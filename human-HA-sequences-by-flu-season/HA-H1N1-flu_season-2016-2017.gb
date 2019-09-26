@@ -1,0 +1,66 @@
+LOCUS       MH216446                 927 bp    cRNA    linear   VRL 22-APR-2018
+DEFINITION  Influenza A virus (A/Ontario/148/2017(H1N1)) segment 4 hemagglutinin
+            (HA) gene, partial cds.
+ACCESSION   MH216446
+VERSION     MH216446.1
+KEYWORDS    .
+SOURCE      Influenza A virus
+  ORGANISM  Influenza A virus
+            Viruses; ssRNA viruses; ssRNA negative-strand viruses;
+            Orthomyxoviridae; Alphainfluenzavirus.
+REFERENCE   1  (bases 1 to 927)
+  AUTHORS   Hickman,R.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (17-APR-2018) Clinical Trials Unit, BC Centre for Disease
+            Control, 655 West 12th Ave, Vancouver, BC V5Z 4R4, Canada
+FEATURES             Location/Qualifiers
+     source          1..927
+                     /organism="Influenza A virus"
+                     /mol_type="viral cRNA"
+                     /strain="A/Ontario/148/2017"
+                     /serotype="H1N1"
+                     /isolate="148"
+                     /isolation_source="nasopharyngeal swab"
+                     /host="Homo sapiens"
+                     /db_xref="taxon:11320"
+                     /segment="4"
+                     /country="Canada: Ontario"
+                     /collection_date="28-Mar-2017"
+                     /note="original specimen"
+     gene            1..>927
+                     /gene="HA"
+     CDS             1..>927
+                     /gene="HA"
+                     /function="receptor binding and fusion protein"
+                     /codon_start=1
+                     /product="hemagglutinin"
+                     /protein_id="AWA25210.1"
+                     /translation="MKAILVVLLYTFTTANADTLCIGYHANNSTDTVDTVLEKNVTVTH
+                     SVNLLEDKHNGKLCKLRGAAPLHLGKCNIAGWILGNPECESLSTASSWSYIVETSNSDN
+                     GTCYPGDFINYEELREQLSSVSSFERFEIFPKTSSWPNHDSNKGVTAACPHAGAKSFYK
+                     NLIWLVKKGNSYPKLNQSYINDKGKEVLVLWGIHHPPTTADQQSLYQNADAYVFVGTSR
+                     YSKKFKPEIATRPKVRDQEGRMNYYWTLVEPGDKITFEATGNLVVPRYAFTMERNAGSG
+                     IIISDTPIHDCNTTCQTPEGAINTSLPF"
+     sig_peptide     1..51
+                     /gene="HA"
+     mat_peptide     52..927
+                     /gene="HA"
+                     /product="HA1"
+ORIGIN
+        1 atgaaggcaa tactagtagt tctgctatat acatttacaa ccgcaaatgc agacacatta
+       61 tgtataggtt atcatgcgaa caattcaaca gacactgtag acacagtact agaaaagaat
+      121 gtaacagtaa cacactctgt taatcttctg gaagacaagc ataacggaaa actatgcaaa
+      181 ctaagagggg cagccccatt gcatttgggt aaatgtaaca ttgctggctg gatcctggga
+      241 aatccagagt gtgaatcact ctccacagca agttcatggt cctacattgt ggaaacatct
+      301 aattcagaca atggaacgtg ttacccagga gatttcatca attatgagga gctaagagag
+      361 caattgagct cagtgtcatc atttgaaagg tttgaaatat tccccaagac aagttcatgg
+      421 cccaatcatg actcgaacaa aggtgtaacg gcagcatgtc ctcacgctgg agcaaaaagc
+      481 ttctacaaaa acttgatatg gctagttaaa aaaggaaatt catacccaaa gctcaaccaa
+      541 tcctacatta atgataaagg gaaagaagtc ctcgtgctgt ggggcattca ccatccacct
+      601 actactgctg accaacaaag tctctatcag aatgcagatg catatgtttt tgtggggaca
+      661 tcaagataca gcaagaagtt caagccggaa atagcaacaa gacccaaagt gagggatcaa
+      721 gaagggagaa tgaactatta ctggacacta gtagagccgg gagacaaaat aacattcgaa
+      781 gcaactggaa atctagtggt accgagatat gcattcacaa tggaaagaaa tgctggatct
+      841 ggtattatca tttcagatac accaatccac gattgcaata caacttgtca gacacccgag
+      901 ggtgctataa acaccagcct cccattt
+//

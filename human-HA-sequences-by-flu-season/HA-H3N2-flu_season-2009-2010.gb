@@ -1,0 +1,250 @@
+LOCUS       JQ658889                1701 bp    cRNA    linear   VRL 29-MAY-2013
+DEFINITION  Influenza A virus (A/Ontario/C432471/2010(H3N2)) segment 4
+            hemagglutinin (HA) gene, complete cds.
+ACCESSION   JQ658889
+VERSION     JQ658889.1
+KEYWORDS    .
+SOURCE      Influenza A virus (A/Ontario/C432471/2010(H3N2))
+  ORGANISM  Influenza A virus (A/Ontario/C432471/2010(H3N2))
+            Viruses; ssRNA viruses; ssRNA negative-strand viruses;
+            Orthomyxoviridae; Influenzavirus A.
+REFERENCE   1  (bases 1 to 1701)
+  AUTHORS   Eshaghi,A., Li,A., Patel,S.N., Low,D.E. and Gubbay,J.B.
+  TITLE     Genetic characterization of seasonal influenza A viruses H3N2 in
+            Ontario during 2010-2011 winter season
+  JOURNAL   Unpublished
+REFERENCE   2  (bases 1 to 1701)
+  AUTHORS   Eshaghi,A., Li,A., Patel,S.N., Low,D.E. and Gubbay,J.B.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (11-FEB-2012) Molecular Research, Ontario Agency for
+            Health Protection and Promotion, 81 Resources Road, Toronto, Ontario
+            M9P 3T1, Canada
+FEATURES             Location/Qualifiers
+     source          1..1701
+                     /organism="Influenza A virus
+                     (A/Ontario/C432471/2010(H3N2))"
+                     /mol_type="viral cRNA"
+                     /strain="A/Ontario/C432471/2010"
+                     /serotype="H3N2"
+                     /isolation_source="NPS"
+                     /host="Homo sapiens; gender M; age 8Y"
+                     /db_xref="taxon:1147460"
+                     /segment="4"
+                     /country="Canada"
+                     /collection_date="10-Aug-2010"
+                     /note="RMK 1st passage"
+     gene            1..1701
+                     /gene="HA"
+     CDS             1..1701
+                     /gene="HA"
+                     /codon_start=1
+                     /product="hemagglutinin"
+                     /protein_id="AFD32471.1"
+                     /translation="MKTIIALSYILCLVFAQKLPGNDNSTATLCLGHHAVPNGTIVKTI
+                     TNDQIEVTNATELVQSSSTGEICNSPHQILDGENCTLIDALLGDPQCDGFQNKKWDLFV
+                     ERSKAHSNCYPYDVPDYASLRSLVASSGTLEFNNESFNWTGVTQNGTSSACIRRSNNSF
+                     FSRLNWLTHLNFKYPALNVTMPNNEQFDKLYIWGVHHPGTDKDQIFLYAQASGRITVST
+                     KKSQQAVIPNIGSRPRVRNIPSRVSIYWTIVKPGDILLINSTGNLIAPRGYFKIRSGKS
+                     SIMRSDAPIGKCNSACITPNGSIPNDKPFQNVNRITYGACPRYVKQNTLKLATGMRNVP
+                     EKQTRGIFGAIAGFIENGWEGMVDGWYGFRHQNSEGRGQAADLKSTQAAIDQINGKLNR
+                     LIGKTNEKFHQIEKEFSEVEGRIQDLEKYVEDTKIDLWSYNAELLVALENQHTIDLTDS
+                     EMNKLFEKTKKQLRENAEDMGNGCFKIYHKCDNACIGSIRNGTYDHDVYRDEALNNRFQ
+                     IKGVELKSGYKDWILWISFAISCFLLCVALLGFIMWACQKGNIRCNICI"
+ORIGIN
+        1 atgaagacta tcattgcttt gagctacatt ctatgtctgg ttttcgctca aaaacttcct
+       61 ggaaatgaca acagcacggc aacgctgtgc cttgggcacc atgcagtgcc aaacggaacg
+      121 atagtgaaaa caatcacgaa tgaccaaatt gaagttacta atgctactga gctggttcag
+      181 agttcctcaa caggtgaaat atgcaacagt cctcatcaga tccttgatgg agaaaactgc
+      241 acactaatag atgctctatt gggagaccct cagtgtgatg gcttccaaaa caagaaatgg
+      301 gacctttttg ttgaacgaag caaagcccac agcaactgtt acccttatga tgtgccggat
+      361 tatgcctccc ttaggtcact agttgcctca tccggcacac tggagtttaa caatgaaagc
+      421 ttcaattgga ctggagtcac tcaaaacgga acaagctctg cttgcataag gagatctaat
+      481 aatagtttct ttagtagatt gaattggttg acccacttga acttcaaata cccagcattg
+      541 aacgtgacta tgccaaacaa tgaacaattt gacaaattgt acatttgggg ggttcaccac
+      601 ccgggtacgg acaaggacca aatcttcctg tatgctcaag catcaggaag aatcacagta
+      661 tctaccaaaa aaagccaaca agctgtaatt ccgaatatcg gatctagacc cagagtaagg
+      721 aatatcccta gcagagtaag catctattgg acaatagtaa aaccgggaga tatacttttg
+      781 attaacagca cagggaatct aattgctcct aggggttact tcaaaatacg aagtgggaaa
+      841 agctcaataa tgagatcaga tgcacccatt ggcaaatgca attctgcatg catcactcca
+      901 aatggaagca ttcccaatga caaaccattc caaaatgtaa acaggatcac atacggggcc
+      961 tgtcccagat atgttaagca aaacactctg aaattggcaa caggaatgcg aaatgtacca
+     1021 gagaaacaaa ctagaggcat atttggcgca atagcgggtt tcatagaaaa tggttgggag
+     1081 ggaatggtgg atggttggta cggtttcagg catcaaaatt ctgagggaag gggacaagca
+     1141 gcagatctca aaagcactca agcagcaatc gatcaaatca atgggaagct gaatagattg
+     1201 atcgggaaaa ccaacgagaa attccatcag attgaaaaag aattctcaga agtcgaaggg
+     1261 agaattcagg accttgagaa atatgttgag gacactaaaa tagatctctg gtcatacaac
+     1321 gcggagcttc ttgttgccct ggagaaccaa cacacaattg atctaactga ctcagaaatg
+     1381 aacaaactgt ttgaaaaaac aaagaagcaa ctgagggaaa atgctgagga tatgggcaat
+     1441 ggttgtttca aaatatacca caaatgtgac aatgcctgca taggatcaat cagaaatgga
+     1501 acttatgacc acgatgtgta cagagatgaa gcattaaaca accgattcca gatcaaggga
+     1561 gttgagctga agtcagggta caaagattgg atcctatgga tttcctttgc catatcatgt
+     1621 tttttgcttt gtgttgcttt gttggggttc atcatgtggg cctgccaaaa aggcaacatt
+     1681 aggtgcaaca tttgcatttg a
+//
+LOCUS       JQ658888                1701 bp    cRNA    linear   VRL 29-MAY-2013
+DEFINITION  Influenza A virus (A/Ontario/U10611/2010(H3N2)) segment 4
+            hemagglutinin (HA) gene, complete cds.
+ACCESSION   JQ658888
+VERSION     JQ658888.1
+KEYWORDS    .
+SOURCE      Influenza A virus (A/Ontario/U10611/2010(H3N2))
+  ORGANISM  Influenza A virus (A/Ontario/U10611/2010(H3N2))
+            Viruses; ssRNA viruses; ssRNA negative-strand viruses;
+            Orthomyxoviridae; Influenzavirus A.
+REFERENCE   1  (bases 1 to 1701)
+  AUTHORS   Eshaghi,A., Li,A., Patel,S.N., Low,D.E. and Gubbay,J.B.
+  TITLE     Genetic characterization of seasonal influenza A viruses H3N2 in
+            Ontario during 2010-2011 winter season
+  JOURNAL   Unpublished
+REFERENCE   2  (bases 1 to 1701)
+  AUTHORS   Eshaghi,A., Li,A., Patel,S.N., Low,D.E. and Gubbay,J.B.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (11-FEB-2012) Molecular Research, Ontario Agency for
+            Health Protection and Promotion, 81 Resources Road, Toronto, Ontario
+            M9P 3T1, Canada
+FEATURES             Location/Qualifiers
+     source          1..1701
+                     /organism="Influenza A virus (A/Ontario/U10611/2010(H3N2))"
+                     /mol_type="viral cRNA"
+                     /strain="A/Ontario/U10611/2010"
+                     /serotype="H3N2"
+                     /isolation_source="NPS"
+                     /host="Homo sapiens; gender F; age 76Y"
+                     /db_xref="taxon:1147496"
+                     /segment="4"
+                     /country="Canada"
+                     /collection_date="09-Aug-2010"
+                     /note="RMK 1st passage"
+     gene            1..1701
+                     /gene="HA"
+     CDS             1..1701
+                     /gene="HA"
+                     /codon_start=1
+                     /product="hemagglutinin"
+                     /protein_id="AFD32470.1"
+                     /translation="MKTIIALSYILCLVFAQKLPGNDNSTATLCLGHHAVPNGTIVKTI
+                     TNDQIEVTNATELVQSSSTGEICDSPHQILDGENCTLIDALLGDPQCDGFQNKKWDLFV
+                     ERSKAYSNCYPYDVPDYASLRSLVASSGTLEFNNESFNWTGVTQNGTSSACIRRSNNSF
+                     FSRLNWLTHLNFKYPALNVTMPNNEQFDKLYIWGVHHPGTDKDQIFLYAQASGRITVST
+                     KRSQQAVIPNIGSRPRVRNIPSRISIYWTIVKPGDILLINSTGNLIAPRGYFKIRSGKS
+                     SIMRSDAPIGKCNSECITPNGSIPNEKPFQNVNRITYGACPRYVKQSTLKLATGMRNVP
+                     EKQTRGIFGAIAGFIENGWEGMVDGWYGFRHQNSEGRGQAADLKSTQAAIDQINGKLNR
+                     LIGKTNEKFHQIEKEFSEVEGRIQDLEKYVEDTKIDLWSYNAELLVALENQHTIDLTDS
+                     EMNKLFEKTKKQLRENAEDMGNGCFTIYHKCDNACIGSIRNGTYDHNVYRDEALNNRFQ
+                     IKGVELKSGYKDWILWISFAISCFLLCVALLGFIMWACQKGNIRCNICI"
+ORIGIN
+        1 atgaagacta tcattgcttt gagctacatt ctatgtctgg ttttcgctca aaaacttcct
+       61 ggaaatgaca acagcacggc aacgctgtgc cttgggcacc atgcagtacc aaacggaacg
+      121 atagtgaaaa caatcacgaa tgaccaaatt gaagttacta atgctactga gctggttcag
+      181 agttcctcaa caggtgaaat atgcgacagt cctcatcaga tccttgatgg agaaaactgc
+      241 acactaatag atgctctatt gggagaccct cagtgtgatg gcttccaaaa taagaaatgg
+      301 gacctttttg ttgaacgaag caaagcatac agcaactgtt acccttatga tgtgccggat
+      361 tatgcctccc ttaggtcact agttgcctca tccggcacac tggagtttaa caatgaaagc
+      421 ttcaattgga ctggagtcac tcaaaacgga acaagctctg cttgcataag aagatctaat
+      481 aatagtttct ttagtagatt gaattggttg acccacttaa acttcaaata cccagcattg
+      541 aacgtgacta tgccaaacaa tgaacaattt gacaaattgt acatttgggg ggttcaccac
+      601 ccgggtacgg acaaggacca aatcttcctg tatgctcaag catcaggaag aatcacagta
+      661 tctaccaaaa gaagccaaca agctgtaatc ccgaatatcg gatctagacc cagagtaagg
+      721 aatatcccta gcagaataag catctattgg acaatagtaa aaccgggaga catacttttg
+      781 attaacagca cagggaatct aattgctcct aggggttact tcaaaatacg aagtggaaaa
+      841 agctcaataa tgagatcaga tgcacccatt ggcaaatgca attctgaatg catcactcca
+      901 aatggaagca ttcccaatga aaaaccattc caaaatgtaa acaggatcac atacggggcc
+      961 tgtcccagat atgttaagca aagcactctg aaattggcaa caggaatgcg aaatgtacca
+     1021 gagaaacaaa ctagaggcat atttggcgca atagcgggtt tcatagaaaa tggttgggag
+     1081 ggaatggtgg atggttggta cggtttcagg catcaaaatt ctgagggaag aggacaagca
+     1141 gcagatctca aaagcactca agcagcaatc gatcaaatca atgggaagct gaatagattg
+     1201 atcgggaaaa ccaacgagaa attccatcag attgaaaaag aattctcaga agtcgaaggg
+     1261 agaattcagg accttgagaa atatgttgag gacactaaaa tagatctctg gtcatacaac
+     1321 gcggagcttc ttgttgccct ggagaaccaa catacaattg atctaactga ctcagaaatg
+     1381 aacaaactgt ttgaaaaaac aaagaagcaa ctgagggaaa atgctgagga tatgggcaat
+     1441 ggttgtttca caatatacca caaatgtgac aatgcctgca taggatcaat cagaaatgga
+     1501 acttatgacc acaatgtata cagagatgaa gcattaaaca accggttcca gatcaaggga
+     1561 gttgagctga agtcagggta caaagattgg atcctatgga tttcctttgc catatcatgt
+     1621 tttttgcttt gtgttgcttt gttggggttc atcatgtggg cctgccaaaa aggcaacatt
+     1681 aggtgcaaca tttgcatttg a
+//
+LOCUS       CY054550                1460 bp    cRNA    linear   VRL 25-JUL-2016
+DEFINITION  Influenza A virus (A/Toronto/H42220/2009(H3N2)) segment 4 sequence.
+ACCESSION   CY054550
+VERSION     CY054550.1
+KEYWORDS    .
+SOURCE      Influenza A virus (A/Toronto/H42220/2009(H3N2))
+  ORGANISM  Influenza A virus (A/Toronto/H42220/2009(H3N2))
+            Viruses; ssRNA viruses; ssRNA negative-strand viruses;
+            Orthomyxoviridae; Influenzavirus A.
+REFERENCE   1  (bases 1 to 1460)
+  AUTHORS   Eshaghi,A., Alexander,D.C., Patel,S., Longtin,J., Gubbay,J.B. and
+            Low,D.E.
+  TITLE     Molecular characterization of seasonal influenza A (H3N2) viruses in
+            Toronto, Canada
+  JOURNAL   Unpublished
+REFERENCE   2  (bases 1 to 1460)
+  AUTHORS   Eshaghi,A., Alexander,D.C., Patel,S., Longtin,J., Gubbay,J.B. and
+            Low,D.E.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (19-JAN-2010) Public Health Laboratory - Toronto, Ontario
+            Agency for Health Protection and Promotion, 81 Resources Road,
+            Toronto, Ontario M9P 3T1, Canada
+FEATURES             Location/Qualifiers
+     source          1..1460
+                     /organism="Influenza A virus (A/Toronto/H42220/2009(H3N2))"
+                     /mol_type="viral cRNA"
+                     /strain="A/Toronto/H42220/2009"
+                     /serotype="H3N2"
+                     /isolation_source="nasopharyngeal swab"
+                     /host="human; gender M; age 72"
+                     /db_xref="taxon:709968"
+                     /segment="4"
+                     /lab_host="MDCK1 passage(s)"
+                     /country="Canada: Ontario"
+                     /collection_date="30-Dec-2009"
+     gene            <1..>1460
+                     /gene="HA"
+     CDS             <1..>1460
+                     /gene="HA"
+                     /function="receptor binding and fusion protein"
+                     /codon_start=1
+                     /product="hemagglutinin"
+                     /protein_id="ADB65922.1"
+                     /translation="VKTITNDQIEVTNATELVQSSSTGEICDSPHQILDGENCTLIDAL
+                     LGDPQCDGFQNKKWDLFVERSKAYSNCYPYDVPDYASLRSLVASSGTLEFNNESFNWTG
+                     VTQNGTSSACIRRSNNSFFSRLNWLTHLNFKYPALNVTMPNNEQFDKLYIWGVHHPGTD
+                     KDQIFLYAQASGRITVSTKRSQQAVIPNIGSRPRVRNIPSRISIYWTIVKPGDILLINS
+                     TGNLIAPRGYFKIRSGKSSIMRSDAPIGKCNSECITPNGSIPNDKPFQNVNRITYGACP
+                     RYVKQSTLKLATGMRNVPEKQTRGIFGAIAGFIENGWEGMVDGWYGFRHQNSEGRGQAA
+                     DLKSTQAAIDQINGKLNRLIGKTNEKFHQIEKEFSEVEGRIQDLEKYVEDTKTDLWSYN
+                     AELLVALENQHTIDLTDSEMNKLFEKTKKQLRENAEDMGNGCFTIYHKCDNACIGSIRN
+                     GTYDHNVYRDEALNNRFQIKGVELKSGY"
+     mat_peptide     <1..912
+                     /gene="HA"
+                     /product="HA1"
+     mat_peptide     913..>1460
+                     /gene="HA"
+                     /product="HA2"
+ORIGIN
+        1 gtgaagacaa tcacgaatga ccaaattgaa gttactaatg ctactgagct ggttcagagt
+       61 tcctcaacag gtgaaatatg cgacagtcct catcagatcc ttgatggaga aaactgcaca
+      121 ctaatagatg ctctattggg agaccctcag tgtgatggct tccaaaataa gaaatgggac
+      181 ctttttgttg aacgaagcaa agcctacagc aactgttacc cttatgatgt gccggattat
+      241 gcctccctta ggtcactagt tgcctcatcc ggcacactgg agtttaacaa tgaaagcttc
+      301 aattggactg gagtcactca aaacggaaca agctctgctt gcataaggag atctaataat
+      361 agtttcttta gtagattgaa ttggttgacc cacttaaact tcaaataccc agcattgaac
+      421 gtgactatgc caaacaatga acaatttgac aaattgtaca tttggggggt tcaccacccg
+      481 ggtacggaca aggaccaaat cttcctgtat gctcaagcat caggaagaat cacagtatct
+      541 accaaaagaa gccaacaagc tgtaatcccg aatatcggat ctagacccag agtaaggaat
+      601 atccctagca gaataagcat ctattggaca atagtaaaac cgggagacat acttttgatt
+      661 aacagcacag ggaatctaat tgctcctagg ggttacttca aaatacgaag tgggaaaagc
+      721 tcaataatga gatcagatgc acccattggc aaatgcaatt ctgaatgcat cactccaaat
+      781 ggaagcattc ccaatgacaa accattccaa aatgtaaaca ggatcacata cggggcctgt
+      841 cccagatatg ttaagcaaag cactctgaaa ttggcaacag gaatgcgaaa tgtaccagag
+      901 aaacaaacta gaggcatatt tggcgcaata gcgggtttca tagaaaatgg ttgggaggga
+      961 atggtggatg gttggtacgg tttcaggcat caaaattctg agggaagagg ccaagcagca
+     1021 gatctcaaaa gcactcaagc agcaatcgat caaatcaatg ggaagctgaa tagattgatc
+     1081 gggaaaacca acgagaaatt ccatcagatt gaaaaagaat tctcagaagt cgaagggaga
+     1141 attcaggacc ttgagaaata tgttgaggac actaaaacag atctctggtc atacaacgcg
+     1201 gagcttcttg ttgccctgga gaaccaacat acaattgatc taactgactc agaaatgaac
+     1261 aaactgtttg aaaaaacaaa gaagcaactg agggaaaatg ctgaggatat gggcaatggt
+     1321 tgtttcacaa tataccacaa atgtgacaat gcctgcatag gatcaatcag aaatggaact
+     1381 tatgaccaca atgtatacag agatgaagca ttaaacaacc ggttccagat caagggagtt
+     1441 gagctgaagt cagggtacaa
+//

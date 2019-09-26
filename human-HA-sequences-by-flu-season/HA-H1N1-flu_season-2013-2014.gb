@@ -1,0 +1,1324 @@
+LOCUS       KP864399                1705 bp    cRNA    linear   VRL 28-MAR-2015
+DEFINITION  Influenza A virus (A/Ontario/05/2014(H1N1)) segment 4 hemagglutinin
+            (HA) gene, partial cds.
+ACCESSION   KP864399
+VERSION     KP864399.1
+KEYWORDS    .
+SOURCE      Influenza A virus (A/Ontario/05/2014(H1N1))
+  ORGANISM  Influenza A virus (A/Ontario/05/2014(H1N1))
+            Viruses; ssRNA viruses; ssRNA negative-strand viruses;
+            Orthomyxoviridae; Influenzavirus A.
+REFERENCE   1  (bases 1 to 1705)
+  AUTHORS   Skowronski,D.M., Chambers,C., Sabaiduc,S., De Serres,G.,
+            Winter,A.L., Dickinson,J.A., Gubbay,J., Fonseca,K., Charest,H.,
+            Krajden,M., Petric,M., Mahmud,S.M., Van Caeseele,P., Bastien,N.,
+            Eshaghi,A. and Li,Y.
+  TITLE     Integrated sentinel surveillance linking genetic, antigenic and
+            epidemiologic monitoring of influenza vaccine-virus relatedness and
+            effectiveness, 2013-14 season
+  JOURNAL   J. Infect. Dis. (2015) In press
+   PUBMED   25784728
+  REMARK    Publication Status: Available-Online prior to print
+REFERENCE   2  (bases 1 to 1705)
+  AUTHORS   Skowronski,D.M., Chambers,C., Sabaiduc,S., De Serres,G.,
+            Winter,A.-L., Dickinson,J.A., Gubbay,J., Fonseca,K., Charest,H.,
+            Krajden,M., Petric,M., Mahmud,S.M., Van Caeseele,P., Bastien,N.,
+            Eshaghi,A. and Li,Y.
+  CONSRTM   Canadian Sentinel Physician Surveillance Network (SPSN)
+  TITLE     Direct Submission
+  JOURNAL   Submitted (27-FEB-2015) Clinical Trials, British Columbia Centre for
+            Disease Control, 655 West 12th Ave, Vancouver, BC V5Z 4R4, Canada
+COMMENT     ##Assembly-Data-START##
+            Assembly Method       :: Geneious v. 4.8.5
+            Sequencing Technology :: Sanger dideoxy sequencing
+            ##Assembly-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..1705
+                     /organism="Influenza A virus (A/Ontario/05/2014(H1N1))"
+                     /mol_type="viral cRNA"
+                     /strain="A/Ontario/05/2014"
+                     /serotype="H1N1"
+                     /isolation_source="nasopharyngeal swab"
+                     /host="Homo sapiens"
+                     /db_xref="taxon:1621951"
+                     /segment="4"
+                     /country="Canada: Ontario"
+                     /collection_date="11-Feb-2014"
+     gene            19..>1705
+                     /gene="HA"
+     CDS             19..>1705
+                     /gene="HA"
+                     /function="receptor binding and fusion protein"
+                     /codon_start=1
+                     /product="hemagglutinin"
+                     /protein_id="AJY54113.1"
+                     /translation="MKAILVVLLYTFATANADTLCIGYHANNSTDTVDTVLEKNVTVTH
+                     SVNLLEDKHNGKLCKLRGVAPLHLGKCNIAGWILGNPECESLSTASSWSYIVETSSSDN
+                     GTCYPGDFINYEELREQLSSVSSFERFEIFPKTSSWPNHDSNKGVTAACPHAGAKSFYK
+                     NLIWLVKKGNSYPKLSQSYINDKGKEVLVLWGIHHPSTTADQQSLYQNADAYVFVGTSR
+                     YSKKFKPEIAIRPKVRDQEGRMNYYWTLVEPGDKITFEATGNLVVPRYAFTMERNAGSG
+                     IIISDTPVHDCNTTCQTPEGAINTSLPFQNIHPITIGKCPKYVKSTKLRLATGLRNVPS
+                     IQSRGLFGAIAGFIEGGWTGMVDGWYGYHHQNEQGSGYAADLKSTQNAIDKITNKVNSV
+                     IEKMNTQFTAVGKEFNHLEKRIENLNKKVDDGFLDIWTYNAELLVLLENERTLDYHDSN
+                     VKNLYEKVRNQLKNNAKEIGNGCFEFYHKCDNTCMESVKNETYDYPKYSEEAKLNREKI
+                     DGVKLESTRIYQILAIYSTVASSLVLVVSLGAISFWMCSNGSLQC"
+     sig_peptide     19..69
+                     /gene="HA"
+     mat_peptide     70..1050
+                     /gene="HA"
+                     /product="HA1"
+     mat_peptide     1051..>1705
+                     /gene="HA"
+                     /product="HA2"
+ORIGIN
+        1 aaaacaaaag caacaaaaat gaaggcaata ctagtagttc tgctatatac atttgcaacc
+       61 gcaaatgcag acacattatg tataggttat catgcgaaca attcaacaga cactgtagac
+      121 acagtactag aaaagaatgt aacagtaaca cactctgtta accttctaga agacaagcat
+      181 aacgggaaac tatgcaaact aagaggggta gccccattgc atttgggtaa atgtaacatt
+      241 gctggctgga tcctgggaaa tccagagtgt gaatcactct ccacagcaag ttcatggtcc
+      301 tacattgtgg aaacatctag ttcagacaat ggaacgtgtt acccaggaga tttcatcaat
+      361 tatgaggagc taagagagca attgagttca gtgtcatcat ttgaaaggtt tgagatattc
+      421 cccaagacaa gttcatggcc caatcatgac tcgaacaaag gtgtaacggc agcatgtcct
+      481 cacgctggag caaaaagctt ctacaaaaat ttaatatggc tagttaaaaa aggaaattca
+      541 tacccaaagc tcagccaatc ctacattaat gataaaggga aagaagtcct cgtgctgtgg
+      601 ggcattcacc acccatctac tactgctgac caacaaagtc tctatcagaa tgcagatgca
+      661 tatgtttttg tggggacatc aagatacagc aagaagttca agccggaaat agcaataaga
+      721 cccaaagtga gggatcaaga agggagaatg aactactact ggacactagt agagccggga
+      781 gacaaaataa cattcgaagc aactggaaat ctagtggtac cgagatatgc attcacaatg
+      841 gaaagaaatg ctggatctgg tattatcatt tcagatacac cagtccacga ttgcaataca
+      901 acttgtcaga cacccgaggg tgctataaac accagcctcc catttcagaa tatacatccg
+      961 atcacaattg gaaaatgtcc aaagtatgta aaaagcacaa aattgagact ggccacagga
+     1021 ttgaggaatg tcccgtctat tcaatctaga ggcctattcg gggccattgc cggcttcatt
+     1081 gaaggggggt ggacagggat ggtagatgga tggtacggtt atcaccatca aaatgagcag
+     1141 gggtcaggat atgcagccga cctgaagagc acacaaaatg ccattgacaa gattactaac
+     1201 aaagtaaatt ctgttattga aaagatgaat acacagttca cagcagtggg taaagagttc
+     1261 aaccacctgg aaaaaagaat agagaactta aataaaaaag ttgatgatgg tttcctggac
+     1321 atttggactt acaatgccga actgttggtt ctattggaaa atgaaagaac tttggactac
+     1381 cacgattcaa atgtgaagaa cttgtatgaa aaggtaagaa accagttaaa aaacaatgcc
+     1441 aaggaaattg gaaacggctg ctttgaattt taccacaaat gcgataacac gtgcatggaa
+     1501 agtgtcaaaa atgagactta tgactaccca aaatactcag aggaagcaaa attaaacaga
+     1561 gaaaaaatag atggggtaaa actggaatca acaaggattt accagatttt ggcgatctat
+     1621 tcaactgtcg ccagttcatt ggtactggta gtctccctgg gggcaatcag cttctggatg
+     1681 tgctctaatg ggtctctaca gtgta
+//
+LOCUS       KP864397                1744 bp    cRNA    linear   VRL 28-MAR-2015
+DEFINITION  Influenza A virus (A/Ontario/04/2014(H1N1)) segment 4 hemagglutinin
+            (HA) gene, complete cds.
+ACCESSION   KP864397
+VERSION     KP864397.1
+KEYWORDS    .
+SOURCE      Influenza A virus (A/Ontario/04/2014(H1N1))
+  ORGANISM  Influenza A virus (A/Ontario/04/2014(H1N1))
+            Viruses; ssRNA viruses; ssRNA negative-strand viruses;
+            Orthomyxoviridae; Influenzavirus A.
+REFERENCE   1  (bases 1 to 1744)
+  AUTHORS   Skowronski,D.M., Chambers,C., Sabaiduc,S., De Serres,G.,
+            Winter,A.L., Dickinson,J.A., Gubbay,J., Fonseca,K., Charest,H.,
+            Krajden,M., Petric,M., Mahmud,S.M., Van Caeseele,P., Bastien,N.,
+            Eshaghi,A. and Li,Y.
+  TITLE     Integrated sentinel surveillance linking genetic, antigenic and
+            epidemiologic monitoring of influenza vaccine-virus relatedness and
+            effectiveness, 2013-14 season
+  JOURNAL   J. Infect. Dis. (2015) In press
+   PUBMED   25784728
+  REMARK    Publication Status: Available-Online prior to print
+REFERENCE   2  (bases 1 to 1744)
+  AUTHORS   Skowronski,D.M., Chambers,C., Sabaiduc,S., De Serres,G.,
+            Winter,A.-L., Dickinson,J.A., Gubbay,J., Fonseca,K., Charest,H.,
+            Krajden,M., Petric,M., Mahmud,S.M., Van Caeseele,P., Bastien,N.,
+            Eshaghi,A. and Li,Y.
+  CONSRTM   Canadian Sentinel Physician Surveillance Network (SPSN)
+  TITLE     Direct Submission
+  JOURNAL   Submitted (27-FEB-2015) Clinical Trials, British Columbia Centre for
+            Disease Control, 655 West 12th Ave, Vancouver, BC V5Z 4R4, Canada
+COMMENT     ##Assembly-Data-START##
+            Assembly Method       :: Geneious v. 4.8.5
+            Sequencing Technology :: Sanger dideoxy sequencing
+            ##Assembly-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..1744
+                     /organism="Influenza A virus (A/Ontario/04/2014(H1N1))"
+                     /mol_type="viral cRNA"
+                     /strain="A/Ontario/04/2014"
+                     /serotype="H1N1"
+                     /isolation_source="nasopharyngeal swab"
+                     /host="Homo sapiens"
+                     /db_xref="taxon:1621950"
+                     /segment="4"
+                     /country="Canada: Ontario"
+                     /collection_date="29-Jan-2014"
+     gene            19..1719
+                     /gene="HA"
+     CDS             19..1719
+                     /gene="HA"
+                     /function="receptor binding and fusion protein"
+                     /codon_start=1
+                     /product="hemagglutinin"
+                     /protein_id="AJY54111.1"
+                     /translation="MKAILVVLLYTFATANADTLCIGYHANNSTDTVDTVLEKNVTVTH
+                     SVNLLEDKHNGKLCKLRGVAPLHLGKCNIAGWILGNPECESLSTASSWSYIVETSSSDN
+                     GTCYPGDFINYEELREQLSSVSSFERFEIFPKTSSWPNHDSNKGVTAACPHAGAKSFYK
+                     NLIWLVKKGNSYPKLSQSYINDKGKEVLVLWGIHHPSTTADQQSLYQNADAYVFVGTSR
+                     YSKKFKPEIAIRPKVRDQEGRMNYYWTLVEPGDKITFEATGNLVVPRYAFTMERNAGSG
+                     IIISDTPVHDCNTTCQTPEGAINTSLPFQNIHPITIGKCPKYVKSTKLRLATGLRNVPS
+                     IQSRGLFGAIAGFIEGGWTGMVDGWYGYHHQNEQGSGYAADLKSTQNAIDKITNKVNSV
+                     IEKMNTQFTAVGKEFNHLEKRIENLNKKVDDGFLDIWTYNAELLVLLENERTLDYHDSN
+                     VKNLYEKVRNQLKNNAKEIGSGCFEFYHKCDNTCMESVKNGTYDYPKYSEEAKLNREKI
+                     DGVKLESTRIYQILAIYSTVASSLVLVVSLGAISFWMCSNGSLQCKICI"
+     sig_peptide     19..69
+                     /gene="HA"
+     mat_peptide     70..1050
+                     /gene="HA"
+                     /product="HA1"
+     mat_peptide     1051..1716
+                     /gene="HA"
+                     /product="HA2"
+ORIGIN
+        1 aaaacaaaag caacaaaaat gaaggcaata ctagtagttc tgctatacac atttgcaacc
+       61 gcaaatgcag acacattatg tataggttat catgcgaaca attcaacaga cactgtagac
+      121 acagtactag aaaagaatgt aacagtaaca cactctgtta accttctaga agacaagcat
+      181 aacgggaaac tatgcaaact aagaggggta gccccattgc atttgggtaa atgtaacatt
+      241 gctggctgga tcctgggaaa tccagagtgt gaatcactct ccacagcaag ttcatggtcc
+      301 tacattgtgg aaacatctag ttcagacaat ggaacgtgtt acccaggaga tttcatcaat
+      361 tatgaggagc taagagagca attgagctca gtgtcatcat ttgaaagatt tgagatattc
+      421 cccaagacaa gttcatggcc caatcatgac tcgaacaaag gtgtaacggc agcatgtcct
+      481 cacgctggag caaaaagctt ctacaaaaat ttaatatggc tagttaaaaa aggaaattca
+      541 tacccaaagc tcagccaatc ctacattaat gataaaggga aagaagtcct cgtgctgtgg
+      601 ggcattcacc atccatctac tactgctgac caacaaagtc tctatcagaa tgcagatgca
+      661 tatgttttcg tggggacatc aagatacagc aagaagttca agccggaaat agcaataaga
+      721 cccaaagtga gggatcaaga agggagaatg aactattact ggacactagt agagccggga
+      781 gacaaaataa cattcgaagc aactggaaat ctagtggtac cgagatatgc attcacaatg
+      841 gaaagaaatg ctggatctgg tattatcatt tcagatacac cagtccacga ttgcaataca
+      901 acttgtcaga cacctgaggg tgctataaac accagcctcc catttcagaa tatacatccg
+      961 atcacaattg gaaaatgtcc aaagtatgta aaaagcacaa aattgagact ggccacagga
+     1021 ttgaggaatg tcccatctat tcaatctaga ggcctattcg gggccattgc cggcttcatt
+     1081 gaaggggggt ggacagggat ggtagatgga tggtacggtt atcaccatca aaatgagcag
+     1141 gggtcaggat atgcagccga cctgaagagc acacaaaatg ccattgacaa aattactaac
+     1201 aaagtaaatt ctgttattga aaagatgaat acacagttca cagcagtggg taaagagttc
+     1261 aaccacttgg aaaaaagaat agagaattta aataaaaaag ttgatgatgg tttcctggac
+     1321 atttggactt acaatgccga actgctggtt ctattggaaa atgaaagaac tttggactac
+     1381 cacgattcaa atgtgaagaa cttgtatgaa aaggtaagaa accagttaaa aaacaatgcc
+     1441 aaggaaattg gaagcggctg ctttgaattt taccacaaat gcgataacac gtgcatggaa
+     1501 agtgtcaaaa atgggactta tgactaccca aaatactcag aggaagcaaa attaaacaga
+     1561 gaaaaaatag atggggtaaa gctggaatca acaaggattt accagatttt ggcgatctat
+     1621 tcaactgtcg ccagttcatt ggtactggta gtctccctgg gggcaatcag cttctggatg
+     1681 tgctctaatg ggtctctaca gtgtaaaata tgtatttaac attaggattt cagaagcatg
+     1741 agaa
+//
+LOCUS       KP864398                1744 bp    cRNA    linear   VRL 28-MAR-2015
+DEFINITION  Influenza A virus (A/Ontario/03/2014(H1N1)) segment 4 hemagglutinin
+            (HA) gene, complete cds.
+ACCESSION   KP864398
+VERSION     KP864398.1
+KEYWORDS    .
+SOURCE      Influenza A virus (A/Ontario/03/2014(H1N1))
+  ORGANISM  Influenza A virus (A/Ontario/03/2014(H1N1))
+            Viruses; ssRNA viruses; ssRNA negative-strand viruses;
+            Orthomyxoviridae; Influenzavirus A.
+REFERENCE   1  (bases 1 to 1744)
+  AUTHORS   Skowronski,D.M., Chambers,C., Sabaiduc,S., De Serres,G.,
+            Winter,A.L., Dickinson,J.A., Gubbay,J., Fonseca,K., Charest,H.,
+            Krajden,M., Petric,M., Mahmud,S.M., Van Caeseele,P., Bastien,N.,
+            Eshaghi,A. and Li,Y.
+  TITLE     Integrated sentinel surveillance linking genetic, antigenic and
+            epidemiologic monitoring of influenza vaccine-virus relatedness and
+            effectiveness, 2013-14 season
+  JOURNAL   J. Infect. Dis. (2015) In press
+   PUBMED   25784728
+  REMARK    Publication Status: Available-Online prior to print
+REFERENCE   2  (bases 1 to 1744)
+  AUTHORS   Skowronski,D.M., Chambers,C., Sabaiduc,S., De Serres,G.,
+            Winter,A.-L., Dickinson,J.A., Gubbay,J., Fonseca,K., Charest,H.,
+            Krajden,M., Petric,M., Mahmud,S.M., Van Caeseele,P., Bastien,N.,
+            Eshaghi,A. and Li,Y.
+  CONSRTM   Canadian Sentinel Physician Surveillance Network (SPSN)
+  TITLE     Direct Submission
+  JOURNAL   Submitted (27-FEB-2015) Clinical Trials, British Columbia Centre for
+            Disease Control, 655 West 12th Ave, Vancouver, BC V5Z 4R4, Canada
+COMMENT     ##Assembly-Data-START##
+            Assembly Method       :: Geneious v. 4.8.5
+            Sequencing Technology :: Sanger dideoxy sequencing
+            ##Assembly-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..1744
+                     /organism="Influenza A virus (A/Ontario/03/2014(H1N1))"
+                     /mol_type="viral cRNA"
+                     /strain="A/Ontario/03/2014"
+                     /serotype="H1N1"
+                     /isolation_source="nasopharyngeal swab"
+                     /host="Homo sapiens"
+                     /db_xref="taxon:1621949"
+                     /segment="4"
+                     /country="Canada: Ontario"
+                     /collection_date="15-Jan-2014"
+     gene            19..1719
+                     /gene="HA"
+     CDS             19..1719
+                     /gene="HA"
+                     /function="receptor binding and fusion protein"
+                     /codon_start=1
+                     /product="hemagglutinin"
+                     /protein_id="AJY54112.1"
+                     /translation="MKAILVVLLYTFATANADTLCIGYHANNSTDTVDTVLEKNVTVTH
+                     SVNLLEDKHNGKLCKLRGVAPLHLGKCNIAGWILGNPECESLSTASSWSYIVETSSSDN
+                     GTCYPGNFINYEELREQLSSVSSFERFEIFPKTSSWPNHDSNKGVTAACPHAGAKSFYK
+                     NLIWLVKKGNSYPKLSQSYINDKGKEVLVLWGIHHPSTTADQQSLYQNADAYVFVGTSR
+                     YSKKFKPEIAIRPKVRDQEGRMNYYWTLVEPGDKITFEATGNLVVPRYAFTMERNAGSG
+                     IIISDTPVHDCNTTCQTPEGAINTSLPFQNIHPITIGKCPKYVKSTKLRLATGLRNVPS
+                     IQSRGLFGAIAGFIEGGWTGMVDGWYGYHHQNEQGSGYAADLKSTQNAIDKITNKVNSV
+                     IEKMNTQFTAVGKEFNHLEKRIENLNKKVDDGFLDIWTYNAELLVLLENERTLDYHDSN
+                     VKNLYEKVRNQLKNNAKEIGNGCFEFYHKCDNTCMESVKNGTYDYPKYSEEAKLNREKI
+                     DGVKLESTRIYQILAIYSTVASSLVLVVSLGAISFWMCSNGSLQCRICI"
+     sig_peptide     19..69
+                     /gene="HA"
+     mat_peptide     70..1050
+                     /gene="HA"
+                     /product="HA1"
+     mat_peptide     1051..1716
+                     /gene="HA"
+                     /product="HA2"
+ORIGIN
+        1 aaaacaaaag caacaaaaat gaaggcaata ctagtagttc tgctatatac atttgcaacc
+       61 gcaaatgcag acacattatg tataggttat catgcgaaca attcaacaga cactgtagac
+      121 acagtactag aaaagaatgt aacagtaaca cactctgtta accttctaga agacaagcat
+      181 aacgggaaac tatgcaaact aagaggggta gccccattgc atttgggtaa atgtaacatt
+      241 gctggctgga tcctgggaaa tccagagtgt gaatcactct ccacagcaag ttcatggtcc
+      301 tacattgtgg aaacatctag ttcagacaat ggaacgtgtt acccaggaaa tttcatcaat
+      361 tatgaggagc taagagagca attgagctca gtgtcatcat ttgaaaggtt tgagatattc
+      421 cccaagacaa gttcatggcc caatcatgac tcgaacaaag gtgtaacggc agcatgtcct
+      481 cacgctggag caaaaagctt ctacaaaaat ttaatatggc tagttaaaaa aggaaattca
+      541 tacccaaagc tcagccaatc ctacattaat gataaaggga aagaagtcct cgtgctgtgg
+      601 ggcattcacc acccatctac tactgctgac caacaaagtc tctatcagaa tgcagatgca
+      661 tatgtttttg tggggacatc aagatacagc aagaagttca agccggaaat agcaataaga
+      721 cccaaagtga gggatcaaga agggagaatg aactattact ggacactagt agaaccggga
+      781 gacaaaataa cattcgaagc aactggaaat ctagtggtac cgagatatgc attcacaatg
+      841 gaaagaaatg ctggatctgg tattatcatt tcagatacac cagtccacga ttgcaataca
+      901 acttgtcaga cacccgaggg tgctataaac accagcctcc catttcagaa tatacatccg
+      961 atcacaattg gaaaatgtcc aaagtatgta aaaagcacaa aattgagact ggccacagga
+     1021 ttgaggaatg tcccgtctat tcaatctaga ggcctattcg gggccattgc cggcttcatt
+     1081 gaaggagggt ggacagggat ggtagatgga tggtacggtt atcaccatca aaacgagcag
+     1141 gggtcaggat atgcagccga cctgaagagc acacaaaatg ccattgacaa gattactaac
+     1201 aaagtaaatt ctgttattga aaagatgaat acacagttca cagcagtggg taaagagttc
+     1261 aaccacctgg aaaaaagaat agagaattta aataaaaaag ttgatgatgg tttcctggac
+     1321 atttggactt acaatgccga actgttggtt ctattggaaa atgaaagaac tttggactac
+     1381 cacgattcaa atgtgaagaa cttgtatgaa aaggtaagaa accagttaaa aaacaatgcc
+     1441 aaggaaattg gaaacggctg ctttgaattt taccacaaat gcgataacac gtgcatggaa
+     1501 agtgtcaaaa atgggactta tgactaccca aaatactcag aggaagcaaa attaaacaga
+     1561 gaaaaaatag atggggtaaa gctggaatca acaaggattt accagatttt ggcgatctat
+     1621 tcaactgtcg ccagttcatt ggtactggta gtctccctgg gggcaatcag cttctggatg
+     1681 tgctctaatg ggtctctaca gtgtagaata tgtatttaac attaggattt cagaagcatg
+     1741 agaa
+//
+LOCUS       KP864396                1744 bp    cRNA    linear   VRL 28-MAR-2015
+DEFINITION  Influenza A virus (A/Ontario/02/2014(H1N1)) segment 4 hemagglutinin
+            (HA) gene, complete cds.
+ACCESSION   KP864396
+VERSION     KP864396.1
+KEYWORDS    .
+SOURCE      Influenza A virus (A/Ontario/02/2014(H1N1))
+  ORGANISM  Influenza A virus (A/Ontario/02/2014(H1N1))
+            Viruses; ssRNA viruses; ssRNA negative-strand viruses;
+            Orthomyxoviridae; Influenzavirus A.
+REFERENCE   1  (bases 1 to 1744)
+  AUTHORS   Skowronski,D.M., Chambers,C., Sabaiduc,S., De Serres,G.,
+            Winter,A.L., Dickinson,J.A., Gubbay,J., Fonseca,K., Charest,H.,
+            Krajden,M., Petric,M., Mahmud,S.M., Van Caeseele,P., Bastien,N.,
+            Eshaghi,A. and Li,Y.
+  TITLE     Integrated sentinel surveillance linking genetic, antigenic and
+            epidemiologic monitoring of influenza vaccine-virus relatedness and
+            effectiveness, 2013-14 season
+  JOURNAL   J. Infect. Dis. (2015) In press
+   PUBMED   25784728
+  REMARK    Publication Status: Available-Online prior to print
+REFERENCE   2  (bases 1 to 1744)
+  AUTHORS   Skowronski,D.M., Chambers,C., Sabaiduc,S., De Serres,G.,
+            Winter,A.-L., Dickinson,J.A., Gubbay,J., Fonseca,K., Charest,H.,
+            Krajden,M., Petric,M., Mahmud,S.M., Van Caeseele,P., Bastien,N.,
+            Eshaghi,A. and Li,Y.
+  CONSRTM   Canadian Sentinel Physician Surveillance Network (SPSN)
+  TITLE     Direct Submission
+  JOURNAL   Submitted (27-FEB-2015) Clinical Trials, British Columbia Centre for
+            Disease Control, 655 West 12th Ave, Vancouver, BC V5Z 4R4, Canada
+COMMENT     ##Assembly-Data-START##
+            Assembly Method       :: Geneious v. 4.8.5
+            Sequencing Technology :: Sanger dideoxy sequencing
+            ##Assembly-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..1744
+                     /organism="Influenza A virus (A/Ontario/02/2014(H1N1))"
+                     /mol_type="viral cRNA"
+                     /strain="A/Ontario/02/2014"
+                     /serotype="H1N1"
+                     /isolation_source="nasopharyngeal swab"
+                     /host="Homo sapiens"
+                     /db_xref="taxon:1621948"
+                     /segment="4"
+                     /country="Canada: Ontario"
+                     /collection_date="10-Jan-2014"
+     gene            19..1719
+                     /gene="HA"
+     CDS             19..1719
+                     /gene="HA"
+                     /function="receptor binding and fusion protein"
+                     /codon_start=1
+                     /product="hemagglutinin"
+                     /protein_id="AJY54110.1"
+                     /translation="MKAILVVLLYTFATANADTLCIGYHANNSTDTVDTVLEKNVTVTH
+                     SVNLLEDKHNGKLCKLRGVAPLHLGKCNIAGWILGNPECESLSTASSWSYIVETSSSDN
+                     GTCYPGDFINYEELREQLSSVSSFERFEIFPKTSSWPNHDSNKGVTAACPHAGAKSFYK
+                     NLIWLVKKGNSYPKLSQSYINDKGKEVLVLWGIHHPSTTADQQSLYQNADAYVFVGTSR
+                     YSKKFKPEIAIRPKVRDQEGRMNYYWTLVEPGDKITFEATGNLVVPRYAFTMERNAGSG
+                     IIISDTPVHDCNTTCQTPEGAINTSLPFQNIHPITIGKCPKYVKSTKLRLATGLRNIPS
+                     IQSRGLFGAIAGFIEGGWTGMVDGWYGYHHQNEQGSGYAADLKSTQNAIDKITNKVNSV
+                     IEKMNTQFTAVGKEFNHLEKRIENLNKKVDDGFLDIWTYNAELLVLLENERTLDYHDSN
+                     VKNLYEKVRNQLKNNAKEIGNGCFEFYHKCDNTCMESVKNGTYDYPKYSEEAKLNREKI
+                     DGVKLESTRIYQILAIYSTVASSLVLVVSLGAISFWMCSNGSLQCKICI"
+     sig_peptide     19..69
+                     /gene="HA"
+     mat_peptide     70..1050
+                     /gene="HA"
+                     /product="HA1"
+     mat_peptide     1051..1716
+                     /gene="HA"
+                     /product="HA2"
+ORIGIN
+        1 aaaacaaaag caacaaaaat gaaggcaata ctagtagttc tgctatatac atttgcaacc
+       61 gcaaatgcag acactttatg tataggttat catgcgaaca attcaacaga cactgtagac
+      121 acagtactag aaaagaatgt aacagtaaca cactctgtta accttctaga agacaagcat
+      181 aacggtaaac tatgcaaact aagaggggta gccccattgc atttgggtaa atgtaacatt
+      241 gctggctgga tcctgggaaa tccagagtgt gaatcactct ccacagcaag ttcatggtcc
+      301 tacattgtgg aaacatctag ttcagacaat ggaacgtgtt acccaggaga tttcatcaat
+      361 tatgaggagc taagagagca attgagctca gtgtcatcat ttgaaaggtt tgagatattc
+      421 cccaagacaa gttcatggcc caatcatgac tcgaacaaag gtgtaacggc agcatgtcct
+      481 cacgctggag caaaaagctt ctacaaaaat ttaatatggc tagttaaaaa aggaaattca
+      541 tacccaaagc tcagtcaatc ctacattaat gataaaggga aagaagtcct cgtgctgtgg
+      601 ggcattcacc atccatctac tactgctgac caacaaagtc tctatcagaa tgcagatgca
+      661 tatgtttttg tggggacatc aagatacagc aagaagttca agccggaaat agcaataaga
+      721 cccaaagtga gggatcaaga agggagaatg aactattact ggacactagt agagccggga
+      781 gacaaaataa cattcgaagc aactggaaat ctagtggtac cgagatatgc attcacaatg
+      841 gaaagaaatg ctggatctgg tattatcatt tcagatacac cagtccacga ttgcaataca
+      901 acttgtcaga cacccgaggg tgctataaac accagcctcc catttcagaa tatacatccg
+      961 atcacaattg gaaaatgtcc aaagtatgta aaaagcacaa aattgagact ggcaacagga
+     1021 ttgaggaata taccgtctat tcaatctaga ggcctattcg gggccattgc cggcttcatt
+     1081 gaaggggggt ggacagggat ggtggatgga tggtacggtt atcaccatca aaatgagcag
+     1141 gggtcaggat atgcagccga cctgaagagc acacaaaatg ccattgacaa gattactaac
+     1201 aaagtaaact ctgttattga aaagatgaat acacagttca cagcagtggg taaagagttc
+     1261 aaccacctgg aaaaaagaat tgagaattta aataaaaaag ttgatgatgg tttcctggac
+     1321 atttggactt acaatgccga actgttggtt ctattggaaa atgaaagaac tttggactac
+     1381 cacgattcaa atgtgaagaa cttgtatgaa aaggtaagaa accagttaaa aaacaatgcc
+     1441 aaggaaattg gaaacggctg ctttgaattt taccacaaat gcgataacac gtgcatggaa
+     1501 agtgtcaaaa atgggactta tgactaccca aaatactcag aggaagcaaa attaaacaga
+     1561 gaaaaaatag atggggtaaa gctggaatca acaaggattt accagatttt ggcgatctat
+     1621 tcaactgtcg ccagttcatt ggtactggta gtctccctgg gggcaatcag cttctggatg
+     1681 tgctctaatg ggtctctaca gtgtaaaata tgtatttaac attaggattt cagaagcatg
+     1741 aaaa
+//
+LOCUS       KJ406387                1745 bp    cRNA    linear   VRL 02-MAR-2014
+DEFINITION  Influenza A virus (A/Ontario/56/2013(H1N1)) segment 4 hemagglutinin
+            (HA) gene, complete cds.
+ACCESSION   KJ406387
+VERSION     KJ406387.1
+KEYWORDS    .
+SOURCE      Influenza A virus (A/Ontario/56/2013(H1N1))
+  ORGANISM  Influenza A virus (A/Ontario/56/2013(H1N1))
+            Viruses; ssRNA viruses; ssRNA negative-strand viruses;
+            Orthomyxoviridae; Influenzavirus A.
+REFERENCE   1  (bases 1 to 1745)
+  AUTHORS   Skowronski,D., Chambers,C., Sabaiduc,S., De Serres,G., Dickinson,J.,
+            Winter,A., Fonseca,K., Gubbay,J., Charest,H., Petric,M., Krajden,M.,
+            Mahmud,S., Van Caeseele,P., Kwindt,T., Eshaghi,A., Bastien,N. and
+            Li,Y.
+  TITLE     Interim estimates of 2013/14 vaccine effectiveness against influenza
+            A(H1N1)pdm09 from Canada s sentinel surveillance network, January
+            2014
+  JOURNAL   Euro Surveill. 19 (5) (2014)
+   PUBMED   24524234
+  REMARK    Publication Status: Online-Only
+REFERENCE   2  (bases 1 to 1745)
+  AUTHORS   Skowronski,D.M., Chambers,C., Sabaiduc,S., De Serres,G.,
+            Dickinson,J.A., Winter,A.-L., Fonseca,K., Gubbay,J.B., Charest,H.,
+            Petric,M., Krajden,M., Mahmud,S.M., Van Caeseele,P., Kwindt,T.L.,
+            Eshaghi,A., Bastien,N. and Li,Y.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (04-FEB-2014) Molecular Diagnostics, Public Health
+            Ontario, 81 Resources, Toronto, ON M9P3T1, Canada
+COMMENT     ##Assembly-Data-START##
+            Sequencing Technology :: Sanger dideoxy sequencing
+            ##Assembly-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..1745
+                     /organism="Influenza A virus (A/Ontario/56/2013(H1N1))"
+                     /mol_type="viral cRNA"
+                     /strain="A/Ontario/56/2013"
+                     /serotype="H1N1"
+                     /isolation_source="nasal"
+                     /host="Homo sapiens"
+                     /db_xref="taxon:1458530"
+                     /segment="4"
+                     /country="Canada: Ontario"
+                     /collection_date="10-Dec-2013"
+                     /note="lineage: swl"
+     gene            1..1701
+                     /gene="HA"
+     CDS             1..1701
+                     /gene="HA"
+                     /function="receptor binding and fusion protein"
+                     /codon_start=1
+                     /product="hemagglutinin"
+                     /protein_id="AHK10718.1"
+                     /translation="MKAILVVLLYTFATANADTLCIGYHANNSTDTVDTVLEKNVTVTH
+                     SVNLLEDKHNGKLCKLRGVAPLHLGKCNIAGWILGNPECESLSTASSWSYIVETSSSDN
+                     GTCYPGDFINYEELREQLSSVSSFERFEIFPKTSSWPNHDSNKGVTAACPHAGAKSFYK
+                     NLIWLVKKGNSYPKLSQSYINDKGKEVLVLWGIHHPSTTADQQSLYQNADAYVFVGTSR
+                     YSKKFKPEIAIRPKVRDQEGRMNYYWTLVEPGDKITFEATGNLVVPRYAFTMERNAGSG
+                     IIISDTPVHDCNTTCQTPEGAINTSLPFQNIHPITIGKCPKYVKSTKLRLATGLRNIPS
+                     IQSRGLFGAIAGFIEGGWTGMVDGWYGYHHQNEQGSGYAADLKSTQNAIDKITNKVNSV
+                     IEKMNTQFTAVGKEFNHLEKRIENLNKKVDDGFLDIWTYNAELLVLLENERTLDYHDSN
+                     VKNLYEKVRNQLKNNAKEIGNGCFEFYHKCDNTCMESVKNGTYDYPKYSEEAKLNREKI
+                     DGVKLESTRIYQILAIYSTVASSLVLVVSLGAISFWMCSNGSLQCRICI"
+     mat_peptide     52..1032
+                     /gene="HA"
+                     /product="HA1"
+     mat_peptide     1033..1698
+                     /gene="HA"
+                     /product="HA2"
+ORIGIN
+        1 atgaaggcaa tactagtagt tctgctatat acatttgcaa ccgcaaatgc agacacttta
+       61 tgtataggtt atcatgcgaa caattcaaca gacactgtag acacagtact agaaaagaat
+      121 gtaacagtaa cacactctgt taaccttcta gaagacaagc ataacggtaa actatgcaaa
+      181 ctaagagggg tagccccatt gcatttgggt aaatgtaaca ttgctggctg gatcctggga
+      241 aatccagagt gtgaatcact ctccacagca agttcatggt cctacattgt ggaaacatct
+      301 agttcagaca atggaacgtg ttacccagga gatttcatca attatgagga gctaagagag
+      361 caattgagct cagtgtcatc atttgaaagg tttgagatat tccccaagac aagttcatgg
+      421 cccaatcatg actcgaacaa aggtgtaacg gcagcatgtc ctcacgctgg agcaaaaagc
+      481 ttctacaaaa atttaatatg gctagttaaa aaaggaaatt catacccaaa gctcagtcaa
+      541 tcctacatta atgataaagg gaaagaagtc ctcgtgctgt ggggcattca ccatccatct
+      601 actactgctg accaacaaag tctctatcag aatgcagatg catatgtttt tgtggggaca
+      661 tcaagataca gcaagaagtt caagccggaa atagcaataa gacccaaagt gagggatcaa
+      721 gaagggagaa tgaactatta ctggacacta gtagagccgg gagacaaaat aacattcgaa
+      781 gcaactggaa atctagtggt accgagatat gcattcacaa tggaaagaaa tgctggatct
+      841 ggtattatca tttcagatac accagtccac gattgcaata caacttgtca gacacccgag
+      901 ggtgctataa acaccagcct cccatttcag aatatacatc cgatcacaat tggaaaatgt
+      961 ccaaagtatg taaaaagcac aaaattgaga ctggcaacag gattgaggaa tataccgtct
+     1021 attcaatcta gaggcctatt cggggccatt gccggcttca ttgaaggggg gtggacaggg
+     1081 atggtagatg gatggtacgg ttatcaccat caaaatgagc aggggtcagg atatgcagcc
+     1141 gacctgaaga gcacacaaaa tgccattgac aagattacta acaaagtaaa ctctgttatt
+     1201 gaaaagatga atacacagtt cacagcagtg ggtaaagagt tcaaccacct ggaaaaaaga
+     1261 attgagaatt taaataaaaa agttgatgat ggtttcctgg acatttggac ttacaatgcc
+     1321 gaactgttgg ttctattgga aaatgaaaga actttggact accacgattc aaatgtgaag
+     1381 aacttgtatg aaaaggtaag aaaccagtta aaaaacaatg ccaaggaaat tggaaacggc
+     1441 tgctttgaat tttaccacaa atgcgataac acgtgcatgg aaagtgtcaa aaatgggact
+     1501 tatgactacc caaaatactc agaggaagca aaattaaaca gagaaaaaat agatggggta
+     1561 aagctggaat caacaaggat ttaccagatt ttggcgatct attcaactgt cgccagttca
+     1621 ttggtactgg tagtctccct gggggcaatc agcttctgga tgtgctctaa tgggtctcta
+     1681 cagtgtagaa tatgtattta acattaggat ttcagaagca tgagaaaaac acccttgttt
+     1741 ctact
+//
+LOCUS       KJ406385                1745 bp    cRNA    linear   VRL 02-MAR-2014
+DEFINITION  Influenza A virus (A/Ontario/53/2013(H1N1)) segment 4 hemagglutinin
+            (HA) gene, complete cds.
+ACCESSION   KJ406385
+VERSION     KJ406385.1
+KEYWORDS    .
+SOURCE      Influenza A virus (A/Ontario/53/2013(H1N1))
+  ORGANISM  Influenza A virus (A/Ontario/53/2013(H1N1))
+            Viruses; ssRNA viruses; ssRNA negative-strand viruses;
+            Orthomyxoviridae; Influenzavirus A.
+REFERENCE   1  (bases 1 to 1745)
+  AUTHORS   Skowronski,D., Chambers,C., Sabaiduc,S., De Serres,G., Dickinson,J.,
+            Winter,A., Fonseca,K., Gubbay,J., Charest,H., Petric,M., Krajden,M.,
+            Mahmud,S., Van Caeseele,P., Kwindt,T., Eshaghi,A., Bastien,N. and
+            Li,Y.
+  TITLE     Interim estimates of 2013/14 vaccine effectiveness against influenza
+            A(H1N1)pdm09 from Canada s sentinel surveillance network, January
+            2014
+  JOURNAL   Euro Surveill. 19 (5) (2014)
+   PUBMED   24524234
+  REMARK    Publication Status: Online-Only
+REFERENCE   2  (bases 1 to 1745)
+  AUTHORS   Skowronski,D.M., Chambers,C., Sabaiduc,S., De Serres,G.,
+            Dickinson,J.A., Winter,A.-L., Fonseca,K., Gubbay,J.B., Charest,H.,
+            Petric,M., Krajden,M., Mahmud,S.M., Van Caeseele,P., Kwindt,T.L.,
+            Eshaghi,A., Bastien,N. and Li,Y.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (04-FEB-2014) Molecular Diagnostics, Public Health
+            Ontario, 81 Resources, Toronto, ON M9P3T1, Canada
+COMMENT     ##Assembly-Data-START##
+            Sequencing Technology :: Sanger dideoxy sequencing
+            ##Assembly-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..1745
+                     /organism="Influenza A virus (A/Ontario/53/2013(H1N1))"
+                     /mol_type="viral cRNA"
+                     /strain="A/Ontario/53/2013"
+                     /serotype="H1N1"
+                     /isolation_source="NPS"
+                     /host="Homo sapiens"
+                     /db_xref="taxon:1458527"
+                     /segment="4"
+                     /country="Canada: Ontario"
+                     /collection_date="09-Dec-2013"
+                     /note="lineage: swl"
+     gene            1..1701
+                     /gene="HA"
+     CDS             1..1701
+                     /gene="HA"
+                     /function="receptor binding and fusion protein"
+                     /codon_start=1
+                     /product="hemagglutinin"
+                     /protein_id="AHK10716.1"
+                     /translation="MKAILVVLLYTFATANADTLCIGYHANNSTDTVDTVLEKNVTVTH
+                     SVNLLEDKHNGKLCKLRGVAPLHLGKCNIAGWILGNPECESLSTASSWSYIVETSSSDN
+                     GTCYPGDFINYEELREQLSSVSSFERFEIFPKTSSWPNHDSNKGVTAACPHAGAKSFYK
+                     NLIWLVKKGNSYPKLSQSYINDKGKEVLVLWGIHHPSTTADQQSLYQNADAYVFVGTSR
+                     YSKKFKPEIAIRPKVRDQEGRMNYYWTLVEPGDKITFEATGNLVVPRYAFTMERNAGSG
+                     IIISDTPVHDCNTTCQTPEGAINTSLPFQNIHPITIGKCPKYVKSTKLRLATGLRNIPS
+                     IQSRGLFGAIAGFIEGGWTGMVDGWYGYHHQNEQGSGYAADLKSTQNAIDKITNKVNSV
+                     IEKMNTQFTAVGKEFNHLEKRIENLNKKVDDGFLDIWTYNAELLVLLENERTLDYHDSN
+                     VKNLYEKVRNQLKNNAKEIGNGCFEFYHKCDNTCMESVKNGTYDYPKYSEEAKLNREKI
+                     DGVKLESTRIYQILAIYSTVASSLVLVVSLGAISFWMCSNGSLQCRICI"
+     mat_peptide     52..1032
+                     /gene="HA"
+                     /product="HA1"
+     mat_peptide     1033..1698
+                     /gene="HA"
+                     /product="HA2"
+ORIGIN
+        1 atgaaggcaa tactagtagt tctgctatat acatttgcaa ccgcaaatgc agacacttta
+       61 tgtataggtt atcatgcgaa caattcaaca gacactgtag acacagtact agaaaagaat
+      121 gtaacagtaa cacactctgt taaccttcta gaagacaagc ataacggtaa actatgcaaa
+      181 ctaagagggg tagccccatt gcatttgggt aaatgtaaca ttgctggctg gatcctggga
+      241 aatccagagt gtgaatcact ctccacagca agttcatggt cctacattgt ggaaacatct
+      301 agttcagaca atggaacgtg ttacccagga gatttcatca attatgagga gctaagagag
+      361 caattgagct cagtgtcatc atttgaaagg tttgagatat tccccaagac aagttcatgg
+      421 cccaatcatg actcgaacaa aggtgtaacg gcagcatgtc ctcacgctgg agcaaaaagc
+      481 ttctacaaaa atttaatatg gctagttaaa aaaggaaatt catacccaaa gctcagtcaa
+      541 tcctacatta atgataaagg gaaagaagtc ctcgtgctgt ggggcattca ccatccatct
+      601 actactgctg accaacaaag tctctatcag aatgcagatg catatgtttt tgtggggaca
+      661 tcaagataca gcaagaagtt caagccggaa atagcaataa gacccaaagt gagggatcaa
+      721 gaagggagaa tgaactatta ctggacacta gtagagccgg gagacaaaat aacattcgaa
+      781 gcaactggaa atctagtggt accgagatat gcattcacaa tggaaagaaa tgctggatct
+      841 ggtattatca tttcagatac accagtccac gattgcaata caacttgtca gacacccgag
+      901 ggtgctataa acaccagcct cccatttcag aatatacatc cgatcacaat tggaaaatgt
+      961 ccaaagtatg taaaaagcac aaaattgaga ctggcaacag gattgaggaa tataccgtct
+     1021 attcaatcta gaggcctatt cggggccatt gccggcttca ttgaaggggg gtggacaggg
+     1081 atggtagatg gatggtacgg ttatcaccat caaaatgagc aggggtcagg atatgcagcc
+     1141 gacctgaaga gcacacaaaa tgccattgac aagattacta acaaagtaaa ctctgttatt
+     1201 gaaaagatga atacacagtt cacagcagtg ggtaaagagt tcaaccacct ggaaaaaaga
+     1261 attgagaatt taaataaaaa agttgatgat ggtttcctgg acatttggac ttacaatgcc
+     1321 gaactgttgg ttctattgga aaatgaaaga actttggact accacgattc aaatgtgaag
+     1381 aacttgtatg aaaaggtaag aaaccagtta aaaaacaatg ccaaggaaat tggaaacggc
+     1441 tgctttgaat tttaccacaa atgcgataac acgtgcatgg aaagtgtcaa aaatgggact
+     1501 tatgactacc caaaatactc agaggaagca aaattaaaca gagaaaaaat agatggggta
+     1561 aagctggaat caacaaggat ttaccagatt ttggcgatct attcaactgt cgccagttca
+     1621 ttggtactgg tagtctccct gggggcaatc agcttctgga tgtgctctaa tgggtctcta
+     1681 cagtgtagaa tatgtattta acattaggat ttcagaagca tgagaaaaac acccttgttt
+     1741 ctact
+//
+LOCUS       KJ406384                1745 bp    cRNA    linear   VRL 02-MAR-2014
+DEFINITION  Influenza A virus (A/Ontario/52/2013(H1N1)) segment 4 hemagglutinin
+            (HA) gene, complete cds.
+ACCESSION   KJ406384
+VERSION     KJ406384.1
+KEYWORDS    .
+SOURCE      Influenza A virus (A/Ontario/52/2013(H1N1))
+  ORGANISM  Influenza A virus (A/Ontario/52/2013(H1N1))
+            Viruses; ssRNA viruses; ssRNA negative-strand viruses;
+            Orthomyxoviridae; Influenzavirus A.
+REFERENCE   1  (bases 1 to 1745)
+  AUTHORS   Skowronski,D., Chambers,C., Sabaiduc,S., De Serres,G., Dickinson,J.,
+            Winter,A., Fonseca,K., Gubbay,J., Charest,H., Petric,M., Krajden,M.,
+            Mahmud,S., Van Caeseele,P., Kwindt,T., Eshaghi,A., Bastien,N. and
+            Li,Y.
+  TITLE     Interim estimates of 2013/14 vaccine effectiveness against influenza
+            A(H1N1)pdm09 from Canada s sentinel surveillance network, January
+            2014
+  JOURNAL   Euro Surveill. 19 (5) (2014)
+   PUBMED   24524234
+  REMARK    Publication Status: Online-Only
+REFERENCE   2  (bases 1 to 1745)
+  AUTHORS   Skowronski,D.M., Chambers,C., Sabaiduc,S., De Serres,G.,
+            Dickinson,J.A., Winter,A.-L., Fonseca,K., Gubbay,J.B., Charest,H.,
+            Petric,M., Krajden,M., Mahmud,S.M., Van Caeseele,P., Kwindt,T.L.,
+            Eshaghi,A., Bastien,N. and Li,Y.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (04-FEB-2014) Molecular Diagnostics, Public Health
+            Ontario, 81 Resources, Toronto, ON M9P3T1, Canada
+COMMENT     ##Assembly-Data-START##
+            Sequencing Technology :: Sanger dideoxy sequencing
+            ##Assembly-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..1745
+                     /organism="Influenza A virus (A/Ontario/52/2013(H1N1))"
+                     /mol_type="viral cRNA"
+                     /strain="A/Ontario/52/2013"
+                     /serotype="H1N1"
+                     /isolation_source="NPS"
+                     /host="Homo sapiens"
+                     /db_xref="taxon:1458526"
+                     /segment="4"
+                     /country="Canada: Ontario"
+                     /collection_date="09-Dec-2013"
+                     /note="lineage: swl"
+     gene            1..1701
+                     /gene="HA"
+     CDS             1..1701
+                     /gene="HA"
+                     /function="receptor binding and fusion protein"
+                     /codon_start=1
+                     /product="hemagglutinin"
+                     /protein_id="AHK10715.1"
+                     /translation="MKAILVVLLYTFATANADTLCIGYHANNSTDTVDTVLEKNVTVTH
+                     SVNLLEDKHNGKLCKLRGVAPLHLGKCNIAGWILGNPECESLSTASSWSYIVETSSSDN
+                     GTCYPGDFINYEELREQLSSVSSFERFEIFPKTSSWPNHDSNKGVTAACPHAGAKSFYK
+                     NLIWLVKKGNSYPKLSQSYINDKGKEVLVLWGIHHPSTTADQQSLYQNADAYVFVGTSR
+                     YSKKFKPEIAIRPKVRDQEGRMNYYWTLVEPGDKITFEATGNLVVPRYAFTMERNAGSG
+                     IIISDTPVHDCNTTCQTPEGAINTSLPFQNIHPITIGKCPKYVKSTKLRLATGLRNVPS
+                     IQSRGLFGAIAGFIEGGWTGMVDGWYGYHHQNEQGSGYAADLKSTQNAIDKITNKVNSV
+                     IEKMNTQFTAVGKEFNHLEKRIENLNKKVDDGFLDIWTYNAELLVLLENERTLDYHDSN
+                     VKNLYEKVRNQLKNNAKEIGNGCFEFYHKCDNTCMESVKNGTYDYPKYSEEAKLNREKI
+                     DGVKLESTRIYQILAIYSTVASSLVLVVSLGAISFWMCSNGSLQCRICI"
+     mat_peptide     52..1032
+                     /gene="HA"
+                     /product="HA1"
+     mat_peptide     1033..1698
+                     /gene="HA"
+                     /product="HA2"
+ORIGIN
+        1 atgaaggcaa tactagtagt tctgctatat acatttgcaa ccgcaaatgc agacacatta
+       61 tgtataggtt atcatgcgaa caattcaaca gacactgtag acacagtact agaaaagaat
+      121 gtaacagtaa cacactctgt taaccttcta gaagacaagc ataacgggaa actatgcaaa
+      181 ctaagagggg tagccccatt gcatttgggt aaatgtaaca ttgctggctg gatcctggga
+      241 aatccagagt gtgaatcact ctccacagca agttcatggt cctacattgt ggaaacatct
+      301 agttcagaca atggaacgtg ttacccagga gatttcatca attatgagga gctaagagag
+      361 caattgagct cagtgtcatc atttgaaagg tttgagatat tccccaagac aagttcatgg
+      421 cccaatcatg actcgaacaa aggtgtaacg gcagcatgtc ctcacgctgg agcaaaaagc
+      481 ttctacaaaa atttaatatg gctagttaaa aaaggaaatt catacccaaa gctcagccaa
+      541 tcctacatta atgataaagg gaaagaagtc ctcgtgctgt ggggcattca ccatccatct
+      601 actactgctg accaacaaag tctctatcag aatgcagatg catatgtttt tgtggggaca
+      661 tcaagataca gcaagaagtt caagccggaa atagcaataa gacccaaagt gagggatcaa
+      721 gaagggagaa tgaactatta ctggacacta gtagagccgg gagacaaaat aacattcgaa
+      781 gcaactggaa atctagtggt accgagatat gcattcacaa tggaaagaaa tgctggatct
+      841 ggtattatca tttcagatac accagtccac gattgcaata caacttgtca gacacccgag
+      901 ggtgctataa acaccagcct cccatttcag aatatacatc cgatcacaat tggaaaatgt
+      961 ccaaagtatg taaaaagcac aaaattgaga ctggccacag gattgaggaa tgtcccgtct
+     1021 attcaatcta gaggcctatt cggggccatt gccggcttca ttgaaggggg gtggacaggg
+     1081 atggtagatg gatggtacgg ttatcaccat caaaatgagc aggggtcagg atatgcagcc
+     1141 gacctgaaga gcacacaaaa tgccattgac aagattacta acaaagtaaa ttctgttatt
+     1201 gaaaagatga atacacagtt cacagcagtg ggtaaagagt tcaaccacct ggaaaaaaga
+     1261 atagagaatt taaataaaaa agttgatgat ggtttcctgg acatttggac ttacaatgcc
+     1321 gaactgttgg ttctattgga aaatgaaaga actttggact accacgattc aaatgtgaag
+     1381 aacttgtatg aaaaggtaag aaaccagtta aaaaacaatg ccaaggaaat tggaaacggc
+     1441 tgctttgaat tttaccacaa atgcgataac acgtgcatgg aaagtgtcaa aaatgggact
+     1501 tatgactacc caaaatactc agaggaagca aaattaaaca gagaaaaaat agatggggta
+     1561 aagctggaat caacaaggat ttaccagatt ttggcgatct attcaactgt cgccagttca
+     1621 ttggtactgg tagtctccct gggggcaatc agcttctgga tgtgctctaa tgggtctcta
+     1681 cagtgtagaa tatgtattta acattaggat ttcagaagca tgagaaaaac acccttgttt
+     1741 ctact
+//
+LOCUS       KJ406386                1745 bp    cRNA    linear   VRL 02-MAR-2014
+DEFINITION  Influenza A virus (A/Ontario/55/2013(H1N1)) segment 4 hemagglutinin
+            (HA) gene, complete cds.
+ACCESSION   KJ406386
+VERSION     KJ406386.1
+KEYWORDS    .
+SOURCE      Influenza A virus (A/Ontario/55/2013(H1N1))
+  ORGANISM  Influenza A virus (A/Ontario/55/2013(H1N1))
+            Viruses; ssRNA viruses; ssRNA negative-strand viruses;
+            Orthomyxoviridae; Influenzavirus A.
+REFERENCE   1  (bases 1 to 1745)
+  AUTHORS   Skowronski,D., Chambers,C., Sabaiduc,S., De Serres,G., Dickinson,J.,
+            Winter,A., Fonseca,K., Gubbay,J., Charest,H., Petric,M., Krajden,M.,
+            Mahmud,S., Van Caeseele,P., Kwindt,T., Eshaghi,A., Bastien,N. and
+            Li,Y.
+  TITLE     Interim estimates of 2013/14 vaccine effectiveness against influenza
+            A(H1N1)pdm09 from Canada s sentinel surveillance network, January
+            2014
+  JOURNAL   Euro Surveill. 19 (5) (2014)
+   PUBMED   24524234
+  REMARK    Publication Status: Online-Only
+REFERENCE   2  (bases 1 to 1745)
+  AUTHORS   Skowronski,D.M., Chambers,C., Sabaiduc,S., De Serres,G.,
+            Dickinson,J.A., Winter,A.-L., Fonseca,K., Gubbay,J.B., Charest,H.,
+            Petric,M., Krajden,M., Mahmud,S.M., Van Caeseele,P., Kwindt,T.L.,
+            Eshaghi,A., Bastien,N. and Li,Y.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (04-FEB-2014) Molecular Diagnostics, Public Health
+            Ontario, 81 Resources, Toronto, ON M9P3T1, Canada
+COMMENT     ##Assembly-Data-START##
+            Sequencing Technology :: Sanger dideoxy sequencing
+            ##Assembly-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..1745
+                     /organism="Influenza A virus (A/Ontario/55/2013(H1N1))"
+                     /mol_type="viral cRNA"
+                     /strain="A/Ontario/55/2013"
+                     /serotype="H1N1"
+                     /isolation_source="nasal"
+                     /host="Homo sapiens"
+                     /db_xref="taxon:1458529"
+                     /segment="4"
+                     /country="Canada: Ontario"
+                     /collection_date="07-Dec-2013"
+                     /note="lineage: swl"
+     gene            1..1701
+                     /gene="HA"
+     CDS             1..1701
+                     /gene="HA"
+                     /function="receptor binding and fusion protein"
+                     /codon_start=1
+                     /product="hemagglutinin"
+                     /protein_id="AHK10717.1"
+                     /translation="MKAILVVLLYTFATANADTLCIGYHANNSTDTVDTVLEKNVTVTH
+                     SVNLLEDKHNGKLCKLRGVAPLHLGKCNIAGWILGNPECESLSTASSWSYIVETSSSDN
+                     GTCYPGDFINYEELREQLSSVSSFERFEIFPKTSSWPNHDSNKGVTAACPHAGAKSFYK
+                     NLIWLVKKGNSYPKLSQSYINDKGKEVLVLWGIHHPSTTADQQSLYQNADAYVFVGTSR
+                     YSKKFKPEIAIRPKVRDQEGRMNYYWTLVEPGDKITFEATGNLVVPRYAFTMERNAGSG
+                     IIISDTPVHDCNTTCQTPEGAINTSLPFQNIHPITIGKCPKYVKSTKLRLATGLRNIPS
+                     IQSRGLFGAIAGFIEGGWTGMVDGWYGYHHQNEQGSGYAADLKSTQNAIDKITNKVNSV
+                     IEKMNTQFTAVGKEFNHLEKRIENLNKKVDDGFLDIWTYNAELLVLLENERTLDYHDSN
+                     VKNLYEKVRNQLKNNAKEIGNGCFEFYHKCDNTCMESVKNGTYDYPKYSEEAKLNREKI
+                     DGVKLESTRIYQILAIYSTVASSLVLVVSLGAISFWMCSNGSLQCRICI"
+     mat_peptide     52..1032
+                     /gene="HA"
+                     /product="HA1"
+     mat_peptide     1033..1698
+                     /gene="HA"
+                     /product="HA2"
+ORIGIN
+        1 atgaaggcaa tactagtagt tctgctatat acatttgcaa ccgcaaatgc agacacttta
+       61 tgtataggtt atcatgcgaa caattcaaca gacactgtag acacagtact agaaaagaat
+      121 gtaacagtaa cacactctgt taaccttcta gaagacaagc ataacggtaa actatgcaaa
+      181 ctaagagggg tagccccatt gcatttgggt aaatgtaaca ttgctggctg gatcctggga
+      241 aatccagagt gtgaatcact ctccacagca agttcatggt cctacattgt ggaaacatct
+      301 agttcagaca atggaacgtg ttacccagga gatttcatca attatgagga gctaagagag
+      361 caattgagct cagtgtcatc atttgaaagg tttgagatat tccccaagac aagttcatgg
+      421 cccaatcatg actcgaacaa aggtgtaacg gcagcatgtc ctcacgctgg agcaaaaagc
+      481 ttctacaaaa atttaatatg gctagttaaa aaaggaaatt catacccaaa gctcagtcaa
+      541 tcctacatta atgataaagg gaaagaagtc ctcgtgctgt ggggcattca ccatccatct
+      601 actactgctg accaacaaag tctctatcag aatgcagatg catatgtttt tgtggggaca
+      661 tcaagataca gcaagaagtt caagccggaa atagcaataa gacccaaagt gagggatcaa
+      721 gaagggagaa tgaactatta ctggacacta gtagagccgg gagacaaaat aacattcgaa
+      781 gcaactggaa atctagtggt accgagatat gcattcacaa tggaaagaaa tgctggatct
+      841 ggtattatca tttcagatac accagtccac gattgcaata caacttgtca gacacccgag
+      901 ggtgctataa acaccagcct cccatttcag aatatacatc cgatcacaat tggaaaatgt
+      961 ccaaagtatg taaaaagcac aaaattgaga ctggcaacag gattgaggaa tataccgtct
+     1021 attcaatcta gaggcctatt cggggccatt gccggcttca ttgaaggggg gtggacaggg
+     1081 atggtagatg gatggtacgg ttatcaccat caaaatgagc aggggtcagg atatgcagcc
+     1141 gacctgaaga gcacacaaaa tgccattgac aagattacta acaaagtaaa ctctgttatt
+     1201 gaaaagatga atacacagtt cacagcagtg ggtaaagagt tcaaccacct ggaaaaaaga
+     1261 attgagaatt taaataaaaa agttgatgat ggtttcctgg acatttggac ttacaatgcc
+     1321 gaactgttgg ttctattgga aaatgaaaga actttggact accacgattc aaatgtgaag
+     1381 aacttgtatg aaaaggtaag aaaccagtta aaaaacaatg ccaaggaaat tggaaacggc
+     1441 tgctttgaat tttaccacaa atgcgataac acgtgcatgg aaagtgtcaa aaatgggact
+     1501 tatgactacc caaaatactc agaggaagca aaattaaaca gagaaaaaat agatggggta
+     1561 aagctggaat caacaaggat ttaccagatt ttggcgatct attcaactgt cgccagttca
+     1621 ttggtactgg tagtctccct gggggcaatc agcttctgga tgtgctctaa tgggtctcta
+     1681 cagtgtagaa tatgtattta acattaggat ttcagaagca tgagaaaaac acccttgttt
+     1741 ctact
+//
+LOCUS       KJ406382                1745 bp    cRNA    linear   VRL 02-MAR-2014
+DEFINITION  Influenza A virus (A/Ontario/51/2013(H1N1)) segment 4 hemagglutinin
+            (HA) gene, complete cds.
+ACCESSION   KJ406382
+VERSION     KJ406382.1
+KEYWORDS    .
+SOURCE      Influenza A virus (A/Ontario/51/2013(H1N1))
+  ORGANISM  Influenza A virus (A/Ontario/51/2013(H1N1))
+            Viruses; ssRNA viruses; ssRNA negative-strand viruses;
+            Orthomyxoviridae; Influenzavirus A.
+REFERENCE   1  (bases 1 to 1745)
+  AUTHORS   Skowronski,D., Chambers,C., Sabaiduc,S., De Serres,G., Dickinson,J.,
+            Winter,A., Fonseca,K., Gubbay,J., Charest,H., Petric,M., Krajden,M.,
+            Mahmud,S., Van Caeseele,P., Kwindt,T., Eshaghi,A., Bastien,N. and
+            Li,Y.
+  TITLE     Interim estimates of 2013/14 vaccine effectiveness against influenza
+            A(H1N1)pdm09 from Canada s sentinel surveillance network, January
+            2014
+  JOURNAL   Euro Surveill. 19 (5) (2014)
+   PUBMED   24524234
+  REMARK    Publication Status: Online-Only
+REFERENCE   2  (bases 1 to 1745)
+  AUTHORS   Skowronski,D.M., Chambers,C., Sabaiduc,S., De Serres,G.,
+            Dickinson,J.A., Winter,A.-L., Fonseca,K., Gubbay,J.B., Charest,H.,
+            Petric,M., Krajden,M., Mahmud,S.M., Van Caeseele,P., Kwindt,T.L.,
+            Eshaghi,A., Bastien,N. and Li,Y.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (04-FEB-2014) Molecular Diagnostics, Public Health
+            Ontario, 81 Resources, Toronto, ON M9P3T1, Canada
+COMMENT     ##Assembly-Data-START##
+            Sequencing Technology :: Sanger dideoxy sequencing
+            ##Assembly-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..1745
+                     /organism="Influenza A virus (A/Ontario/51/2013(H1N1))"
+                     /mol_type="viral cRNA"
+                     /strain="A/Ontario/51/2013"
+                     /serotype="H1N1"
+                     /isolation_source="nasal"
+                     /host="Homo sapiens"
+                     /db_xref="taxon:1458525"
+                     /segment="4"
+                     /country="Canada: Ontario"
+                     /collection_date="06-Dec-2013"
+                     /note="lineage: swl"
+     gene            1..1701
+                     /gene="HA"
+     CDS             1..1701
+                     /gene="HA"
+                     /function="receptor binding and fusion protein"
+                     /codon_start=1
+                     /product="hemagglutinin"
+                     /protein_id="AHK10713.1"
+                     /translation="MKAILVVLLYTFATANADTLCIGYHANNSTDTVDTVLEKNVTVTH
+                     SVNLLEDKHNGKLCKLRGVAPLHLGKCNIAGWILGNPECESLSTASSWSYIVETSSSDN
+                     GTCYPGDFINYEELREQLSSVSSFERFEIFPKTSSWPNHDSNKGVTAACPHAGAKSFYK
+                     NLIWLVKKGNSYPKLSQSYINDKGKEVLVLWGIHHPSTTADQQSLYQNADAYVFVGTSR
+                     YSKKFKPEIAIRPKVRDQEGRMNYYWTLVEPGDKITFEATGNLVVPRYAFTMERNAGSG
+                     IIISDTPVHDCNTTCQTPEGAINTSLPFQNIHPITIGKCPKYVKSTKLRLATGLRNIPS
+                     IQSRGLFGAIAGFIEGGWTGMVDGWYGYHHQNEQGSGYAADLKSTQNAIDKITNKVNSV
+                     IEKMNTQFTAVGKEFNHLEKRIENLNKKVDDGFLDIWTYNAELLVLLENERTLDYHDSN
+                     VKNLYEKVRNQLKNNAKEIGNGCFEFYHKCDNTCMESVKNGTYDYPKYSEEAKLNREKI
+                     DGVKLESTRIYQILAIYSTVASSLVLVVSLGAISFWMCSNGSLQCRICI"
+     mat_peptide     52..1032
+                     /gene="HA"
+                     /product="HA1"
+     mat_peptide     1033..1698
+                     /gene="HA"
+                     /product="HA2"
+ORIGIN
+        1 atgaaggcaa tactagtagt tctgctatat acatttgcaa ccgcaaatgc agacacttta
+       61 tgtataggtt atcatgcgaa caattcaaca gacactgtag acacagtact agaaaagaat
+      121 gtaacagtaa cacactctgt taaccttcta gaagacaagc ataacggtaa actatgcaaa
+      181 ctaagagggg tagccccatt gcatttgggt aaatgtaaca ttgctggctg gatcctggga
+      241 aatccagagt gtgaatcact ctccacagca agttcatggt cctacattgt ggaaacatct
+      301 agttcagaca atggaacgtg ttacccagga gatttcatca attatgagga gctaagagag
+      361 caattgagct cagtgtcatc atttgaaagg tttgagatat tccccaagac aagttcatgg
+      421 cccaatcatg actcgaacaa aggtgtaacg gcagcatgtc ctcacgctgg agcaaaaagc
+      481 ttctacaaaa atttaatatg gctagttaaa aaaggaaatt catacccaaa gctcagtcaa
+      541 tcctacatta atgataaagg gaaagaagtc ctcgtgctgt ggggcattca ccatccatct
+      601 actactgctg accaacaaag tctctatcag aatgcagatg catatgtttt tgtggggaca
+      661 tcaagataca gcaagaagtt caagccggaa atagcaataa gacccaaagt gagggatcaa
+      721 gaagggagaa tgaactatta ctggacacta gtagagccgg gagacaaaat aacattcgaa
+      781 gcaactggaa atctagtggt accgagatat gcattcacaa tggaaagaaa tgctggatct
+      841 ggtattatca tttcagatac accagtccac gattgcaata caacttgtca gacacccgag
+      901 ggtgctataa acaccagcct cccatttcag aatatacatc cgatcacaat tggaaaatgt
+      961 ccaaagtatg taaaaagcac aaaattgaga ctggcaacag gattgaggaa tatcccgtct
+     1021 attcaatcta gaggcctatt cggggccatt gccggcttca ttgaaggggg gtggacaggg
+     1081 atggtagatg gatggtacgg ttatcaccat caaaatgagc aggggtcagg atatgcagcc
+     1141 gacctgaaga gcacacaaaa tgccattgac aagattacta acaaagtaaa ctctgttatt
+     1201 gaaaagatga atacacagtt cacagcagtg ggtaaagagt tcaaccacct ggaaaaaaga
+     1261 atagagaatt taaataaaaa agttgatgat ggtttcctgg acatttggac ttacaatgcc
+     1321 gaactgttgg ttctattgga aaatgaaaga actttggact accacgattc aaatgtgaag
+     1381 aacttgtatg aaaaggtaag aaaccagtta aaaaacaatg ccaaggaaat tggaaacggc
+     1441 tgctttgaat tttaccacaa atgcgataac acgtgcatgg aaagtgtcaa aaatgggact
+     1501 tatgactacc caaaatactc agaggaagca aaattaaaca gagaaaaaat agatggggta
+     1561 aagctggaat caacaaggat ttaccagatt ttggcgatct attcaactgt cgccagttca
+     1621 ttggtactgg tagtctccct gggggcaatc agcttctgga tgtgctctaa tgggtctcta
+     1681 cagtgtagaa tatgtattta acattaggat ttcagaagca tgagaaaaac acccttgttt
+     1741 ctact
+//
+LOCUS       KJ406380                1745 bp    cRNA    linear   VRL 02-MAR-2014
+DEFINITION  Influenza A virus (A/Ontario/54/2013(H1N1)) segment 4 hemagglutinin
+            (HA) gene, complete cds.
+ACCESSION   KJ406380
+VERSION     KJ406380.1
+KEYWORDS    .
+SOURCE      Influenza A virus (A/Ontario/54/2013(H1N1))
+  ORGANISM  Influenza A virus (A/Ontario/54/2013(H1N1))
+            Viruses; ssRNA viruses; ssRNA negative-strand viruses;
+            Orthomyxoviridae; Influenzavirus A.
+REFERENCE   1  (bases 1 to 1745)
+  AUTHORS   Skowronski,D., Chambers,C., Sabaiduc,S., De Serres,G., Dickinson,J.,
+            Winter,A., Fonseca,K., Gubbay,J., Charest,H., Petric,M., Krajden,M.,
+            Mahmud,S., Van Caeseele,P., Kwindt,T., Eshaghi,A., Bastien,N. and
+            Li,Y.
+  TITLE     Interim estimates of 2013/14 vaccine effectiveness against influenza
+            A(H1N1)pdm09 from Canada s sentinel surveillance network, January
+            2014
+  JOURNAL   Euro Surveill. 19 (5) (2014)
+   PUBMED   24524234
+  REMARK    Publication Status: Online-Only
+REFERENCE   2  (bases 1 to 1745)
+  AUTHORS   Skowronski,D.M., Chambers,C., Sabaiduc,S., De Serres,G.,
+            Dickinson,J.A., Winter,A.-L., Fonseca,K., Gubbay,J.B., Charest,H.,
+            Petric,M., Krajden,M., Mahmud,S.M., Van Caeseele,P., Kwindt,T.L.,
+            Eshaghi,A., Bastien,N. and Li,Y.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (04-FEB-2014) Molecular Diagnostics, Public Health
+            Ontario, 81 Resources, Toronto, ON M9P3T1, Canada
+COMMENT     ##Assembly-Data-START##
+            Sequencing Technology :: Sanger dideoxy sequencing
+            ##Assembly-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..1745
+                     /organism="Influenza A virus (A/Ontario/54/2013(H1N1))"
+                     /mol_type="viral cRNA"
+                     /strain="A/Ontario/54/2013"
+                     /serotype="H1N1"
+                     /isolation_source="NPS"
+                     /host="Homo sapiens"
+                     /db_xref="taxon:1458528"
+                     /segment="4"
+                     /country="Canada: Ontario"
+                     /collection_date="06-Dec-2013"
+                     /note="lineage: swl"
+     gene            1..1701
+                     /gene="HA"
+     CDS             1..1701
+                     /gene="HA"
+                     /function="receptor binding and fusion protein"
+                     /codon_start=1
+                     /product="hemagglutinin"
+                     /protein_id="AHK10711.1"
+                     /translation="MKAILVVLLYTFATANADTLCIGYHANNSTDTVDTVLEKNVTVTH
+                     SVNLLEDKHNGKLCKLKGVAPLHLGKCNIAGWILGNPECESLSTASSWSYIVETSSSDN
+                     GTCYPGDFINYEELREQLSSVSSFERFEIFPKTSSWPNHDSNKGVTAACPHAGAKSFYK
+                     NLIWLVKKGNSYPKLSQSYINDKGKEVLVLWGIHHPSTTADQQSLYQNADAYVFVGTSR
+                     YSKKFKPEIAIRPKVRDQEGRMNYYWTLVEPGDKITFEATGNLVVPRYAFTMERNAGSG
+                     IIISDTPVHDCNTTCQTPEGAINTSLPFQNIHPITIGKCPKYVKSTKLRLATGLRNVPS
+                     IQSRGLFGAIAGFIEGGWTGMVDGWYGYHHQNEQGSGYAADLKSTQNAIDKITNKVNSV
+                     IEKMNTQFTAVGKEFNHLEKRIENLNKKVDDGFLDIWTYNAELLVLLENERTLDYHDSN
+                     VKNLYEKVRNQLKNNAKEIGNGCFEFYHKCDNTCMESVKNGTYDYPKYSEEAKLNREKI
+                     DGVKLESTRIYQILAIYSTVASSLVLVVSLGAISFWMCSNGSLQCRICI"
+     mat_peptide     52..1032
+                     /gene="HA"
+                     /product="HA1"
+     mat_peptide     1033..1698
+                     /gene="HA"
+                     /product="HA2"
+ORIGIN
+        1 atgaaggcaa tactagtagt tctgctatat acatttgcaa ccgcaaatgc agacacatta
+       61 tgtataggtt atcatgcgaa caattcaaca gacactgtag acacagtact agaaaagaat
+      121 gtaacagtaa cacactctgt taaccttcta gaagacaagc ataacgggaa actatgcaaa
+      181 ctaaaagggg tagccccatt gcatttgggt aaatgtaaca ttgctggctg gatcctggga
+      241 aatccagagt gtgaatcact ctccacagca agttcatggt cctacattgt ggaaacatct
+      301 agttcagaca atggaacgtg ttacccagga gatttcatca attatgagga gctaagagag
+      361 caattgagct cagtgtcatc atttgaaagg tttgagatat tccccaagac aagttcatgg
+      421 cccaatcatg actcgaacaa aggtgtaacg gcagcatgtc ctcacgctgg agcaaaaagc
+      481 ttctacaaaa atttaatatg gctagttaaa aaaggaaatt catacccaaa gctcagccaa
+      541 tcctacatta atgataaagg gaaagaagtc ctcgtgctgt ggggcattca ccatccatct
+      601 actactgctg accaacaaag tctctatcag aatgcagatg catatgtttt tgtggggaca
+      661 tcaagataca gcaagaagtt caagccggaa atagcaataa gacccaaagt gagggatcaa
+      721 gaagggagaa tgaactatta ctggacacta gtagagccgg gagacaaaat aacattcgaa
+      781 gcaactggaa atctagtggt accgagatat gcattcacaa tggaaagaaa tgctggatct
+      841 ggtattatca tttcagatac accagtccac gattgcaata caacttgtca gacacccgag
+      901 ggtgctataa acaccagcct cccatttcag aatatacatc cgatcacaat tggaaaatgt
+      961 ccaaagtatg taaaaagcac aaaattaaga ctggccacag gattgaggaa tgtcccgtct
+     1021 attcaatcta gaggcctatt cggggccatt gccggcttca ttgaaggggg gtggacaggg
+     1081 atggtagatg gatggtacgg ttatcaccat caaaatgagc aggggtcagg atatgcagcc
+     1141 gacctgaaga gcacacaaaa tgccattgac aagattacta acaaagtaaa ttctgttatt
+     1201 gaaaagatga atacacagtt cacagcagtg ggtaaagagt tcaaccacct ggaaaaaaga
+     1261 atagagaatt taaataaaaa agttgatgat ggtttcctgg acatttggac ttacaatgcc
+     1321 gaactgttgg ttctattgga aaatgaaaga actttggact accacgattc aaatgtgaag
+     1381 aacttgtatg aaaaggtaag aaaccagtta aaaaacaatg ccaaggaaat tggaaacggc
+     1441 tgctttgaat tttaccacaa atgcgataac acgtgcatgg aaagtgtcaa aaatgggact
+     1501 tatgactacc caaaatactc agaggaagca aaattaaaca gagaaaaaat agatggggta
+     1561 aagctggaat caacaaggat ttaccagatt ttggcgatct attcaactgt cgccagttca
+     1621 ttggtactgg tagtctccct gggggcaatc agcttctgga tgtgctctaa tgggtctcta
+     1681 cagtgtagaa tatgtattta acattaggat ttcagaagca tgagaaaaac acccttgttt
+     1741 ctact
+//
+LOCUS       KJ406379                1745 bp    cRNA    linear   VRL 02-MAR-2014
+DEFINITION  Influenza A virus (A/Ontario/50/2013(H1N1)) segment 4 hemagglutinin
+            (HA) gene, complete cds.
+ACCESSION   KJ406379
+VERSION     KJ406379.1
+KEYWORDS    .
+SOURCE      Influenza A virus (A/Ontario/50/2013(H1N1))
+  ORGANISM  Influenza A virus (A/Ontario/50/2013(H1N1))
+            Viruses; ssRNA viruses; ssRNA negative-strand viruses;
+            Orthomyxoviridae; Influenzavirus A.
+REFERENCE   1  (bases 1 to 1745)
+  AUTHORS   Skowronski,D., Chambers,C., Sabaiduc,S., De Serres,G., Dickinson,J.,
+            Winter,A., Fonseca,K., Gubbay,J., Charest,H., Petric,M., Krajden,M.,
+            Mahmud,S., Van Caeseele,P., Kwindt,T., Eshaghi,A., Bastien,N. and
+            Li,Y.
+  TITLE     Interim estimates of 2013/14 vaccine effectiveness against influenza
+            A(H1N1)pdm09 from Canada s sentinel surveillance network, January
+            2014
+  JOURNAL   Euro Surveill. 19 (5) (2014)
+   PUBMED   24524234
+  REMARK    Publication Status: Online-Only
+REFERENCE   2  (bases 1 to 1745)
+  AUTHORS   Skowronski,D.M., Chambers,C., Sabaiduc,S., De Serres,G.,
+            Dickinson,J.A., Winter,A.-L., Fonseca,K., Gubbay,J.B., Charest,H.,
+            Petric,M., Krajden,M., Mahmud,S.M., Van Caeseele,P., Kwindt,T.L.,
+            Eshaghi,A., Bastien,N. and Li,Y.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (04-FEB-2014) Molecular Diagnostics, Public Health
+            Ontario, 81 Resources, Toronto, ON M9P3T1, Canada
+COMMENT     ##Assembly-Data-START##
+            Sequencing Technology :: Sanger dideoxy sequencing
+            ##Assembly-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..1745
+                     /organism="Influenza A virus (A/Ontario/50/2013(H1N1))"
+                     /mol_type="viral cRNA"
+                     /strain="A/Ontario/50/2013"
+                     /serotype="H1N1"
+                     /isolation_source="NPS"
+                     /host="Homo sapiens"
+                     /db_xref="taxon:1458524"
+                     /segment="4"
+                     /country="Canada: Ontario"
+                     /collection_date="05-Dec-2013"
+                     /note="lineage: swl"
+     gene            1..1701
+                     /gene="HA"
+     CDS             1..1701
+                     /gene="HA"
+                     /function="receptor binding and fusion protein"
+                     /codon_start=1
+                     /product="hemagglutinin"
+                     /protein_id="AHK10710.1"
+                     /translation="MKAILVVLLYTFATANADTLCIGYHANNSTDTVDTVLEKNVTVTH
+                     SVNLLEDKHNGKLCKLRGVAPLHLGKCNIAGWILGNPECESLSTASSWSYIVETSSSDN
+                     GTCYPGDFINYEELREQLSSVSSFERFEIFPKTSSWPNHDSNKGVTAACPHAGAKSFYK
+                     NLIWLVKKGNSYPKLSQSYINDKGKEVLVLWGIHHPSTTADQQSLYQNADAYVFVGTSR
+                     YSKKFKPEIAIRPKVRDQEGRMNYYWTLIEPGDKITFEATGNLVVPRYAFTMERNAGSG
+                     IIISDTPVHDCNTTCQTPEGAINTSLPFQNIHPITIGKCPKYVKSTKLRLATGLRNIPS
+                     IQSRGLFGAIAGFIEGGWTGMVDGWYGYHHQNEQGSGYAADLKSTQNAIDKITNKVNSV
+                     IEKMNTQFTAVGKEFNHLEKRIENLNKKVDDGFLDIWTYNAELLVLLENERTLDYHDSN
+                     VKNLYEKVRNQLKNNAKEIGNGCFEFYHKCDNTCMESVKNGTYDYPKYSEEAKLNREKI
+                     DGVKLESTRIYQILAIYSTVASSLVLVVSLGAISFWMCSNGSLQCRICI"
+     mat_peptide     52..1032
+                     /gene="HA"
+                     /product="HA1"
+     mat_peptide     1033..1698
+                     /gene="HA"
+                     /product="HA2"
+ORIGIN
+        1 atgaaggcaa tactagtagt tctgctatat acatttgcaa ccgcaaatgc agacacttta
+       61 tgtataggtt atcatgcgaa caattcaaca gacactgtag acacagtact agaaaagaat
+      121 gtaacagtaa cacactctgt taaccttcta gaagacaagc ataacggtaa actatgcaaa
+      181 ctaagagggg tagccccatt gcatttgggt aaatgtaaca ttgctggctg gatcctggga
+      241 aatccagagt gtgaatcact ctccacagca agttcatggt cctacattgt ggaaacatct
+      301 agttcagaca atggaacgtg ttacccagga gatttcatca attatgagga gctaagagag
+      361 caattgagct cagtgtcatc atttgaaagg tttgagatat tccccaagac aagttcatgg
+      421 cccaatcatg actcgaacaa aggtgtaacg gcagcatgtc ctcacgctgg agcaaaaagc
+      481 ttctacaaaa atttaatatg gctagttaaa aaaggaaatt catacccaaa gctcagtcaa
+      541 tcctacatta atgataaagg gaaagaagtc ctcgtgctgt ggggcattca ccatccatct
+      601 actactgctg accaacaaag tctctatcag aatgcagatg catatgtttt tgtggggaca
+      661 tcaagataca gcaagaagtt caagccggaa atagcaataa gacccaaagt gagggatcaa
+      721 gaagggagaa tgaactatta ctggacacta atagagccgg gagacaaaat aacattcgaa
+      781 gcaactggaa atctagtggt accgagatat gcattcacaa tggaaagaaa tgctggatct
+      841 ggtattatca tttcagatac accagtccac gattgcaata caacttgtca gacacccgag
+      901 ggtgctataa acaccagcct cccatttcag aatatacatc cgatcacaat tggaaaatgt
+      961 ccaaagtatg taaaaagcac aaaattgaga ctggcaacag gattgaggaa tatcccgtct
+     1021 attcaatcta gaggcctatt cggggccatt gccggcttca ttgaaggggg gtggacaggg
+     1081 atggtagatg gatggtacgg ttatcaccat caaaatgagc aggggtcagg atatgcagcc
+     1141 gacctgaaga gcacacaaaa tgccattgac aagattacta acaaagtaaa ctctgttatt
+     1201 gaaaagatga atacacagtt cacagcagtg ggtaaagagt tcaaccacct ggaaaaaaga
+     1261 attgagaatt taaataaaaa agttgatgat ggtttcctgg acatttggac ttacaatgcc
+     1321 gaactgttgg ttctattgga aaatgaaaga actttggact accacgattc aaatgtgaag
+     1381 aacttgtatg aaaaggtaag aaaccagtta aaaaacaatg ccaaggaaat tggaaacggc
+     1441 tgctttgaat tttaccacaa atgcgataac acgtgcatgg aaagtgtcaa aaatgggact
+     1501 tatgactacc caaaatactc agaggaagca aaattaaaca gagaaaaaat agatggggta
+     1561 aagctggaat caacaaggat ttaccagatt ttggcgatct attcaactgt cgccagttca
+     1621 ttggtactgg tagtctccct gggggcaatc agcttctgga tgtgctctaa tgggtctcta
+     1681 cagtgtagaa tatgtattta acattaggat ttcagaagca tgagaaaaac acccttgttt
+     1741 ctact
+//
+LOCUS       KJ406383                1745 bp    cRNA    linear   VRL 02-MAR-2014
+DEFINITION  Influenza A virus (A/Ontario/49/2013(H1N1)) segment 4 hemagglutinin
+            (HA) gene, complete cds.
+ACCESSION   KJ406383
+VERSION     KJ406383.1
+KEYWORDS    .
+SOURCE      Influenza A virus (A/Ontario/49/2013(H1N1))
+  ORGANISM  Influenza A virus (A/Ontario/49/2013(H1N1))
+            Viruses; ssRNA viruses; ssRNA negative-strand viruses;
+            Orthomyxoviridae; Influenzavirus A.
+REFERENCE   1  (bases 1 to 1745)
+  AUTHORS   Skowronski,D., Chambers,C., Sabaiduc,S., De Serres,G., Dickinson,J.,
+            Winter,A., Fonseca,K., Gubbay,J., Charest,H., Petric,M., Krajden,M.,
+            Mahmud,S., Van Caeseele,P., Kwindt,T., Eshaghi,A., Bastien,N. and
+            Li,Y.
+  TITLE     Interim estimates of 2013/14 vaccine effectiveness against influenza
+            A(H1N1)pdm09 from Canada s sentinel surveillance network, January
+            2014
+  JOURNAL   Euro Surveill. 19 (5) (2014)
+   PUBMED   24524234
+  REMARK    Publication Status: Online-Only
+REFERENCE   2  (bases 1 to 1745)
+  AUTHORS   Skowronski,D.M., Chambers,C., Sabaiduc,S., De Serres,G.,
+            Dickinson,J.A., Winter,A.-L., Fonseca,K., Gubbay,J.B., Charest,H.,
+            Petric,M., Krajden,M., Mahmud,S.M., Van Caeseele,P., Kwindt,T.L.,
+            Eshaghi,A., Bastien,N. and Li,Y.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (04-FEB-2014) Molecular Diagnostics, Public Health
+            Ontario, 81 Resources, Toronto, ON M9P3T1, Canada
+COMMENT     ##Assembly-Data-START##
+            Sequencing Technology :: Sanger dideoxy sequencing
+            ##Assembly-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..1745
+                     /organism="Influenza A virus (A/Ontario/49/2013(H1N1))"
+                     /mol_type="viral cRNA"
+                     /strain="A/Ontario/49/2013"
+                     /serotype="H1N1"
+                     /isolation_source="NPS"
+                     /host="Homo sapiens"
+                     /db_xref="taxon:1458523"
+                     /segment="4"
+                     /country="Canada: Ontario"
+                     /collection_date="04-Dec-2013"
+                     /note="lineage: swl"
+     gene            1..1701
+                     /gene="HA"
+     CDS             1..1701
+                     /gene="HA"
+                     /function="receptor binding and fusion protein"
+                     /codon_start=1
+                     /product="hemagglutinin"
+                     /protein_id="AHK10714.1"
+                     /translation="MKAILVVLLYTFATANADTLCIGYHANNSTDTVDTVLEKNVTVTH
+                     SVNLLEDKHNGKLCKLRGVAPLHLGKCNIAGWILGNPECESLSTASSWSYIVETSSSDN
+                     GTCYPGDFINYEELREQLSSVSSFERFEIFPKTSSWPNHDSNKGVTAACPHAGAKSFYK
+                     NLIWLVKKGNSYPKLSQSYINDKGKEVLVLWGIHHPSTTADQQSLYQNADAYVFVGTSR
+                     YSKKFKPEIAIRPKVRDQEGRMNYYWTLVEPGDKITFEATGNLVVPRYAFTMERNAGSG
+                     IIISDTPVHDCNTTCQTPEGAINTSLPFQNIHPITIGKCPKYVKSTKLRLATGLRNIPS
+                     IQSRGLFGAIAGFIEGGWTGMVDGWYGYHHQNEQGSGYAADLKSTQNAIDKITNKVNSV
+                     IEKMNTQFTAVGKEFNHLEKRIENLNKKVDDGFLDIWTYNAELLVLLENERTLDYHDSN
+                     VKNLYEKVRNQLKNNAKEIGNGCFEFYHKCDNTCMESVKNGTYDYPKYSEEAKLNREKI
+                     DGVKLESTRIYQILAIYSTVASSLVLVVSLGAISFWMCSNGSLQCRICI"
+     mat_peptide     52..1032
+                     /gene="HA"
+                     /product="HA1"
+     mat_peptide     1033..1698
+                     /gene="HA"
+                     /product="HA2"
+ORIGIN
+        1 atgaaggcaa tactagtagt tctgctatat acatttgcaa ccgcaaatgc agacacttta
+       61 tgtataggtt atcatgcgaa caattcaaca gacactgtag acacagtact agaaaagaat
+      121 gtaacagtaa cacactctgt taaccttcta gaagacaagc ataacggtaa actatgcaaa
+      181 ctaagagggg tagccccatt gcatttgggt aaatgtaaca ttgctggctg gatcctggga
+      241 aatccagagt gtgaatcact ctccacagca agttcatggt cctacattgt ggaaacatct
+      301 agttcagaca atggaacgtg ttacccagga gatttcatca attatgagga gctaagagag
+      361 caattgagct cagtgtcatc atttgaaagg tttgagatat tccccaagac aagttcatgg
+      421 cccaatcatg actcgaacaa aggtgtaacg gcagcatgtc ctcacgctgg agcaaaaagc
+      481 ttctacaaaa atttaatatg gctagttaaa aaaggaaatt catacccaaa gctcagtcaa
+      541 tcctacatta atgataaagg gaaagaagtc ctcgtgctgt ggggcattca ccatccatct
+      601 actactgctg accaacaaag tctctatcag aatgcagatg catatgtttt tgtggggaca
+      661 tcaagataca gcaagaagtt caagccggaa atagcaataa gacccaaagt gagggatcaa
+      721 gaagggagaa tgaactatta ctggacacta gtagagccgg gagacaaaat aacattcgaa
+      781 gcaactggaa atctagtggt accgagatat gcattcacaa tggaaagaaa tgctggatct
+      841 ggtattatca tttcagatac accagtccac gattgcaata caacttgtca gacacccgag
+      901 ggtgctataa acaccagcct cccatttcag aatatacatc cgatcacaat tggaaaatgt
+      961 ccaaagtatg taaaaagcac aaaattgaga ctggcaacag gattgaggaa tatcccgtct
+     1021 attcaatcta gaggcctatt cggggccatt gccggcttca ttgaaggggg gtggacaggg
+     1081 atggtagatg gatggtacgg ttatcaccat caaaatgagc aggggtcagg atatgcagcc
+     1141 gacctgaaga gcacacaaaa tgccattgac aagattacta acaaagtaaa ctctgttatt
+     1201 gaaaagatga atacacagtt cacagcagtg ggtaaagagt tcaaccacct ggaaaaaaga
+     1261 attgagaatt taaataaaaa agttgatgat ggtttcctgg acatttggac ttacaatgcc
+     1321 gaactgttgg ttctattgga aaatgaaaga actttggact accacgattc aaatgtgaag
+     1381 aacttgtatg aaaaggtaag aaaccagtta aaaaacaatg ccaaggaaat tggaaacggc
+     1441 tgctttgaat tttaccacaa atgcgataac acgtgcatgg aaagtgtcaa aaatgggact
+     1501 tatgactacc caaaatactc agaggaagca aaattaaaca gagaaaaaat agatggggta
+     1561 aagctggaat caacaaggat ttaccagatt ttggcgatct attcaactgt cgccagttca
+     1621 ttggtactgg tagtctccct gggggcaatc agcttctgga tgtgctctaa tgggtctcta
+     1681 cagtgtagaa tatgtattta acattaggat ttcagaagca tgagaaaaac acccttgttt
+     1741 ctact
+//
+LOCUS       KJ406381                1745 bp    cRNA    linear   VRL 02-MAR-2014
+DEFINITION  Influenza A virus (A/Ontario/48/2013(H1N1)) segment 4 hemagglutinin
+            (HA) gene, complete cds.
+ACCESSION   KJ406381
+VERSION     KJ406381.1
+KEYWORDS    .
+SOURCE      Influenza A virus (A/Ontario/48/2013(H1N1))
+  ORGANISM  Influenza A virus (A/Ontario/48/2013(H1N1))
+            Viruses; ssRNA viruses; ssRNA negative-strand viruses;
+            Orthomyxoviridae; Influenzavirus A.
+REFERENCE   1  (bases 1 to 1745)
+  AUTHORS   Skowronski,D., Chambers,C., Sabaiduc,S., De Serres,G., Dickinson,J.,
+            Winter,A., Fonseca,K., Gubbay,J., Charest,H., Petric,M., Krajden,M.,
+            Mahmud,S., Van Caeseele,P., Kwindt,T., Eshaghi,A., Bastien,N. and
+            Li,Y.
+  TITLE     Interim estimates of 2013/14 vaccine effectiveness against influenza
+            A(H1N1)pdm09 from Canada s sentinel surveillance network, January
+            2014
+  JOURNAL   Euro Surveill. 19 (5) (2014)
+   PUBMED   24524234
+  REMARK    Publication Status: Online-Only
+REFERENCE   2  (bases 1 to 1745)
+  AUTHORS   Skowronski,D.M., Chambers,C., Sabaiduc,S., De Serres,G.,
+            Dickinson,J.A., Winter,A.-L., Fonseca,K., Gubbay,J.B., Charest,H.,
+            Petric,M., Krajden,M., Mahmud,S.M., Van Caeseele,P., Kwindt,T.L.,
+            Eshaghi,A., Bastien,N. and Li,Y.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (04-FEB-2014) Molecular Diagnostics, Public Health
+            Ontario, 81 Resources, Toronto, ON M9P3T1, Canada
+COMMENT     ##Assembly-Data-START##
+            Sequencing Technology :: Sanger dideoxy sequencing
+            ##Assembly-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..1745
+                     /organism="Influenza A virus (A/Ontario/48/2013(H1N1))"
+                     /mol_type="viral cRNA"
+                     /strain="A/Ontario/48/2013"
+                     /serotype="H1N1"
+                     /isolation_source="nasal"
+                     /host="Homo sapiens"
+                     /db_xref="taxon:1458522"
+                     /segment="4"
+                     /country="Canada: Ontario"
+                     /collection_date="20-Nov-2013"
+                     /note="lineage: swl"
+     gene            1..1701
+                     /gene="HA"
+     CDS             1..1701
+                     /gene="HA"
+                     /function="receptor binding and fusion protein"
+                     /codon_start=1
+                     /product="hemagglutinin"
+                     /protein_id="AHK10712.1"
+                     /translation="MKAILVVLLYTFATANADTLCIGYHANNSTDTVDTVLEKNVTVTH
+                     SVNLLEDKHNGKLCKLRGVAPLHLGKCNIAGWILGNPECESLSTASSWSYIVETSSSDN
+                     GTCYPGDFINYEELREQLSSVSSFERFEIFPKTSSWPNHDSNKGVTAACPHAGAKSFYK
+                     NLIWLVKKGNSYPKLSQSYINDKGKEVLVLWGIHHPSTTADQQSLYQNADAYVFVGTSR
+                     YSKKFKPEIAIRPKVRDQEGRMNYYWTLVEPGDKITFEATGNLVVPRYAFTMERNAGSG
+                     IIISDTPVHDCNTTCQTPEGAINTSLPFQNIHPITIGKCPKYVKSTKLRLATGLRNIPS
+                     IQSRGLFGAIAGFIEGGWTGMVDGWYGYHHQNEQGSGYAADLKSTQNAIDKITNKVNSV
+                     IEKMNTQFTAVGKEFNHLEKRIENLNKKVDDGFLDIWTYNAELLVLLENERTLDYHDSN
+                     VKNLYEKVRNQLKNNAKEIGNGCFEFYHKCDNTCMESVKNGTYDYPKYSEEAKLNREKI
+                     DGVKLESTRIYQILAIYSTVASSLVLVVSLGAISFWMCSNGSLQCRICI"
+     mat_peptide     52..1032
+                     /gene="HA"
+                     /product="HA1"
+     mat_peptide     1033..1698
+                     /gene="HA"
+                     /product="HA2"
+ORIGIN
+        1 atgaaggcaa tactagtagt tctgctatat acatttgcaa ccgcaaatgc agacacttta
+       61 tgtataggtt atcatgcgaa caattcaaca gacactgtag acacagtact agaaaagaat
+      121 gtaacagtaa cacactctgt taaccttcta gaagacaagc ataacggtaa actatgcaaa
+      181 ctaagagggg tagccccatt gcatttgggt aaatgtaaca ttgctggctg gatcctggga
+      241 aatccagagt gtgaatcact ctccacagca agttcatggt cctacattgt ggaaacatct
+      301 agttcagaca atggaacgtg ttacccagga gatttcatca attatgagga gctaagagag
+      361 caattgagct cagtgtcatc atttgaaagg tttgagatat tccccaagac aagttcatgg
+      421 cccaatcatg actcgaacaa aggtgtaacg gcagcatgtc ctcacgctgg agcaaaaagc
+      481 ttctacaaaa atttaatatg gctagttaaa aaaggaaatt catacccaaa gctcagtcaa
+      541 tcctacatta atgataaagg gaaagaagtc ctcgtgctgt ggggcattca ccatccatct
+      601 actactgctg accaacaaag tctctatcag aatgcagatg catatgtttt tgtggggaca
+      661 tcaagataca gcaagaagtt caagccggaa atagcaataa gacccaaagt gagggatcaa
+      721 gaagggagaa tgaactatta ctggacacta gtagagccgg gagacaaaat aacattcgaa
+      781 gcaactggaa atctagtggt accgagatat gcattcacaa tggaaagaaa tgctggatct
+      841 ggtattatca tttcagatac accagtccac gattgcaata caacttgtca gacacccgag
+      901 ggtgctataa acaccagcct cccatttcag aatatacatc cgatcacaat tggaaaatgt
+      961 ccaaagtatg taaaaagcac aaaattgaga ctggcaacag gattgaggaa tatcccgtct
+     1021 attcaatcta gaggcctatt cggggccatt gccggcttca ttgaaggggg gtggacaggg
+     1081 atggtagatg gatggtacgg ttatcaccat caaaatgagc aggggtcagg atatgcagcc
+     1141 gacctgaaga gcacacaaaa tgccattgac aagattacta acaaagtaaa ctctgttatt
+     1201 gaaaagatga atacacagtt cacagcagtg ggtaaagagt tcaaccacct ggaaaaaaga
+     1261 attgagaatt taaataaaaa agttgatgat ggtttcctgg acatttggac ttacaatgcc
+     1321 gaactgttgg ttctattgga aaatgaaaga actttggact accacgattc aaatgtgaag
+     1381 aacttgtatg aaaaggtaag aaaccagtta aaaaacaatg ccaaggaaat tggaaacggc
+     1441 tgctttgaat tttaccacaa atgcgataac acgtgcatgg aaagtgtcaa aaatgggact
+     1501 tatgactacc caaaatactc agaggaagca aaattaaaca gagaaaaaat agatggggta
+     1561 aagctggaat caacaaggat ttaccagatt ttggcgatct attcaactgt cgccagttca
+     1621 ttggtactgg tagtctccct gggggcaatc agcttctgga tgtgctctaa tgggtctcta
+     1681 cagtgtagaa tatgtattta acattaggat ttcagaagca tgagaaaaac acccttgttt
+     1741 ctact
+//

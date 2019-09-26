@@ -1,0 +1,390 @@
+LOCUS       FJ800811                 853 bp    cRNA    linear   VRL 24-JUL-2016
+DEFINITION  Influenza A virus (A/Toronto/432/2008(H1N1)) segment 4 hemagglutinin
+            (HA) gene, partial cds.
+ACCESSION   FJ800811
+VERSION     FJ800811.1
+KEYWORDS    .
+SOURCE      Influenza A virus (A/Toronto/432/2008(H1N1))
+  ORGANISM  Influenza A virus (A/Toronto/432/2008(H1N1))
+            Viruses; ssRNA viruses; ssRNA negative-strand viruses;
+            Orthomyxoviridae; Influenzavirus A.
+REFERENCE   1  (bases 1 to 853)
+  AUTHORS   Eshaghi,A., Bolotin,S., Burton,L., Low,D.E., Mazzulli,T. and
+            Drews,S.J.
+  TITLE     Genetic microheterogeneity of emerging H275Y influenza virus A
+            (H1N1) in Toronto, Ontario, Canada from the 2007-2008 respiratory
+            season
+  JOURNAL   J. Clin. Virol. 45 (2), 142-145 (2009)
+   PUBMED   19451021
+REFERENCE   2  (bases 1 to 853)
+  AUTHORS   Eshaghi,A., Bolotin,S. and Drews,S.J.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (03-MAR-2009) Molecular Diagnostics, Ontario Agency for
+            Health Protection and Promotion, 81 Resources Road, Toronto, ON M9P
+            3T1, Canada
+FEATURES             Location/Qualifiers
+     source          1..853
+                     /organism="Influenza A virus (A/Toronto/432/2008(H1N1))"
+                     /mol_type="viral cRNA"
+                     /strain="A/Toronto/432/2008"
+                     /serotype="H1N1"
+                     /host="Homo sapiens; DOB 01-Mar-51; M"
+                     /db_xref="taxon:620785"
+                     /segment="4"
+                     /country="Canada"
+                     /collection_date="31-Jan-2008"
+     gene            <1..>853
+                     /gene="HA"
+     CDS             <1..>853
+                     /gene="HA"
+                     /codon_start=1
+                     /product="hemagglutinin"
+                     /protein_id="ACN72548.1"
+                     /translation="KLLVLLCTFTATYADTICIGYHANNSTDTVDTVLEKNVTVTHSVN
+                     LLENSHNGKLCLLKGIAPLQLGNCSVAGWILGNPECELLISKESWSYIVEKPNPENGTC
+                     YPGHFADYEELREQLSSVSSFERFEIFPKESSWPNHTVTGVSASCSHNGESSFYRNLLW
+                     LTGKNGLYPNLSKSYANNKEKEVLVLWGVHHPPNIGDQKALYHTENAYVSVVSSHYSRK
+                     FTPEIAKRPKVRDQEGRINYYWTLLEPGDTIIFEANGNLIAPRYAFALSRGLGSGIINS
+                     NAP"
+ORIGIN
+        1 aaactactgg tcctgttatg cacatttaca gctacatatg cagacacaat atgtataggc
+       61 taccatgcta acaactcgac cgacactgtt gacacagtac ttgaaaagaa tgtgacagtg
+      121 acacactctg tcaacctgct tgagaacagt cacaatggaa aactatgtct attaaaagga
+      181 atagccccac tacaattggg taattgcagc gttgccgggt ggatcttagg aaacccagaa
+      241 tgcgaattac tgatttccaa ggagtcatgg tcctacattg tagaaaaacc aaatcctgag
+      301 aatggaacat gttacccagg gcatttcgct gactatgagg aactgaggga gcaattgagt
+      361 tcagtatctt catttgagag gttcgaaata ttccccaaag aaagctcatg gcccaaccac
+      421 accgtaaccg gagtgtcagc atcatgctcc cataatgggg aaagcagttt ttacagaaat
+      481 ttgctatggc tgacggggaa gaatggtttg tacccaaacc tgagcaagtc ctatgcaaac
+      541 aacaaagaaa aagaagtcct tgtactatgg ggtgttcatc acccgccaaa cataggtgac
+      601 caaaaggccc tctatcatac agaaaatgct tatgtctctg tagtgtcttc acattatagc
+      661 agaaaattca ccccagaaat agccaaaaga cccaaagtaa gagatcaaga aggaagaatc
+      721 aactactact ggactctgct tgaacccggg gatacaataa tatttgaggc aaatggaaat
+      781 ctaatagcgc caagatatgc tttcgcactg agtagaggtt taggatcagg tatcatcaac
+      841 tcaaatgcac caa
+//
+LOCUS       FJ800819                 853 bp    cRNA    linear   VRL 24-JUL-2016
+DEFINITION  Influenza A virus (A/Toronto/415/2008(H1N1)) segment 4 hemagglutinin
+            (HA) gene, partial cds.
+ACCESSION   FJ800819
+VERSION     FJ800819.1
+KEYWORDS    .
+SOURCE      Influenza A virus (A/Toronto/415/2008(H1N1))
+  ORGANISM  Influenza A virus (A/Toronto/415/2008(H1N1))
+            Viruses; ssRNA viruses; ssRNA negative-strand viruses;
+            Orthomyxoviridae; Influenzavirus A.
+REFERENCE   1  (bases 1 to 853)
+  AUTHORS   Eshaghi,A., Bolotin,S., Burton,L., Low,D.E., Mazzulli,T. and
+            Drews,S.J.
+  TITLE     Genetic microheterogeneity of emerging H275Y influenza virus A
+            (H1N1) in Toronto, Ontario, Canada from the 2007-2008 respiratory
+            season
+  JOURNAL   J. Clin. Virol. 45 (2), 142-145 (2009)
+   PUBMED   19451021
+REFERENCE   2  (bases 1 to 853)
+  AUTHORS   Eshaghi,A., Bolotin,S. and Drews,S.J.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (03-MAR-2009) Molecular Diagnostics, Ontario Agency for
+            Health Protection and Promotion, 81 Resources Road, Toronto, ON M9P
+            3T1, Canada
+FEATURES             Location/Qualifiers
+     source          1..853
+                     /organism="Influenza A virus (A/Toronto/415/2008(H1N1))"
+                     /mol_type="viral cRNA"
+                     /strain="A/Toronto/415/2008"
+                     /serotype="H1N1"
+                     /host="Homo sapiens; DOB 14-Dec-62; F"
+                     /db_xref="taxon:620784"
+                     /segment="4"
+                     /country="Canada"
+                     /collection_date="08-Jan-2008"
+     gene            <1..>853
+                     /gene="HA"
+     CDS             <1..>853
+                     /gene="HA"
+                     /codon_start=1
+                     /product="hemagglutinin"
+                     /protein_id="ACN72550.1"
+                     /translation="KLLVLLCTFTATYADTICIGYHANNSTDTVDTVLEKNVTVTHSVN
+                     LLENSHNGKLCLLKGIAPLQLGNCSVAGWILGNPECELLISKESWSYIVEKPNPENGTC
+                     YPGHFADYEELREQLSSVSSFERFEIFPKESSWPNHTVTGVSASCSHNGESSFYRNLLW
+                     LTGKNGLYPNLSKSYANNKEKEVLVLWGVHHPPNIGDPKTLYHTENAYVSVVSSHYSRK
+                     FTPEIAKRPKVRDQEGRINYYWTLLEPGDTIIFEANGNLIAPRYAFALSRGFGSGIINS
+                     NAP"
+ORIGIN
+        1 aaactactgg tcctgttatg cacatttaca gctacatatg cagacacaat atgtataggc
+       61 taccatgcta acaactcgac cgacactgtt gacacagtac ttgaaaagaa tgtgacagtg
+      121 acacactctg tcaacctgct tgagaacagt cacaatggaa aactatgtct attaaaagga
+      181 atagccccac tacaattggg taactgcagc gttgccgggt ggatcttagg aaacccagaa
+      241 tgcgaattac tgatttccaa ggagtcatgg tcctacattg tagaaaaacc aaatcctgag
+      301 aatggaacat gttacccagg gcatttcgct gactatgagg aactgaggga gcaattgagt
+      361 tcagtatctt catttgagag gttcgaaata ttccccaaag aaagctcatg gcccaaccac
+      421 accgtaaccg gagtgtcagc atcatgctcc cataatgggg aaagcagttt ttacagaaat
+      481 ttgctatggc tgacggggaa gaatggtttg tacccaaacc tgagcaagtc ctatgcaaac
+      541 aacaaagaaa aagaagtcct tgtactatgg ggtgttcatc acccgccaaa cataggtgac
+      601 ccaaagaccc tctatcatac agaaaatgct tatgtttctg tagtgtcttc acattatagc
+      661 agaaaattca ccccagaaat agccaaaaga cccaaagtaa gagatcaaga aggaagaatc
+      721 aactactact ggactctgct tgaacccggg gatacaataa tatttgaggc aaatggaaat
+      781 ctaatagcgc caagatatgc tttcgcactg agtagaggct ttggatcagg aatcatcaac
+      841 tcaaatgcac caa
+//
+LOCUS       FJ800810                 853 bp    cRNA    linear   VRL 24-JUL-2016
+DEFINITION  Influenza A virus (A/Toronto/104/2007(H1N1)) segment 4 hemagglutinin
+            (HA) gene, partial cds.
+ACCESSION   FJ800810
+VERSION     FJ800810.1
+KEYWORDS    .
+SOURCE      Influenza A virus (A/Toronto/104/2007(H1N1))
+  ORGANISM  Influenza A virus (A/Toronto/104/2007(H1N1))
+            Viruses; ssRNA viruses; ssRNA negative-strand viruses;
+            Orthomyxoviridae; Influenzavirus A.
+REFERENCE   1  (bases 1 to 853)
+  AUTHORS   Eshaghi,A., Bolotin,S., Burton,L., Low,D.E., Mazzulli,T. and
+            Drews,S.J.
+  TITLE     Genetic microheterogeneity of emerging H275Y influenza virus A
+            (H1N1) in Toronto, Ontario, Canada from the 2007-2008 respiratory
+            season
+  JOURNAL   J. Clin. Virol. 45 (2), 142-145 (2009)
+   PUBMED   19451021
+REFERENCE   2  (bases 1 to 853)
+  AUTHORS   Eshaghi,A., Bolotin,S. and Drews,S.J.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (03-MAR-2009) Molecular Diagnostics, Ontario Agency for
+            Health Protection and Promotion, 81 Resources Road, Toronto, ON M9P
+            3T1, Canada
+FEATURES             Location/Qualifiers
+     source          1..853
+                     /organism="Influenza A virus (A/Toronto/104/2007(H1N1))"
+                     /mol_type="viral cRNA"
+                     /strain="A/Toronto/104/2007"
+                     /serotype="H1N1"
+                     /host="Homo sapiens; DOB 05-Feb-02; M"
+                     /db_xref="taxon:620782"
+                     /segment="4"
+                     /country="Canada"
+                     /collection_date="23-Dec-2007"
+     gene            <1..>853
+                     /gene="HA"
+     CDS             <1..>853
+                     /gene="HA"
+                     /codon_start=1
+                     /product="hemagglutinin"
+                     /protein_id="ACN72547.1"
+                     /translation="KLLVLLCTFTATYADTICIGYHANNSTDTVDTVLEKNVTVTHSVN
+                     LLENSHNGKLCLLKGIAPLQLGNCSVAGWILGNPECELLISKESWSYIVEKPNPENGTC
+                     YPGHFADYEELREQLSSVSSFERFEIFPKESSWPNHTVTGVSASCSHNGESSFYRNLLW
+                     LTGKNGLYPNLSKSYANNKEKKVLVLWGVHHPPNIGDQKALYHTENAYVSVVSSHYSRK
+                     FTPEIAKRPKVRDQEGRINYYWTLLEPGDTIIFEANGNLIAPRYAFALSRGLGSGIINS
+                     NAP"
+ORIGIN
+        1 aaactactgg tcctgttatg cacatttaca gctacatatg cagacacaat atgtataggc
+       61 taccatgcta acaactcgac cgacactgtt gacacagtac ttgaaaagaa tgtgacagtg
+      121 acacactctg tcaacctgct tgagaacagt cacaatggaa aactatgtct attaaaagga
+      181 atagccccac tacaattggg taattgcagc gttgccgggt ggatcttagg aaacccagaa
+      241 tgcgaattac tgatttccaa ggagtcatgg tcctacattg tagaaaaacc aaatcctgag
+      301 aatggaacat gttacccagg gcatttcgct gactatgagg aactgaggga gcaattgagt
+      361 tcagtatctt catttgagag gttcgaaata ttccccaaag aaagctcatg gcccaaccac
+      421 accgtaaccg gagtgtcagc atcatgctcc cataatgggg aaagcagttt ttacagaaat
+      481 ttgctatggc tgacggggaa gaatggtttg tacccaaacc tgagcaagtc ctatgcaaac
+      541 aacaaagaaa aaaaagtcct tgtactatgg ggtgttcatc acccgccaaa cataggtgac
+      601 caaaaggccc tctatcatac agaaaatgct tatgtctctg tagtgtcttc acattatagc
+      661 agaaaattca ccccagaaat agccaaaaga cccaaagtaa gagatcaaga aggaagaatc
+      721 aactactact ggactctgct tgaacccggg gatacaataa tatttgaggc aaatggaaat
+      781 ctaatagcgc caagatatgc tttcgcactg agtagaggtt taggatcagg tatcatcaac
+      841 tcaaatgcac caa
+//
+LOCUS       FJ800818                 853 bp    cRNA    linear   VRL 24-JUL-2016
+DEFINITION  Influenza A virus (A/Toronto/087/2007(H1N1)) segment 4 hemagglutinin
+            (HA) gene, partial cds.
+ACCESSION   FJ800818
+VERSION     FJ800818.1
+KEYWORDS    .
+SOURCE      Influenza A virus (A/Toronto/087/2007(H1N1))
+  ORGANISM  Influenza A virus (A/Toronto/087/2007(H1N1))
+            Viruses; ssRNA viruses; ssRNA negative-strand viruses;
+            Orthomyxoviridae; Influenzavirus A.
+REFERENCE   1  (bases 1 to 853)
+  AUTHORS   Eshaghi,A., Bolotin,S., Burton,L., Low,D.E., Mazzulli,T. and
+            Drews,S.J.
+  TITLE     Genetic microheterogeneity of emerging H275Y influenza virus A
+            (H1N1) in Toronto, Ontario, Canada from the 2007-2008 respiratory
+            season
+  JOURNAL   J. Clin. Virol. 45 (2), 142-145 (2009)
+   PUBMED   19451021
+REFERENCE   2  (bases 1 to 853)
+  AUTHORS   Eshaghi,A., Bolotin,S. and Drews,S.J.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (03-MAR-2009) Molecular Diagnostics, Ontario Agency for
+            Health Protection and Promotion, 81 Resources Road, Toronto, ON M9P
+            3T1, Canada
+FEATURES             Location/Qualifiers
+     source          1..853
+                     /organism="Influenza A virus (A/Toronto/087/2007(H1N1))"
+                     /mol_type="viral cRNA"
+                     /strain="A/Toronto/087/2007"
+                     /serotype="H1N1"
+                     /host="Homo sapiens; DOB 13-Oct-82; F"
+                     /db_xref="taxon:620781"
+                     /segment="4"
+                     /country="Canada"
+                     /collection_date="22-Dec-2007"
+     gene            <1..>853
+                     /gene="HA"
+     CDS             <1..>853
+                     /gene="HA"
+                     /codon_start=1
+                     /product="hemagglutinin"
+                     /protein_id="ACN72549.1"
+                     /translation="KLLVLLCTFTATYADTICIGYHANNSTDTVDTVLEKNVTVTHSVN
+                     LLENSHNGKLCLLKGIAPLQLGNCSVAGWILGNPECELLISKESWSYIVEKPNPENGTC
+                     YPGHFADYEELREQLSSVSSFERFEIFPKESSWPNHTVTGVSASCSHNGESSFYRNLLW
+                     LTGKNGLYPNLSKSYANNKEKEVLVLWGVHHPPNIGDQKTLYHTENAYVSVVSSHYSRK
+                     FTPEIAKRPKVRDQEGRINYYWTLLEPGDTIIFEANGNLIAPRYAFALSRGFGSGIINS
+                     NAP"
+ORIGIN
+        1 aaactactgg tcctgttatg cacatttaca gctacatatg cagacacaat atgtataggc
+       61 taccatgcta acaactcgac cgacactgtt gacacagtac ttgaaaagaa tgtgacagtg
+      121 acacactctg tcaacctgct tgagaacagt cacaatggaa aactatgtct attaaaagga
+      181 atagccccac tacaattggg taactgcagc gttgccgggt ggatcttagg aaacccagaa
+      241 tgcgaattac tgatttccaa ggagtcatgg tcctacattg tagaaaaacc aaatcctgag
+      301 aatggaacat gttacccagg gcatttcgct gactatgagg aactgaggga gcaattgagt
+      361 tcagtatctt catttgagag gttcgaaata ttccccaaag aaagctcatg gcccaaccac
+      421 accgtaaccg gagtgtcagc atcatgctcc cataatgggg aaagcagttt ttacagaaat
+      481 ttgctatggc tgacggggaa gaatggtttg tacccaaacc tgagcaagtc ctatgcaaac
+      541 aacaaagaaa aagaagtcct tgtactatgg ggtgttcatc acccgccaaa cataggtgac
+      601 caaaagaccc tctatcatac agaaaatgct tatgtttctg tagtgtcttc acattatagc
+      661 agaaaattca ccccagaaat agccaaaaga cccaaagtaa gagatcaaga aggaagaatc
+      721 aactactact ggactctgct tgaacccggg gatacaataa tatttgaggc aaatggaaat
+      781 ctaatagcgc caagatatgc tttcgcactg agtagaggct ttggatcagg aatcatcaac
+      841 tcaaatgcac caa
+//
+LOCUS       FJ800820                 853 bp    cRNA    linear   VRL 24-JUL-2016
+DEFINITION  Influenza A virus (A/Toronto/398/2007(H1N1)) segment 4 hemagglutinin
+            (HA) gene, partial cds.
+ACCESSION   FJ800820
+VERSION     FJ800820.1
+KEYWORDS    .
+SOURCE      Influenza A virus (A/Toronto/398/2007(H1N1))
+  ORGANISM  Influenza A virus (A/Toronto/398/2007(H1N1))
+            Viruses; ssRNA viruses; ssRNA negative-strand viruses;
+            Orthomyxoviridae; Influenzavirus A.
+REFERENCE   1  (bases 1 to 853)
+  AUTHORS   Eshaghi,A., Bolotin,S., Burton,L., Low,D.E., Mazzulli,T. and
+            Drews,S.J.
+  TITLE     Genetic microheterogeneity of emerging H275Y influenza virus A
+            (H1N1) in Toronto, Ontario, Canada from the 2007-2008 respiratory
+            season
+  JOURNAL   J. Clin. Virol. 45 (2), 142-145 (2009)
+   PUBMED   19451021
+REFERENCE   2  (bases 1 to 853)
+  AUTHORS   Eshaghi,A., Bolotin,S. and Drews,S.J.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (03-MAR-2009) Molecular Diagnostics, Ontario Agency for
+            Health Protection and Promotion, 81 Resources Road, Toronto, ON M9P
+            3T1, Canada
+FEATURES             Location/Qualifiers
+     source          1..853
+                     /organism="Influenza A virus (A/Toronto/398/2007(H1N1))"
+                     /mol_type="viral cRNA"
+                     /strain="A/Toronto/398/2007"
+                     /serotype="H1N1"
+                     /host="Homo sapiens; DOB 25-Jul-96; M"
+                     /db_xref="taxon:620783"
+                     /segment="4"
+                     /country="Canada"
+                     /collection_date="03-Dec-2007"
+     gene            <1..>853
+                     /gene="HA"
+     CDS             <1..>853
+                     /gene="HA"
+                     /codon_start=1
+                     /product="hemagglutinin"
+                     /protein_id="ACN72551.1"
+                     /translation="KLLVLLCTFTATYADTICIGYHANNSTDTVDTVLEKNVTVTHSVN
+                     LLENSHNGKLCLLKGIAPLQLGNCSVAGWILGNPECELLISKESWSYIVEKPNPENGTC
+                     YPGHFADYEELREQLSSVSSFERFEIFPKESSWPNHTVTGVSASCSHNGESSFYRNLLW
+                     LTGKNGLYPNLSKSYANNKEKEVLVLWGVHHPPNIGDQKTLYHTENAYVSVVSSHYSRK
+                     FTPEIAKRPKVRDQEGRINYYWTLLEPGDTIIFEANGNLIAPRYAFALSRGFGSGIINS
+                     NAP"
+ORIGIN
+        1 aaactactgg tcctgttatg cacatttaca gctacatatg cagacacaat atgtataggc
+       61 taccatgcta acaactcgac cgacactgtt gacacagtac ttgaaaagaa tgtgacagtg
+      121 acacactctg tcaacctgct tgagaacagt cacaatggaa aactatgtct attaaaagga
+      181 atagccccac tacaattggg taactgcagc gttgccgggt ggatcttagg aaacccagaa
+      241 tgcgaattac tgatttccaa ggagtcatgg tcctacattg tagaaaaacc aaatcctgag
+      301 aatggaacat gttacccagg gcatttcgct gactatgagg aactgaggga gcaattgagt
+      361 tcagtatctt catttgagag gttcgaaata ttccccaaag aaagctcatg gcccaaccac
+      421 accgtaaccg gagtgtcagc atcatgctcc cataatgggg aaagcagttt ttacagaaat
+      481 ttgctatggc tgacggggaa gaatggtttg tacccaaacc tgagcaagtc ctatgcaaac
+      541 aacaaagaaa aagaagtcct tgtactatgg ggtgttcatc acccgccaaa cataggtgac
+      601 caaaagaccc tctatcatac agaaaatgct tatgtttctg tagtgtcttc acattatagc
+      661 agaaaattca ccccagaaat agccaaaaga cccaaagtaa gagatcaaga aggaagaatc
+      721 aactactact ggactctgct tgaacccggg gatacaataa tatttgaggc aaatggaaat
+      781 ctaatagcgc caagatatgc tttcgcactg agtagaggct ttggatcagg aatcatcaac
+      841 tcaaatgcac caa
+//
+LOCUS       FJ800809                 853 bp    cRNA    linear   VRL 24-JUL-2016
+DEFINITION  Influenza A virus (A/Toronto/008/2007(H1N1)) segment 4 hemagglutinin
+            (HA) gene, partial cds.
+ACCESSION   FJ800809
+VERSION     FJ800809.1
+KEYWORDS    .
+SOURCE      Influenza A virus (A/Toronto/008/2007(H1N1))
+  ORGANISM  Influenza A virus (A/Toronto/008/2007(H1N1))
+            Viruses; ssRNA viruses; ssRNA negative-strand viruses;
+            Orthomyxoviridae; Influenzavirus A.
+REFERENCE   1  (bases 1 to 853)
+  AUTHORS   Eshaghi,A., Bolotin,S., Burton,L., Low,D.E., Mazzulli,T. and
+            Drews,S.J.
+  TITLE     Genetic microheterogeneity of emerging H275Y influenza virus A
+            (H1N1) in Toronto, Ontario, Canada from the 2007-2008 respiratory
+            season
+  JOURNAL   J. Clin. Virol. 45 (2), 142-145 (2009)
+   PUBMED   19451021
+REFERENCE   2  (bases 1 to 853)
+  AUTHORS   Eshaghi,A., Bolotin,S. and Drews,S.J.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (03-MAR-2009) Molecular Diagnostics, Ontario Agency for
+            Health Protection and Promotion, 81 Resources Road, Toronto, ON M9P
+            3T1, Canada
+FEATURES             Location/Qualifiers
+     source          1..853
+                     /organism="Influenza A virus (A/Toronto/008/2007(H1N1))"
+                     /mol_type="viral cRNA"
+                     /strain="A/Toronto/008/2007"
+                     /serotype="H1N1"
+                     /host="Homo sapiens; DOB 02-Dec-06; M"
+                     /db_xref="taxon:620780"
+                     /segment="4"
+                     /country="Canada"
+                     /collection_date="26-Nov-2007"
+     gene            <1..>853
+                     /gene="HA"
+     CDS             <1..>853
+                     /gene="HA"
+                     /codon_start=1
+                     /product="hemagglutinin"
+                     /protein_id="ACN72546.1"
+                     /translation="KLLVLLCTFTATYADTICIGYHANNSTDTVDTVLEKNVTVTHSVN
+                     LLENSHNGKLCLLKGIAPLQLGNCSVAGWILGNPECELLISKESWSYIVEKPNPENGTC
+                     YPGHFADYEELREQLSSVSSFERFEIFPKESSWPNHTVTGVSASCSHNGESSFYRNLLW
+                     LTGKNGLYPNLSKSYANNKEKEVLVLWGVHHPPNIGDQKALYHTENAYVSVVSSHYSRK
+                     FTPEIAKRPKVRDQEGRINYYWTLLEPGDTIIFEANGNLIAPRYAFALSRGLGSGIINS
+                     NAP"
+ORIGIN
+        1 aaactactgg tcctgttatg cacatttaca gctacatatg cagacacaat atgtataggc
+       61 taccatgcta acaactcgac cgacactgtt gacacagtac ttgaaaagaa tgtgacagtg
+      121 acacactctg tcaacctgct tgagaacagt cacaatggaa aactatgtct attaaaagga
+      181 atagccccac tacaattggg taattgcagc gttgccgggt ggatcttagg aaacccagaa
+      241 tgcgaattac tgatttccaa ggagtcatgg tcctacattg tagaaaaacc aaatcctgag
+      301 aatggaacat gttacccagg gcatttcgct gactatgagg aactgaggga gcaattgagt
+      361 tcagtatctt catttgagag gttcgaaata ttccccaaag aaagctcatg gcccaaccac
+      421 accgtaaccg gagtgtcagc atcatgctcc cataatgggg aaagcagttt ttacagaaat
+      481 ttgctatggc tgacggggaa gaatggtttg tacccaaacc tgagcaagtc ctatgcaaac
+      541 aacaaagaaa aagaagtcct tgtactatgg ggtgttcatc acccgccaaa cataggtgac
+      601 caaaaggccc tctatcatac agaaaatgct tatgtctctg tagtgtcttc acattatagc
+      661 agaaaattca ccccagaaat agccaaaaga cccaaagtaa gagatcaaga aggaagaatc
+      721 aactactact ggactctgct tgaacccggg gatacaataa tatttgaggc aaatggaaat
+      781 ctaatagcgc caagatatgc tttcgcactg agtagaggtt taggatcagg aatcatcaac
+      841 tcaaatgcac caa
+//

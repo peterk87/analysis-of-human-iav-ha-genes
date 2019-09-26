@@ -1,0 +1,892 @@
+>gi|52078172|gb|AY619969|Influenza A virus (A/swine/Ontario/K01477/01(H3N3)) hemagglutinin (HA) gene, complete cds
+>gi|52078190|gb|AY619977|Influenza A virus (A/swine/Ontario/42729A/01(H3N3)) hemagglutinin (HA) gene, complete cds
+>gi|79083042|gb|DQ241762|Influenza A virus (A/swine/Ontario/Biovet1/05(H3N2)) hemagglutinin (HA) gene, partial cds
+>gi|82622848|gb|DQ280195|Influenza A virus (A/swine/Ontario/57561/03(H1N1)) hemagglutinin (HA) gene, complete cds
+>gi|82622887|gb|DQ280212|Influenza A virus (A/swine/Ontario/55383/04(H1N2)) hemagglutinin (HA) gene, complete cds
+>gi|82622902|gb|DQ280219|Influenza A virus (A/swine/Ontario/53518/03(H1N1)) hemagglutinin (HA) gene, complete cds
+>gi|82622920|gb|DQ280227|Influenza A virus (A/swine/Ontario/52156/03(H1N2)) hemagglutinin (HA) gene, complete cds
+>gi|82622941|gb|DQ280236|Influenza A virus (A/swine/Ontario/48235/04(H1N2)) hemagglutinin (HA) gene, complete cds
+>gi|82622956|gb|DQ280243|Influenza A virus (A/swine/Ontario/23866/04(H1N1)) hemagglutinin (HA) gene, complete cds
+>gi|82622972|gb|DQ280250|Influenza A virus (A/swine/Ontario/11112/04(H1N1)) hemagglutinin (HA) gene, complete cds
+>gi|93204676|gb|AJ697864|Influenza A virus (A/Duck/Ontario/05/00 (H3N2)) partial H3 gene for hemagglutinin, genomic RNA
+>gi|94404583|gb|DQ469962|Influenza A virus (A/Ontario/RV1273/2005(H3N2)) hemagglutinin (HA) gene, complete cds
+>gi|94404591|gb|DQ469994|Influenza A virus (A/swine/Ontario/33853/2005(H3N2)) hemagglutinin (HA) gene, complete cds
+>gi|94404593|gb|DQ470002|Influenza A virus (A/turkey/Ontario/31232/2005(H3N2)) hemagglutinin (HA) gene, complete cds
+>gi|99093049|gb|AF251395|Influenza A virus (A/swine/Ontario/00130/97(H3N2)) hemagglutinin (HA) gene, complete cds
+>gi|149779912|gb|CY022381|Influenza A virus (A/swine/Ontario/4/1981(H1N1)) segment 4, complete sequence
+>gi|149779942|gb|CY022389|Influenza A virus (A/swine/Ontario/7/1981(H1N1)) segment 4, complete sequence
+>gi|152963191|gb|CY022978|Influenza A virus (A/swine/Ontario/1/1981(H1N1)) segment 4, complete sequence
+>gi|158344947|gb|CY026435|Influenza A virus (A/swine/Ontario/2/1981(H1N1)) segment 4, complete sequence
+>gi|158344966|gb|CY026443|Influenza A virus (A/swine/Ontario/3/1981(H1N1)) segment 4, complete sequence
+>gi|158344985|gb|CY026451|Influenza A virus (A/swine/Ontario/6/1981(H1N1)) segment 4, complete sequence
+>gi|165880677|gb|EU399751|Influenza A virus (A/Ontario/1252/2007(H3N2)) hemagglutinin (HA) gene, complete cds
+>gi|224979446|gb|FJ800809|Influenza A virus (A/Toronto/008/2007(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|224979448|gb|FJ800810|Influenza A virus (A/Toronto/104/2007(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|224979450|gb|FJ800811|Influenza A virus (A/Toronto/432/2008(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|224979452|gb|FJ800818|Influenza A virus (A/Toronto/087/2007(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|224979454|gb|FJ800819|Influenza A virus (A/Toronto/415/2008(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|224979456|gb|FJ800820|Influenza A virus (A/Toronto/398/2007(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|228551499|gb|FJ974022|Influenza A virus (A/Toronto/3181/2009(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|228551501|gb|FJ974023|Influenza A virus (A/Toronto/3170/2009(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|228551505|gb|FJ974025|Influenza A virus (A/Toronto/3178/2009(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|228551509|gb|FJ974027|Influenza A virus (A/Toronto/3145/2009(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|228551511|gb|FJ974028|Influenza A virus (A/Toronto/3146/2009(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|229484030|gb|FJ998209|Influenza A virus (A/Canada-ON/RV1527/2009(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|229892701|gb|GQ132143|Influenza A virus (A/Canada-ON/RV1526/2009(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|229892703|gb|GQ132144|Influenza A virus (A/Canada-ON/RV1529/2009(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|254032020|gb|GQ385300|Influenza A virus (A/Toronto/0462/2009(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|254728927|gb|GQ411897|Influenza A virus (A/Toronto/T5308/2009(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|255734905|gb|GQ465678|Influenza A virus (A/Canada-ON/RV1589/2009(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|257412799|gb|CY045938|Influenza A virus (A/Toronto/C0270/2009(H1N1)) segment 4 sequence
+>gi|284022941|gb|CY054550|Influenza A virus (A/Toronto/H42220/2009(H3N2)) segment 4 sequence
+>gi|294546910|gb|CY060750|Influenza A virus (A/Ontario/9739/2009(H1N1)) segment 4 sequence
+>gi|297750443|gb|HM450134|Influenza A virus (A/turkey/Ontario/FAV117-1C/2009(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|297750445|gb|HM370975|Influenza A virus (A/turkey/Ontario/FAV114-17/2009(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|297750447|gb|HM370967|Influenza A virus (A/turkey/Ontario/FAV110-4/2009(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|297750449|gb|HM370960|Influenza A virus (A/turkey/Ontario/FAV110/2009(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|307069710|gb|HQ239416|Influenza A virus (A/Canada-ON/RV1545/2009(H1N1)) hemagglutinin (HA) gene, partial cds
+>gi|307069728|gb|HQ239425|Influenza A virus (A/Canada-ON/RV1590/2009(H1N1)) hemagglutinin (HA) gene, partial cds
+>gi|307070010|gb|HQ239566|Influenza A virus (A/Canada-ON/RV2887/2009(H1N1)) hemagglutinin (HA) gene, partial cds
+>gi|307070012|gb|HQ239567|Influenza A virus (A/Canada-ON/RV2888/2009(H1N1)) hemagglutinin (HA) gene, partial cds
+>gi|307070014|gb|HQ239568|Influenza A virus (A/Canada-ON/RV2889/2009(H1N1)) hemagglutinin (HA) gene, partial cds
+>gi|307070016|gb|HQ239569|Influenza A virus (A/Canada-ON/RV2890/2009(H1N1)) hemagglutinin (HA) gene, partial cds
+>gi|307070018|gb|HQ239570|Influenza A virus (A/Canada-ON/RV2891/2009(H1N1)) hemagglutinin (HA) gene, partial cds
+>gi|307070020|gb|HQ239571|Influenza A virus (A/Canada-ON/RV2892/2009(H1N1)) hemagglutinin (HA) gene, partial cds
+>gi|307070022|gb|HQ239572|Influenza A virus (A/Canada-ON/RV2904/2009(H1N1)) hemagglutinin (HA) gene, partial cds
+>gi|307070024|gb|HQ239573|Influenza A virus (A/Canada-ON/RV2905/2009(H1N1)) hemagglutinin (HA) gene, partial cds
+>gi|307070026|gb|HQ239574|Influenza A virus (A/Canada-ON/RV2906/2009(H1N1)) hemagglutinin (HA) gene, partial cds
+>gi|307070028|gb|HQ239575|Influenza A virus (A/Canada-ON/RV2907/2009(H1N1)) hemagglutinin (HA) gene, partial cds
+>gi|307070030|gb|HQ239576|Influenza A virus (A/Canada-ON/RV2908/2009(H1N1)) hemagglutinin (HA) gene, partial cds
+>gi|307070032|gb|HQ239577|Influenza A virus (A/Canada-ON/RV2909/2009(H1N1)) hemagglutinin (HA) gene, partial cds
+>gi|307070034|gb|HQ239578|Influenza A virus (A/Canada-ON/RV2910/2009(H1N1)) hemagglutinin (HA) gene, partial cds
+>gi|307070036|gb|HQ239579|Influenza A virus (A/Canada-ON/RV2912/2009(H1N1)) hemagglutinin (HA) gene, partial cds
+>gi|307070038|gb|HQ239580|Influenza A virus (A/Canada-ON/RV2913/2009(H1N1)) hemagglutinin (HA) gene, partial cds
+>gi|307070040|gb|HQ239581|Influenza A virus (A/Canada-ON/RV2914/2009(H1N1)) hemagglutinin (HA) gene, partial cds
+>gi|307070094|gb|HQ239608|Influenza A virus (A/Canada-ON/RV2961/2009(H1N1)) hemagglutinin (HA) gene, partial cds
+>gi|307070096|gb|HQ239609|Influenza A virus (A/Canada-ON/RV2962/2009(H1N1)) hemagglutinin (HA) gene, partial cds
+>gi|307070098|gb|HQ239610|Influenza A virus (A/Canada-ON/RV2963/2009(H1N1)) hemagglutinin (HA) gene, partial cds
+>gi|307070100|gb|HQ239611|Influenza A virus (A/Canada-ON/RV2964/2009(H1N1)) hemagglutinin (HA) gene, partial cds
+>gi|307070102|gb|HQ239612|Influenza A virus (A/Canada-ON/RV2965/2009(H1N1)) hemagglutinin (HA) gene, partial cds
+>gi|307070104|gb|HQ239613|Influenza A virus (A/Canada-ON/RV2966/2009(H1N1)) hemagglutinin (HA) gene, partial cds
+>gi|307070106|gb|HQ239614|Influenza A virus (A/Canada-ON/RV2967/2009(H1N1)) hemagglutinin (HA) gene, partial cds
+>gi|307070108|gb|HQ239615|Influenza A virus (A/Canada-ON/RV2983/2009(H1N1)) hemagglutinin (HA) gene, partial cds
+>gi|307070110|gb|HQ239616|Influenza A virus (A/Canada-ON/RV2984/2009(H1N1)) hemagglutinin (HA) gene, partial cds
+>gi|307070112|gb|HQ239617|Influenza A virus (A/Canada-ON/RV2985/2009(H1N1)) hemagglutinin (HA) gene, partial cds
+>gi|336180781|gb|JN084411|Influenza A virus (A/equine/Ontario/V-50/1997(H3N8)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|336180801|gb|JN084421|Influenza A virus (A/equine/Ontario/51610/2001(H3N8)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|336180807|gb|JN084424|Influenza A virus (A/equine/Ontario/40754/2002(H3N8)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|340745418|gb|CY095291|Influenza A virus (A/mallard/Ontario/15873/2005(H3N2)) hemagglutinin (HA) gene, partial cds
+>gi|340745456|gb|CY095331|Influenza A virus (A/ring-necked duck/Ontario/15530/2005(H3N2)) hemagglutinin (HA) gene, complete cds
+>gi|347665324|gb|JN683637|Influenza A virus (A/turkey/Ontario/FAV-3/2011(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|347665343|gb|JN683629|Influenza A virus (A/turkey/Ontario/FAV-9/2011(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|349591319|gb|JN706700|Influenza A virus (A/turkey/Ontario/FAV-10/2011(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|380039913|gb|JQ658888|Influenza A virus (A/Ontario/U10611/2010(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|380039915|gb|JQ658889|Influenza A virus (A/Ontario/C432471/2010(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|380039917|gb|JQ658890|Influenza A virus (A/Ontario/C1995/2010(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|380039919|gb|JQ658891|Influenza A virus (A/Ontario/C526567/2010(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|380039921|gb|JQ658892|Influenza A virus (A/Ontario/C537546/2010(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|380039923|gb|JQ658893|Influenza A virus (A/Ontario/N91737/2010(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|380039925|gb|JQ658894|Influenza A virus (A/Ontario/N91738/2010(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|380039927|gb|JQ658895|Influenza A virus (A/Ontario/C575475/2010(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|380039929|gb|JQ658896|Influenza A virus (A/Ontario/C575478/2010(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|380039931|gb|JQ658897|Influenza A virus (A/Ontario/C575591/2010(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|380039933|gb|JQ658898|Influenza A virus (A/Ontario/C575589/2010(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|380039935|gb|JQ658899|Influenza A virus (A/Ontario/C575590/2010(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|380039937|gb|JQ658900|Influenza A virus (A/Ontario/C582096/2010(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|380039939|gb|JQ658901|Influenza A virus (A/Ontario/C543493/2010(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|380039941|gb|JQ658902|Influenza A virus (A/Ontario/C582144/2010(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|380039943|gb|JQ658903|Influenza A virus (A/Ontario/C582093/2010(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|380039945|gb|JQ658904|Influenza A virus (A/Ontario/C627683/2010(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|380039947|gb|JQ658905|Influenza A virus (A/Ontario/P21546/2010(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|380039949|gb|JQ658906|Influenza A virus (A/Ontario/P21548/2010(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|380039951|gb|JQ658907|Influenza A virus (A/Ontario/C610464/2010(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|380039953|gb|JQ658908|Influenza A virus (A/Ontario/C698767/2010(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|380039955|gb|JQ658909|Influenza A virus (A/Ontario/C706264/2010(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|380039957|gb|JQ658910|Influenza A virus (A/Ontario/C706265/2010(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|380039959|gb|JQ658911|Influenza A virus (A/Ontario/C720525/2010(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|380039961|gb|JQ658912|Influenza A virus (A/Ontario/C720531/2010(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|380039963|gb|JQ658913|Influenza A virus (A/Ontario/C687408/2010(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|380039965|gb|JQ658914|Influenza A virus (A/Ontario/C687409/2010(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|380039967|gb|JQ658915|Influenza A virus (A/Ontario/K4022160/2010(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|380039969|gb|JQ658916|Influenza A virus (A/Ontario/K4023106/2010(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|380039971|gb|JQ658917|Influenza A virus (A/Ontario/K4050772/2010(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|380039973|gb|JQ658918|Influenza A virus (A/Ontario/C835943/2010(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|380039975|gb|JQ658919|Influenza A virus (A/Ontario/C835944/2010(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|380039977|gb|JQ658920|Influenza A virus (A/Ontario/C835942/2010(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|380039979|gb|JQ658921|Influenza A virus (A/Ontario/C5828/2011(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|380039981|gb|JQ658922|Influenza A virus (A/Ontario/C4144/2011(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|380039983|gb|JQ658923|Influenza A virus (A/Ontario/C653602/2011(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|380039985|gb|JQ658924|Influenza A virus (A/Ontario/R3296/2011(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|380039987|gb|JQ658925|Influenza A virus (A/Ontario/C37332/2011(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|380039989|gb|JQ658926|Influenza A virus (A/Ontario/C76206/2011(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|380039991|gb|JQ658927|Influenza A virus (A/Ontario/C728447/2010(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|380681423|gb|CY110990|Influenza A virus (A/Ontario/011/2011(H3N2)) hemagglutinin (HA) gene, complete cds
+>gi|380681427|gb|CY110991|Influenza A virus (A/Ontario/012/2011(H3N2)) hemagglutinin (HA) gene, complete cds
+>gi|380681431|gb|CY110992|Influenza A virus (A/Ontario/013/2011(H3N2)) hemagglutinin (HA) gene, complete cds
+>gi|380681437|gb|CY110993|Influenza A virus (A/Ontario/014/2011(H3N2)) hemagglutinin (HA) gene, complete cds
+>gi|380681441|gb|CY110994|Influenza A virus (A/Ontario/015/2011(H3N2)) hemagglutinin (HA) gene, complete cds
+>gi|380681445|gb|CY110995|Influenza A virus (A/Ontario/016/2011(H3N2)) hemagglutinin (HA) gene, complete cds
+>gi|380681447|gb|CY110996|Influenza A virus (A/Ontario/017/2011(H3N2)) hemagglutinin (HA) gene, complete cds
+>gi|380681453|gb|CY110997|Influenza A virus (A/Ontario/018/2011(H3N2)) hemagglutinin (HA) gene, complete cds
+>gi|380681457|gb|CY110998|Influenza A virus (A/Ontario/019/2011(H3N2)) hemagglutinin (HA) gene, complete cds
+>gi|380681461|gb|CY110999|Influenza A virus (A/Ontario/020/2011(H3N2)) hemagglutinin (HA) gene, complete cds
+>gi|380681465|gb|CY111000|Influenza A virus (A/Ontario/021/2011(H3N2)) hemagglutinin (HA) gene, complete cds
+>gi|380681469|gb|CY111001|Influenza A virus (A/Ontario/022/2011(H3N2)) hemagglutinin (HA) gene, complete cds
+>gi|380681471|gb|CY111002|Influenza A virus (A/Ontario/023/2011(H3N2)) hemagglutinin (HA) gene, complete cds
+>gi|380681473|gb|CY111003|Influenza A virus (A/Ontario/024/2011(H3N2)) hemagglutinin (HA) gene, complete cds
+>gi|380681475|gb|CY111004|Influenza A virus (A/Ontario/001/2010(H3N2)) hemagglutinin (HA) gene, complete cds
+>gi|380681477|gb|CY111005|Influenza A virus (A/Ontario/002/2010(H3N2)) hemagglutinin (HA) gene, complete cds
+>gi|380681479|gb|CY111006|Influenza A virus (A/Ontario/004/2010(H3N2)) hemagglutinin (HA) gene, complete cds
+>gi|380681481|gb|CY111007|Influenza A virus (A/Ontario/003/2010(H3N2)) hemagglutinin (HA) gene, complete cds
+>gi|380681483|gb|CY111008|Influenza A virus (A/Ontario/005/2010(H3N2)) hemagglutinin (HA) gene, complete cds
+>gi|380681485|gb|CY111009|Influenza A virus (A/Ontario/007/2010(H3N2)) hemagglutinin (HA) gene, complete cds
+>gi|380681487|gb|CY111010|Influenza A virus (A/Ontario/008/2010(H3N2)) hemagglutinin (HA) gene, complete cds
+>gi|380681489|gb|CY111011|Influenza A virus (A/Ontario/006/2010(H3N2)) hemagglutinin (HA) gene, complete cds
+>gi|380681491|gb|CY111012|Influenza A virus (A/Ontario/009/2010(H3N2)) hemagglutinin (HA) gene, partial cds
+>gi|380681493|gb|CY111013|Influenza A virus (A/Ontario/010/2010(H3N2)) hemagglutinin (HA) gene, complete cds
+>gi|387601200|gb|CY045511|Influenza A virus (A/Toronto/R8564/2009(H1N1)) segment 4 sequence
+>gi|387601201|gb|CY045946|Influenza A virus (A/Toronto/C2781/2009(H1N1)) segment 4 sequence
+>gi|387601204|gb|CY045962|Influenza A virus (A/Toronto/T5294/2009(H1N1)) segment 4 sequence
+>gi|387601206|gb|CY045970|Influenza A virus (A/Toronto/T5362/2009(H1N1)) segment 4 sequence
+>gi|387601208|gb|CY045978|Influenza A virus (A/Toronto/T9842/2009(H1N1)) segment 4 sequence
+>gi|387601210|gb|CY060502|Influenza A virus (A/Ontario/10016/2009(H1N1)) segment 4 sequence
+>gi|387601211|gb|CY060510|Influenza A virus (A/Ontario/10296/2009(H1N1)) segment 4 sequence
+>gi|387601213|gb|CY060526|Influenza A virus (A/Ontario/235657/2009(H1N1)) segment 4 sequence
+>gi|387601215|gb|CY060534|Influenza A virus (A/Ontario/237882/2009(H1N1)) segment 4 sequence
+>gi|387601217|gb|CY060542|Influenza A virus (A/Ontario/25389/2009(H1N1)) segment 4 sequence
+>gi|387601219|gb|CY060550|Influenza A virus (A/Ontario/25913/2009(H1N1)) segment 4 sequence
+>gi|387601221|gb|CY060566|Influenza A virus (A/Ontario/296008/2009(H1N1)) segment 4 sequence
+>gi|387601223|gb|CY060574|Influenza A virus (A/Ontario/29801/2009(H1N1)) segment 4 sequence
+>gi|387601225|gb|CY060582|Influenza A virus (A/Ontario/304434/2009(H1N1)) segment 4 sequence
+>gi|387601227|gb|CY060590|Influenza A virus (A/Ontario/305139/2009(H1N1)) segment 4 sequence
+>gi|387601228|gb|CY060598|Influenza A virus (A/Ontario/305598/2009(H1N1)) segment 4 sequence
+>gi|387601230|gb|CY060606|Influenza A virus (A/Ontario/308054/2009(H1N1)) segment 4 sequence
+>gi|387601232|gb|CY060614|Influenza A virus (A/Ontario/309862/2009(H1N1)) segment 4 sequence
+>gi|387601234|gb|CY060622|Influenza A virus (A/Ontario/313762/2009(H1N1)) segment 4 sequence
+>gi|387601236|gb|CY060630|Influenza A virus (A/Ontario/314095/2009(H1N1)) segment 4 sequence
+>gi|387601237|gb|CY060638|Influenza A virus (A/Ontario/314137/2009(H1N1)) segment 4 sequence
+>gi|387601239|gb|CY060646|Influenza A virus (A/Ontario/314603/2009(H1N1)) segment 4 sequence
+>gi|387601241|gb|CY060654|Influenza A virus (A/Ontario/315003/2009(H1N1)) segment 4 sequence
+>gi|387601243|gb|CY060662|Influenza A virus (A/Ontario/315015/2009(H1N1)) segment 4 sequence
+>gi|387601244|gb|CY060670|Influenza A virus (A/Ontario/315047/2009(H1N1)) segment 4 sequence
+>gi|387601246|gb|CY060678|Influenza A virus (A/Ontario/315107/2009(H1N1)) segment 4 sequence
+>gi|387601248|gb|CY060686|Influenza A virus (A/Ontario/315181/2009(H1N1)) segment 4 sequence
+>gi|387601250|gb|CY060694|Influenza A virus (A/Ontario/315187/2009(H1N1)) segment 4 sequence
+>gi|387601252|gb|CY060702|Influenza A virus (A/Ontario/315613/2009(H1N1)) segment 4 sequence
+>gi|387601254|gb|CY060710|Influenza A virus (A/Ontario/315637/2009(H1N1)) segment 4 sequence
+>gi|387601256|gb|CY060718|Influenza A virus (A/Ontario/320266/2009(H1N1)) segment 4 sequence
+>gi|387601258|gb|CY060726|Influenza A virus (A/Ontario/328474/2009(H1N1)) segment 4 sequence
+>gi|387601260|gb|CY060734|Influenza A virus (A/Ontario/35273/2009(H1N1)) segment 4 sequence
+>gi|387601262|gb|CY060742|Influenza A virus (A/Ontario/9698/2009(H1N1)) segment 4 sequence
+>gi|387601264|gb|CY076755|Influenza A virus (A/Ontario/142358/2009(H1N1)) segment 4 sequence
+>gi|387601266|gb|CY076763|Influenza A virus (A/Ontario/147265/2009(H1N1)) segment 4 sequence
+>gi|387601267|gb|CY076771|Influenza A virus (A/Ontario/147723/2009(H1N1)) segment 4 sequence
+>gi|387601269|gb|CY076779|Influenza A virus (A/Ontario/152439/2009(H1N1)) segment 4 sequence
+>gi|387601271|gb|CY076787|Influenza A virus (A/Ontario/152846/2009(H1N1)) segment 4 sequence
+>gi|387601272|gb|CY076795|Influenza A virus (A/Ontario/156785/2009(H1N1)) segment 4 sequence
+>gi|387601273|gb|CY081061|Influenza A virus (A/Ontario/130741/2010(H1N1)) hemagglutinin (HA) gene, complete cds
+>gi|387601274|gb|CY081069|Influenza A virus (A/Ontario/3620/2010(H1N1)) hemagglutinin (HA) gene, complete cds
+>gi|387601275|gb|CY081077|Influenza A virus (A/Ontario/720545/2010(H1N1)) hemagglutinin (HA) gene, complete cds
+>gi|387601276|gb|CY081085|Influenza A virus (A/Ontario/741328/2010(H1N1)) hemagglutinin (HA) gene, complete cds
+>gi|387601277|gb|CY081093|Influenza A virus (A/Ontario/778873/2010(H1N1)) hemagglutinin (HA) gene, complete cds
+>gi|387601278|gb|CY081101|Influenza A virus (A/Ontario/804635/2010(H1N1)) hemagglutinin (HA) gene, complete cds
+>gi|387913768|gb|FJ974024|Influenza A virus (A/Toronto/3184/2009(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|387913769|gb|FJ974026|Influenza A virus (A/Toronto/3141/2009(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|387913771|gb|GQ502906|Influenza A virus (A/Toronto/R8557/2009(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|409194324|gb|JX875001|Influenza A virus (A/Ontario/N163578/2012(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|410945746|gb|HQ239458|Influenza A virus (A/Canada-ON/RV2015-10/2009(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|410945748|gb|HQ239459|Influenza A virus (A/Canada-ON/RV2016-10/2009(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|410945750|gb|HQ239460|Influenza A virus (A/Canada-ON/RV2017-10/2009(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|444301832|gb|KC526204|Influenza A virus (A/Ontario/030/2012(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|444301834|gb|KC526205|Influenza A virus (A/Ontario/031/2012(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|444301836|gb|KC526206|Influenza A virus (A/Ontario/032/2012(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|444301838|gb|KC526207|Influenza A virus (A/Ontario/001/2013(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|444301840|gb|KC526208|Influenza A virus (A/Ontario/002/2013(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|444301842|gb|KC526209|Influenza A virus (A/Ontario/003/2013(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|444301844|gb|KC526210|Influenza A virus (A/Ontario/004/2013(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|444301846|gb|KC526211|Influenza A virus (A/Ontario/005/2013(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|444301848|gb|KC526212|Influenza A virus (A/Ontario/006/2013(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|444301850|gb|KC526213|Influenza A virus (A/Ontario/007/2013(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|444301852|gb|KC526214|Influenza A virus (A/Ontario/008/2013(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|543868941|gb|KF551067|Influenza A virus (A/Ontario/025/2011(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|543868943|gb|KF551068|Influenza A virus (A/Ontario/001/2012(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|543868945|gb|KF551069|Influenza A virus (A/Ontario/005/2012(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|543868947|gb|KF551070|Influenza A virus (A/Ontario/009/2012(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|543868949|gb|KF551071|Influenza A virus (A/Ontario/014/2012(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|543868951|gb|KF551072|Influenza A virus (A/Ontario/015/2012(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|543868953|gb|KF551073|Influenza A virus (A/Ontario/017/2012(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|543868955|gb|KF551074|Influenza A virus (A/Ontario/020/2012(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|543868957|gb|KF551075|Influenza A virus (A/Ontario/021/2012(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|543868959|gb|KF551076|Influenza A virus (A/Ontario/027/2012(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|543868961|gb|KF551077|Influenza A virus (A/Ontario/028/2012(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|543868963|gb|KF551078|Influenza A virus (A/Ontario/029/2012(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|543868965|gb|KF551079|Influenza A virus (A/Ontario/026/2012(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|543868967|gb|KF551080|Influenza A virus (A/Ontario/026/2011(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|543868969|gb|KF551081|Influenza A virus (A/Ontario/002/2012(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|543868971|gb|KF551082|Influenza A virus (A/Ontario/003/2012(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|543868973|gb|KF551083|Influenza A virus (A/Ontario/006/2012(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|543868975|gb|KF551084|Influenza A virus (A/Ontario/007/2012(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|543868977|gb|KF551085|Influenza A virus (A/Ontario/008/2012(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|543868979|gb|KF551086|Influenza A virus (A/Ontario/010/2012(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|543868981|gb|KF551087|Influenza A virus (A/Ontario/011/2012(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|543868983|gb|KF551088|Influenza A virus (A/Ontario/013/2012(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|543868985|gb|KF551089|Influenza A virus (A/Ontario/016/2012(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|543868987|gb|KF551090|Influenza A virus (A/Ontario/018/2012(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|543868989|gb|KF551091|Influenza A virus (A/Ontario/019/2012(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|543868991|gb|KF551092|Influenza A virus (A/Ontario/022/2012(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|543868993|gb|KF551093|Influenza A virus (A/Ontario/023/2012(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|543868995|gb|KF551094|Influenza A virus (A/Ontario/024/2012(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|543868997|gb|KF551095|Influenza A virus (A/Ontario/025/2012(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|543868999|gb|KF551096|Influenza A virus (A/Ontario/004/2012(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|564125750|gb|KF886348|Influenza A virus (A/Ontario/038/2013(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|564125752|gb|KF886349|Influenza A virus (A/Ontario/028/2013(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|564125754|gb|KF886350|Influenza A virus (A/Ontario/023/2013(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|564125756|gb|KF886351|Influenza A virus (A/Ontario/022/2013(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|564125758|gb|KF886352|Influenza A virus (A/Ontario/027/2013(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|564125760|gb|KF886353|Influenza A virus (A/Ontario/021/2013(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|564125762|gb|KF886354|Influenza A virus (A/Ontario/047/2013(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|564125764|gb|KF886355|Influenza A virus (A/Ontario/018/2013(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|564125766|gb|KF886356|Influenza A virus (A/Ontario/017/2013(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|564125768|gb|KF886357|Influenza A virus (A/Ontario/036/2013(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|564125770|gb|KF886358|Influenza A virus (A/Ontario/016/2013(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|564125772|gb|KF886359|Influenza A virus (A/Ontario/013/2013(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|564125774|gb|KF886360|Influenza A virus (A/Ontario/015/2013(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|564125776|gb|KF886361|Influenza A virus (A/Ontario/037/2013(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|564125778|gb|KF886362|Influenza A virus (A/Ontario/030/2013(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|564125780|gb|KF886363|Influenza A virus (A/Ontario/009/2013(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|564125782|gb|KF886364|Influenza A virus (A/Ontario/025/2013(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|564125784|gb|KF886365|Influenza A virus (A/Ontario/034/2013(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|564125786|gb|KF886366|Influenza A virus (A/Ontario/043/2013(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|564125788|gb|KF886367|Influenza A virus (A/Ontario/020/2013(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|564125790|gb|KF886368|Influenza A virus (A/Ontario/033/2012(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|564125792|gb|KF886369|Influenza A virus (A/Ontario/031/2013(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|564125794|gb|KF886370|Influenza A virus (A/Ontario/029/2013(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|564125796|gb|KF886371|Influenza A virus (A/Ontario/039/2013(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|564125798|gb|KF886372|Influenza A virus (A/Ontario/014/2013(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|564125800|gb|KF886373|Influenza A virus (A/Ontario/033/2013(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|564125802|gb|KF886374|Influenza A virus (A/Ontario/024/2013(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|564125804|gb|KF886375|Influenza A virus (A/Ontario/032/2013(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|564125806|gb|KF886376|Influenza A virus (A/Ontario/045/2013(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|564125808|gb|KF886377|Influenza A virus (A/Ontario/012/2013(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|564125810|gb|KF886378|Influenza A virus (A/Ontario/040/2013(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|564125812|gb|KF886379|Influenza A virus (A/Ontario/044/2013(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|564125814|gb|KF886380|Influenza A virus (A/Ontario/011/2013(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|564125816|gb|KF886381|Influenza A virus (A/Ontario/026/2013(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|587680849|gb|KJ406379|Influenza A virus (A/Ontario/50/2013(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|587680851|gb|KJ406380|Influenza A virus (A/Ontario/54/2013(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|587680853|gb|KJ406381|Influenza A virus (A/Ontario/48/2013(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|587680855|gb|KJ406382|Influenza A virus (A/Ontario/51/2013(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|587680857|gb|KJ406383|Influenza A virus (A/Ontario/49/2013(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|587680859|gb|KJ406384|Influenza A virus (A/Ontario/52/2013(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|587680861|gb|KJ406385|Influenza A virus (A/Ontario/53/2013(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|587680863|gb|KJ406386|Influenza A virus (A/Ontario/55/2013(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|587680865|gb|KJ406387|Influenza A virus (A/Ontario/56/2013(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|589825795|gb|KJ413895|Influenza A virus (A/swine/Ontario/103-18/2011(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|589825799|gb|KJ413897|Influenza A virus (A/swine/Ontario/104-25/2012(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|589825803|gb|KJ413899|Influenza A virus (A/swine/Ontario/105-56/2012(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|589825807|gb|KJ413901|Influenza A virus (A/swine/Ontario/107-22/2012(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|589825811|gb|KJ413903|Influenza A virus (A/swine/Ontario/114-13/2012(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|589825815|gb|KJ413905|Influenza A virus (A/swine/Ontario/115-2/2012(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|589825819|gb|KJ413907|Influenza A virus (A/swine/Ontario/118-38/2012(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|589825821|gb|KJ413908|Influenza A virus (A/swine/Ontario/120-55/2012(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|589825827|gb|KJ413911|Influenza A virus (A/swine/Ontario/11-105317/2011(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|589825831|gb|KJ413913|Influenza A virus (A/swine/Ontario/204-76/2012(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|635227279|gb|KJ734739|Influenza A virus (A/Ontario/C3798-1/2012(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|635227306|gb|KJ734740|Influenza A virus (A/Ontario/C9969-2/2013(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|635227337|gb|KJ734741|Influenza A virus (A/Ontario/C0982-3/2013(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|635227361|gb|KJ734742|Influenza A virus (A/Ontario/C0587-4/2013(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|635227393|gb|KJ734743|Influenza A virus (A/Ontario/C8073-5/2013(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|635227427|gb|KJ734744|Influenza A virus (A/Ontario/C5314-6/2013(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|635227443|gb|KJ734745|Influenza A virus (A/Ontario/C3849-7/2013(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|635227457|gb|KJ734746|Influenza A virus (A/Ontario/C6633-8/2013(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|635227475|gb|KJ734747|Influenza A virus (A/Ontario/C7065-9/2013(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|635227503|gb|KJ734748|Influenza A virus (A/Ontario/C8308-10/2013(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|635227534|gb|KJ734749|Influenza A virus (A/Ontario/C1823-11/2013(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|695308367|gb|KM489563|Influenza A virus (A/swine/Ontario/13-1/2012(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|695308380|gb|KM489564|Influenza A virus (A/swine/Ontario/16-24/2012(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|695308393|gb|KM489565|Influenza A virus (A/swine/Ontario/84/2012(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|695308399|gb|KM489566|Influenza A virus (A/swine/Ontario/62/2012(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|695308409|gb|KM489567|Influenza A virus (A/swine/Ontario/68/2012(H1N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|695308424|gb|KM489568|Influenza A virus (A/swine/Ontario/46/2012(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|756763312|gb|KP701623|Influenza A virus (A/Ontario/60/2014(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|756763314|gb|KP701624|Influenza A virus (A/Ontario/58/2014(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|756763316|gb|KP701625|Influenza A virus (A/Ontario/57/2014(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|756763318|gb|KP701626|Influenza A virus (A/Ontario/56/2014(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|756763320|gb|KP701627|Influenza A virus (A/Ontario/55/2014(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|756763322|gb|KP701628|Influenza A virus (A/Ontario/54/2014(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|756763324|gb|KP701629|Influenza A virus (A/Ontario/53/2014(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|756763326|gb|KP701630|Influenza A virus (A/Ontario/52/2014(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|756763328|gb|KP701631|Influenza A virus (A/Ontario/51/2014(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|756763330|gb|KP701632|Influenza A virus (A/Ontario/49/2014(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|756763332|gb|KP701633|Influenza A virus (A/Ontario/48/2014(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|756763334|gb|KP701634|Influenza A virus (A/Ontario/47/2014(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|756763336|gb|KP701635|Influenza A virus (A/Ontario/45/2014(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|756763338|gb|KP701636|Influenza A virus (A/Ontario/44/2014(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|756763340|gb|KP701637|Influenza A virus (A/Ontario/42/2014(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|756763342|gb|KP701638|Influenza A virus (A/Ontario/41/2014(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|756763344|gb|KP701639|Influenza A virus (A/Ontario/61/2014(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|756763346|gb|KP701640|Influenza A virus (A/Ontario/63/2014(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|756763348|gb|KP701641|Influenza A virus (A/Ontario/66/2014(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|756763350|gb|KP701642|Influenza A virus (A/Ontario/67/2014(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|756763352|gb|KP701643|Influenza A virus (A/Ontario/68/2014(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|756763354|gb|KP701644|Influenza A virus (A/Ontario/69/2014(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|756763356|gb|KP701645|Influenza A virus (A/Ontario/70/2014(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|756763358|gb|KP701646|Influenza A virus (A/Ontario/71/2014(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|756763360|gb|KP701647|Influenza A virus (A/Ontario/73/2014(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|756763362|gb|KP701648|Influenza A virus (A/Ontario/74/2014(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|756763364|gb|KP701649|Influenza A virus (A/Ontario/76/2014(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|756763366|gb|KP701650|Influenza A virus (A/Ontario/79/2014(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|777862892|gb|KP864396|Influenza A virus (A/Ontario/02/2014(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|777862895|gb|KP864397|Influenza A virus (A/Ontario/04/2014(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|777862898|gb|KP864398|Influenza A virus (A/Ontario/03/2014(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|777862901|gb|KP864399|Influenza A virus (A/Ontario/05/2014(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|777862977|gb|KP864423|Influenza A virus (A/Ontario/40/2014(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|777862980|gb|KP864424|Influenza A virus (A/Ontario/25/2014(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|777862983|gb|KP864425|Influenza A virus (A/Ontario/01/2014(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002822988|gb|KU729352|Influenza A virus (A/Ontario/98/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002822990|gb|KU729353|Influenza A virus (A/Ontario/99/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002822992|gb|KU729354|Influenza A virus (A/Ontario/100/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002822994|gb|KU729355|Influenza A virus (A/Ontario/101/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002822996|gb|KU729356|Influenza A virus (A/Ontario/81/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002822998|gb|KU729357|Influenza A virus (A/Ontario/85/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823000|gb|KU729358|Influenza A virus (A/Ontario/81/2014(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823002|gb|KU729359|Influenza A virus (A/Ontario/55/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823004|gb|KU729360|Influenza A virus (A/Ontario/56/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823006|gb|KU729361|Influenza A virus (A/Ontario/29/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823008|gb|KU729362|Influenza A virus (A/Ontario/34/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823010|gb|KU729363|Influenza A virus (A/Ontario/28/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823012|gb|KU729364|Influenza A virus (A/Ontario/48/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823014|gb|KU729365|Influenza A virus (A/Ontario/59/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823016|gb|KU729366|Influenza A virus (A/Ontario/67/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823018|gb|KU729367|Influenza A virus (A/Ontario/15/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823020|gb|KU729368|Influenza A virus (A/Ontario/53/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823022|gb|KU729369|Influenza A virus (A/Ontario/5/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823024|gb|KU729370|Influenza A virus (A/Ontario/84/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823026|gb|KU729371|Influenza A virus (A/Ontario/73/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823028|gb|KU729372|Influenza A virus (A/Ontario/76/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823030|gb|KU729373|Influenza A virus (A/Ontario/69/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823032|gb|KU729374|Influenza A virus (A/Ontario/13/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823034|gb|KU729375|Influenza A virus (A/Ontario/40/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823036|gb|KU729376|Influenza A virus (A/Ontario/25/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823038|gb|KU729377|Influenza A virus (A/Ontario/31/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823040|gb|KU729378|Influenza A virus (A/Ontario/12/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823042|gb|KU729379|Influenza A virus (A/Ontario/93/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823044|gb|KU729380|Influenza A virus (A/Ontario/22/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823046|gb|KU729381|Influenza A virus (A/Ontario/70/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823048|gb|KU729382|Influenza A virus (A/Ontario/66/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823050|gb|KU729383|Influenza A virus (A/Ontario/33/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823052|gb|KU729384|Influenza A virus (A/Ontario/4/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823054|gb|KU729385|Influenza A virus (A/Ontario/39/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823056|gb|KU729386|Influenza A virus (A/Ontario/75/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823058|gb|KU729387|Influenza A virus (A/Ontario/87/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823060|gb|KU729388|Influenza A virus (A/Ontario/20/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823062|gb|KU729389|Influenza A virus (A/Ontario/43/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823064|gb|KU729390|Influenza A virus (A/Ontario/21/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823066|gb|KU729391|Influenza A virus (A/Ontario/91/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823068|gb|KU729392|Influenza A virus (A/Ontario/26/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823070|gb|KU729393|Influenza A virus (A/Ontario/51/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823072|gb|KU729394|Influenza A virus (A/Ontario/9/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823074|gb|KU729395|Influenza A virus (A/Ontario/89/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823076|gb|KU729396|Influenza A virus (A/Ontario/90/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823078|gb|KU729397|Influenza A virus (A/Ontario/30/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823080|gb|KU729398|Influenza A virus (A/Ontario/3/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823082|gb|KU729399|Influenza A virus (A/Ontario/44/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823084|gb|KU729400|Influenza A virus (A/Ontario/45/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823086|gb|KU729401|Influenza A virus (A/Ontario/52/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823088|gb|KU729402|Influenza A virus (A/Ontario/2/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823090|gb|KU729403|Influenza A virus (A/Ontario/24/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823092|gb|KU729404|Influenza A virus (A/Ontario/64/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823094|gb|KU729405|Influenza A virus (A/Ontario/7/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823096|gb|KU729406|Influenza A virus (A/Ontario/19/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823098|gb|KU729407|Influenza A virus (A/Ontario/49/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823100|gb|KU729408|Influenza A virus (A/Ontario/78/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823102|gb|KU729409|Influenza A virus (A/Ontario/6/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823104|gb|KU729410|Influenza A virus (A/Ontario/83/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823106|gb|KU729411|Influenza A virus (A/Ontario/38/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823108|gb|KU729412|Influenza A virus (A/Ontario/77/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823110|gb|KU729413|Influenza A virus (A/Ontario/95/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823112|gb|KU729414|Influenza A virus (A/Ontario/17/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823114|gb|KU729415|Influenza A virus (A/Ontario/42/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823116|gb|KU729416|Influenza A virus (A/Ontario/88/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823118|gb|KU729417|Influenza A virus (A/Ontario/16/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823120|gb|KU729418|Influenza A virus (A/Ontario/80/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823122|gb|KU729419|Influenza A virus (A/Ontario/96/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823124|gb|KU729420|Influenza A virus (A/Ontario/60/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823126|gb|KU729421|Influenza A virus (A/Ontario/8/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823128|gb|KU729422|Influenza A virus (A/Ontario/10/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823130|gb|KU729423|Influenza A virus (A/Ontario/11/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823132|gb|KU729424|Influenza A virus (A/Ontario/85/2014(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823134|gb|KU729425|Influenza A virus (A/Ontario/36/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823136|gb|KU729426|Influenza A virus (A/Ontario/84/2014(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823138|gb|KU729427|Influenza A virus (A/Ontario/86/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823140|gb|KU729428|Influenza A virus (A/Ontario/94/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823142|gb|KU729429|Influenza A virus (A/Ontario/46/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823144|gb|KU729430|Influenza A virus (A/Ontario/57/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823146|gb|KU729431|Influenza A virus (A/Ontario/32/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823148|gb|KU729432|Influenza A virus (A/Ontario/54/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823150|gb|KU729433|Influenza A virus (A/Ontario/35/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823152|gb|KU729434|Influenza A virus (A/Ontario/83/2014(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823154|gb|KU729435|Influenza A virus (A/Ontario/79/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823156|gb|KU729436|Influenza A virus (A/Ontario/14/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823158|gb|KU729437|Influenza A virus (A/Ontario/58/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823160|gb|KU729438|Influenza A virus (A/Ontario/65/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823162|gb|KU729439|Influenza A virus (A/Ontario/86/2014(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823164|gb|KU729440|Influenza A virus (A/Ontario/62/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823166|gb|KU729441|Influenza A virus (A/Ontario/82/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823168|gb|KU729442|Influenza A virus (A/Ontario/92/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823170|gb|KU729443|Influenza A virus (A/Ontario/61/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823172|gb|KU729444|Influenza A virus (A/Ontario/87/2014(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823174|gb|KU729445|Influenza A virus (A/Ontario/74/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823176|gb|KU729446|Influenza A virus (A/Ontario/72/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823178|gb|KU729447|Influenza A virus (A/Ontario/68/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823180|gb|KU729448|Influenza A virus (A/Ontario/47/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823182|gb|KU729449|Influenza A virus (A/Ontario/23/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823184|gb|KU729450|Influenza A virus (A/Ontario/27/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823186|gb|KU729451|Influenza A virus (A/Ontario/50/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823188|gb|KU729452|Influenza A virus (A/Ontario/1/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823190|gb|KU729453|Influenza A virus (A/Ontario/82/2014(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823192|gb|KU729454|Influenza A virus (A/Ontario/37/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823194|gb|KU729455|Influenza A virus (A/Ontario/18/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823196|gb|KU729456|Influenza A virus (A/Ontario/63/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823198|gb|KU729457|Influenza A virus (A/Ontario/71/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1002823200|gb|KU729458|Influenza A virus (A/Ontario/97/2015(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1033657593|gb|KX232493|Influenza A virus (A/turkey/Ontario/FAV-006-10/2016(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1033657612|gb|KX232485|Influenza A virus (A/turkey/Ontario/FAV-006-4/2016(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1033657631|gb|KX232477|Influenza A virus (A/turkey/Ontario/FAV-005-2/2016(H1N1)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1036636741|gb|KX264759|Influenza A virus (A/swine/Ontario/G16/2014(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1036636759|gb|KX264758|Influenza A virus (A/swine/Ontario/G15/2014(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1036636777|gb|KX264757|Influenza A virus (A/swine/Ontario/G14/2014(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1036636795|gb|KX264756|Influenza A virus (A/swine/Ontario/G13/2014(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1036636813|gb|KX264753|Influenza A virus (A/swine/Ontario/G10/2014(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1036636831|gb|KX264755|Influenza A virus (A/swine/Ontario/G12/2014(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1036636849|gb|KX264754|Influenza A virus (A/swine/Ontario/G11/2014(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1036637011|gb|KX264746|Influenza A virus (A/swine/Ontario/G3/2014(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1071464335|gb|CY045954|Influenza A virus (A/Toronto/T0106/2009(H1N1)) segment 4 sequence
+>gi|1071464340|gb|CY060518|Influenza A virus (A/Ontario/222656/2009(H1N1)) segment 4 sequence
+>gi|1071464341|gb|CY060558|Influenza A virus (A/Ontario/26184/2009(H1N1)) segment 4 sequence
+>gi|1148950683|gb|KY583680|Influenza A virus (A/Ontario/253/2016(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1148950685|gb|KY583681|Influenza A virus (A/Ontario/252/2016(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950687|gb|KY583682|Influenza A virus (A/Ontario/254/2016(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950689|gb|KY583683|Influenza A virus (A/Ontario/258/2016(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950691|gb|KY583684|Influenza A virus (A/Ontario/259/2016(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950693|gb|KY583685|Influenza A virus (A/Ontario/260/2016(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950695|gb|KY583686|Influenza A virus (A/Ontario/262/2016(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950697|gb|KY583687|Influenza A virus (A/Ontario/255/2016(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950699|gb|KY583688|Influenza A virus (A/Ontario/261/2016(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950701|gb|KY583689|Influenza A virus (A/Ontario/257/2016(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950703|gb|KY583690|Influenza A virus (A/Ontario/017/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1148950705|gb|KY583691|Influenza A virus (A/Ontario/023/2017(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950707|gb|KY583692|Influenza A virus (A/Ontario/010/2017(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950709|gb|KY583693|Influenza A virus (A/Ontario/256/2016(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950711|gb|KY583694|Influenza A virus (A/Ontario/001/2017(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950713|gb|KY583695|Influenza A virus (A/Ontario/251/2016(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950715|gb|KY583696|Influenza A virus (A/Ontario/264/2016(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950717|gb|KY583697|Influenza A virus (A/Ontario/018/2017(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950719|gb|KY583698|Influenza A virus (A/Ontario/028/2017(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950721|gb|KY583699|Influenza A virus (A/Ontario/245/2016(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950723|gb|KY583700|Influenza A virus (A/Ontario/267/2016(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950725|gb|KY583701|Influenza A virus (A/Ontario/004/2017(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950727|gb|KY583702|Influenza A virus (A/Ontario/027/2017(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950729|gb|KY583703|Influenza A virus (A/Ontario/265/2016(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950731|gb|KY583704|Influenza A virus (A/Ontario/003/2017(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950733|gb|KY583705|Influenza A virus (A/Ontario/007/2017(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950735|gb|KY583706|Influenza A virus (A/Ontario/015/2017(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950737|gb|KY583707|Influenza A virus (A/Ontario/016/2017(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950739|gb|KY583708|Influenza A virus (A/Ontario/247/2016(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950741|gb|KY583709|Influenza A virus (A/Ontario/014/2017(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950743|gb|KY583710|Influenza A virus (A/Ontario/250/2016(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950745|gb|KY583711|Influenza A virus (A/Ontario/022/2017(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950747|gb|KY583712|Influenza A virus (A/Ontario/026/2017(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950749|gb|KY583713|Influenza A virus (A/Ontario/242/2016(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950751|gb|KY583714|Influenza A virus (A/Ontario/006/2017(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950753|gb|KY583715|Influenza A virus (A/Ontario/246/2016(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950755|gb|KY583716|Influenza A virus (A/Ontario/020/2017(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950757|gb|KY583717|Influenza A virus (A/Ontario/244/2016(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950759|gb|KY583718|Influenza A virus (A/Ontario/012/2017(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950761|gb|KY583719|Influenza A virus (A/Ontario/013/2017(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950763|gb|KY583720|Influenza A virus (A/Ontario/248/2016(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950765|gb|KY583721|Influenza A virus (A/Ontario/249/2016(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950767|gb|KY583722|Influenza A virus (A/Ontario/019/2017(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950769|gb|KY583723|Influenza A virus (A/Ontario/025/2017(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950771|gb|KY583724|Influenza A virus (A/Ontario/268/2016(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950773|gb|KY583725|Influenza A virus (A/Ontario/011/2017(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950775|gb|KY583726|Influenza A virus (A/Ontario/024/2017(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1148950777|gb|KY583727|Influenza A virus (A/Ontario/266/2016(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1208328315|gb|MF195413|Influenza A virus (A/Ontario/026/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328317|gb|MF195414|Influenza A virus (A/Ontario/027/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328319|gb|MF195415|Influenza A virus (A/Ontario/028/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328321|gb|MF195416|Influenza A virus (A/Ontario/029/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328323|gb|MF195417|Influenza A virus (A/Ontario/030/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328325|gb|MF195418|Influenza A virus (A/Ontario/038/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328327|gb|MF195419|Influenza A virus (A/Ontario/041/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328329|gb|MF195420|Influenza A virus (A/Ontario/043/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328331|gb|MF195421|Influenza A virus (A/Ontario/044/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328333|gb|MF195422|Influenza A virus (A/Ontario/048/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328335|gb|MF195423|Influenza A virus (A/Ontario/050/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328337|gb|MF195424|Influenza A virus (A/Ontario/052/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328339|gb|MF195425|Influenza A virus (A/Ontario/053/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328341|gb|MF195426|Influenza A virus (A/Ontario/054/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328343|gb|MF195427|Influenza A virus (A/Ontario/055/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328345|gb|MF195428|Influenza A virus (A/Ontario/056/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328347|gb|MF195429|Influenza A virus (A/Ontario/057/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328349|gb|MF195430|Influenza A virus (A/Ontario/058/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328351|gb|MF195431|Influenza A virus (A/Ontario/059/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328353|gb|MF195432|Influenza A virus (A/Ontario/060/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328355|gb|MF195433|Influenza A virus (A/Ontario/061/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328357|gb|MF195434|Influenza A virus (A/Ontario/062/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328359|gb|MF195435|Influenza A virus (A/Ontario/063/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328361|gb|MF195436|Influenza A virus (A/Ontario/064/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328363|gb|MF195437|Influenza A virus (A/Ontario/065/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328365|gb|MF195438|Influenza A virus (A/Ontario/066/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328367|gb|MF195439|Influenza A virus (A/Ontario/067/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328369|gb|MF195440|Influenza A virus (A/Ontario/069/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328371|gb|MF195441|Influenza A virus (A/Ontario/071/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328373|gb|MF195442|Influenza A virus (A/Ontario/073/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328375|gb|MF195443|Influenza A virus (A/Ontario/074/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328377|gb|MF195444|Influenza A virus (A/Ontario/075/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328379|gb|MF195445|Influenza A virus (A/Ontario/076/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328381|gb|MF195446|Influenza A virus (A/Ontario/077/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328383|gb|MF195447|Influenza A virus (A/Ontario/078/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328385|gb|MF195448|Influenza A virus (A/Ontario/079/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328387|gb|MF195449|Influenza A virus (A/Ontario/080/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328389|gb|MF195450|Influenza A virus (A/Ontario/081/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328391|gb|MF195451|Influenza A virus (A/Ontario/082/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328393|gb|MF195452|Influenza A virus (A/Ontario/083/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328395|gb|MF195453|Influenza A virus (A/Ontario/084/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328397|gb|MF195454|Influenza A virus (A/Ontario/085/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328399|gb|MF195455|Influenza A virus (A/Ontario/087/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328401|gb|MF195456|Influenza A virus (A/Ontario/088/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328403|gb|MF195457|Influenza A virus (A/Ontario/089/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328405|gb|MF195458|Influenza A virus (A/Ontario/090/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328407|gb|MF195459|Influenza A virus (A/Ontario/091/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328409|gb|MF195460|Influenza A virus (A/Ontario/092/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328411|gb|MF195461|Influenza A virus (A/Ontario/093/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328413|gb|MF195462|Influenza A virus (A/Ontario/095/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328415|gb|MF195463|Influenza A virus (A/Ontario/097/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328417|gb|MF195464|Influenza A virus (A/Ontario/098/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328419|gb|MF195465|Influenza A virus (A/Ontario/099/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328421|gb|MF195466|Influenza A virus (A/Ontario/100/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328423|gb|MF195467|Influenza A virus (A/Ontario/101/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328425|gb|MF195468|Influenza A virus (A/Ontario/102/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328427|gb|MF195469|Influenza A virus (A/Ontario/103/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328429|gb|MF195470|Influenza A virus (A/Ontario/104/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328431|gb|MF195471|Influenza A virus (A/Ontario/105/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328433|gb|MF195472|Influenza A virus (A/Ontario/106/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328435|gb|MF195473|Influenza A virus (A/Ontario/107/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328437|gb|MF195474|Influenza A virus (A/Ontario/108/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328439|gb|MF195475|Influenza A virus (A/Ontario/109/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328441|gb|MF195476|Influenza A virus (A/Ontario/110/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328443|gb|MF195477|Influenza A virus (A/Ontario/111/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328445|gb|MF195478|Influenza A virus (A/Ontario/112/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328447|gb|MF195479|Influenza A virus (A/Ontario/113/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328449|gb|MF195480|Influenza A virus (A/Ontario/114/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328451|gb|MF195481|Influenza A virus (A/Ontario/115/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328453|gb|MF195482|Influenza A virus (A/Ontario/116/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328455|gb|MF195483|Influenza A virus (A/Ontario/117/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328457|gb|MF195484|Influenza A virus (A/Ontario/118/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328459|gb|MF195485|Influenza A virus (A/Ontario/119/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328461|gb|MF195486|Influenza A virus (A/Ontario/120/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328463|gb|MF195487|Influenza A virus (A/Ontario/121/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328465|gb|MF195488|Influenza A virus (A/Ontario/122/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328467|gb|MF195489|Influenza A virus (A/Ontario/123/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328469|gb|MF195490|Influenza A virus (A/Ontario/125/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328471|gb|MF195491|Influenza A virus (A/Ontario/126/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328473|gb|MF195492|Influenza A virus (A/Ontario/127/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328475|gb|MF195493|Influenza A virus (A/Ontario/129/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328477|gb|MF195494|Influenza A virus (A/Ontario/131/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328479|gb|MF195495|Influenza A virus (A/Ontario/132/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328481|gb|MF195496|Influenza A virus (A/Ontario/133/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328483|gb|MF195497|Influenza A virus (A/Ontario/134/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328485|gb|MF195498|Influenza A virus (A/Ontario/135/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328487|gb|MF195499|Influenza A virus (A/Ontario/136/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328489|gb|MF195500|Influenza A virus (A/Ontario/139/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328491|gb|MF195501|Influenza A virus (A/Ontario/140/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328493|gb|MF195502|Influenza A virus (A/Ontario/141/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328495|gb|MF195503|Influenza A virus (A/Ontario/142/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328497|gb|MF195504|Influenza A virus (A/Ontario/143/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328499|gb|MF195505|Influenza A virus (A/Ontario/145/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328501|gb|MF195506|Influenza A virus (A/Ontario/146/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328503|gb|MF195507|Influenza A virus (A/Ontario/147/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328505|gb|MF195508|Influenza A virus (A/Ontario/148/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328507|gb|MF195509|Influenza A virus (A/Ontario/149/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328509|gb|MF195510|Influenza A virus (A/Ontario/150/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328511|gb|MF195511|Influenza A virus (A/Ontario/151/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328513|gb|MF195512|Influenza A virus (A/Ontario/152/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328515|gb|MF195513|Influenza A virus (A/Ontario/153/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328517|gb|MF195514|Influenza A virus (A/Ontario/154/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328519|gb|MF195515|Influenza A virus (A/Ontario/155/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328521|gb|MF195516|Influenza A virus (A/Ontario/156/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328523|gb|MF195517|Influenza A virus (A/Ontario/157/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328525|gb|MF195518|Influenza A virus (A/Ontario/160/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328527|gb|MF195519|Influenza A virus (A/Ontario/161/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328529|gb|MF195520|Influenza A virus (A/Ontario/162/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328531|gb|MF195521|Influenza A virus (A/Ontario/163/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328533|gb|MF195522|Influenza A virus (A/Ontario/164/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328535|gb|MF195523|Influenza A virus (A/Ontario/166/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328537|gb|MF195524|Influenza A virus (A/Ontario/167/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328539|gb|MF195525|Influenza A virus (A/Ontario/168/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328541|gb|MF195526|Influenza A virus (A/Ontario/169/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328543|gb|MF195527|Influenza A virus (A/Ontario/170/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328545|gb|MF195528|Influenza A virus (A/Ontario/171/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328547|gb|MF195529|Influenza A virus (A/Ontario/172/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328549|gb|MF195530|Influenza A virus (A/Ontario/173/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328551|gb|MF195531|Influenza A virus (A/Ontario/174/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328553|gb|MF195532|Influenza A virus (A/Ontario/177/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328555|gb|MF195533|Influenza A virus (A/Ontario/179/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328557|gb|MF195534|Influenza A virus (A/Ontario/180/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328559|gb|MF195535|Influenza A virus (A/Ontario/181/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328561|gb|MF195536|Influenza A virus (A/Ontario/182/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328563|gb|MF195537|Influenza A virus (A/Ontario/183/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328565|gb|MF195538|Influenza A virus (A/Ontario/184/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328567|gb|MF195539|Influenza A virus (A/Ontario/186/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328569|gb|MF195540|Influenza A virus (A/Ontario/188/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328571|gb|MF195541|Influenza A virus (A/Ontario/189/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328573|gb|MF195542|Influenza A virus (A/Ontario/190/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328575|gb|MF195543|Influenza A virus (A/Ontario/191/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328577|gb|MF195544|Influenza A virus (A/Ontario/192/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328579|gb|MF195545|Influenza A virus (A/Ontario/194/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328581|gb|MF195546|Influenza A virus (A/Ontario/195/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328583|gb|MF195547|Influenza A virus (A/Ontario/199/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328585|gb|MF195548|Influenza A virus (A/Ontario/200/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328587|gb|MF195549|Influenza A virus (A/Ontario/201/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328589|gb|MF195550|Influenza A virus (A/Ontario/202/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328591|gb|MF195551|Influenza A virus (A/Ontario/203/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328593|gb|MF195552|Influenza A virus (A/Ontario/204/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328595|gb|MF195553|Influenza A virus (A/Ontario/205/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328597|gb|MF195554|Influenza A virus (A/Ontario/206/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328599|gb|MF195555|Influenza A virus (A/Ontario/207/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328601|gb|MF195556|Influenza A virus (A/Ontario/208/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328603|gb|MF195557|Influenza A virus (A/Ontario/209/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328605|gb|MF195558|Influenza A virus (A/Ontario/210/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328607|gb|MF195559|Influenza A virus (A/Ontario/211/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328609|gb|MF195560|Influenza A virus (A/Ontario/212/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328611|gb|MF195561|Influenza A virus (A/Ontario/213/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328613|gb|MF195562|Influenza A virus (A/Ontario/214/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328615|gb|MF195563|Influenza A virus (A/Ontario/215/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328617|gb|MF195564|Influenza A virus (A/Ontario/216/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328619|gb|MF195565|Influenza A virus (A/Ontario/217/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328621|gb|MF195566|Influenza A virus (A/Ontario/218/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328623|gb|MF195567|Influenza A virus (A/Ontario/219/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328625|gb|MF195568|Influenza A virus (A/Ontario/220/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328627|gb|MF195569|Influenza A virus (A/Ontario/221/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328629|gb|MF195570|Influenza A virus (A/Ontario/222/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328631|gb|MF195571|Influenza A virus (A/Ontario/223/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328633|gb|MF195572|Influenza A virus (A/Ontario/224/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328635|gb|MF195573|Influenza A virus (A/Ontario/225/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328637|gb|MF195574|Influenza A virus (A/Ontario/226/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328639|gb|MF195575|Influenza A virus (A/Ontario/227/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328641|gb|MF195576|Influenza A virus (A/Ontario/228/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328643|gb|MF195577|Influenza A virus (A/Ontario/229/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328645|gb|MF195578|Influenza A virus (A/Ontario/230/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328647|gb|MF195579|Influenza A virus (A/Ontario/234/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328649|gb|MF195580|Influenza A virus (A/Ontario/235/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328651|gb|MF195581|Influenza A virus (A/Ontario/237/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328653|gb|MF195582|Influenza A virus (A/Ontario/238/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328655|gb|MF195583|Influenza A virus (A/Ontario/239/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328657|gb|MF195584|Influenza A virus (A/Ontario/240/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328659|gb|MF195585|Influenza A virus (A/Ontario/241/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1208328945|gb|MF195728|Influenza A virus (A/Ontario/031/2016(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1208328947|gb|MF195729|Influenza A virus (A/Ontario/040/2016(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1208328949|gb|MF195730|Influenza A virus (A/Ontario/045/2016(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1208328951|gb|MF195731|Influenza A virus (A/Ontario/047/2016(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1208328953|gb|MF195732|Influenza A virus (A/Ontario/049/2016(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1208328955|gb|MF195733|Influenza A virus (A/Ontario/051/2016(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1208328957|gb|MF195734|Influenza A virus (A/Ontario/068/2016(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1208328959|gb|MF195735|Influenza A virus (A/Ontario/086/2016(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1208328961|gb|MF195736|Influenza A virus (A/Ontario/144/2016(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1208328963|gb|MF195737|Influenza A virus (A/Ontario/196/2016(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1208328965|gb|MF195738|Influenza A virus (A/Ontario/231/2016(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1208328967|gb|MF195739|Influenza A virus (A/Ontario/233/2016(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1214942098|gb|MF348042|Influenza A virus (A/Ontario/01/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1214942100|gb|MF348043|Influenza A virus (A/Ontario/02/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1214942102|gb|MF348044|Influenza A virus (A/Ontario/03/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1214942104|gb|MF348045|Influenza A virus (A/Ontario/04/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1214942106|gb|MF348046|Influenza A virus (A/Ontario/05/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1214942108|gb|MF348047|Influenza A virus (A/Ontario/06/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1214942110|gb|MF348048|Influenza A virus (A/Ontario/07/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1214942112|gb|MF348049|Influenza A virus (A/Ontario/08/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1214942114|gb|MF348050|Influenza A virus (A/Ontario/09/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1214942116|gb|MF348051|Influenza A virus (A/Ontario/10/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1214942118|gb|MF348052|Influenza A virus (A/Ontario/11/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1214942120|gb|MF348053|Influenza A virus (A/Ontario/12/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1214942122|gb|MF348054|Influenza A virus (A/Ontario/13/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1214942124|gb|MF348055|Influenza A virus (A/Ontario/14/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1214942126|gb|MF348056|Influenza A virus (A/Ontario/15/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1214942128|gb|MF348057|Influenza A virus (A/Ontario/16/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1214942130|gb|MF348058|Influenza A virus (A/Ontario/17/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1214942132|gb|MF348059|Influenza A virus (A/Ontario/18/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1214942134|gb|MF348060|Influenza A virus (A/Ontario/19/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1214942136|gb|MF348061|Influenza A virus (A/Ontario/20/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1214942138|gb|MF348062|Influenza A virus (A/Ontario/21/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1214942140|gb|MF348063|Influenza A virus (A/Ontario/22/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1214942142|gb|MF348064|Influenza A virus (A/Ontario/23/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1214942144|gb|MF348065|Influenza A virus (A/Ontario/24/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1214942146|gb|MF348066|Influenza A virus (A/Ontario/25/2016(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684841|gb|MG889749|Influenza A virus (A/Ontario/001/2018(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684843|gb|MG889750|Influenza A virus (A/Ontario/002/2018(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684845|gb|MG889751|Influenza A virus (A/Ontario/003/2018(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684847|gb|MG889752|Influenza A virus (A/Ontario/004/2018(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684849|gb|MG889753|Influenza A virus (A/Ontario/005/2018(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684851|gb|MG889754|Influenza A virus (A/Ontario/006/2018(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684853|gb|MG889755|Influenza A virus (A/Ontario/007/2018(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684855|gb|MG889756|Influenza A virus (A/Ontario/008/2018(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684857|gb|MG889757|Influenza A virus (A/Ontario/010/2018(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684859|gb|MG889758|Influenza A virus (A/Ontario/011/2018(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684861|gb|MG889759|Influenza A virus (A/Ontario/012/2018(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684863|gb|MG889760|Influenza A virus (A/Ontario/013/2018(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684865|gb|MG889761|Influenza A virus (A/Ontario/016/2018(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684867|gb|MG889762|Influenza A virus (A/Ontario/019/2018(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684869|gb|MG889763|Influenza A virus (A/Ontario/020/2018(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684871|gb|MG889764|Influenza A virus (A/Ontario/021/2018(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684873|gb|MG889765|Influenza A virus (A/Ontario/022/2018(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684875|gb|MG889766|Influenza A virus (A/Ontario/023/2018(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684877|gb|MG889767|Influenza A virus (A/Ontario/024/2018(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684879|gb|MG889768|Influenza A virus (A/Ontario/025/2018(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684881|gb|MG889769|Influenza A virus (A/Ontario/026/2018(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684883|gb|MG889770|Influenza A virus (A/Ontario/027/2018(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684885|gb|MG889771|Influenza A virus (A/Ontario/028/2018(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684887|gb|MG889772|Influenza A virus (A/Ontario/029/2018(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684889|gb|MG889773|Influenza A virus (A/Ontario/030/2018(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684891|gb|MG889774|Influenza A virus (A/Ontario/031/2018(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684893|gb|MG889775|Influenza A virus (A/Ontario/032/2018(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684895|gb|MG889776|Influenza A virus (A/Ontario/033/2018(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684897|gb|MG889777|Influenza A virus (A/Ontario/034/2018(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684899|gb|MG889778|Influenza A virus (A/Ontario/036/2018(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684901|gb|MG889779|Influenza A virus (A/Ontario/038/2018(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684903|gb|MG889780|Influenza A virus (A/Ontario/302/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684905|gb|MG889781|Influenza A virus (A/Ontario/303/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684907|gb|MG889782|Influenza A virus (A/Ontario/304/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684909|gb|MG889783|Influenza A virus (A/Ontario/305/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684911|gb|MG889784|Influenza A virus (A/Ontario/306/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684913|gb|MG889785|Influenza A virus (A/Ontario/307/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684915|gb|MG889786|Influenza A virus (A/Ontario/308/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684917|gb|MG889787|Influenza A virus (A/Ontario/309/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684919|gb|MG889788|Influenza A virus (A/Ontario/310/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684921|gb|MG889789|Influenza A virus (A/Ontario/311/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684923|gb|MG889790|Influenza A virus (A/Ontario/312/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684925|gb|MG889791|Influenza A virus (A/Ontario/313/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684927|gb|MG889792|Influenza A virus (A/Ontario/314/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684929|gb|MG889793|Influenza A virus (A/Ontario/315/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684931|gb|MG889794|Influenza A virus (A/Ontario/316/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684933|gb|MG889795|Influenza A virus (A/Ontario/317/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684935|gb|MG889796|Influenza A virus (A/Ontario/318/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684937|gb|MG889797|Influenza A virus (A/Ontario/320/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1338684939|gb|MG889798|Influenza A virus (A/Ontario/323/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378287921|gb|MH216332|Influenza A virus (A/Ontario/029/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378287925|gb|MH216333|Influenza A virus (A/Ontario/030/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378287929|gb|MH216334|Influenza A virus (A/Ontario/031/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378287933|gb|MH216335|Influenza A virus (A/Ontario/032/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378287937|gb|MH216336|Influenza A virus (A/Ontario/033/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378287941|gb|MH216337|Influenza A virus (A/Ontario/034/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378287945|gb|MH216338|Influenza A virus (A/Ontario/035/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378287949|gb|MH216339|Influenza A virus (A/Ontario/036/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378287953|gb|MH216340|Influenza A virus (A/Ontario/037/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378287957|gb|MH216341|Influenza A virus (A/Ontario/038/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378287961|gb|MH216342|Influenza A virus (A/Ontario/039/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378287965|gb|MH216343|Influenza A virus (A/Ontario/040/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378287969|gb|MH216344|Influenza A virus (A/Ontario/041/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378287973|gb|MH216345|Influenza A virus (A/Ontario/042/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378287977|gb|MH216346|Influenza A virus (A/Ontario/043/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378287981|gb|MH216347|Influenza A virus (A/Ontario/044/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378287985|gb|MH216348|Influenza A virus (A/Ontario/045/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378287989|gb|MH216349|Influenza A virus (A/Ontario/046/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378287993|gb|MH216350|Influenza A virus (A/Ontario/048/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378287997|gb|MH216351|Influenza A virus (A/Ontario/049/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288001|gb|MH216352|Influenza A virus (A/Ontario/050/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288005|gb|MH216353|Influenza A virus (A/Ontario/051/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288009|gb|MH216354|Influenza A virus (A/Ontario/052/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288013|gb|MH216355|Influenza A virus (A/Ontario/053/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288017|gb|MH216356|Influenza A virus (A/Ontario/054/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288021|gb|MH216357|Influenza A virus (A/Ontario/055/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288025|gb|MH216358|Influenza A virus (A/Ontario/056/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288029|gb|MH216359|Influenza A virus (A/Ontario/057/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288033|gb|MH216360|Influenza A virus (A/Ontario/058/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288037|gb|MH216361|Influenza A virus (A/Ontario/059/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288041|gb|MH216362|Influenza A virus (A/Ontario/060/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288045|gb|MH216363|Influenza A virus (A/Ontario/061/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288049|gb|MH216364|Influenza A virus (A/Ontario/062/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288053|gb|MH216365|Influenza A virus (A/Ontario/063/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288057|gb|MH216366|Influenza A virus (A/Ontario/064/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288061|gb|MH216367|Influenza A virus (A/Ontario/065/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288065|gb|MH216368|Influenza A virus (A/Ontario/066/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288069|gb|MH216369|Influenza A virus (A/Ontario/067/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288073|gb|MH216370|Influenza A virus (A/Ontario/068/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288077|gb|MH216371|Influenza A virus (A/Ontario/069/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288081|gb|MH216372|Influenza A virus (A/Ontario/070/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288100|gb|MH216373|Influenza A virus (A/Ontario/071/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288104|gb|MH216374|Influenza A virus (A/Ontario/072/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288108|gb|MH216375|Influenza A virus (A/Ontario/073/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288112|gb|MH216376|Influenza A virus (A/Ontario/074/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288116|gb|MH216377|Influenza A virus (A/Ontario/075/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288120|gb|MH216378|Influenza A virus (A/Ontario/076/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288124|gb|MH216379|Influenza A virus (A/Ontario/077/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288128|gb|MH216380|Influenza A virus (A/Ontario/078/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288132|gb|MH216381|Influenza A virus (A/Ontario/079/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288136|gb|MH216382|Influenza A virus (A/Ontario/080/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288140|gb|MH216383|Influenza A virus (A/Ontario/081/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288144|gb|MH216384|Influenza A virus (A/Ontario/082/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288148|gb|MH216385|Influenza A virus (A/Ontario/083/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288152|gb|MH216386|Influenza A virus (A/Ontario/084/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288156|gb|MH216387|Influenza A virus (A/Ontario/085/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288160|gb|MH216388|Influenza A virus (A/Ontario/086/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288164|gb|MH216389|Influenza A virus (A/Ontario/087/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288168|gb|MH216390|Influenza A virus (A/Ontario/088/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288172|gb|MH216391|Influenza A virus (A/Ontario/089/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288176|gb|MH216392|Influenza A virus (A/Ontario/090/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288180|gb|MH216393|Influenza A virus (A/Ontario/091/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288184|gb|MH216394|Influenza A virus (A/Ontario/092/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288188|gb|MH216395|Influenza A virus (A/Ontario/093/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288192|gb|MH216396|Influenza A virus (A/Ontario/094/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288196|gb|MH216397|Influenza A virus (A/Ontario/095/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288200|gb|MH216398|Influenza A virus (A/Ontario/096/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288204|gb|MH216399|Influenza A virus (A/Ontario/097/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288208|gb|MH216400|Influenza A virus (A/Ontario/098/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288212|gb|MH216401|Influenza A virus (A/Ontario/099/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288216|gb|MH216402|Influenza A virus (A/Ontario/100/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288220|gb|MH216403|Influenza A virus (A/Ontario/101/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288224|gb|MH216404|Influenza A virus (A/Ontario/102/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288228|gb|MH216405|Influenza A virus (A/Ontario/103/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288232|gb|MH216406|Influenza A virus (A/Ontario/104/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288236|gb|MH216407|Influenza A virus (A/Ontario/105/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288240|gb|MH216408|Influenza A virus (A/Ontario/106/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288244|gb|MH216409|Influenza A virus (A/Ontario/107/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288248|gb|MH216410|Influenza A virus (A/Ontario/108/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288252|gb|MH216411|Influenza A virus (A/Ontario/109/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288256|gb|MH216412|Influenza A virus (A/Ontario/110/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288261|gb|MH216413|Influenza A virus (A/Ontario/111/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288265|gb|MH216414|Influenza A virus (A/Ontario/112/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288269|gb|MH216415|Influenza A virus (A/Ontario/113/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288273|gb|MH216416|Influenza A virus (A/Ontario/114/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288277|gb|MH216417|Influenza A virus (A/Ontario/115/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288281|gb|MH216418|Influenza A virus (A/Ontario/116/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288285|gb|MH216419|Influenza A virus (A/Ontario/117/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288289|gb|MH216420|Influenza A virus (A/Ontario/118/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288293|gb|MH216421|Influenza A virus (A/Ontario/119/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288297|gb|MH216422|Influenza A virus (A/Ontario/120/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288301|gb|MH216423|Influenza A virus (A/Ontario/121/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288305|gb|MH216424|Influenza A virus (A/Ontario/122/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288309|gb|MH216425|Influenza A virus (A/Ontario/123/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288313|gb|MH216426|Influenza A virus (A/Ontario/124/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288317|gb|MH216427|Influenza A virus (A/Ontario/125/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288321|gb|MH216428|Influenza A virus (A/Ontario/126/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288337|gb|MH216429|Influenza A virus (A/Ontario/127/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288341|gb|MH216430|Influenza A virus (A/Ontario/128/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288345|gb|MH216431|Influenza A virus (A/Ontario/129/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288349|gb|MH216432|Influenza A virus (A/Ontario/130/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288353|gb|MH216433|Influenza A virus (A/Ontario/132/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288357|gb|MH216434|Influenza A virus (A/Ontario/133/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288361|gb|MH216435|Influenza A virus (A/Ontario/134/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288365|gb|MH216436|Influenza A virus (A/Ontario/135/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288369|gb|MH216437|Influenza A virus (A/Ontario/136/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288373|gb|MH216438|Influenza A virus (A/Ontario/137/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288377|gb|MH216439|Influenza A virus (A/Ontario/138/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288381|gb|MH216440|Influenza A virus (A/Ontario/139/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288385|gb|MH216441|Influenza A virus (A/Ontario/140/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288389|gb|MH216442|Influenza A virus (A/Ontario/142/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288393|gb|MH216443|Influenza A virus (A/Ontario/143/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288397|gb|MH216444|Influenza A virus (A/Ontario/144/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288401|gb|MH216445|Influenza A virus (A/Ontario/147/2017(H3N2)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1378288405|gb|MH216446|Influenza A virus (A/Ontario/148/2017(H1N1)) segment 4 hemagglutinin (HA) gene, partial cds
+>gi|1540595948|gb|MK328725|Influenza A virus (A/swine/Ontario/DM_11/2017(H1N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1540595987|gb|MK328741|Influenza A virus (A/swine/Ontario/DM_21/2017(H1N2)) segment 4 hemagglutinin (HA) gene, complete cds
+>gi|1564390627|gb|MK462790|Influenza A virus (A/swine/Ontario/SD0298/2018(H3N2)) segment 4 hemagglutinin (HA) gene, complete cds
