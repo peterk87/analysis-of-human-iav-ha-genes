@@ -1534,6 +1534,7 @@ Use GNU Parallel to run parallel instances of `mafft` MSA
 !parallel -v mafft --thread -1 --maxiterate 1000 --localpair {} ">" human-HA-sequences-by-flu-season/mafft-msa/{/} ::: human-HA-sequences-by-flu-season/*.fa
 ```
 
+    
     mafft --thread -1 --maxiterate 1000 --localpair human-HA-sequences-by-flu-season/HA-H1N1-flu_season-2016-2017.fa > human-HA-sequences-by-flu-season/mafft-msa/HA-H1N1-flu_season-2016-2017.fa
     OS = linux
     The number of physical cores =  28
@@ -2652,7 +2653,6 @@ Use GNU Parallel to run parallel instances of `mafft` MSA
     The default gap scoring scheme has been changed in version 7.110 (2013 Oct).
     It tends to insert more gaps into gap-rich regions than previous versions.
     To disable this change, add the --leavegappyregion option.
-    
 
 
 
@@ -4625,7 +4625,7 @@ xticks(ticks=locs, labels=labels)
 fig.legend(handles=patches, title='Flu Season', bbox_to_anchor=(.8,0.4))
 # fig.suptitle('Maximum-likelihood phylogenetic tree of Ontario Human H1N1 HA sequences')
 fig.show()
-``
+```
 
 ![png](figures/output_165_1.png)
 
