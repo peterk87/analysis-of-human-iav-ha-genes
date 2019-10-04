@@ -1,0 +1,1916 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head>
+  <style>
+    body {
+      margin: 0.625em auto;
+      /*max-width: 60em;*/
+    }
+    #tree-plot {
+      width: 100%;
+      height: 40em;
+    }
+
+    .phylocanvas-context-menu,
+    .phylocanvas-context-menu ul {
+      list-style: outside none none;
+      margin: 0;
+    }
+
+    .phylocanvas-context-menu {
+      background: #fff;
+      border-radius: 2px;
+      box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+      letter-spacing: 0px;
+      list-style: outside none none;
+      min-width: 124px;
+      padding: 8px 0;
+    }
+
+    .phylocanvas-context-menu ul {
+      padding: 0;
+    }
+
+    .phylocanvas-context-menu ul + ul {
+      border-top: 1px solid #e0e0e0;
+      margin-top: 8px;
+      padding-top: 8px;
+    }
+
+    .phylocanvas-context-menu li {
+      padding: 0 16px;
+      outline-color: #bdbdbd;
+      height: 40px;
+      line-height: 40px;
+      text-decoration: none;
+      background-color: transparent;
+      cursor: pointer;
+      font-size: 13px;
+      font-family: Helvetica, Arial, sans-serif;
+    }
+
+    .phylocanvas-context-menu li:hover,
+    .phylocanvas-context-menu li:focus {
+      background-color: #eee;
+    }
+
+    .phylocanvas-context-menu a {
+      display: block;
+      margin: 0 -16px;
+      padding: 0 16px;
+    }
+
+    .phylocanvas-context-menu li,
+    .phylocanvas-context-menu a {
+      color: rgba(0, 0, 0, 0.87);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .phylocanvas-history {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      box-sizing: border-box;
+      width: 240px;
+      background: #fff;
+      transform: translateX(-240px);
+      transform-style: preserve-3d;
+      will-change: transform;
+      transition-duration: .2s;
+      transition-timing-function: cubic-bezier(.4,0,.2,1);
+      transition-property: transform;
+      border: 1px solid #e7e7e7;
+      border-left: none;
+    }
+
+    .phylocanvas-history--open {
+      transform: translateX(0);
+      box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+    }
+
+    .phylocanvas-history-button {
+      border: none;
+      height: 24px;
+      line-height: 24px;
+      text-align: center;
+      margin: auto;
+      min-width: 56px;
+      width: 56px;
+      padding: 0;
+      overflow: hidden;
+      background: #3c7383;
+      color: #fff;
+      box-shadow: 0 1px 1.5px 0 rgba(0,0,0,.12),0 1px 1px 0 rgba(0,0,0,.24);
+      position: relative;
+      line-height: normal;
+      position: absolute;
+      bottom: 16px;
+      right: -57px;
+      z-index: 1;
+      outline: none;
+      cursor: pointer;
+      border-radius: 0 0 2px 2px;
+      font-size: 13px;
+      font-family: Helvetica, Arial, sans-serif;
+      transform: rotate(-90deg);
+      transform-origin: top left;
+    }
+
+    .phylocanvas-history-snapshots {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      overflow-y: scroll;
+    }
+
+    .phylocanvas-history-snapshot {
+      list-style: none;
+      border-bottom: 1px solid #e7e7e7;
+      cursor: pointer;
+      box-sizing: border-box;
+      display: block;
+      position: relative;
+      height: 128px;
+    }
+
+    .phylocanvas-history-snapshot::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 4px;
+      background-color: transparent;
+      transition: background-color .2s cubic-bezier(.4,0,.2,1);
+    }
+
+    .phylocanvas-history-snapshot:hover::after,
+    .phylocanvas-history-snapshot--selected::after {
+      background-color: #3c7383;
+    }
+
+    .phylocanvas-history-snapshot > img {
+      width: 100%;
+      height: 128px;
+      object-fit: contain;
+    }
+  </style>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/phylocanvas@2.8.1/dist/phylocanvas.js"></script>
+  <script src="https://unpkg.com/phylocanvas@2.8.1/polyfill.js"></script>
+  <script src="https://unpkg.com/chroma-js@2.0.2/chroma.js"></script>
+  <script src="https://unpkg.com/lodash@4.17.11/lodash.min.js"></script>
+  <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-grid.css">
+  <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-theme-balham.css">
+</head>
+<body>
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <a class="nav-item nav-link active"
+         id="tree-tab-link"
+         href="#tree-tab"
+         data-toggle="tab"
+         role="tab"
+         aria-controls="tree-tab"
+         aria-selected="true">
+        Tree <span class="sr-only">(current)</span>
+      </a>
+      <a class="nav-item nav-link"
+           id="table-tab-link"
+           href="#table-tab"
+           data-toggle="tab"
+           role="tab"
+           aria-controls="table-tab"
+           aria-selected="true">
+         Table
+       </a>
+    </div>
+  </nav>
+  <div class="tab-content">
+    <div class="tab-pane active" role="tabpanel" id="tree-tab" aria-labelledby="tree-tab-link">
+      <div class="container-fluid">
+        <div class="row">
+          <h1>Phylogenetic tree - interactive visualization</h1>
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <div class="card">
+              <div class="card-header">Visualization Controls</div>
+              <div class="card-body">
+                <p class="card-text small">Right-click on the phylogenetic tree visualization to open context menu for more options to interact with tree.</p>
+                <!-- Find leaves in tree -->
+                <div class="form-group">
+                  <label for="findLeavesInput">Find Leaves</label>
+                  <input type="text"
+                         id="findLeavesInput"
+                         class="form-control"
+                         placeholder="Enter leaf name(s)">
+                </div>
+                <!-- branchScaleInput: scale branch length -->
+                <div class="form-group">
+                  <label for="branchScaleInput">Tree Branch Scale</label>
+                  <input type="range"
+                         id="branchScaleInput"
+                         class="custom-range"
+                         min="0"
+                         max="1.0"
+                         value="0.5"
+                         step="0.05">
+                </div>
+                <!-- metadata block width -->
+                <div class="form-group">
+                  <label for="metadataBlockLengthInput">Metadata Block Width</label>
+                  <input type="number"
+                         id="metadataBlockLengthInput"
+                         class="form-control"
+                         min="0"
+                         value="20"
+                         step="1">
+                </div>
+                <!-- headerAngleRotation -->
+                <div class="form-group">
+                  <label for="headerAngleRotationInput">Metadata Header Angle</label>
+                  <input type="range"
+                         id="headerAngleRotationInput"
+                         class="custom-range"
+                         min="0"
+                         max="90"
+                         value="0"
+                         step="1">
+                </div>
+                <div class="custom-control custom-switch">
+                  <input type="checkbox"
+                         id="showMetadataLabelsInput"
+                         class="custom-control-input"
+                         checked
+                         value="true">
+                  <label class="custom-control-label" for="showMetadataLabelsInput">Show Metadata Labels</label>
+                </div>
+                <div class="custom-control custom-switch">
+                  <input type="checkbox"
+                         id="highlightLowSupportBranchesInput"
+                         class="custom-control-input"
+                         checked
+                         value="true">
+                  <label class="custom-control-label" for="highlightLowSupportBranchesInput">Highlight Low Support Branches</label>
+                </div>
+                <div class="form-group">
+                  <label for="lowSupportInput">Low Support Threshold</label>
+                  <input type="number"
+                         id="lowSupportInput"
+                         class="form-control"
+                         min="0"
+                         value="95"
+                         step="1">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-10">
+            <div id="tree-plot" style="overflow: auto;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane" id="table-tab" role="tabpanel" aria-labelledby="table-tab-link">
+      <div class="container-fluid">
+        <div class="ag-theme-balham" id="metadata-grid" style="height: 600px; width: 100%;"></div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    var newick_string = "(((HQ239459.2:0.00254156,HQ239567.1:0.000598914,(HQ239614.1:0.00059889,(HQ239613.1:2.0926e-06,HQ239579.1:2.0926e-06)96:2.0926e-06)100:0.000598757,GQ132144.1:2.0926e-06,CY060534.2:0.00114926,FJ974022.1:2.0926e-06,(CY060734.2:2.8829e-06,HQ239577.1:0.00120174)99:0.00114882,(CY060726.2:0.000574597,HQ239574.1:2.0856e-06)100:0.000574661,CY060574.2:2.0926e-06,GQ132143.1:0.000574524,GQ465678.1:2.0926e-06,FJ998209.1:2.0926e-06,CY060630.2:0.000573835,CY060598.2:0.000573749,HQ239581.1:2.0926e-06,HQ239460.2:0.00124244,KF551095.1:0.0127676,CY060558.2:2.0926e-06,CY045954.2:0.000573639,((CY081093.2:2.0926e-06,CY081101.2:0.000574377)100:0.000570219,(CY081069.2:2.6071e-06,CY081085.2:2.7317e-06)100:0.00347876)99:0.00173329,HQ239615.1:0.00120007,FJ974028.1:2.0926e-06,HQ239569.1:0.000598978,CY060566.2:0.000574068,HQ239612.1:2.0926e-06,HQ239609.1:0.000599359,CY060662.2:2.0926e-06,CY060694.2:0.000573439,CY060582.2:0.000573546,FJ974027.1:2.0926e-06,(HQ239610.1:2.0926e-06,HQ239571.1:2.0926e-06)100:2.1672e-06,HQ239566.1:0.00059908,CY060654.2:2.0926e-06,CY060702.2:0,(CY060750.1:2.0926e-06,CY060742.2:2.0926e-06,CY045978.2:2.4407e-06,CY045970.2:0.000573689)99:0.00114749,FJ974023.1:0.00609681,CY060518.2:2.1032e-06,GQ502906.2:0.000578798,(((KF886371.1:0.00118258,(KF886369.1:0.0011796,KF886374.1:2.0926e-06)99:0.00118197)99:0.00117919,((KF886379.1:0.00417279,KF886368.1:0.000596105)99:0.000585794,KF886375.1:0.000590902)99:0.000589539,KF886370.1:0.00356344,KF886376.1:0.0023629,(KF886378.1:2.0926e-06,(KF886377.1:0.00117974,(KF886365.1:2.0926e-06,KF886373.1:2.0926e-06)100:0.000590439,KF886367.1:0.000589475,KF886372.1:0.000589474)100:0.00117981)100:0.00058931)99:0.000858528,((MF348058.1:0.00663416,((MF195494.1:0.00310649,MF195415.1:2.0926e-06)100:0.00416782,MF348044.1:0.00321133)99:0.00314613,KP864397.1:0.00316369,MF195540.1:0.0119719)95:0.00230211,(((KP864396.1:0.00173001,KJ406385.1:2.1076e-06,KJ406387.1:0,KJ406386.1:0)100:0.000570761,KJ406379.1:0.000575246,KJ406383.1:2.0926e-06,KJ406381.1:2.0926e-06)100:0.00057069,KJ406382.1:2.1269e-06)100:0.00344345,(KP864399.1:0.00296568,KP864398.1:0.00231513)95:0.000570034,KF886366.1:0.00534729,(MF348046.1:0.00286622,(((MF195585.1:2.0926e-06,MF195584.1:2.0926e-06,MF195465.1:2.0926e-06,MF195499.1:2.0926e-06,MF195583.1:2.0926e-06)99:0.00103102,MF348061.1:0.00095321)98:0.000928946,(MF195486.1:2.0926e-06,MF195414.1:2.0926e-06)95:2.0522e-06)100:0.00092681,MF195417.1:0.00311466,(MF195446.1:0.00106451,MF195418.1:0.0010359)97:0.00103796,MF195487.1:0.00106467,(MF195441.1:2.0926e-06,((MF195511.1:2.3082e-06,MF195503.1:2.1141e-06)100:0.00417034,MF195471.1:2.8056e-06)99:0.00103633,MF195466.1:2.0926e-06,(MF195536.1:2.4707e-06,(MF195462.1:2.0926e-06,MF195443.1:2.0926e-06,MF348042.1:0.00291154)100:0.00138562)99:0.00138363,(MF195568.1:2.0926e-06,MF348049.1:2.0926e-06)100:0.00278923,MF348064.1:0,MF348057.1:0,MF348060.1:2.0926e-06,(MF195439.1:2.0681e-06,MF195440.1:2.9643e-06)100:0.00207293,(MF195551.1:2.0926e-06,MF195543.1:2.0926e-06)99:0.00103466,MF348050.1:0.000952941,MF195557.1:0.0021404,MF348054.1:0.00256112,MF195413.1:0,MF195447.1:2.0926e-06,((MF195516.1:0.00106854,MF195468.1:2.0926e-06)99:0.00103716,MF195580.1:2.0926e-06,MF195453.1:2.0926e-06,(MF195564.1:0.00312341,MF195477.1:2.8119e-06,MF195455.1:2.0926e-06,MF195448.1:0,MF195421.1:0)100:0.00103762,MF195576.1:0.00106941,MF195513.1:0.00106871)98:0.00207708,MF348062.1:2.0926e-06,MF348047.1:0.000951199,MF195467.1:0,MF195419.1:0,MF195573.1:0.001067,MF195426.1:0.00103722,MH216446.1:0.00321499,(MF195578.1:0.00103886,MF195518.1:2.0926e-06,MF195431.1:0,MF195430.1:2.0926e-06,(MF195547.1:2.0926e-06,MF195457.1:2.0926e-06)100:0.00103587,MF195445.1:0.00103556,MF195428.1:0,MF195427.1:2.0926e-06,MF195574.1:0,MF195463.1:0,MF195570.1:0.00321254,MF195553.1:2.0926e-06)99:0.00103653,MF195569.1:0.0010351,MF195522.1:2.0926e-06,MF195523.1:2.0926e-06,MF195504.1:0.00103522,MF195438.1:0.00207453,MF348052.1:2.0926e-06,MF195434.1:0.00103695,MF195456.1:2.0926e-06,MF195552.1:0.00103893,MF195481.1:0.00106784,MF195512.1:0.00103517,MF195485.1:0.00106606,MF195542.1:2.0926e-06,MF195525.1:0.00106625,MF195429.1:0.00103462,MF195475.1:0.00103562,MF195575.1:2.0926e-06,(MF195546.1:2.0388e-06,MF195489.1:2.0926e-06,MF195478.1:2.0926e-06)98:0.00103491,(MF195508.1:2.5465e-06,MF195416.1:2.3199e-06)100:0.00106724,MF195483.1:2.0926e-06,MF195435.1:0.00103513,MF195544.1:0.00213843,MF348053.1:1.5805e-06,MF195565.1:0,MF195464.1:0,(MF195555.1:2.0926e-06,MF195534.1:2.0926e-06,MF195532.1:2.962e-06)99:0.00103472,MF195460.1:0.00311366,MF195519.1:0.00103605,MF195528.1:2.0926e-06,MF195554.1:0.00106541,MF195533.1:0.00106589,(MF195521.1:2.0926e-06,MF195550.1:2.0926e-06,MF195498.1:2.9918e-06)98:0.00103515,MF195425.1:0,(MF195556.1:0.00103871,MF195520.1:2.126e-06)98:0.00103601,MF195461.1:0,MF195469.1:0.00103653,MF195510.1:0,MF195579.1:0.00428864,MF195561.1:0,MF195433.1:0,MF195476.1:0.00103559,MF195452.1:0,MF195582.1:2.0926e-06,MF195535.1:0,MF195480.1:0,MF195506.1:0.00106608,MF195505.1:0,MF195495.1:0,(MF195571.1:2.0562e-06,MF195515.1:0.00103424)98:0.00103522,MF195531.1:0,MF195432.1:0,(MF195538.1:2.0234e-06,MF195479.1:2.919e-06)100:0.00103775,MF195509.1:0,MF195436.1:0,MF195541.1:0,MF195449.1:0,MF195581.1:0.00207236,((MF195566.1:2.8026e-06,MF195545.1:2.0926e-06)98:0.00104151,MF195562.1:0.00215043)96:0.00103773,MF195563.1:0.00106935,MF195497.1:0,MF195423.1:0,MF195537.1:0.00213791,MF195490.1:0,MF195442.1:0,MF195437.1:2.0926e-06,MF195474.1:0,MF195420.1:0,(MF195530.1:2.0926e-06,MF195507.1:2.0926e-06)99:0.0021375,MF195472.1:0,MF195492.1:0,MF348059.1:0.00578674,MF195559.1:0,MF195473.1:0,MF195567.1:0,MF195500.1:0,MF348048.1:0,MF348043.1:0,MF195444.1:0,MF195424.1:0,(MF348055.1:0.000954185,MF195549.1:2.0926e-06,MF348056.1:2.0926e-06)99:0.000953135,MF348045.1:2.0926e-06,MF195496.1:0,MF195454.1:0,MF348065.1:0.00134132,MF348066.1:0.000952608,MF348063.1:0.000953613,MF348051.1:0.000955082,MF195529.1:0,MF195484.1:0,MF195558.1:0,MF195526.1:0,MF195488.1:0,MF195470.1:0,MF195482.1:0,MF195527.1:0,MF195524.1:0,MF195451.1:0,MF195422.1:0,MF195572.1:0,MF195450.1:0,MF195502.1:0,MF195517.1:0,MF195560.1:0,MF195548.1:0,MF195493.1:0,MF195459.1:0,MF195539.1:0,MF195491.1:0,MF195514.1:0,MF195577.1:0,MF195458.1:0)96:0.00278579,MF195501.1:0.00320766)100:0.0074961,KJ406384.1:2.0926e-06,KJ406380.1:0.00114862)96:0.00231014)100:0.00606907,(HQ239616.1:2.1607e-06,HQ239617.1:2.1755e-06)100:0.000599308,CY060670.2:0,(CY081077.2:0.000575701,((((KF551096.1:0.000589706,KF551087.1:0.000590445,KF551081.1:2.0926e-06,KF551093.1:2.0926e-06,KF551079.1:0.000589851,(KF551092.1:0.000589282,KF551086.1:2.1093e-06)99:0.000589563,KF551084.1:0.000590032,KF551091.1:0.00177187,KF551089.1:0.000589562)100:0.000589376,KF551094.1:2.8056e-06)100:0.00358079,(KF886381.1:0.00478484,KF886380.1:0.00479861)100:0.00421234)100:0.000573581,(KF551090.1:2.0744e-06,((KF551080.1:0.000590488,KF551082.1:2.0926e-06)100:0.0011823,KF551088.1:0.000590212,KF551083.1:0.00177456)96:0.00059034,KF551085.1:2.1576e-06)100:0.0035646)100:0.000593855)100:0.00231283,CY081061.2:0.00231173,HQ239611.1:0.000598935,(CY060718.2:2.0926e-06,CY060638.2:2.0926e-06)100:0.000573878,CY060678.2:0.000574627,CY060646.2:0,CY060590.2:0,CY060502.2:2.1479e-06,(CY060550.2:2.0926e-06,HQ239572.1:2.0926e-06)100:2.1191e-06,HQ239416.1:0.000598791,(HQ239578.1:2.0926e-06,HQ239608.1:2.0926e-06)100:0.00179895,CY060686.2:0,CY060614.2:0,CY060622.2:0,CY060510.2:2.0926e-06,CY060542.2:2.0926e-06,HQ239458.2:0.000600016,FJ974024.3:2.0926e-06,GQ385300.1:0.00114185,CY045938.1:0.00114881,HQ239425.1:2.0926e-06,CY060526.2:0.00113979,HQ239568.1:0.00240031,CY060710.2:0,CY060606.2:0,HQ239570.1:2.0926e-06,FJ974026.3:2.0926e-06,CY045946.2:2.515e-06,HQ239580.1:0,GQ411897.1:0.000568095,FJ974025.1:2.0926e-06,HQ239576.1:0,CY045511.2:0.000573892,CY076755.2:0.000574336,(CY076779.2:2.1261e-06,CY076787.2:0,CY076771.2:0,CY076795.2:0,CY076763.2:0)99:0.000573782,CY045962.2:0.00057463,HQ239573.1:0,HQ239575.1:0)98:0.0492766,JX875001.1:0.0332619)100:0.305862,(FJ800819.1:0.00116736,FJ800809.1:2.5889e-06,FJ800818.1:2.0926e-06,FJ800820.1:2.0926e-06,FJ800811.1:2.1448e-06,FJ800810.1:0.00116504)100:0.305862);";
+  </script>
+  <script type="text/javascript">
+    var genomeMetadata = {"HQ239459.2":{"flu_season":"2009-2010","strain":"A\/Canada-ON\/RV2016-10\/2009","collection_date":"2009-11-16","note":"lineage: swl; P1 passage(s)","isolation_source":"ASP","gap_pos":114,"start_gaps":32,"end_gaps":82},"HQ239567.1":{"flu_season":"2008-2009","strain":"A\/Canada-ON\/RV2888\/2009","collection_date":"2009-08-29","note":"lineage: swl; P1 passage(s)","isolation_source":"TCF","gap_pos":114,"start_gaps":32,"end_gaps":82},"HQ239614.1":{"flu_season":"2009-2010","strain":"A\/Canada-ON\/RV2967\/2009","collection_date":"2009-10-16","note":"lineage: swl; P1 passage(s)","isolation_source":"TCF","gap_pos":114,"start_gaps":32,"end_gaps":82},"HQ239613.1":{"flu_season":"2009-2010","strain":"A\/Canada-ON\/RV2966\/2009","collection_date":"2009-10-15","note":"lineage: swl; P1 passage(s)","isolation_source":"TCF","gap_pos":114,"start_gaps":32,"end_gaps":82},"HQ239579.1":{"flu_season":"2009-2010","strain":"A\/Canada-ON\/RV2912\/2009","collection_date":"2009-10-01","note":"lineage: swl; P1 passage(s)","isolation_source":"TCF","gap_pos":114,"start_gaps":32,"end_gaps":82},"GQ132144.1":{"flu_season":"2008-2009","strain":"A\/Canada-ON\/RV1529\/2009","collection_date":"2009-01-01","note":null,"isolation_source":null,"gap_pos":42,"start_gaps":14,"end_gaps":28},"CY060534.2":{"flu_season":"2008-2009","strain":"A\/Ontario\/237882\/2009","collection_date":"2009-08-24","note":"lineage=swl","isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"FJ974022.1":{"flu_season":"2008-2009","strain":"A\/Toronto\/3181\/2009","collection_date":"2009-04-01","note":null,"isolation_source":"NP swab","gap_pos":1313,"start_gaps":165,"end_gaps":1148},"CY060734.2":{"flu_season":"2008-2009","strain":"A\/Ontario\/35273\/2009","collection_date":"2009-08-13","note":"lineage=swl","isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"HQ239577.1":{"flu_season":"2009-2010","strain":"A\/Canada-ON\/RV2909\/2009","collection_date":"2009-09-29","note":"lineage: swl; P1 passage(s)","isolation_source":"TCF","gap_pos":114,"start_gaps":32,"end_gaps":82},"CY060726.2":{"flu_season":"2009-2010","strain":"A\/Ontario\/328474\/2009","collection_date":"2009-11-17","note":"lineage=swl","isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"HQ239574.1":{"flu_season":"2009-2010","strain":"A\/Canada-ON\/RV2906\/2009","collection_date":"2009-09-14","note":"lineage: swl; P1 passage(s)","isolation_source":"TCF","gap_pos":114,"start_gaps":32,"end_gaps":82},"CY060574.2":{"flu_season":"2009-2010","strain":"A\/Ontario\/29801\/2009","collection_date":"2009-10-19","note":"lineage=swl","isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"GQ132143.1":{"flu_season":"2008-2009","strain":"A\/Canada-ON\/RV1526\/2009","collection_date":"2009-01-01","note":null,"isolation_source":null,"gap_pos":42,"start_gaps":14,"end_gaps":28},"GQ465678.1":{"flu_season":"2008-2009","strain":"A\/Canada-ON\/RV1589\/2009","collection_date":"2009-04-27","note":"lineage: swl","isolation_source":null,"gap_pos":42,"start_gaps":14,"end_gaps":28},"FJ998209.1":{"flu_season":"2008-2009","strain":"A\/Canada-ON\/RV1527\/2009","collection_date":"2009-04-24","note":null,"isolation_source":null,"gap_pos":42,"start_gaps":14,"end_gaps":28},"CY060630.2":{"flu_season":"2009-2010","strain":"A\/Ontario\/314095\/2009","collection_date":"2009-11-02","note":"lineage=swl","isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"CY060598.2":{"flu_season":"2009-2010","strain":"A\/Ontario\/305598\/2009","collection_date":"2009-10-27","note":"lineage=swl","isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"HQ239581.1":{"flu_season":"2009-2010","strain":"A\/Canada-ON\/RV2914\/2009","collection_date":"2009-09-17","note":"lineage: swl; P1 passage(s)","isolation_source":"TCF","gap_pos":114,"start_gaps":32,"end_gaps":82},"HQ239460.2":{"flu_season":"2009-2010","strain":"A\/Canada-ON\/RV2017-10\/2009","collection_date":"2009-12-02","note":"lineage: swl; P1 passage(s)","isolation_source":"NASW","gap_pos":114,"start_gaps":32,"end_gaps":82},"KF551095.1":{"flu_season":"2011-2012","strain":"A\/Ontario\/025\/2012","collection_date":"2012-03-14","note":"lineage:swl","isolation_source":"NPS","gap_pos":84,"start_gaps":32,"end_gaps":52},"CY060558.2":{"flu_season":"2009-2010","strain":"A\/Ontario\/26184\/2009","collection_date":"2009-09-29","note":"lineage=swl","isolation_source":"nasopharyngeal swab","gap_pos":24,"start_gaps":16,"end_gaps":8},"CY045954.2":{"flu_season":"2008-2009","strain":"A\/Toronto\/T0106\/2009(H1N1)","collection_date":"2009-07-07","note":"lineage=swl","isolation_source":"gender:F; age:28; nasopharyngeal swab","gap_pos":28,"start_gaps":20,"end_gaps":8},"CY081093.2":{"flu_season":"2009-2010","strain":"A\/Ontario\/778873\/2010","collection_date":"2010-01-01","note":null,"isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"CY081101.2":{"flu_season":"2010-2011","strain":"A\/Ontario\/804635\/2010","collection_date":"2010-12-14","note":null,"isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"CY081069.2":{"flu_season":"2010-2011","strain":"A\/Ontario\/3620\/2010","collection_date":"2010-11-24","note":null,"isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"CY081085.2":{"flu_season":"2010-2011","strain":"A\/Ontario\/741328\/2010","collection_date":"2010-11-23","note":null,"isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"HQ239615.1":{"flu_season":"2009-2010","strain":"A\/Canada-ON\/RV2983\/2009","collection_date":"2009-10-14","note":"lineage: swl; P1 passage(s)","isolation_source":"TCF","gap_pos":114,"start_gaps":32,"end_gaps":82},"FJ974028.1":{"flu_season":"2008-2009","strain":"A\/Toronto\/3146\/2009","collection_date":"2009-04-01","note":null,"isolation_source":"NP swab","gap_pos":1241,"start_gaps":507,"end_gaps":734},"HQ239569.1":{"flu_season":"2009-2010","strain":"A\/Canada-ON\/RV2890\/2009","collection_date":"2009-09-24","note":"lineage: swl; P1 passage(s)","isolation_source":"TCF","gap_pos":114,"start_gaps":32,"end_gaps":82},"CY060566.2":{"flu_season":"2009-2010","strain":"A\/Ontario\/296008\/2009","collection_date":"2009-10-18","note":"lineage=swl","isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"HQ239612.1":{"flu_season":"2009-2010","strain":"A\/Canada-ON\/RV2965\/2009","collection_date":"2009-10-14","note":"lineage: swl; P1 passage(s)","isolation_source":"TCF","gap_pos":114,"start_gaps":32,"end_gaps":82},"HQ239609.1":{"flu_season":"2009-2010","strain":"A\/Canada-ON\/RV2962\/2009","collection_date":"2009-10-09","note":"lineage: swl; P1 passage(s)","isolation_source":"TCF","gap_pos":114,"start_gaps":32,"end_gaps":82},"CY060662.2":{"flu_season":"2009-2010","strain":"A\/Ontario\/315015\/2009","collection_date":"2009-11-04","note":"lineage=swl","isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"CY060694.2":{"flu_season":"2009-2010","strain":"A\/Ontario\/315187\/2009","collection_date":"2009-11-03","note":"lineage=swl","isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"CY060582.2":{"flu_season":"2009-2010","strain":"A\/Ontario\/304434\/2009","collection_date":"2009-10-24","note":"lineage=swl","isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"FJ974027.1":{"flu_season":"2008-2009","strain":"A\/Toronto\/3145\/2009","collection_date":"2009-04-01","note":null,"isolation_source":"NP swab","gap_pos":1224,"start_gaps":491,"end_gaps":733},"HQ239610.1":{"flu_season":"2009-2010","strain":"A\/Canada-ON\/RV2963\/2009","collection_date":"2009-10-11","note":"lineage: swl; P1 passage(s)","isolation_source":"TCF","gap_pos":114,"start_gaps":32,"end_gaps":82},"HQ239571.1":{"flu_season":"2009-2010","strain":"A\/Canada-ON\/RV2892\/2009","collection_date":"2009-09-27","note":"lineage: swl; P1 passage(s)","isolation_source":"TCF","gap_pos":114,"start_gaps":32,"end_gaps":82},"HQ239566.1":{"flu_season":"2009-2010","strain":"A\/Canada-ON\/RV2887\/2009","collection_date":"2009-10-15","note":"lineage: swl; P1 passage(s)","isolation_source":"TCF","gap_pos":114,"start_gaps":32,"end_gaps":82},"CY060654.2":{"flu_season":"2009-2010","strain":"A\/Ontario\/315003\/2009","collection_date":"2009-11-03","note":"lineage=swl","isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"CY060702.2":{"flu_season":"2009-2010","strain":"A\/Ontario\/315613\/2009","collection_date":"2009-11-03","note":"lineage=swl","isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"CY060750.1":{"flu_season":"2008-2009","strain":"A\/Ontario\/9739\/2009","collection_date":"2009-06-15","note":"lineage=swl","isolation_source":"nasopharyngeal swab","gap_pos":44,"start_gaps":23,"end_gaps":21},"CY060742.2":{"flu_season":"2008-2009","strain":"A\/Ontario\/9698\/2009","collection_date":"2009-06-15","note":"lineage=swl","isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"CY045978.2":{"flu_season":"2008-2009","strain":"A\/Toronto\/T9842\/2009(H1N1)","collection_date":"2009-06-17","note":"lineage=swl","isolation_source":"gender:M; age:9; nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"CY045970.2":{"flu_season":"2008-2009","strain":"A\/Toronto\/T5362\/2009(H1N1)","collection_date":"2009-06-09","note":"lineage=swl","isolation_source":"gender:M; age:14; nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"FJ974023.1":{"flu_season":"2008-2009","strain":"A\/Toronto\/3170\/2009","collection_date":"2009-04-01","note":null,"isolation_source":"NP swab","gap_pos":1307,"start_gaps":159,"end_gaps":1148},"CY060518.2":{"flu_season":"2008-2009","strain":"A\/Ontario\/222656\/2009","collection_date":"2009-08-11","note":"lineage=swl","isolation_source":"nasopharyngeal swab","gap_pos":28,"start_gaps":20,"end_gaps":8},"GQ502906.2":{"flu_season":"2008-2009","strain":"A\/Toronto\/R8557\/2009","collection_date":"2009-07-03","note":"lineage: swl","isolation_source":"nasopharyngeal swab","gap_pos":54,"start_gaps":14,"end_gaps":40},"KF886371.1":{"flu_season":"2012-2013","strain":"A\/Ontario\/039\/2013","collection_date":"2013-02-25","note":null,"isolation_source":"NPS","gap_pos":84,"start_gaps":32,"end_gaps":52},"KF886369.1":{"flu_season":"2012-2013","strain":"A\/Ontario\/031\/2013","collection_date":"2013-01-30","note":null,"isolation_source":"NPS","gap_pos":84,"start_gaps":32,"end_gaps":52},"KF886374.1":{"flu_season":"2012-2013","strain":"A\/Ontario\/024\/2013","collection_date":"2013-01-19","note":null,"isolation_source":"NPS","gap_pos":84,"start_gaps":32,"end_gaps":52},"KF886379.1":{"flu_season":"2012-2013","strain":"A\/Ontario\/044\/2013","collection_date":"2013-03-08","note":null,"isolation_source":"NPS","gap_pos":84,"start_gaps":32,"end_gaps":52},"KF886368.1":{"flu_season":"2012-2013","strain":"A\/Ontario\/033\/2012","collection_date":"2012-11-19","note":null,"isolation_source":"NPS","gap_pos":84,"start_gaps":32,"end_gaps":52},"KF886375.1":{"flu_season":"2012-2013","strain":"A\/Ontario\/032\/2013","collection_date":"2013-01-30","note":null,"isolation_source":"NPS","gap_pos":84,"start_gaps":32,"end_gaps":52},"KF886370.1":{"flu_season":"2012-2013","strain":"A\/Ontario\/029\/2013","collection_date":"2013-01-31","note":null,"isolation_source":"NPS","gap_pos":84,"start_gaps":32,"end_gaps":52},"KF886376.1":{"flu_season":"2012-2013","strain":"A\/Ontario\/045\/2013","collection_date":"2013-02-26","note":null,"isolation_source":"NPS","gap_pos":84,"start_gaps":32,"end_gaps":52},"KF886378.1":{"flu_season":"2012-2013","strain":"A\/Ontario\/040\/2013","collection_date":"2013-02-21","note":null,"isolation_source":"nasal","gap_pos":84,"start_gaps":32,"end_gaps":52},"KF886377.1":{"flu_season":"2012-2013","strain":"A\/Ontario\/012\/2013","collection_date":"2013-01-15","note":null,"isolation_source":"NPS","gap_pos":84,"start_gaps":32,"end_gaps":52},"KF886365.1":{"flu_season":"2012-2013","strain":"A\/Ontario\/034\/2013","collection_date":"2013-02-02","note":null,"isolation_source":"NPS","gap_pos":84,"start_gaps":32,"end_gaps":52},"KF886373.1":{"flu_season":"2012-2013","strain":"A\/Ontario\/033\/2013","collection_date":"2013-01-30","note":null,"isolation_source":"NPS","gap_pos":84,"start_gaps":32,"end_gaps":52},"KF886367.1":{"flu_season":"2012-2013","strain":"A\/Ontario\/020\/2013","collection_date":"2013-01-22","note":null,"isolation_source":"NPS","gap_pos":84,"start_gaps":32,"end_gaps":52},"KF886372.1":{"flu_season":"2012-2013","strain":"A\/Ontario\/014\/2013","collection_date":"2013-01-15","note":null,"isolation_source":"NPS","gap_pos":84,"start_gaps":32,"end_gaps":52},"MF348058.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/17\/2016","collection_date":"2016-02-04","note":"lineage: swl","isolation_source":"NPS","gap_pos":1193,"start_gaps":371,"end_gaps":822},"MF195494.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/131\/2016","collection_date":"2016-03-04","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195415.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/028\/2016","collection_date":"2016-01-06","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF348044.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/03\/2016","collection_date":"2016-01-20","note":"lineage: swl","isolation_source":"nasal swab","gap_pos":857,"start_gaps":32,"end_gaps":825},"KP864397.1":{"flu_season":"2013-2014","strain":"A\/Ontario\/04\/2014","collection_date":"2014-01-29","note":null,"isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"MF195540.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/188\/2016","collection_date":"2016-03-14","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"KP864396.1":{"flu_season":"2013-2014","strain":"A\/Ontario\/02\/2014","collection_date":"2014-01-10","note":null,"isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"KJ406385.1":{"flu_season":"2013-2014","strain":"A\/Ontario\/53\/2013","collection_date":"2013-12-09","note":"lineage: swl","isolation_source":"NPS","gap_pos":40,"start_gaps":32,"end_gaps":8},"KJ406387.1":{"flu_season":"2013-2014","strain":"A\/Ontario\/56\/2013","collection_date":"2013-12-10","note":"lineage: swl","isolation_source":"nasal","gap_pos":40,"start_gaps":32,"end_gaps":8},"KJ406386.1":{"flu_season":"2013-2014","strain":"A\/Ontario\/55\/2013","collection_date":"2013-12-07","note":"lineage: swl","isolation_source":"nasal","gap_pos":40,"start_gaps":32,"end_gaps":8},"KJ406379.1":{"flu_season":"2013-2014","strain":"A\/Ontario\/50\/2013","collection_date":"2013-12-05","note":"lineage: swl","isolation_source":"NPS","gap_pos":40,"start_gaps":32,"end_gaps":8},"KJ406383.1":{"flu_season":"2013-2014","strain":"A\/Ontario\/49\/2013","collection_date":"2013-12-04","note":"lineage: swl","isolation_source":"NPS","gap_pos":40,"start_gaps":32,"end_gaps":8},"KJ406381.1":{"flu_season":"2013-2014","strain":"A\/Ontario\/48\/2013","collection_date":"2013-11-20","note":"lineage: swl","isolation_source":"nasal","gap_pos":40,"start_gaps":32,"end_gaps":8},"KJ406382.1":{"flu_season":"2013-2014","strain":"A\/Ontario\/51\/2013","collection_date":"2013-12-06","note":"lineage: swl","isolation_source":"nasal","gap_pos":40,"start_gaps":32,"end_gaps":8},"KP864399.1":{"flu_season":"2013-2014","strain":"A\/Ontario\/05\/2014","collection_date":"2014-02-11","note":null,"isolation_source":"nasopharyngeal swab","gap_pos":80,"start_gaps":14,"end_gaps":66},"KP864398.1":{"flu_season":"2013-2014","strain":"A\/Ontario\/03\/2014","collection_date":"2014-01-15","note":null,"isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"KF886366.1":{"flu_season":"2012-2013","strain":"A\/Ontario\/043\/2013","collection_date":"2013-03-05","note":null,"isolation_source":"NPS","gap_pos":84,"start_gaps":32,"end_gaps":52},"MF348046.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/05\/2016","collection_date":"2016-01-21","note":"lineage: swl","isolation_source":"NPS","gap_pos":753,"start_gaps":32,"end_gaps":721},"MF195585.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/241\/2016","collection_date":"2016-03-11","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195584.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/240\/2016","collection_date":"2016-03-01","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195465.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/099\/2016","collection_date":"2016-02-29","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195499.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/136\/2016","collection_date":"2016-03-07","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195583.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/239\/2016","collection_date":"2016-03-01","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":879,"start_gaps":54,"end_gaps":825},"MF348061.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/20\/2016","collection_date":"2016-02-05","note":"lineage: swl","isolation_source":"NPS","gap_pos":753,"start_gaps":32,"end_gaps":721},"MF195486.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/120\/2016","collection_date":"2016-02-29","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195414.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/027\/2016","collection_date":"2016-01-05","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195417.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/030\/2016","collection_date":"2016-01-10","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195446.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/077\/2016","collection_date":"2016-02-22","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195418.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/038\/2016","collection_date":"2016-02-02","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195487.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/121\/2016","collection_date":"2016-02-29","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195441.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/071\/2016","collection_date":"2016-02-19","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":877,"start_gaps":32,"end_gaps":845},"MF195511.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/151\/2016","collection_date":"2016-03-08","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195503.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/142\/2016","collection_date":"2016-03-03","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195471.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/105\/2016","collection_date":"2016-02-29","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195466.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/100\/2016","collection_date":"2016-02-26","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195536.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/182\/2016","collection_date":"2016-03-11","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":932,"start_gaps":32,"end_gaps":900},"MF195462.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/095\/2016","collection_date":"2016-02-26","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195443.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/074\/2016","collection_date":"2016-02-22","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF348042.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/01\/2016","collection_date":"2016-01-13","note":"lineage: swl","isolation_source":"NPS","gap_pos":753,"start_gaps":32,"end_gaps":721},"MF195568.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/220\/2016","collection_date":"2016-03-30","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF348049.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/08\/2016","collection_date":"2016-01-27","note":"lineage: swl","isolation_source":"NPS","gap_pos":753,"start_gaps":32,"end_gaps":721},"MF348064.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/23\/2016","collection_date":"2016-02-09","note":"lineage: swl","isolation_source":"NPS","gap_pos":753,"start_gaps":32,"end_gaps":721},"MF348057.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/16\/2016","collection_date":"2016-02-04","note":"lineage: swl","isolation_source":"nasal swab","gap_pos":753,"start_gaps":32,"end_gaps":721},"MF348060.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/19\/2016","collection_date":"2016-02-07","note":"lineage: swl","isolation_source":"NPS","gap_pos":753,"start_gaps":32,"end_gaps":721},"MF195439.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/067\/2016","collection_date":"2016-02-21","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":930,"start_gaps":32,"end_gaps":898},"MF195440.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/069\/2016","collection_date":"2016-02-19","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195551.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/203\/2016","collection_date":"2016-03-18","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195543.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/191\/2016","collection_date":"2016-03-15","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF348050.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/09\/2016","collection_date":"2016-01-27","note":"lineage: swl","isolation_source":"nasal swab","gap_pos":753,"start_gaps":32,"end_gaps":721},"MF195557.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/209\/2016","collection_date":"2016-03-23","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF348054.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/13\/2016","collection_date":"2016-02-01","note":"lineage: swl","isolation_source":"NPS","gap_pos":753,"start_gaps":32,"end_gaps":721},"MF195413.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/026\/2016","collection_date":"2016-01-04","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195447.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/078\/2016","collection_date":"2016-02-22","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":900,"start_gaps":32,"end_gaps":868},"MF195516.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/156\/2016","collection_date":"2016-03-08","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195468.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/102\/2016","collection_date":"2016-02-27","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195580.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/235\/2016","collection_date":"2016-04-19","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195453.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/084\/2016","collection_date":"2016-02-25","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195564.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/216\/2016","collection_date":"2016-03-29","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195477.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/111\/2016","collection_date":"2016-02-29","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195455.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/087\/2016","collection_date":"2016-02-19","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195448.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/079\/2016","collection_date":"2016-02-23","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195421.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/044\/2016","collection_date":"2016-02-05","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195576.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/228\/2016","collection_date":"2016-04-07","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195513.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/153\/2016","collection_date":"2016-03-09","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF348062.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/21\/2016","collection_date":"2016-02-08","note":"lineage: swl","isolation_source":"nasal swab","gap_pos":1119,"start_gaps":398,"end_gaps":721},"MF348047.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/06\/2016","collection_date":"2016-01-26","note":"lineage: swl","isolation_source":"NPS","gap_pos":753,"start_gaps":32,"end_gaps":721},"MF195467.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/101\/2016","collection_date":"2016-02-26","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195419.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/041\/2016","collection_date":"2016-02-08","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195573.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/225\/2016","collection_date":"2016-04-05","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195426.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/054\/2016","collection_date":"2016-02-15","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MH216446.1":{"flu_season":"2016-2017","strain":"A\/Ontario\/148\/2017","collection_date":"2017-03-28","note":"original specimen","isolation_source":"nasopharyngeal swab","gap_pos":858,"start_gaps":32,"end_gaps":826},"MF195578.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/230\/2016","collection_date":"2016-04-11","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195518.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/160\/2016","collection_date":"2016-03-09","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195431.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/059\/2016","collection_date":"2016-02-17","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195430.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/058\/2016","collection_date":"2016-02-18","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195547.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/199\/2016","collection_date":"2016-03-21","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195457.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/089\/2016","collection_date":"2016-02-23","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195445.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/076\/2016","collection_date":"2016-02-10","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195428.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/056\/2016","collection_date":"2016-02-16","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195427.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/055\/2016","collection_date":"2016-02-16","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195574.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/226\/2016","collection_date":"2016-04-06","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195463.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/097\/2016","collection_date":"2016-02-26","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195570.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/222\/2016","collection_date":"2016-03-31","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195553.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/205\/2016","collection_date":"2016-03-22","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":879,"start_gaps":54,"end_gaps":825},"MF195569.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/221\/2016","collection_date":"2016-03-31","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195522.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/164\/2016","collection_date":"2016-03-09","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195523.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/166\/2016","collection_date":"2016-03-10","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195504.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/143\/2016","collection_date":"2016-03-07","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195438.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/066\/2016","collection_date":"2016-02-22","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF348052.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/11\/2016","collection_date":"2016-02-01","note":"lineage: swl","isolation_source":"NPS","gap_pos":862,"start_gaps":32,"end_gaps":830},"MF195434.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/062\/2016","collection_date":"2016-02-17","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195456.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/088\/2016","collection_date":"2016-02-23","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195552.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/204\/2016","collection_date":"2016-03-22","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195481.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/115\/2016","collection_date":"2016-02-29","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195512.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/152\/2016","collection_date":"2016-03-08","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195485.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/119\/2016","collection_date":"2016-03-01","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195542.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/190\/2016","collection_date":"2016-03-16","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195525.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/168\/2016","collection_date":"2016-03-09","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195429.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/057\/2016","collection_date":"2016-02-17","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195475.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/109\/2016","collection_date":"2016-02-29","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195575.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/227\/2016","collection_date":"2016-04-06","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195546.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/195\/2016","collection_date":"2016-03-14","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195489.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/123\/2016","collection_date":"2016-03-02","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195478.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/112\/2016","collection_date":"2016-02-29","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195508.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/148\/2016","collection_date":"2016-03-08","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195416.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/029\/2016","collection_date":"2016-01-07","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195483.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/117\/2016","collection_date":"2016-02-29","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195435.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/063\/2016","collection_date":"2016-02-22","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195544.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/192\/2016","collection_date":"2016-03-16","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF348053.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/12\/2016","collection_date":"2016-02-01","note":"lineage: swl","isolation_source":"NPS","gap_pos":753,"start_gaps":32,"end_gaps":721},"MF195565.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/217\/2016","collection_date":"2016-03-30","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195464.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/098\/2016","collection_date":"2016-02-26","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195555.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/207\/2016","collection_date":"2016-03-22","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195534.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/180\/2016","collection_date":"2016-03-14","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195532.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/177\/2016","collection_date":"2016-03-10","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195460.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/092\/2016","collection_date":"2016-02-22","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195519.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/161\/2016","collection_date":"2016-03-10","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195528.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/171\/2016","collection_date":"2016-03-11","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195554.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/206\/2016","collection_date":"2016-03-22","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195533.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/179\/2016","collection_date":"2016-03-10","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195521.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/163\/2016","collection_date":"2016-03-10","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195550.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/202\/2016","collection_date":"2016-03-17","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195498.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/135\/2016","collection_date":"2016-03-07","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195425.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/053\/2016","collection_date":"2016-02-16","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195556.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/208\/2016","collection_date":"2016-03-24","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195520.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/162\/2016","collection_date":"2016-03-08","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195461.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/093\/2016","collection_date":"2016-02-24","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195469.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/103\/2016","collection_date":"2016-02-26","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195510.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/150\/2016","collection_date":"2016-03-08","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195579.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/234\/2016","collection_date":"2016-04-18","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195561.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/213\/2016","collection_date":"2016-03-28","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195433.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/061\/2016","collection_date":"2016-02-18","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195476.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/110\/2016","collection_date":"2016-03-01","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195452.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/083\/2016","collection_date":"2016-02-24","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195582.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/238\/2016","collection_date":"2016-04-25","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195535.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/181\/2016","collection_date":"2016-03-10","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195480.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/114\/2016","collection_date":"2016-03-02","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195506.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/146\/2016","collection_date":"2016-03-07","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195505.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/145\/2016","collection_date":"2016-03-07","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195495.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/132\/2016","collection_date":"2016-03-03","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195571.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/223\/2016","collection_date":"2016-03-15","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195515.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/155\/2016","collection_date":"2016-03-08","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195531.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/174\/2016","collection_date":"2016-03-14","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195432.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/060\/2016","collection_date":"2016-02-18","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195538.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/184\/2016","collection_date":"2016-03-14","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195479.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/113\/2016","collection_date":"2016-02-25","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195509.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/149\/2016","collection_date":"2016-03-09","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195436.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/064\/2016","collection_date":"2016-02-18","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195541.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/189\/2016","collection_date":"2016-03-14","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195449.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/080\/2016","collection_date":"2016-02-19","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195581.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/237\/2016","collection_date":"2016-04-20","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195566.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/218\/2016","collection_date":"2016-03-29","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195545.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/194\/2016","collection_date":"2016-03-16","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":1005,"start_gaps":180,"end_gaps":825},"MF195562.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/214\/2016","collection_date":"2016-03-24","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195563.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/215\/2016","collection_date":"2016-03-22","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195497.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/134\/2016","collection_date":"2016-03-06","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195423.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/050\/2016","collection_date":"2016-02-16","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195537.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/183\/2016","collection_date":"2016-03-14","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195490.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/125\/2016","collection_date":"2016-03-02","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195442.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/073\/2016","collection_date":"2016-02-22","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195437.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/065\/2016","collection_date":"2016-02-21","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":943,"start_gaps":32,"end_gaps":911},"MF195474.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/108\/2016","collection_date":"2016-02-29","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195420.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/043\/2016","collection_date":"2016-02-08","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195530.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/173\/2016","collection_date":"2016-03-11","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195507.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/147\/2016","collection_date":"2016-03-08","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195472.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/106\/2016","collection_date":"2016-02-29","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195492.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/127\/2016","collection_date":"2016-03-02","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF348059.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/18\/2016","collection_date":"2016-02-04","note":"lineage: swl","isolation_source":"NPS","gap_pos":753,"start_gaps":32,"end_gaps":721},"MF195559.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/211\/2016","collection_date":"2016-03-26","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195473.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/107\/2016","collection_date":"2016-03-01","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195567.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/219\/2016","collection_date":"2016-03-29","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195500.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/139\/2016","collection_date":"2016-03-04","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF348048.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/07\/2016","collection_date":"2016-01-27","note":"lineage: swl","isolation_source":"nasal swab","gap_pos":753,"start_gaps":32,"end_gaps":721},"MF348043.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/02\/2016","collection_date":"2016-01-16","note":"lineage: swl","isolation_source":"nasal swab","gap_pos":753,"start_gaps":32,"end_gaps":721},"MF195444.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/075\/2016","collection_date":"2016-02-23","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195424.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/052\/2016","collection_date":"2016-02-15","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF348055.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/14\/2016","collection_date":"2016-02-01","note":"lineage: swl","isolation_source":"nasal swab","gap_pos":753,"start_gaps":32,"end_gaps":721},"MF195549.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/201\/2016","collection_date":"2016-03-15","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF348056.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/15\/2016","collection_date":"2016-02-03","note":"lineage: swl","isolation_source":"NPS","gap_pos":753,"start_gaps":32,"end_gaps":721},"MF348045.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/04\/2016","collection_date":"2016-01-21","note":"lineage: swl","isolation_source":"nasal swab","gap_pos":753,"start_gaps":32,"end_gaps":721},"MF195496.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/133\/2016","collection_date":"2016-03-05","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195454.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/085\/2016","collection_date":"2016-02-24","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF348065.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/24\/2016","collection_date":"2016-02-08","note":"lineage: swl","isolation_source":"nasal swab","gap_pos":1056,"start_gaps":335,"end_gaps":721},"MF348066.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/25\/2016","collection_date":"2016-02-08","note":"lineage: swl","isolation_source":"nasal swab","gap_pos":753,"start_gaps":32,"end_gaps":721},"MF348063.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/22\/2016","collection_date":"2016-02-09","note":"lineage: swl","isolation_source":"NPS","gap_pos":753,"start_gaps":32,"end_gaps":721},"MF348051.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/10\/2016","collection_date":"2016-01-28","note":"lineage: swl","isolation_source":"NPS","gap_pos":753,"start_gaps":32,"end_gaps":721},"MF195529.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/172\/2016","collection_date":"2016-03-12","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195484.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/118\/2016","collection_date":"2016-03-01","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195558.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/210\/2016","collection_date":"2016-03-26","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195526.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/169\/2016","collection_date":"2016-03-09","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195488.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/122\/2016","collection_date":"2016-03-02","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195470.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/104\/2016","collection_date":"2016-03-01","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195482.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/116\/2016","collection_date":"2016-02-29","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195527.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/170\/2016","collection_date":"2016-03-09","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195524.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/167\/2016","collection_date":"2016-03-10","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195451.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/082\/2016","collection_date":"2016-02-24","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195422.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/048\/2016","collection_date":"2016-02-10","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195572.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/224\/2016","collection_date":"2016-04-04","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195450.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/081\/2016","collection_date":"2016-02-22","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":825,"start_gaps":0,"end_gaps":825},"MF195502.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/141\/2016","collection_date":"2016-03-06","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195517.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/157\/2016","collection_date":"2016-03-08","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195560.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/212\/2016","collection_date":"2016-03-26","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195548.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/200\/2016","collection_date":"2016-03-21","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195493.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/129\/2016","collection_date":"2016-03-03","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195459.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/091\/2016","collection_date":"2016-02-24","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195539.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/186\/2016","collection_date":"2016-03-14","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195491.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/126\/2016","collection_date":"2016-03-02","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195514.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/154\/2016","collection_date":"2016-03-04","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195577.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/229\/2016","collection_date":"2016-04-07","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195458.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/090\/2016","collection_date":"2016-02-24","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"MF195501.1":{"flu_season":"2015-2016","strain":"A\/Ontario\/140\/2016","collection_date":"2016-03-05","note":"passage details: original specimen","isolation_source":"nasopharyngeal wash","gap_pos":857,"start_gaps":32,"end_gaps":825},"KJ406384.1":{"flu_season":"2013-2014","strain":"A\/Ontario\/52\/2013","collection_date":"2013-12-09","note":"lineage: swl","isolation_source":"NPS","gap_pos":40,"start_gaps":32,"end_gaps":8},"KJ406380.1":{"flu_season":"2013-2014","strain":"A\/Ontario\/54\/2013","collection_date":"2013-12-06","note":"lineage: swl","isolation_source":"NPS","gap_pos":40,"start_gaps":32,"end_gaps":8},"HQ239616.1":{"flu_season":"2009-2010","strain":"A\/Canada-ON\/RV2984\/2009","collection_date":"2009-10-16","note":"lineage: swl; P1 passage(s)","isolation_source":"TCF","gap_pos":114,"start_gaps":32,"end_gaps":82},"HQ239617.1":{"flu_season":"2009-2010","strain":"A\/Canada-ON\/RV2985\/2009","collection_date":"2009-10-14","note":"lineage: swl; P1 passage(s)","isolation_source":"TCF","gap_pos":114,"start_gaps":32,"end_gaps":82},"CY060670.2":{"flu_season":"2009-2010","strain":"A\/Ontario\/315047\/2009","collection_date":"2009-11-02","note":"lineage=swl","isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"CY081077.2":{"flu_season":"2010-2011","strain":"A\/Ontario\/720545\/2010","collection_date":"2010-11-17","note":null,"isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"KF551096.1":{"flu_season":"2011-2012","strain":"A\/Ontario\/004\/2012","collection_date":"2012-01-25","note":"lineage:swl","isolation_source":"nasal","gap_pos":84,"start_gaps":32,"end_gaps":52},"KF551087.1":{"flu_season":"2011-2012","strain":"A\/Ontario\/011\/2012","collection_date":"2012-02-28","note":"lineage:swl","isolation_source":"nasal","gap_pos":84,"start_gaps":32,"end_gaps":52},"KF551081.1":{"flu_season":"2011-2012","strain":"A\/Ontario\/002\/2012","collection_date":"2012-01-16","note":"lineage:swl","isolation_source":"NPS","gap_pos":84,"start_gaps":32,"end_gaps":52},"KF551093.1":{"flu_season":"2011-2012","strain":"A\/Ontario\/023\/2012","collection_date":"2012-03-13","note":"lineage:swl","isolation_source":"NPS","gap_pos":84,"start_gaps":32,"end_gaps":52},"KF551079.1":{"flu_season":"2011-2012","strain":"A\/Ontario\/026\/2012","collection_date":"2012-03-28","note":"lineage:swl","isolation_source":"NPS","gap_pos":84,"start_gaps":32,"end_gaps":52},"KF551092.1":{"flu_season":"2011-2012","strain":"A\/Ontario\/022\/2012","collection_date":"2012-03-12","note":"lineage:swl","isolation_source":"NPS","gap_pos":84,"start_gaps":32,"end_gaps":52},"KF551086.1":{"flu_season":"2011-2012","strain":"A\/Ontario\/010\/2012","collection_date":"2012-02-23","note":"lineage:swl","isolation_source":null,"gap_pos":84,"start_gaps":32,"end_gaps":52},"KF551084.1":{"flu_season":"2011-2012","strain":"A\/Ontario\/007\/2012","collection_date":"2012-02-21","note":"lineage:swl","isolation_source":"NPS","gap_pos":84,"start_gaps":32,"end_gaps":52},"KF551091.1":{"flu_season":"2011-2012","strain":"A\/Ontario\/019\/2012","collection_date":"2012-03-07","note":"lineage:swl","isolation_source":"nasal","gap_pos":84,"start_gaps":32,"end_gaps":52},"KF551089.1":{"flu_season":"2011-2012","strain":"A\/Ontario\/016\/2012","collection_date":"2012-03-05","note":"lineage:swl","isolation_source":"NPS","gap_pos":84,"start_gaps":32,"end_gaps":52},"KF551094.1":{"flu_season":"2011-2012","strain":"A\/Ontario\/024\/2012","collection_date":"2012-03-09","note":"lineage:swl","isolation_source":"NPS","gap_pos":84,"start_gaps":32,"end_gaps":52},"KF886381.1":{"flu_season":"2012-2013","strain":"A\/Ontario\/026\/2013","collection_date":"2013-01-19","note":null,"isolation_source":"NPS","gap_pos":84,"start_gaps":32,"end_gaps":52},"KF886380.1":{"flu_season":"2012-2013","strain":"A\/Ontario\/011\/2013","collection_date":"2013-01-14","note":null,"isolation_source":"NPS","gap_pos":84,"start_gaps":32,"end_gaps":52},"KF551090.1":{"flu_season":"2011-2012","strain":"A\/Ontario\/018\/2012","collection_date":"2012-03-07","note":"lineage:swl","isolation_source":"nasal","gap_pos":84,"start_gaps":32,"end_gaps":52},"KF551080.1":{"flu_season":"2011-2012","strain":"A\/Ontario\/026\/2011","collection_date":"2011-12-16","note":"lineage:swl","isolation_source":"NPS","gap_pos":84,"start_gaps":32,"end_gaps":52},"KF551082.1":{"flu_season":"2012-2013","strain":"A\/Ontario\/003\/2012","collection_date":"2012-12-27","note":"lineage:swl","isolation_source":"NPS","gap_pos":84,"start_gaps":32,"end_gaps":52},"KF551088.1":{"flu_season":"2011-2012","strain":"A\/Ontario\/013\/2012","collection_date":"2012-02-29","note":"lineage:swl","isolation_source":"NPS","gap_pos":84,"start_gaps":32,"end_gaps":52},"KF551083.1":{"flu_season":"2011-2012","strain":"A\/Ontario\/006\/2012","collection_date":"2012-02-02","note":"lineage:swl","isolation_source":"NPS","gap_pos":84,"start_gaps":32,"end_gaps":52},"KF551085.1":{"flu_season":"2011-2012","strain":"A\/Ontario\/008\/2012","collection_date":"2012-02-17","note":"lineage:swl","isolation_source":"NPS","gap_pos":84,"start_gaps":32,"end_gaps":52},"CY081061.2":{"flu_season":"2010-2011","strain":"A\/Ontario\/130741\/2010","collection_date":"2010-10-13","note":null,"isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"HQ239611.1":{"flu_season":"2009-2010","strain":"A\/Canada-ON\/RV2964\/2009","collection_date":"2009-10-14","note":"lineage: swl; P1 passage(s)","isolation_source":"TCF","gap_pos":114,"start_gaps":32,"end_gaps":82},"CY060718.2":{"flu_season":"2009-2010","strain":"A\/Ontario\/320266\/2009","collection_date":"2009-11-08","note":"lineage=swl","isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"CY060638.2":{"flu_season":"2009-2010","strain":"A\/Ontario\/314137\/2009","collection_date":"2009-11-03","note":"lineage=swl","isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"CY060678.2":{"flu_season":"2009-2010","strain":"A\/Ontario\/315107\/2009","collection_date":"2009-11-04","note":"lineage=swl","isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"CY060646.2":{"flu_season":"2009-2010","strain":"A\/Ontario\/314603\/2009","collection_date":"2009-11-02","note":"lineage=swl","isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"CY060590.2":{"flu_season":"2009-2010","strain":"A\/Ontario\/305139\/2009","collection_date":"2009-10-27","note":"lineage=swl","isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"CY060502.2":{"flu_season":"2008-2009","strain":"A\/Ontario\/10016\/2009","collection_date":"2009-08-24","note":"lineage=swl","isolation_source":"nasopharyngeal swab; oseltamivir resistant","gap_pos":41,"start_gaps":14,"end_gaps":27},"CY060550.2":{"flu_season":"2009-2010","strain":"A\/Ontario\/25913\/2009","collection_date":"2009-09-07","note":"lineage=swl","isolation_source":"nasopharyngeal swab; oseltamivir resistant","gap_pos":41,"start_gaps":14,"end_gaps":27},"HQ239572.1":{"flu_season":"2009-2010","strain":"A\/Canada-ON\/RV2904\/2009","collection_date":"2009-09-07","note":"lineage: swl; P1 passage(s)","isolation_source":"TCF","gap_pos":114,"start_gaps":32,"end_gaps":82},"HQ239416.1":{"flu_season":"2008-2009","strain":"A\/Canada-ON\/RV1545\/2009","collection_date":"2009-04-27","note":"lineage: swl; P1 passage(s)","isolation_source":"THT_SWAB","gap_pos":114,"start_gaps":32,"end_gaps":82},"HQ239578.1":{"flu_season":"2009-2010","strain":"A\/Canada-ON\/RV2910\/2009","collection_date":"2009-09-29","note":"lineage: swl; P1 passage(s)","isolation_source":"TCF","gap_pos":114,"start_gaps":32,"end_gaps":82},"HQ239608.1":{"flu_season":"2009-2010","strain":"A\/Canada-ON\/RV2961\/2009","collection_date":"2009-09-25","note":"lineage: swl; P1 passage(s)","isolation_source":"TCF","gap_pos":114,"start_gaps":32,"end_gaps":82},"CY060686.2":{"flu_season":"2009-2010","strain":"A\/Ontario\/315181\/2009","collection_date":"2009-11-03","note":"lineage=swl","isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"CY060614.2":{"flu_season":"2009-2010","strain":"A\/Ontario\/309862\/2009","collection_date":"2009-10-29","note":"lineage=swl","isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"CY060622.2":{"flu_season":"2009-2010","strain":"A\/Ontario\/313762\/2009","collection_date":"2009-10-30","note":"lineage=swl","isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"CY060510.2":{"flu_season":"2008-2009","strain":"A\/Ontario\/10296\/2009","collection_date":"2009-08-17","note":"lineage=swl","isolation_source":"nasopharyngeal swab; oseltamivir resistant","gap_pos":41,"start_gaps":14,"end_gaps":27},"CY060542.2":{"flu_season":"2008-2009","strain":"A\/Ontario\/25389\/2009","collection_date":"2009-08-09","note":"lineage=swl","isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"HQ239458.2":{"flu_season":"2009-2010","strain":"A\/Canada-ON\/RV2015-10\/2009","collection_date":"2009-11-09","note":"lineage: swl; P1 passage(s)","isolation_source":"NASW","gap_pos":114,"start_gaps":32,"end_gaps":82},"FJ974024.3":{"flu_season":"2008-2009","strain":"A\/Toronto\/3184\/2009","collection_date":"2009-04-01","note":null,"isolation_source":"NP swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"GQ385300.1":{"flu_season":"2008-2009","strain":"A\/Toronto\/0462\/2009","collection_date":"2009-05-26","note":"lineage: swl; passaged in rhesus monkey kidney cells","isolation_source":"nasopharyngeal swab","gap_pos":32,"start_gaps":22,"end_gaps":10},"CY045938.1":{"flu_season":"2008-2009","strain":"A\/Toronto\/C0270\/2009(H1N1)","collection_date":"2009-05-24","note":"lineage=swl","isolation_source":"gender:M; age:33; nasopharyngeal swab","gap_pos":44,"start_gaps":27,"end_gaps":17},"HQ239425.1":{"flu_season":"2008-2009","strain":"A\/Canada-ON\/RV1590\/2009","collection_date":"2009-04-26","note":"lineage: swl; P1 passage(s)","isolation_source":"NP_SWAB","gap_pos":114,"start_gaps":32,"end_gaps":82},"CY060526.2":{"flu_season":"2008-2009","strain":"A\/Ontario\/235657\/2009","collection_date":"2009-08-21","note":"lineage=swl","isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"HQ239568.1":{"flu_season":"2009-2010","strain":"A\/Canada-ON\/RV2889\/2009","collection_date":"2009-09-22","note":"lineage: swl; P1 passage(s)","isolation_source":"TCF","gap_pos":114,"start_gaps":32,"end_gaps":82},"CY060710.2":{"flu_season":"2009-2010","strain":"A\/Ontario\/315637\/2009","collection_date":"2009-11-04","note":"lineage=swl","isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"CY060606.2":{"flu_season":"2009-2010","strain":"A\/Ontario\/308054\/2009","collection_date":"2009-10-28","note":"lineage=swl","isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"HQ239570.1":{"flu_season":"2009-2010","strain":"A\/Canada-ON\/RV2891\/2009","collection_date":"2009-10-15","note":"lineage: swl; P1 passage(s)","isolation_source":"TCF","gap_pos":114,"start_gaps":32,"end_gaps":82},"FJ974026.3":{"flu_season":"2008-2009","strain":"A\/Toronto\/3141\/2009","collection_date":"2009-04-24","note":"lineage: swl; passaged in rhesus monkey kidney cell","isolation_source":"NP swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"CY045946.2":{"flu_season":"2008-2009","strain":"A\/Toronto\/C2781\/2009(H1N1)","collection_date":"2009-05-09","note":"lineage=swl","isolation_source":"gender:F; age:12; nasopharyngeal swab","gap_pos":55,"start_gaps":28,"end_gaps":27},"HQ239580.1":{"flu_season":"2009-2010","strain":"A\/Canada-ON\/RV2913\/2009","collection_date":"2009-10-02","note":"lineage: swl; P1 passage(s)","isolation_source":"TCF","gap_pos":114,"start_gaps":32,"end_gaps":82},"GQ411897.1":{"flu_season":"2008-2009","strain":"A\/Toronto\/T5308\/2009","collection_date":"2009-06-03","note":"lineage: swl","isolation_source":"nasopharyngeal swab","gap_pos":19,"start_gaps":17,"end_gaps":0},"FJ974025.1":{"flu_season":"2008-2009","strain":"A\/Toronto\/3178\/2009","collection_date":"2009-04-01","note":null,"isolation_source":"NP swab","gap_pos":1294,"start_gaps":133,"end_gaps":1161},"HQ239576.1":{"flu_season":"2009-2010","strain":"A\/Canada-ON\/RV2908\/2009","collection_date":"2009-09-29","note":"lineage: swl; P1 passage(s)","isolation_source":"TCF","gap_pos":114,"start_gaps":32,"end_gaps":82},"CY045511.2":{"flu_season":"2008-2009","strain":"A\/Toronto\/R8564\/2009(H1N1)","collection_date":"2009-07-06","note":"lineage=swl","isolation_source":"gender:F; age:7; nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"CY076755.2":{"flu_season":"2008-2009","strain":"A\/Ontario\/142358\/2009","collection_date":"2009-05-27","note":"lineage=swl","isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"CY076779.2":{"flu_season":"2008-2009","strain":"A\/Ontario\/152439\/2009","collection_date":"2009-06-04","note":"lineage=swl","isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"CY076787.2":{"flu_season":"2008-2009","strain":"A\/Ontario\/152846\/2009","collection_date":"2009-06-04","note":"lineage=swl","isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"CY076771.2":{"flu_season":"2008-2009","strain":"A\/Ontario\/147723\/2009","collection_date":"2009-06-02","note":"lineage=swl","isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"CY076795.2":{"flu_season":"2008-2009","strain":"A\/Ontario\/156785\/2009","collection_date":"2009-06-08","note":"lineage=swl","isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"CY076763.2":{"flu_season":"2008-2009","strain":"A\/Ontario\/147265\/2009","collection_date":"2009-06-01","note":"lineage=swl","isolation_source":"nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"CY045962.2":{"flu_season":"2008-2009","strain":"A\/Toronto\/T5294\/2009(H1N1)","collection_date":"2009-05-30","note":"lineage=swl","isolation_source":"gender:F; age:22; nasopharyngeal swab","gap_pos":41,"start_gaps":14,"end_gaps":27},"HQ239573.1":{"flu_season":"2008-2009","strain":"A\/Canada-ON\/RV2905\/2009","collection_date":"2009-08-09","note":"lineage: swl; P1 passage(s)","isolation_source":"TCF","gap_pos":114,"start_gaps":32,"end_gaps":82},"HQ239575.1":{"flu_season":"2009-2010","strain":"A\/Canada-ON\/RV2907\/2009","collection_date":"2009-09-26","note":"lineage: swl; P1 passage(s)","isolation_source":"TCF","gap_pos":114,"start_gaps":32,"end_gaps":82},"JX875001.1":{"flu_season":"2011-2012","strain":"A\/Ontario\/N163578\/2012","collection_date":"2012-08-10","note":"RMK 1st passage","isolation_source":"NPS","gap_pos":84,"start_gaps":32,"end_gaps":52},"FJ800819.1":{"flu_season":"2007-2008","strain":"A\/Toronto\/415\/2008","collection_date":"2008-01-08","note":null,"isolation_source":null,"gap_pos":932,"start_gaps":41,"end_gaps":888},"FJ800809.1":{"flu_season":"2007-2008","strain":"A\/Toronto\/008\/2007","collection_date":"2007-11-26","note":null,"isolation_source":null,"gap_pos":932,"start_gaps":41,"end_gaps":888},"FJ800818.1":{"flu_season":"2007-2008","strain":"A\/Toronto\/087\/2007","collection_date":"2007-12-22","note":null,"isolation_source":null,"gap_pos":932,"start_gaps":41,"end_gaps":888},"FJ800820.1":{"flu_season":"2007-2008","strain":"A\/Toronto\/398\/2007","collection_date":"2007-12-03","note":null,"isolation_source":null,"gap_pos":932,"start_gaps":41,"end_gaps":888},"FJ800811.1":{"flu_season":"2007-2008","strain":"A\/Toronto\/432\/2008","collection_date":"2008-01-31","note":null,"isolation_source":null,"gap_pos":932,"start_gaps":41,"end_gaps":888},"FJ800810.1":{"flu_season":"2007-2008","strain":"A\/Toronto\/104\/2007","collection_date":"2007-12-23","note":null,"isolation_source":null,"gap_pos":932,"start_gaps":41,"end_gaps":888}};
+  </script>
+  <script>
+    (function webpackUniversalModuleDefinition(root, factory) {
+      if(typeof exports === 'object' && typeof module === 'object')
+        module.exports = factory(require("phylocanvas"));
+      else if(typeof define === 'function' && define.amd)
+        define(["phylocanvas"], factory);
+      else if(typeof exports === 'object')
+        exports["metadataPlugin"] = factory(require("phylocanvas"));
+      else
+        root["metadataPlugin"] = factory(root["phylocanvas"]);
+    })(this, function(__WEBPACK_EXTERNAL_MODULE_1__) {
+    return /******/ (function(modules) { // webpackBootstrap
+    /******/  // The module cache
+    /******/  var installedModules = {};
+
+    /******/  // The require function
+    /******/  function __webpack_require__(moduleId) {
+
+    /******/    // Check if module is in cache
+    /******/    if(installedModules[moduleId])
+    /******/      return installedModules[moduleId].exports;
+
+    /******/    // Create a new module (and put it into the cache)
+    /******/    var module = installedModules[moduleId] = {
+    /******/      exports: {},
+    /******/      id: moduleId,
+    /******/      loaded: false
+    /******/    };
+
+    /******/    // Execute the module function
+    /******/    modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+
+    /******/    // Flag the module as loaded
+    /******/    module.loaded = true;
+
+    /******/    // Return the exports of the module
+    /******/    return module.exports;
+    /******/  }
+
+
+    /******/  // expose the modules object (__webpack_modules__)
+    /******/  __webpack_require__.m = modules;
+
+    /******/  // expose the module cache
+    /******/  __webpack_require__.c = installedModules;
+
+    /******/  // __webpack_public_path__
+    /******/  __webpack_require__.p = "";
+
+    /******/  // Load entry module and return exports
+    /******/  return __webpack_require__(0);
+    /******/ })
+    /************************************************************************/
+    /******/ ([
+    /* 0 */
+    /***/ (function(module, exports, __webpack_require__) {
+
+      'use strict';
+
+      Object.defineProperty(exports, "__esModule", {
+        value: true
+      });
+      exports.DEFAULT_BRANCH_MENU_ITEMS = exports.DEFAULT_MENU_ITEMS = undefined;
+
+      var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+      var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+
+      exports.default = metadataPlugin;
+
+      var _phylocanvas = Phylocanvas;//__webpack_require__(1);
+
+      var _phylocanvas2 = _interopRequireDefault(_phylocanvas);
+
+      function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+      function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+      function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+      function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+      function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } } /* eslint no-param-reassign: ["error", { "props": false }] */
+
+      var _utils$events = _phylocanvas.utils.events,
+          createHandler = _utils$events.createHandler,
+          preventDefault = _utils$events.preventDefault;
+      var createBlobUrl = _phylocanvas.utils.dom.createBlobUrl;
+      var constants = _phylocanvas.utils.constants;
+      var Angles = constants.Angles;
+      // const { getPixelRatio } = utils.canvas;
+
+      var DEFAULTS = {
+        _headingDrawn: false,
+        _maxLabelWidth: {},
+        _blockCoords: {}, // object to store metadata block coordinates
+        active: true,
+        showHeaders: true,
+        showLabels: true,
+        blockLength: 32,
+        blockSize: null,
+        padding: 8,
+        columns: [],
+        propertyName: 'data',
+        underlineHeaders: true,
+        headerAngle: 90,
+        fillStyle: 'black',
+        strokeStyle: 'black',
+        lineWidth: 1,
+        font: null,
+        showTooltip: true, // whether or not to show metadata tooltip
+        tooltipFunc: null // optional function for innerHTML to set for tooltip
+      };
+
+      var INVALID_HORIZONTAL_POSITION = 'Invalid horizontal position specified' + 'Supported values are `left`, `centre`, or `right`';
+      var INVALID_VERTICAL_POSITION = 'Invalid vertical position specified' + 'Supported values are `top`, `middle`, or `bottom`';
+
+      var LOG10 = Math.log(10);
+
+      function drawScalebar() {
+        var scalebar = this.scalebar,
+            zoom = this.zoom,
+            branchScalar = this.branchScalar;
+        var position = scalebar.position;
+
+        var cxt = this.canvas;
+        var canvas = cxt.canvas;
+        var pixelRatio = getPixelRatio(cxt);
+        var width = pixelRatio * scalebar.width;
+        var height = pixelRatio * scalebar.height;
+        var lineWidth = pixelRatio * scalebar.lineWidth;
+        var fontSize = pixelRatio * scalebar.fontSize;
+
+        cxt.save();
+
+        var x = 0;
+        if (typeof position.left !== 'undefined') {
+          x = scalebar.lineWidth + position.left;
+        } else if (typeof position.centre !== 'undefined') {
+          x = canvas.width / 2 - width / 2 + position.centre;
+        } else if (typeof position.right !== 'undefined') {
+          x = canvas.width - width - scalebar.lineWidth - position.right;
+        } else {
+          this.loadError(INVALID_HORIZONTAL_POSITION);
+        }
+        var y = 0;
+        if (typeof position.top !== 'undefined') {
+          y = position.top;
+        } else if (typeof position.middle !== 'undefined') {
+          y = canvas.height / 2 - height + position.middle;
+        } else if (typeof position.bottom !== 'undefined') {
+          y = canvas.height - height - position.bottom;
+        } else {
+          this.loadError(INVALID_VERTICAL_POSITION);
+        }
+        cxt.clearRect(x, y, width, height);
+
+        cxt.font = fontSize + 'px ' + scalebar.fontFamily;
+        cxt.fillStyle = scalebar.fillStyle;
+        cxt.strokeStyle = scalebar.strokeStyle;
+        cxt.lineWidth = lineWidth;
+        cxt.textBaseline = scalebar.textBaseline;
+        cxt.textAlign = scalebar.textAlign;
+
+        cxt.beginPath();
+        cxt.moveTo(x, y);
+        cxt.lineTo(x + width, y);
+        cxt.stroke();
+        cxt.moveTo(x, y);
+        cxt.lineTo(x, y + height);
+        cxt.stroke();
+        cxt.moveTo(x + width, y);
+        cxt.lineTo(x + width, y + height);
+        cxt.stroke();
+        cxt.closePath();
+
+        var scale = width / branchScalar / zoom;
+        var minDigitis = parseInt(Math.abs(Math.log(scale) / LOG10), 10);
+        var label = scale.toFixed(minDigitis + scalebar.digits);
+        cxt.fillText(label, x + width / 2, y + height);
+
+        cxt.restore();
+      }
+
+      function isCircularTree(tree) {
+        return tree.treeType === 'circular' || tree.treeType === 'radial';
+      }
+
+      function getFontString(tree) {
+        if (tree.metadata.font) {
+          return tree.metadata.font;
+        }
+        return Math.min(tree.textSize, tree.metadata.blockLength) + 'pt ' + tree.font;
+      }
+
+      function getMetadataColumnNames(tree) {
+        var _tree$metadata = tree.metadata,
+            columns = _tree$metadata.columns,
+            propertyName = _tree$metadata.propertyName;
+        // If no columns specified, then draw all columns
+
+        return columns.length > 0 ? columns : Object.keys(tree.leaves[0][propertyName]);
+      }
+
+      function hasMetadataHeadings(tree) {
+        if (!tree.metadata.showHeaders) {
+          return false;
+        }
+        var treeType = tree.treeType,
+            alignLabels = tree.alignLabels;
+
+        return treeType === 'diagonal' || alignLabels && treeType === 'rectangular' || treeType === 'hierarchical';
+      }
+
+      function getMetadataLength(tree) {
+        var _tree$metadata2 = tree.metadata,
+            showLabels = _tree$metadata2.showLabels,
+            blockLength = _tree$metadata2.blockLength,
+            padding = _tree$metadata2.padding,
+            _maxLabelWidth = _tree$metadata2._maxLabelWidth;
+
+        var cols = getMetadataColumnNames(tree);
+        return (showLabels ? cols.reduce(function (pre, cur) {
+          return _maxLabelWidth[cur];
+        }, 0) : 0) + cols.length * (blockLength + padding);
+      }
+
+      function getMetadataMaxBlockSize(tree) {
+        if (tree.metadata._maxBlockSize) {
+          return tree.metadata._maxBlockSize;
+        }
+
+        // the max block size of circular trees is the max angle in pixels
+        if (isCircularTree(tree)) {
+          var maxHypot = 0;
+          var _iteratorNormalCompletion = true;
+          var _didIteratorError = false;
+          var _iteratorError = undefined;
+
+          try {
+            for (var _iterator = tree.leaves[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+              var lf = _step.value;
+
+              var tx = lf.getLabelStartX();
+              if (tree.showLabels || tree.hoverLabel && lf.highlighted) {
+                tx += tree.maxLabelLength[tree.treeType];
+              }
+              var offset = tree.alignLabels ? tree.labelAlign.getLabelOffset(lf) : 0;
+              var hypot = Math.hypot(lf.centerx - lf.startx, lf.centery - lf.starty) + tx + offset;
+              if (hypot > maxHypot) maxHypot = hypot;
+            }
+          } catch (err) {
+            _didIteratorError = true;
+            _iteratorError = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion && _iterator.return) {
+                _iterator.return();
+              }
+            } finally {
+              if (_didIteratorError) {
+                throw _iteratorError;
+              }
+            }
+          }
+
+          tree.metadata._maxBlockSize = Angles.FULL * maxHypot / tree.leaves.length;
+          return tree.metadata._maxBlockSize;
+        }
+
+        // the max block size for non-circular trees is equal to the tree step
+        return tree.step;
+      }
+
+      function drawMetadataHeading(branch, startX, startY) {
+        var ctx = branch.tree.canvas;
+        var treeType = branch.tree.treeType;
+        var _branch$tree$metadata = branch.tree.metadata,
+            _maxLabelWidth = _branch$tree$metadata._maxLabelWidth,
+            _maxHeaderWidth = _branch$tree$metadata._maxHeaderWidth,
+            _maxHeaderHeight = _branch$tree$metadata._maxHeaderHeight,
+            blockLength = _branch$tree$metadata.blockLength,
+            padding = _branch$tree$metadata.padding,
+            headerAngle = _branch$tree$metadata.headerAngle,
+            showLabels = _branch$tree$metadata.showLabels,
+            fillStyle = _branch$tree$metadata.fillStyle,
+            strokeStyle = _branch$tree$metadata.strokeStyle,
+            underlineHeaders = _branch$tree$metadata.underlineHeaders;
+
+        var metadata = branch.tree.metadata.columns.length > 0 ? branch.tree.metadata.columns : Object.keys(branch.data);
+        var lineWidth = branch.tree.metadata.lineWidth / branch.tree.zoom;
+        // Drawing Column headings
+        ctx.font = getFontString(branch.tree);
+        ctx.fillStyle = fillStyle;
+        ctx.strokeStyle = strokeStyle;
+        ctx.lineWidth = lineWidth;
+
+        var angle = headerAngle / 180 * Math.PI;
+        var y = startY + _maxHeaderHeight / 2 + Math.sin(angle) * _maxHeaderWidth / 2;
+        var sign = treeType === 'hierarchical' ? -1 : 1;
+        var x = startX;
+        var cosAngle = Math.cos(angle);
+        var sinAngle = Math.sin(angle);
+        // start of header text should appear directly over metadata blocks
+        ctx.textAlign = 'start';
+        ctx.textBaseline = 'bottom';
+        var _iteratorNormalCompletion2 = true;
+        var _didIteratorError2 = false;
+        var _iteratorError2 = undefined;
+
+        try {
+          for (var _iterator2 = metadata[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+            var columnName = _step2.value;
+
+            var headerLength = blockLength + (showLabels ? _maxLabelWidth[columnName] : 0);
+            var textX = cosAngle * x + sinAngle * sign * (startY + _maxHeaderHeight);
+            var textY = sinAngle * (x + _maxHeaderHeight) + cosAngle * -sign * startY;
+            ctx.rotate(-angle);
+            ctx.fillText(columnName, textX, textY);
+            ctx.rotate(angle);
+            if (underlineHeaders) {
+              ctx.beginPath();
+              ctx.moveTo(x, -sign * startY);
+              ctx.lineTo(x + headerLength, -sign * startY);
+              ctx.stroke();
+              ctx.closePath();
+            }
+            x += headerLength + padding;
+          }
+        } catch (err) {
+          _didIteratorError2 = true;
+          _iteratorError2 = err;
+        } finally {
+          try {
+            if (!_iteratorNormalCompletion2 && _iterator2.return) {
+              _iterator2.return();
+            }
+          } finally {
+            if (_didIteratorError2) {
+              throw _iteratorError2;
+            }
+          }
+        }
+      }
+
+      function drawMetadata(branch) {
+        var ctx = branch.tree.canvas;
+        var tree = branch.tree;
+        var _branch$tree$metadata2 = branch.tree.metadata,
+            _maxLabelWidth = _branch$tree$metadata2._maxLabelWidth,
+            blockSize = _branch$tree$metadata2.blockSize,
+            blockLength = _branch$tree$metadata2.blockLength,
+            padding = _branch$tree$metadata2.padding,
+            propertyName = _branch$tree$metadata2.propertyName,
+            fillStyle = _branch$tree$metadata2.fillStyle,
+            columns = _branch$tree$metadata2.columns,
+            showLabels = _branch$tree$metadata2.showLabels;
+
+        // set initial x and y coordinates
+
+        var tx = branch.getLabelStartX();
+        var ty = 0;
+
+        // initialize metadata block coordinates for current branch
+        tree.metadata._blockCoords[branch.id] = [];
+
+        if (tree.showLabels || tree.hoverLabel && branch.highlighted) {
+          tx += tree.maxLabelLength[tree.treeType];
+        }
+
+        // makes sure that the block size is not greater than tree step or max angle
+        var maxSize = getMetadataMaxBlockSize(tree);
+        var size = blockSize !== null ? Math.min(maxSize, blockSize) : maxSize;
+
+        // add padding to both x and y axis
+        if (tree.alignLabels) {
+          tx += tree.labelAlign.getLabelOffset(branch);
+        }
+        tx += padding;
+        ty = ty - size / 2;
+
+        // draw column headers
+        if (!tree.metadata._headingDrawn && hasMetadataHeadings(tree)) {
+          drawMetadataHeading(branch, tx, size / 2 + padding);
+          tree.metadata._headingDrawn = true;
+        }
+
+        var data = this[propertyName];
+        if (Object.keys(data).length > 0) {
+          ctx.beginPath();
+
+          // If no columns specified, then draw all columns
+          var columnNames = columns.length > 0 ? columns : Object.keys(data);
+
+          var i = 1;
+          var stepCorrection = isCircularTree(tree) && tree.alignLabels ? Angles.FULL * blockLength / tree.leaves.length : 0;
+          var font = getFontString(tree);
+          var _iteratorNormalCompletion3 = true;
+          var _didIteratorError3 = false;
+          var _iteratorError3 = undefined;
+
+          try {
+            for (var _iterator3 = columnNames[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+              var columnName = _step3.value;
+
+              if (typeof data[columnName] !== 'undefined' && branch.leafStyle.fillStyle !== 'transparent') {
+                ctx.fillStyle = data[columnName].colour || data[columnName];
+                ctx.fillRect(tx, ty, blockLength, size + i * stepCorrection);
+                // add metadata block coordinate information for each column
+                tree.metadata._blockCoords[branch.id].push({
+                  x: tx + branch.centerx,
+                  y: ty + branch.centery,
+                  w: blockLength,
+                  h: size + i * stepCorrection,
+                  columnName: columnName,
+                  data: data[columnName],
+                  leaf: branch.id
+                });
+                if (showLabels && typeof data[columnName].label === 'string') {
+                  ctx.font = font;
+                  ctx.fillStyle = fillStyle;
+                  ctx.textAlign = 'left';
+                  ctx.textBaseline = 'middle';
+                  ctx.fillText(data[columnName].label, tx + blockLength + padding / 4, ty + size / 2);
+                }
+              }
+              tx += blockLength + padding;
+              if (showLabels) {
+                tx += _maxLabelWidth[columnName];
+              }
+              i++;
+            }
+          } catch (err) {
+            _didIteratorError3 = true;
+            _iteratorError3 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion3 && _iterator3.return) {
+                _iterator3.return();
+              }
+            } finally {
+              if (_didIteratorError3) {
+                throw _iteratorError3;
+              }
+            }
+          }
+
+          ctx.closePath();
+        }
+      }
+
+      function setMaxLabelWidths(tree) {
+        var ctx = tree.canvas;
+        var _tree$metadata3 = tree.metadata,
+            showLabels = _tree$metadata3.showLabels,
+            propertyName = _tree$metadata3.propertyName,
+            headerAngle = _tree$metadata3.headerAngle;
+
+        var columnNames = getMetadataColumnNames(tree);
+        var angle = headerAngle / 180 * Math.PI;
+
+        ctx.font = getFontString(tree);
+
+        tree.metadata._maxHeaderWidth = 0;
+        // Using W since it is the widest character given the default font style context
+        tree.metadata._maxHeaderHeight = ctx.measureText('W').width;
+        var maxLabelWidth = {};
+        if (showLabels) {
+          var _iteratorNormalCompletion4 = true;
+          var _didIteratorError4 = false;
+          var _iteratorError4 = undefined;
+
+          try {
+            for (var _iterator4 = columnNames[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+              var col = _step4.value;
+
+              var labelWidth = ctx.measureText(col).width;
+              maxLabelWidth[col] = Math.cos(angle) * labelWidth;
+              if (labelWidth > tree.metadata._maxHeaderWidth) {
+                tree.metadata._maxHeaderWidth = labelWidth;
+              }
+            }
+          } catch (err) {
+            _didIteratorError4 = true;
+            _iteratorError4 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion4 && _iterator4.return) {
+                _iterator4.return();
+              }
+            } finally {
+              if (_didIteratorError4) {
+                throw _iteratorError4;
+              }
+            }
+          }
+
+          var _iteratorNormalCompletion5 = true;
+          var _didIteratorError5 = false;
+          var _iteratorError5 = undefined;
+
+          try {
+            for (var _iterator5 = tree.leaves[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
+              var leaf = _step5.value;
+
+              var data = leaf[propertyName];
+              var _iteratorNormalCompletion6 = true;
+              var _didIteratorError6 = false;
+              var _iteratorError6 = undefined;
+
+              try {
+                for (var _iterator6 = columnNames[Symbol.iterator](), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
+                  var columnName = _step6.value;
+
+                  if (data[columnName] && typeof data[columnName].label === 'string') {
+                    var textWidth = ctx.measureText(data[columnName].label).width;
+                    if (textWidth > maxLabelWidth[columnName]) {
+                      maxLabelWidth[columnName] = textWidth;
+                    }
+                  }
+                }
+              } catch (err) {
+                _didIteratorError6 = true;
+                _iteratorError6 = err;
+              } finally {
+                try {
+                  if (!_iteratorNormalCompletion6 && _iterator6.return) {
+                    _iterator6.return();
+                  }
+                } finally {
+                  if (_didIteratorError6) {
+                    throw _iteratorError6;
+                  }
+                }
+              }
+            }
+          } catch (err) {
+            _didIteratorError5 = true;
+            _iteratorError5 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion5 && _iterator5.return) {
+                _iterator5.return();
+              }
+            } finally {
+              if (_didIteratorError5) {
+                throw _iteratorError5;
+              }
+            }
+          }
+        } else {
+          var _iteratorNormalCompletion7 = true;
+          var _didIteratorError7 = false;
+          var _iteratorError7 = undefined;
+
+          try {
+            for (var _iterator7 = columnNames[Symbol.iterator](), _step7; !(_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done); _iteratorNormalCompletion7 = true) {
+              var _col = _step7.value;
+
+              maxLabelWidth[_col] = 0;
+            }
+          } catch (err) {
+            _didIteratorError7 = true;
+            _iteratorError7 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion7 && _iterator7.return) {
+                _iterator7.return();
+              }
+            } finally {
+              if (_didIteratorError7) {
+                throw _iteratorError7;
+              }
+            }
+          }
+        }
+
+        tree.metadata._maxLabelWidth = maxLabelWidth;
+      }
+
+      /**
+       * Try to find a metadata block at a position. 
+       * 
+       * @param  {Object.<string, Object[]>} blocks Map with metadata block coordinate information for each leaf branch.
+       * @param  {number} x x-axis coordinate position
+       * @param  {number} y y-axis coordinate position
+       * @return {?Object} Metadata block at x,y coordinates if any otherwise null
+       */
+      function findMetadataBlock(blocks, x, y) {
+        for (var branchId in blocks) {
+          var row = blocks[branchId];
+          var _iteratorNormalCompletion8 = true;
+          var _didIteratorError8 = false;
+          var _iteratorError8 = undefined;
+
+          try {
+            for (var _iterator8 = row[Symbol.iterator](), _step8; !(_iteratorNormalCompletion8 = (_step8 = _iterator8.next()).done); _iteratorNormalCompletion8 = true) {
+              var cell = _step8.value;
+
+              if (x >= cell.x && x <= cell.x + cell.w && y >= cell.y && y <= cell.y + cell.h) {
+                return cell;
+              }
+            }
+          } catch (err) {
+            _didIteratorError8 = true;
+            _iteratorError8 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion8 && _iterator8.return) {
+                _iterator8.return();
+              }
+            } finally {
+              if (_didIteratorError8) {
+                throw _iteratorError8;
+              }
+            }
+          }
+        }
+        return null;
+      }
+
+      function getBackingStorePixelRatio(context) {
+        return context.backingStorePixelRatio || context.webkitBackingStorePixelRatio || context.mozBackingStorePixelRatio || context.msBackingStorePixelRatio || context.oBackingStorePixelRatio || 1;
+      }
+
+      function getPixelRatio(canvas) {
+        return (window.devicePixelRatio || 1) / getBackingStorePixelRatio(canvas);
+      }
+
+      /**
+       * Translate a mouse event to the internal coordinates of a PhyloCanvas Tree object.
+       *
+       * Adapted from `translateClick()` in phylocanvas/src/utils/canvas.js
+       * 
+       * @param  {MouseEvent} event Mouse event object
+       * @param  {PhyloCanvas.Tree} PhyloCanvas Tree object
+       * @return {number[]} Adjusted x,y coordinate positions
+       */
+      function translateMouseEvent(event, tree) {
+        var pixelRatio = getPixelRatio(tree.canvas);
+        return [(event.offsetX - tree.offsetx) / tree.zoom * pixelRatio, (event.offsetY - tree.offsety) / tree.zoom * pixelRatio];
+      }
+
+      /**
+       * Get the default tooltip inner HTML for a metadata block.
+       * 
+       * @param  {Object} block Metadata block/cell object
+       * @return {string} Inner HTML for the PhyloCanvas tooltip
+       */
+      function defaultTooltipInnerHTML(block) {
+        var columnName = block.columnName,
+            data = block.data,
+            leaf = block.leaf;
+        var colour = data.colour,
+            label = data.label;
+
+        return '\n    <table style="border: 2px solid ' + colour + '">\n      <tbody>\n        <tr>\n          <td><b>Sample</b></td>\n          <td>' + leaf + '</td>\n        </tr>\n        <tr>\n          <td><b>' + columnName + '</b></td>\n          <td>' + label + '</td>\n        </tr>\n      </tbody>\n    </table>';
+      }
+
+      function displayMetadataTooltip(tooltip, block, event, func) {
+        tooltip.element.innerHTML = func ? func(block) : defaultTooltipInnerHTML(block);
+        tooltip.element.style.top = event.clientY + 'px';
+        tooltip.element.style.left = event.clientX + 'px';
+        tooltip.element.style.display = 'block';
+        tooltip.closed = false;
+      }
+
+      function metadataPlugin(decorate) {
+        decorate(_phylocanvas2.default, 'createTree', function (delegate, args) {
+          var tree = delegate.apply(undefined, _toConsumableArray(args));
+
+          tree.metadata = Object.assign({}, DEFAULTS, tree.metadata || {});
+
+          return tree;
+        });
+
+        var alignLabels = _phylocanvas.Tree.prototype.__lookupGetter__('alignLabels');
+        _phylocanvas.Tree.prototype.__defineGetter__('alignLabels', function () {
+          if (this.metadata.active) {
+            return this.labelAlign && this.labelAlignEnabled;
+          }
+          return alignLabels.call(this);
+        });
+
+        decorate(_phylocanvas.Prerenderer, 'run', function (delegate, args) {
+          delegate.apply(this, args);
+
+          var _args = _slicedToArray(args, 1),
+              tree = _args[0];
+
+          setMaxLabelWidths(tree);
+          tree.metadata._maxBlockSize = null;
+        });
+
+        decorate(_phylocanvas.Tree, 'draw', function (delegate, args) {
+          if (this.metadata.active) {
+            this.metadata._headingDrawn = false;
+          }
+          delegate.apply(this, args);
+        });
+
+        decorate(_phylocanvas.Tree, 'getBounds', function (delegate, args) {
+          var bounds = delegate.apply(this, args);
+          if (this.metadata.active) {
+            var minx = bounds[0][0];
+            var miny = bounds[0][1];
+            var maxx = bounds[1][0];
+            var maxy = bounds[1][1];
+            var _metadata = this.metadata,
+                _maxHeaderWidth = _metadata._maxHeaderWidth,
+                _maxHeaderHeight = _metadata._maxHeaderHeight;
+            var treeType = this.treeType;
+
+            var labelsOnY = treeType === 'rectangular' || treeType === 'diagonal';
+            var labelsOnX = treeType === 'hierarchical';
+            return [[minx - (labelsOnX ? _maxHeaderWidth + _maxHeaderHeight : 0), miny - (labelsOnY ? _maxHeaderWidth + _maxHeaderHeight : 0)], [maxx, maxy]];
+          }
+          return bounds;
+        });
+
+        decorate(_phylocanvas.Branch, 'drawLeaf', function (delegate) {
+          delegate.call(this);
+          if (this.tree.metadata.active) {
+            drawMetadata.call(this, this);
+          }
+        });
+
+        decorate(_phylocanvas.Branch, 'getTotalLength', function (delegate) {
+          var totalSize = delegate.call(this);
+
+          if (this.tree.metadata.active) {
+            totalSize += getMetadataLength(this.tree);
+          }
+          return totalSize;
+        });
+
+        decorate(_phylocanvas.Tree, 'drag', function (delegate, args) {
+          if (!this.pickedup && this.metadata.showTooltip) {
+            var _args2 = _slicedToArray(args, 1),
+                event = _args2[0];
+
+            var _translateMouseEvent = translateMouseEvent(event, this),
+                _translateMouseEvent2 = _slicedToArray(_translateMouseEvent, 2),
+                x = _translateMouseEvent2[0],
+                y = _translateMouseEvent2[1];
+
+            var block = findMetadataBlock(this.metadata._blockCoords, x, y);
+            if (block) {
+              displayMetadataTooltip(this.tooltip, block, event, this.metadata.tooltipFunc);
+              return;
+            }
+          }
+          delegate.apply(this, args);
+        });
+
+        decorate(_phylocanvas2.default, 'createTree', function (delegate, args) {
+          var tree = delegate.apply(undefined, _toConsumableArray(args));
+
+          var _args3 = _slicedToArray(args, 2),
+              _args3$ = _args3[1],
+              config = _args3$ === undefined ? {} : _args3$;
+
+          var DEFAULTS = {
+            active: true,
+            width: 100,
+            height: 20,
+            fillStyle: 'black',
+            strokeStyle: 'black',
+            lineWidth: 1,
+            fontFamily: 'Sans-serif',
+            fontSize: 16,
+            textBaseline: 'bottom',
+            textAlign: 'center',
+            digits: 2,
+            position: {
+              bottom: 10,
+              left: 10
+            }
+          };
+          tree.scalebar = Object.assign({}, DEFAULTS, config.scalebar || {});
+          return tree;
+        });
+        decorate(_phylocanvas.Tree, 'draw', function (delegate, args) {
+          delegate.apply(this, args);
+          if (this.scalebar.active) {
+            drawScalebar.apply(this);
+          }
+        });
+
+        decorate(_phylocanvas2.default, 'createTree', function (delegate, args) {
+          var tree = delegate.apply(undefined, _toConsumableArray(args));
+
+          var _args4 = _slicedToArray(args, 2),
+              _args4$ = _args4[1],
+              config = _args4$ === undefined ? {} : _args4$;
+
+          if (config.contextMenu !== false) {
+            tree.contextMenu = new ContextMenu(tree, config.contextMenu);
+            tree.addListener('contextmenu', handleContextmenu.bind(tree));
+            decorate(tree, 'cleanup', onCleanup);
+          }
+
+          return tree;
+        });
+
+        decorate(_phylocanvas2.default, 'createTree', function (delegate, args) {
+          var tree = delegate.apply(undefined, _toConsumableArray(args));
+
+          var _args5 = _slicedToArray(args, 2),
+              _args5$ = _args5[1],
+              config = _args5$ === undefined ? {} : _args5$;
+
+          if (config.history !== false) {
+            tree.history = new History(tree, config.history || {});
+          }
+          return tree;
+        });
+      }
+
+      function createAnchorElement(_ref) {
+        var _ref$text = _ref.text,
+            text = _ref$text === undefined ? 'link' : _ref$text,
+            _ref$filename = _ref.filename,
+            filename = _ref$filename === undefined ? 'file' : _ref$filename,
+            href = _ref.href;
+
+        var anchorElement = document.createElement('a');
+        anchorElement.appendChild(document.createTextNode(text));
+        anchorElement.href = href;
+        anchorElement.download = filename;
+        return anchorElement;
+      }
+
+      function createImageLink(_ref2) {
+        var tree = _ref2.tree,
+            filenames = _ref2.filenames;
+
+        return createAnchorElement({
+          text: this.text,
+          filename: filenames.image,
+          href: tree.getPngUrl()
+        });
+      }
+
+      function createLeafLabelsLink(_ref3, node) {
+        var tree = _ref3.tree,
+            filenames = _ref3.filenames;
+
+        return createAnchorElement({
+          text: this.text,
+          filename: filenames.leafLabels,
+          href: createBlobUrl((node || tree.root).getChildProperties('label').join('\n'))
+        });
+      }
+
+      function createSelectedLabelsLink(_ref4) {
+        var tree = _ref4.tree,
+            filenames = _ref4.filenames;
+
+        var labels = tree.leaves.reduce(function (memo, leaf) {
+          if (leaf[tree.clickFlag] === true) {
+            memo.push(leaf.label);
+          }
+          return memo;
+        }, []);
+        if (labels.length === 0) {
+          return null;
+        }
+        return createAnchorElement({
+          text: this.text,
+          filename: filenames.leafLabels,
+          href: createBlobUrl(labels.join('\n'))
+        });
+      }
+
+      function createNewickLink(_ref5, node) {
+        var tree = _ref5.tree,
+            filenames = _ref5.filenames;
+
+        return createAnchorElement({
+          text: this.text,
+          filename: filenames.newick,
+          href: createBlobUrl((node || tree.root).getNwk())
+        });
+      }
+
+      function createAboutLink() {
+        var anchorElement = document.createElement('a');
+        var imageElement = document.createElement('img');
+        imageElement.src = 'data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20619.3%20166.7%22%20style%3D%22enable-background%3Anew%200%200%20619.3%20166.7%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%09.st0%7Bfill%3A%233C7383%3B%7D%09.st1%7Bfill%3A%239BB7BF%3B%7D%3C%2Fstyle%3E%3Cg%3E%09%3Cpath%20class%3D%22st0%22%20d%3D%22M139.5%2C145.8V86.4h24.1c2.5%2C0%2C4.8%2C0.5%2C6.9%2C1.6c2.1%2C1.1%2C3.9%2C2.5%2C5.4%2C4.2c1.5%2C1.8%2C2.7%2C3.7%2C3.6%2C5.9%20%20%20c0.9%2C2.2%2C1.3%2C4.4%2C1.3%2C6.7c0%2C2.4-0.4%2C4.7-1.2%2C7c-0.8%2C2.2-1.9%2C4.2-3.4%2C5.9c-1.5%2C1.7-3.2%2C3.1-5.2%2C4.1c-2%2C1-4.3%2C1.5-6.7%2C1.5h-20.5v22.4%20%20%20H139.5z%20M143.8%2C119.5H164c1.9%2C0%2C3.7-0.4%2C5.2-1.2c1.5-0.8%2C2.8-1.9%2C3.9-3.3c1.1-1.4%2C1.9-2.9%2C2.5-4.7c0.6-1.8%2C0.9-3.6%2C0.9-5.5%20%20%20c0-2-0.3-3.8-1-5.6c-0.7-1.8-1.6-3.3-2.8-4.6c-1.2-1.3-2.6-2.4-4.1-3.2c-1.6-0.8-3.2-1.2-5-1.2h-19.7V119.5z%22%2F%3E%09%3Cpath%20class%3D%22st0%22%20d%3D%22M224.6%2C145.8h-4.1v-24.3c0-5.4-0.9-9.5-2.7-12.1s-4.5-4-7.9-4c-1.8%2C0-3.5%2C0.3-5.2%2C1c-1.7%2C0.7-3.3%2C1.6-4.7%2C2.8%20%20%20c-1.5%2C1.2-2.7%2C2.7-3.8%2C4.3c-1.1%2C1.6-1.9%2C3.4-2.4%2C5.3v27h-4.1V84.7h4.1v28c1.8-3.4%2C4.2-6.1%2C7.3-8.1s6.5-3%2C10-3%20%20%20c2.4%2C0%2C4.4%2C0.4%2C6.1%2C1.3c1.7%2C0.9%2C3.1%2C2.2%2C4.3%2C3.9c1.1%2C1.7%2C2%2C3.7%2C2.5%2C6.1c0.5%2C2.4%2C0.8%2C5%2C0.8%2C8V145.8z%22%2F%3E%09%3Cpath%20class%3D%22st0%22%20d%3D%22M238.8%2C160.7c0.5%2C0%2C1.2%2C0%2C2.2-0.1c1-0.1%2C1.7-0.2%2C2.2-0.5c0.2-0.1%2C0.5-0.4%2C0.8-0.8c0.3-0.4%2C0.7-1.1%2C1.2-2.1%20%20%20c0.5-1%2C1.1-2.4%2C1.9-4.2c0.8-1.8%2C1.7-4.2%2C2.9-7.1l-19.2-43.5h4.4l17%2C39.4l15.9-39.4h4l-23.5%2C57.3c-0.8%2C2-1.9%2C3.3-3.3%2C4%20%20%20c-1.3%2C0.6-3%2C1-4.9%2C1c-0.3%2C0-0.6%2C0-0.8%2C0c-0.3%2C0-0.6%2C0-0.8-0.1V160.7z%22%2F%3E%09%3Cpath%20class%3D%22st0%22%20d%3D%22M318.2%2C146.7c-3%2C0-5.8-0.6-8.4-1.8c-2.6-1.2-4.8-2.8-6.6-4.9c-1.9-2.1-3.3-4.5-4.4-7.2c-1-2.7-1.6-5.6-1.6-8.6%20%20%20c0-3.1%2C0.5-6%2C1.6-8.7s2.6-5.1%2C4.5-7.2s4.1-3.7%2C6.6-4.9c2.5-1.2%2C5.3-1.8%2C8.3-1.8s5.7%2C0.6%2C8.3%2C1.8c2.6%2C1.2%2C4.8%2C2.8%2C6.7%2C4.9%20%20%20s3.4%2C4.5%2C4.5%2C7.2s1.6%2C5.6%2C1.6%2C8.7c0%2C3-0.5%2C5.9-1.6%2C8.6c-1.1%2C2.7-2.5%2C5.1-4.4%2C7.2c-1.9%2C2.1-4.1%2C3.7-6.7%2C4.9%20%20%20C323.9%2C146.1%2C321.1%2C146.7%2C318.2%2C146.7z%20M301.4%2C124.3c0%2C2.6%2C0.4%2C5%2C1.3%2C7.2c0.9%2C2.3%2C2.1%2C4.2%2C3.6%2C5.9c1.5%2C1.7%2C3.3%2C3%2C5.3%2C4%20%20%20c2%2C1%2C4.2%2C1.5%2C6.5%2C1.5s4.5-0.5%2C6.5-1.5c2-1%2C3.8-2.3%2C5.3-4.1c1.5-1.7%2C2.7-3.7%2C3.6-6s1.4-4.7%2C1.4-7.3c0-2.6-0.5-5-1.4-7.2%20%20%20c-0.9-2.3-2.1-4.2-3.6-5.9c-1.5-1.7-3.3-3.1-5.3-4.1c-2-1-4.2-1.5-6.5-1.5c-2.3%2C0-4.4%2C0.5-6.4%2C1.5c-2%2C1-3.8%2C2.4-5.4%2C4.1%20%20%20c-1.5%2C1.7-2.8%2C3.8-3.6%2C6.1C301.8%2C119.3%2C301.4%2C121.7%2C301.4%2C124.3z%22%2F%3E%09%3Cpath%20class%3D%22st0%22%20d%3D%22M405.7%2C146.7c-2.1%2C0-4-0.3-5.8-1c-1.8-0.7-3.3-1.7-4.6-2.9c-1.3-1.2-2.3-2.7-3.1-4.4s-1.1-3.5-1.1-5.4%20%20%20c0-2.1%2C0.4-3.9%2C1.3-5.6c0.9-1.7%2C2.1-3.1%2C3.8-4.4c1.6-1.2%2C3.6-2.2%2C5.8-2.8s4.7-1%2C7.4-1c2%2C0%2C4%2C0.2%2C6%2C0.5c2%2C0.4%2C3.8%2C0.9%2C5.4%2C1.5v-3%20%20%20c0-3.2-0.9-5.8-2.7-7.6c-1.8-1.8-4.4-2.7-7.8-2.7c-2.3%2C0-4.6%2C0.4-6.8%2C1.3c-2.2%2C0.9-4.5%2C2.1-6.9%2C3.7l-2.8-5.9%20%20%20c5.6-3.8%2C11.3-5.7%2C17.3-5.7c5.9%2C0%2C10.6%2C1.5%2C13.9%2C4.6c3.3%2C3.1%2C5%2C7.5%2C5%2C13.2V135c0%2C1.1%2C0.2%2C1.8%2C0.6%2C2.3c0.4%2C0.4%2C1%2C0.7%2C2%2C0.8v7.9%20%20%20c-0.9%2C0.2-1.7%2C0.3-2.4%2C0.3c-0.7%2C0.1-1.4%2C0.1-2%2C0.1c-1.8-0.1-3.1-0.6-4-1.4c-0.9-0.8-1.5-2-1.7-3.3l-0.2-2.8%20%20%20c-1.9%2C2.6-4.3%2C4.5-7.1%2C5.9C412%2C146%2C408.9%2C146.7%2C405.7%2C146.7z%20M408.2%2C139.9c2.2%2C0%2C4.3-0.4%2C6.2-1.2c2-0.8%2C3.5-1.9%2C4.6-3.4%20%20%20c1.2-1%2C1.7-2.1%2C1.7-3.2v-5.8c-1.5-0.6-3.2-1.1-4.9-1.4s-3.4-0.5-5.1-0.5c-3.2%2C0-5.9%2C0.7-8%2C2.1s-3.1%2C3.3-3.1%2C5.7%20%20%20c0%2C2.2%2C0.8%2C4%2C2.4%2C5.5C403.7%2C139.2%2C405.7%2C139.9%2C408.2%2C139.9z%22%2F%3E%09%3Cpath%20class%3D%22st0%22%20d%3D%22M479.7%2C145.8h-9.1v-24.5c0-4.1-0.7-7.1-2-9c-1.3-1.9-3.2-2.8-5.7-2.8c-1.3%2C0-2.7%2C0.3-4%2C0.8%20%20%20c-1.3%2C0.5-2.6%2C1.2-3.8%2C2.1c-1.2%2C0.9-2.2%2C2-3.1%2C3.3s-1.6%2C2.6-2.1%2C4.1v26h-9.1V102h8.3v8.8c1.7-3%2C4-5.3%2C7.2-7%20%20%20c3.1-1.7%2C6.6-2.6%2C10.4-2.6c2.6%2C0%2C4.7%2C0.5%2C6.4%2C1.4c1.7%2C0.9%2C3%2C2.2%2C4%2C3.9c1%2C1.6%2C1.6%2C3.5%2C2%2C5.7c0.4%2C2.1%2C0.6%2C4.4%2C0.6%2C6.8V145.8z%22%2F%3E%09%3Cpolygon%20class%3D%22st0%22%20points%3D%22501.3%2C145.8%20484.8%2C102%20494.2%2C102%20506.5%2C138.1%20519%2C102%20527.6%2C102%20511.1%2C145.8%20%20%22%2F%3E%09%3Cpath%20class%3D%22st0%22%20d%3D%22M544.3%2C146.7c-2.1%2C0-4-0.3-5.8-1c-1.8-0.7-3.3-1.7-4.6-2.9c-1.3-1.2-2.3-2.7-3.1-4.4s-1.1-3.5-1.1-5.4%20%20%20c0-2.1%2C0.4-3.9%2C1.3-5.6c0.9-1.7%2C2.1-3.1%2C3.8-4.4c1.6-1.2%2C3.6-2.2%2C5.8-2.8c2.2-0.7%2C4.7-1%2C7.4-1c2%2C0%2C4%2C0.2%2C6%2C0.5%20%20%20c2%2C0.4%2C3.8%2C0.9%2C5.4%2C1.5v-3c0-3.2-0.9-5.8-2.7-7.6c-1.8-1.8-4.4-2.7-7.8-2.7c-2.3%2C0-4.6%2C0.4-6.8%2C1.3c-2.2%2C0.9-4.5%2C2.1-6.9%2C3.7%20%20%20l-2.8-5.9c5.6-3.8%2C11.3-5.7%2C17.3-5.7c5.9%2C0%2C10.6%2C1.5%2C13.9%2C4.6c3.3%2C3.1%2C5%2C7.5%2C5%2C13.2V135c0%2C1.1%2C0.2%2C1.8%2C0.6%2C2.3c0.4%2C0.4%2C1%2C0.7%2C2%2C0.8%20%20%20v7.9c-0.9%2C0.2-1.7%2C0.3-2.4%2C0.3c-0.7%2C0.1-1.4%2C0.1-2%2C0.1c-1.8-0.1-3.1-0.6-4-1.4c-0.9-0.8-1.5-2-1.7-3.3l-0.2-2.8%20%20%20c-1.9%2C2.6-4.3%2C4.5-7.1%2C5.9C550.6%2C146%2C547.6%2C146.7%2C544.3%2C146.7z%20M546.8%2C139.9c2.2%2C0%2C4.3-0.4%2C6.2-1.2c2-0.8%2C3.5-1.9%2C4.6-3.4%20%20%20c1.2-1%2C1.7-2.1%2C1.7-3.2v-5.8c-1.5-0.6-3.2-1.1-4.9-1.4c-1.7-0.3-3.4-0.5-5.1-0.5c-3.2%2C0-5.9%2C0.7-8%2C2.1s-3.1%2C3.3-3.1%2C5.7%20%20%20c0%2C2.2%2C0.8%2C4%2C2.4%2C5.5C542.3%2C139.2%2C544.3%2C139.9%2C546.8%2C139.9z%22%2F%3E%09%3Cpath%20class%3D%22st0%22%20d%3D%22M595.7%2C146.7c-1.8%2C0-3.5-0.1-5.3-0.4c-1.8-0.3-3.6-0.7-5.3-1.2c-1.7-0.5-3.4-1.2-5-1.9s-3-1.6-4.2-2.6l3.8-6.2%20%20%20c5.3%2C3.7%2C10.5%2C5.6%2C15.8%2C5.6c2.8%2C0%2C4.9-0.5%2C6.5-1.6c1.6-1.1%2C2.4-2.6%2C2.4-4.5c0-1.8-0.9-3.2-2.7-4.1c-1.8-0.9-4.6-1.8-8.5-2.7%20%20%20c-2.7-0.7-5-1.4-6.9-2.1c-1.9-0.7-3.5-1.5-4.7-2.3c-1.2-0.9-2.1-1.9-2.6-3.1c-0.6-1.2-0.8-2.6-0.8-4.3c0-2.2%2C0.4-4.2%2C1.3-5.9%20%20%20c0.9-1.7%2C2.1-3.2%2C3.6-4.4c1.5-1.2%2C3.3-2.1%2C5.4-2.7c2.1-0.6%2C4.3-0.9%2C6.6-0.9c3.1%2C0%2C6.2%2C0.5%2C9.1%2C1.5c2.9%2C1%2C5.5%2C2.4%2C7.8%2C4.1l-3.9%2C5.6%20%20%20c-4.1-3.1-8.5-4.7-13.2-4.7c-2.3%2C0-4.3%2C0.5-5.9%2C1.5c-1.6%2C1-2.4%2C2.5-2.4%2C4.6c0%2C0.9%2C0.2%2C1.6%2C0.5%2C2.3c0.3%2C0.6%2C0.9%2C1.1%2C1.6%2C1.6%20%20%20c0.7%2C0.4%2C1.7%2C0.9%2C2.9%2C1.2c1.2%2C0.4%2C2.7%2C0.8%2C4.5%2C1.2c3%2C0.7%2C5.5%2C1.5%2C7.7%2C2.2c2.1%2C0.7%2C3.9%2C1.6%2C5.3%2C2.6c1.4%2C1%2C2.4%2C2.1%2C3.1%2C3.4%20%20%20c0.7%2C1.3%2C1%2C2.9%2C1%2C4.7c0%2C2.1-0.4%2C3.9-1.2%2C5.6c-0.8%2C1.7-2%2C3.1-3.5%2C4.3c-1.5%2C1.2-3.4%2C2.1-5.5%2C2.7C600.8%2C146.4%2C598.3%2C146.7%2C595.7%2C146.7%20%20%20z%22%2F%3E%09%3Cpath%20class%3D%22st0%22%20d%3D%22M345.5%2C124c0-3.1%2C0.5-6%2C1.6-8.7c1.1-2.7%2C2.6-5.1%2C4.6-7.2c2-2.1%2C4.4-3.7%2C7.1-4.9c2.8-1.2%2C5.9-1.8%2C9.4-1.8%20%20%20c4.5%2C0%2C8.4%2C1%2C11.7%2C3c3.3%2C2%2C5.7%2C4.6%2C7.3%2C7.9l-8.9%2C2.8c-1.1-1.8-2.5-3.3-4.3-4.3c-1.8-1-3.8-1.5-5.9-1.5c-1.8%2C0-3.6%2C0.4-5.1%2C1.1%20%20%20c-1.6%2C0.7-3%2C1.7-4.1%2C3c-1.2%2C1.3-2.1%2C2.9-2.8%2C4.6c-0.7%2C1.8-1%2C3.8-1%2C5.9c0%2C2.1%2C0.3%2C4.1%2C1%2C5.9c0.7%2C1.8%2C1.6%2C3.4%2C2.8%2C4.7%20%20%20c1.2%2C1.3%2C2.6%2C2.4%2C4.2%2C3.1c1.6%2C0.8%2C3.3%2C1.1%2C5.1%2C1.1c1.1%2C0%2C2.2-0.2%2C3.3-0.5c1.1-0.3%2C2.1-0.7%2C3-1.3c0.9-0.6%2C1.7-1.2%2C2.4-1.9%20%20%20c0.7-0.7%2C1.2-1.5%2C1.5-2.3l9%2C2.7c-1.4%2C3.3-3.9%2C6-7.3%2C8.1c-3.4%2C2.1-7.4%2C3.1-12%2C3.1c-3.4%2C0-6.5-0.6-9.3-1.8c-2.8-1.2-5.2-2.9-7.1-5%20%20%20c-2-2.1-3.5-4.5-4.6-7.2C346.1%2C129.9%2C345.5%2C127%2C345.5%2C124z%22%2F%3E%09%3Cpolygon%20class%3D%22st0%22%20points%3D%22280.8%2C84.7%20285.1%2C84.7%20285.1%2C146.3%20280.8%2C146.3%20%20%22%2F%3E%09%3Cpath%20class%3D%22st1%22%20d%3D%22M110.6%2C105.2c0-0.2%2C0.1-0.3%2C0.1-0.5c0-0.1%2C0-0.3%2C0.1-0.4c0-0.2%2C0-0.4%2C0.1-0.6c0-0.2%2C0-0.4%2C0-0.6%20%20%20c0-0.1%2C0-0.2%2C0-0.4c0-0.1%2C0-0.3%2C0-0.4l0-0.3c0-0.1%2C0-0.3%2C0-0.4c0-0.2%2C0-0.3%2C0-0.4l0-0.2c0-0.2%2C0-0.4-0.1-0.5l0-0.2%20%20%20c0-0.2-0.1-0.4-0.1-0.6l0-0.1c0-0.2-0.1-0.3-0.1-0.5l-0.1-0.2c0-0.1-0.1-0.3-0.1-0.4l-0.1-0.2c0-0.1-0.1-0.3-0.1-0.4%20%20%20c0-0.1-0.1-0.2-0.1-0.3c0-0.1-0.1-0.2-0.1-0.4l-0.1-0.2c-0.1-0.2-0.1-0.4-0.2-0.6c-0.1-0.2-0.2-0.4-0.3-0.6l-0.1-0.1%20%20%20c-0.1-0.2-0.2-0.3-0.2-0.5l-0.1-0.2c-0.1-0.2-0.2-0.3-0.3-0.5l0-0.1c-0.1-0.2-0.2-0.4-0.3-0.5c-0.1-0.2-0.2-0.4-0.4-0.6l-0.1-0.1%20%20%20c-0.1-0.2-0.2-0.3-0.4-0.5c-0.1-0.2-0.3-0.4-0.4-0.5l0%2C0c-0.1-0.2-0.3-0.3-0.4-0.5c-0.2-0.2-0.3-0.3-0.5-0.5%20%20%20c-0.2-0.2-0.3-0.3-0.5-0.5c-0.2-0.2-0.4-0.3-0.5-0.5c-0.2-0.2-0.5-0.4-0.8-0.6l-0.4-0.2c-0.2-0.1-0.4-0.2-0.5-0.3%20%20%20c-0.2-0.1-0.4-0.3-0.7-0.4l-0.1-0.1c-0.2-0.1-0.4-0.2-0.6-0.3c-0.2-0.1-0.4-0.2-0.7-0.3l-0.1%2C0c-3.1-1.3-5.9-3-8.4-5.1%20%20%20c-3.1-2.7-5.6-5.9-7.4-9.5l0%2C0c-1.4-2.9-2.4-6.1-2.9-9.3c0-0.1%2C0-0.3-0.1-0.4c-0.8-5.1-4.2-9.6-9.3-11.7%20%20%20c-5.1-2.1-10.7-1.2-14.8%2C1.9c-0.2%2C0.2-0.4%2C0.3-0.6%2C0.4c-1.9%2C1.6-3.5%2C3.6-4.4%2C6c-1%2C2.4-1.3%2C4.9-1%2C7.4l0%2C0c0%2C0.2%2C0.1%2C0.5%2C0.1%2C0.7l0%2C0%20%20%20c0.8%2C5.1%2C4.2%2C9.6%2C9.3%2C11.7l0%2C0c2.2%2C0.9%2C4.2%2C2%2C6.1%2C3.3c0.4%2C0.3%2C0.8%2C0.6%2C1.2%2C0.9l0%2C0c0.4%2C0.3%2C0.7%2C0.6%2C1.1%2C0.9l0%2C0l0%2C0l0%2C0%20%20%20c3.1%2C2.7%2C5.6%2C5.9%2C7.3%2C9.5c1.4%2C2.8%2C2.4%2C5.8%2C2.8%2C8.9l0%2C0.1c0%2C0.3%2C0.1%2C0.5%2C0.1%2C0.8c0%2C0.3%2C0.1%2C0.6%2C0.2%2C0.9c0.1%2C0.2%2C0.1%2C0.5%2C0.2%2C0.7%20%20%20l0.1%2C0.2l0%2C0c0.1%2C0.2%2C0.1%2C0.4%2C0.2%2C0.6c0.1%2C0.2%2C0.2%2C0.5%2C0.3%2C0.7l0.1%2C0.3l0%2C0c0.1%2C0.2%2C0.2%2C0.4%2C0.3%2C0.6c0.1%2C0.3%2C0.3%2C0.5%2C0.4%2C0.8l0%2C0%20%20%20c0.1%2C0.2%2C0.3%2C0.5%2C0.4%2C0.7c0.2%2C0.2%2C0.3%2C0.5%2C0.5%2C0.7c0.2%2C0.2%2C0.3%2C0.5%2C0.5%2C0.7c0.1%2C0.1%2C0.2%2C0.3%2C0.4%2C0.4c0.2%2C0.2%2C0.4%2C0.5%2C0.6%2C0.7%20%20%20c0.2%2C0.2%2C0.3%2C0.3%2C0.5%2C0.5c0.1%2C0.1%2C0.3%2C0.2%2C0.4%2C0.4c0.2%2C0.2%2C0.4%2C0.4%2C0.6%2C0.5c0.2%2C0.2%2C0.5%2C0.3%2C0.7%2C0.5c0.2%2C0.2%2C0.5%2C0.3%2C0.7%2C0.5%20%20%20c0.1%2C0.1%2C0.3%2C0.2%2C0.5%2C0.3l0.4%2C0.2l0.3%2C0.1c0.1%2C0.1%2C0.3%2C0.1%2C0.4%2C0.2c0.2%2C0.1%2C0.4%2C0.2%2C0.7%2C0.3l0.1%2C0c0.2%2C0.1%2C0.4%2C0.2%2C0.7%2C0.3%20%20%20c7.6%2C2.7%2C16-1.1%2C19.1-8.6C110.1%2C107%2C110.4%2C106.1%2C110.6%2C105.2z%22%2F%3E%09%3Cpath%20class%3D%22st1%22%20d%3D%22M12.3%2C84.1c0.1%2C0.1%2C0.3%2C0.2%2C0.4%2C0.3c0.1%2C0.1%2C0.2%2C0.2%2C0.3%2C0.3c0.2%2C0.1%2C0.3%2C0.2%2C0.5%2C0.3c0.2%2C0.1%2C0.3%2C0.2%2C0.5%2C0.4%20%20%20l0.3%2C0.2l0.3%2C0.2l0.2%2C0.1c0.1%2C0.1%2C0.2%2C0.1%2C0.4%2C0.2c0.1%2C0.1%2C0.3%2C0.1%2C0.4%2C0.2l0.2%2C0.1c0.2%2C0.1%2C0.3%2C0.1%2C0.5%2C0.2l0.1%2C0.1%20%20%20c0.2%2C0.1%2C0.4%2C0.1%2C0.6%2C0.2l0.1%2C0c0.2%2C0.1%2C0.3%2C0.1%2C0.5%2C0.2l0.2%2C0.1c0.1%2C0%2C0.3%2C0.1%2C0.4%2C0.1l0.2%2C0.1c0.1%2C0%2C0.3%2C0.1%2C0.4%2C0.1%20%20%20c0.1%2C0%2C0.2%2C0.1%2C0.3%2C0.1c0.1%2C0%2C0.2%2C0.1%2C0.4%2C0.1l0.2%2C0c0.2%2C0%2C0.4%2C0.1%2C0.6%2C0.1c0.2%2C0%2C0.4%2C0.1%2C0.6%2C0.1l0.1%2C0c0.2%2C0%2C0.4%2C0%2C0.5%2C0l0.2%2C0%20%20%20c0.2%2C0%2C0.4%2C0%2C0.6%2C0l0.1%2C0c0.2%2C0%2C0.4%2C0%2C0.6%2C0c0.2%2C0%2C0.4%2C0%2C0.7%2C0l0.1%2C0c0.2%2C0%2C0.4%2C0%2C0.6-0.1c0.2%2C0%2C0.4-0.1%2C0.7-0.1l0.1%2C0%20%20%20c0.2%2C0%2C0.4-0.1%2C0.6-0.1c0.2-0.1%2C0.5-0.1%2C0.7-0.2c0.2-0.1%2C0.4-0.1%2C0.7-0.2c0.2-0.1%2C0.4-0.2%2C0.7-0.2c0.3-0.1%2C0.6-0.2%2C0.9-0.4%20%20%20c0.1-0.1%2C0.3-0.1%2C0.4-0.2c0.2-0.1%2C0.4-0.2%2C0.6-0.3c0.2-0.1%2C0.4-0.2%2C0.6-0.4l0.1-0.1c0.2-0.1%2C0.4-0.2%2C0.6-0.4%20%20%20c0.2-0.1%2C0.4-0.3%2C0.6-0.4l0.1%2C0c2.7-2.1%2C5.6-3.7%2C8.6-4.7c3.9-1.4%2C7.9-1.9%2C11.9-1.7l0%2C0c3.3%2C0.2%2C6.5%2C0.9%2C9.5%2C2.1%20%20%20c0.1%2C0.1%2C0.3%2C0.1%2C0.4%2C0.2c4.8%2C1.8%2C10.4%2C1.2%2C14.8-2.2c4.4-3.4%2C6.4-8.7%2C5.8-13.8c0-0.2-0.1-0.5-0.1-0.7c-0.4-2.4-1.4-4.8-3-6.9%20%20%20c-1.6-2.1-3.6-3.6-5.9-4.6l0%2C0c-0.2-0.1-0.5-0.2-0.7-0.3l0%2C0c-4.8-1.8-10.4-1.1-14.7%2C2.2l0%2C0c-1.9%2C1.5-3.8%2C2.7-5.9%2C3.6%20%20%20c-0.5%2C0.2-0.9%2C0.4-1.4%2C0.6l0%2C0c-0.4%2C0.2-0.9%2C0.3-1.3%2C0.5l0%2C0l0%2C0l0%2C0c-3.9%2C1.3-7.9%2C1.9-11.9%2C1.6c-3.1-0.2-6.2-0.9-9.2-2l0%2C0%20%20%20c-0.3-0.1-0.5-0.2-0.8-0.3c-0.3-0.1-0.5-0.2-0.8-0.3c-0.2-0.1-0.5-0.1-0.7-0.2l-0.2-0.1l0%2C0c-0.2-0.1-0.4-0.1-0.7-0.1%20%20%20c-0.3%2C0-0.5-0.1-0.8-0.1l-0.3%2C0l0%2C0c-0.2%2C0-0.5%2C0-0.7-0.1c-0.3%2C0-0.6%2C0-0.8%2C0l0%2C0c-0.3%2C0-0.6%2C0-0.9%2C0c-0.3%2C0-0.6%2C0-0.9%2C0.1%20%20%20c-0.3%2C0-0.6%2C0.1-0.9%2C0.1c-0.2%2C0-0.4%2C0.1-0.5%2C0.1c-0.3%2C0.1-0.6%2C0.1-0.9%2C0.2c-0.2%2C0.1-0.5%2C0.1-0.7%2C0.2c-0.2%2C0.1-0.3%2C0.1-0.5%2C0.2%20%20%20c-0.3%2C0.1-0.5%2C0.2-0.8%2C0.3c-0.3%2C0.1-0.5%2C0.2-0.8%2C0.3c-0.3%2C0.1-0.5%2C0.3-0.8%2C0.4c-0.2%2C0.1-0.3%2C0.2-0.5%2C0.3c-0.1%2C0.1-0.2%2C0.1-0.4%2C0.2%20%20%20L14%2C59.9c-0.1%2C0.1-0.3%2C0.2-0.4%2C0.3c-0.2%2C0.1-0.4%2C0.3-0.6%2C0.4l-0.1%2C0c-0.2%2C0.1-0.4%2C0.3-0.6%2C0.5c-6.1%2C5.3-7.1%2C14.5-2%2C20.9%20%20%20C10.9%2C82.8%2C11.6%2C83.5%2C12.3%2C84.1z%22%2F%3E%09%3Cpath%20class%3D%22st1%22%20d%3D%22M72.6%2C80.7c0.2-0.1%2C0.3-0.1%2C0.5-0.2c0.1-0.1%2C0.3-0.1%2C0.4-0.2c0.2-0.1%2C0.4-0.2%2C0.5-0.2c0.2-0.1%2C0.4-0.2%2C0.6-0.3%20%20%20c0.1-0.1%2C0.2-0.1%2C0.3-0.2c0.1-0.1%2C0.2-0.1%2C0.3-0.2l0.2-0.1c0.1-0.1%2C0.2-0.1%2C0.4-0.2c0.1-0.1%2C0.2-0.2%2C0.4-0.2l0.2-0.1%20%20%20c0.1-0.1%2C0.3-0.2%2C0.4-0.3l0.1-0.1c0.2-0.1%2C0.3-0.3%2C0.5-0.4l0%2C0c0.1-0.1%2C0.3-0.2%2C0.4-0.3l0.2-0.2c0.1-0.1%2C0.2-0.2%2C0.3-0.3l0.2-0.2%20%20%20l0.3-0.3l0.2-0.3l0.2-0.3l0.1-0.2c0.1-0.1%2C0.3-0.3%2C0.4-0.5c0.1-0.2%2C0.2-0.3%2C0.4-0.5l0.1-0.1c0.1-0.1%2C0.2-0.3%2C0.3-0.4l0.1-0.1%20%20%20c0.1-0.2%2C0.2-0.3%2C0.3-0.5l0-0.1c0.1-0.2%2C0.2-0.4%2C0.3-0.6c0.1-0.2%2C0.2-0.4%2C0.3-0.6l0-0.1c0.1-0.2%2C0.2-0.4%2C0.2-0.6%20%20%20c0.1-0.2%2C0.2-0.4%2C0.2-0.6l0-0.1c0.1-0.2%2C0.1-0.4%2C0.2-0.6c0.1-0.2%2C0.1-0.4%2C0.2-0.7c0.1-0.2%2C0.1-0.5%2C0.1-0.7c0-0.2%2C0.1-0.5%2C0.1-0.7%20%20%20c0-0.3%2C0.1-0.6%2C0.1-1c0-0.1%2C0-0.3%2C0-0.4c0-0.2%2C0-0.4%2C0-0.6c0-0.3%2C0-0.5%2C0-0.8l0-0.2c0-0.2%2C0-0.4%2C0-0.7c0-0.2%2C0-0.5-0.1-0.7l0-0.1%20%20%20c-0.5-3.4-0.4-6.7%2C0.2-9.8c0.7-4%2C2.3-7.8%2C4.5-11.2l0%2C0c1.8-2.7%2C4-5.2%2C6.6-7.2c0.1-0.1%2C0.2-0.2%2C0.3-0.3c4-3.3%2C6.2-8.5%2C5.4-13.9%20%20%20c-0.8-5.5-4.4-9.8-9.1-11.9c-0.2-0.1-0.5-0.2-0.7-0.3c-2.3-0.9-4.8-1.2-7.4-0.8c-2.6%2C0.4-4.9%2C1.4-6.9%2C2.8l0%2C0%20%20%20c-0.2%2C0.2-0.4%2C0.3-0.6%2C0.5l0%2C0c-3.9%2C3.3-6.2%2C8.4-5.4%2C13.9l0%2C0c0.3%2C2.3%2C0.4%2C4.7%2C0.2%2C6.9c0%2C0.5-0.1%2C1-0.2%2C1.5l0%2C0%20%20%20c-0.1%2C0.5-0.1%2C0.9-0.2%2C1.4l0%2C0l0%2C0l0%2C0c-0.7%2C4-2.3%2C7.8-4.5%2C11.1c-1.7%2C2.6-3.8%2C5-6.3%2C7l0%2C0c-0.2%2C0.2-0.4%2C0.3-0.6%2C0.5%20%20%20c-0.2%2C0.2-0.4%2C0.4-0.7%2C0.6c-0.2%2C0.2-0.4%2C0.3-0.5%2C0.5l-0.2%2C0.2l0%2C0c-0.2%2C0.2-0.3%2C0.3-0.4%2C0.5c-0.2%2C0.2-0.3%2C0.4-0.5%2C0.6l-0.2%2C0.3l0%2C0%20%20%20c-0.1%2C0.2-0.3%2C0.4-0.4%2C0.6c-0.2%2C0.2-0.3%2C0.5-0.5%2C0.7l0%2C0c-0.1%2C0.2-0.3%2C0.5-0.4%2C0.7c-0.1%2C0.3-0.3%2C0.5-0.4%2C0.8%20%20%20c-0.1%2C0.3-0.2%2C0.5-0.3%2C0.8c-0.1%2C0.2-0.1%2C0.3-0.2%2C0.5c-0.1%2C0.3-0.2%2C0.6-0.3%2C0.9c-0.1%2C0.2-0.1%2C0.5-0.2%2C0.7c0%2C0.2-0.1%2C0.3-0.1%2C0.5%20%20%20c0%2C0.3-0.1%2C0.6-0.1%2C0.8c0%2C0.3-0.1%2C0.6-0.1%2C0.8c0%2C0.3%2C0%2C0.6%2C0%2C0.9c0%2C0.2%2C0%2C0.4%2C0%2C0.5c0%2C0.1%2C0%2C0.3%2C0%2C0.4l0%2C0.3c0%2C0.2%2C0%2C0.3%2C0%2C0.5%20%20%20c0%2C0.2%2C0%2C0.5%2C0.1%2C0.7l0%2C0.1c0%2C0.2%2C0.1%2C0.5%2C0.1%2C0.7c1.5%2C7.9%2C9%2C13.3%2C17.1%2C12.2C70.7%2C81.3%2C71.7%2C81%2C72.6%2C80.7z%22%2F%3E%09%3Ccircle%20class%3D%22st0%22%20cx%3D%2222.5%22%20cy%3D%2272.6%22%20r%3D%2215.2%22%2F%3E%09%3Ccircle%20class%3D%22st0%22%20cx%3D%2295.5%22%20cy%3D%22102.1%22%20r%3D%2215.2%22%2F%3E%09%3Ccircle%20class%3D%22st0%22%20cx%3D%2284.6%22%20cy%3D%2223.9%22%20r%3D%2215.2%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E';
+        imageElement.style = 'width: 124px; margin: 4px auto 0';
+        anchorElement.appendChild(imageElement);
+        anchorElement.title = 'About Phylocanvas...';
+        anchorElement.href = 'http://phylocanvas.org/';
+        anchorElement.target = '_blank';
+        return anchorElement;
+      }
+
+      var DEFAULT_MENU_ITEMS = exports.DEFAULT_MENU_ITEMS = [[{
+        text: 'Show/Hide Labels',
+        handler: 'toggleLabels'
+      }, {
+        text: 'Align/Realign Labels',
+        handler: function handler(tree) {
+          tree.alignLabels = !tree.alignLabels;
+        }
+      }, {
+        text: 'Show/Hide Internal Labels',
+        handler: function handler(tree) {
+          tree.showInternalNodeLabels = !tree.showInternalNodeLabels;
+          tree.showBranchLengthLabels = !tree.showBranchLengthLabels;
+          tree.draw();
+        }
+      }], [{
+        text: 'Fit in Panel',
+        handler: function handler(tree) {
+          tree.fitInPanel();
+        }
+      }, {
+        text: 'Redraw Original Tree',
+        handler: 'redrawOriginalTree'
+      }, {
+        text: 'Expand All',
+        handler: function handler(tree) {
+          var _iteratorNormalCompletion9 = true;
+          var _didIteratorError9 = false;
+          var _iteratorError9 = undefined;
+
+          try {
+            for (var _iterator9 = Object.keys(tree.branches)[Symbol.iterator](), _step9; !(_iteratorNormalCompletion9 = (_step9 = _iterator9.next()).done); _iteratorNormalCompletion9 = true) {
+              var branchId = _step9.value;
+
+              tree.branches[branchId].expand();
+            }
+          } catch (err) {
+            _didIteratorError9 = true;
+            _iteratorError9 = err;
+          } finally {
+            try {
+              if (!_iteratorNormalCompletion9 && _iterator9.return) {
+                _iterator9.return();
+              }
+            } finally {
+              if (_didIteratorError9) {
+                throw _iteratorError9;
+              }
+            }
+          }
+        }
+      }], [{
+        text: 'Export Leaf Labels',
+        element: createLeafLabelsLink
+      }, {
+        text: 'Export Selected Labels',
+        element: createSelectedLabelsLink
+      }, {
+        text: 'Export as Newick File',
+        element: createNewickLink
+      }, {
+        text: 'Export as Image',
+        element: createImageLink
+      }], [{
+        element: createAboutLink
+      }]];
+
+      var DEFAULT_BRANCH_MENU_ITEMS = exports.DEFAULT_BRANCH_MENU_ITEMS = [[{
+        text: 'Collapse/Expand Subtree',
+        handler: function handler(branch) {
+          branch.toggleCollapsed();
+          branch.tree.draw(); // some browsers do not fire mousemove after clicking
+        }
+      }, {
+        text: 'Invert Subtree',
+        handler: 'rotate'
+      }], [{
+        text: 'Redraw Subtree',
+        handler: 'redrawTreeFromBranch'
+      }], [{
+        text: 'Export Subtree Leaf Labels',
+        element: createLeafLabelsLink
+      }, {
+        text: 'Export Subtree as Newick File',
+        element: createNewickLink
+      }], [{
+        element: createAboutLink
+      }]];
+
+      var DEFAULT_FILENAMES = {
+        image: 'phylocanvas.png',
+        leafLabels: 'phylocanvas-leaf-labels.txt',
+        newick: 'phylocanvas.nwk'
+      };
+
+      /**
+       * The menu that is shown when the PhyloCanvas widget is right-clicked
+       *
+       * @constructor
+       * @memberOf PhyloCanvas
+       * @extends Tooltip
+       */
+
+      var ContextMenu = function (_Tooltip) {
+        _inherits(ContextMenu, _Tooltip);
+
+        function ContextMenu(tree) {
+          var _ref6 = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
+              _ref6$menuItems = _ref6.menuItems,
+              menuItems = _ref6$menuItems === undefined ? DEFAULT_MENU_ITEMS : _ref6$menuItems,
+              _ref6$branchMenuItems = _ref6.branchMenuItems,
+              branchMenuItems = _ref6$branchMenuItems === undefined ? DEFAULT_BRANCH_MENU_ITEMS : _ref6$branchMenuItems,
+              _ref6$unstyled = _ref6.unstyled,
+              unstyled = _ref6$unstyled === undefined ? false : _ref6$unstyled,
+              _ref6$className = _ref6.className,
+              className = _ref6$className === undefined ? '' : _ref6$className,
+              parent = _ref6.parent,
+              _ref6$filenames = _ref6.filenames,
+              filenames = _ref6$filenames === undefined ? DEFAULT_FILENAMES : _ref6$filenames;
+
+          _classCallCheck(this, ContextMenu);
+
+          var _this = _possibleConstructorReturn(this, (ContextMenu.__proto__ || Object.getPrototypeOf(ContextMenu)).call(this, tree, {
+            className: ('phylocanvas-context-menu ' + className).trim(),
+            element: document.createElement('ul'),
+            parent: parent
+          }));
+
+          _this.menuItems = menuItems;
+          _this.branchMenuItems = branchMenuItems;
+          _this.filenames = filenames;
+
+          // if (!unstyled) {
+          //   require('./style.css');
+          // }
+
+          _this.element.addEventListener('click', function (event) {
+            return event.stopPropagation();
+          });
+          return _this;
+        }
+
+        _createClass(ContextMenu, [{
+          key: 'createSublist',
+          value: function createSublist(menuItems, node) {
+            var sublist = document.createElement('ul');
+            var _iteratorNormalCompletion10 = true;
+            var _didIteratorError10 = false;
+            var _iteratorError10 = undefined;
+
+            try {
+              for (var _iterator10 = menuItems[Symbol.iterator](), _step10; !(_iteratorNormalCompletion10 = (_step10 = _iterator10.next()).done); _iteratorNormalCompletion10 = true) {
+                var menuItem = _step10.value;
+
+                var listElement = null;
+
+                if (menuItem.element) {
+                  var menuItemContent = menuItem.element(this, node);
+                  if (menuItemContent) {
+                    listElement = document.createElement('li');
+                    listElement.appendChild(menuItemContent);
+                  }
+                } else {
+                  listElement = document.createElement('li');
+                  listElement.appendChild(document.createTextNode(menuItem.text));
+                  listElement.addEventListener('click', createHandler(node || this.tree, menuItem.handler));
+                }
+
+                if (listElement) {
+                  listElement.addEventListener('click', createHandler(this, 'close'));
+                  listElement.addEventListener('contextmenu', preventDefault);
+
+                  sublist.appendChild(listElement);
+                }
+              }
+            } catch (err) {
+              _didIteratorError10 = true;
+              _iteratorError10 = err;
+            } finally {
+              try {
+                if (!_iteratorNormalCompletion10 && _iterator10.return) {
+                  _iterator10.return();
+                }
+              } finally {
+                if (_didIteratorError10) {
+                  throw _iteratorError10;
+                }
+              }
+            }
+
+            if (sublist.hasChildNodes()) {
+              this.element.appendChild(sublist);
+            }
+          }
+        }, {
+          key: 'createContent',
+          value: function createContent(node) {
+            var menuItems = node && node.children.length ? this.branchMenuItems : this.menuItems;
+            var _iteratorNormalCompletion11 = true;
+            var _didIteratorError11 = false;
+            var _iteratorError11 = undefined;
+
+            try {
+              for (var _iterator11 = menuItems[Symbol.iterator](), _step11; !(_iteratorNormalCompletion11 = (_step11 = _iterator11.next()).done); _iteratorNormalCompletion11 = true) {
+                var subgroup = _step11.value;
+
+                this.createSublist(subgroup, node);
+              }
+            } catch (err) {
+              _didIteratorError11 = true;
+              _iteratorError11 = err;
+            } finally {
+              try {
+                if (!_iteratorNormalCompletion11 && _iterator11.return) {
+                  _iterator11.return();
+                }
+              } finally {
+                if (_didIteratorError11) {
+                  throw _iteratorError11;
+                }
+              }
+            }
+
+            document.body.addEventListener('click', createHandler(this, 'close'));
+          }
+        }, {
+          key: 'cleanup',
+          value: function cleanup() {
+            this.element.parentNode.removeChild(this.element);
+          }
+        }]);
+
+        return ContextMenu;
+      }(_phylocanvas.Tooltip);
+
+      function handleContextmenu(event) {
+        if (event.button === 2) {
+          event.preventDefault();
+          var node = this.getNodeAtMousePosition(event);
+          this.contextMenu.open(event.clientX, event.clientY, node && node.interactive ? node : null);
+          this.contextMenu.closed = false;
+          this.tooltip.close();
+        }
+      }
+
+      function onCleanup(delegate) {
+        this.contextMenu.cleanup();
+        delegate.call(this);
+      }
+
+      var _utils$dom = _phylocanvas.utils.dom,
+          addClass = _utils$dom.addClass,
+          removeClass = _utils$dom.removeClass;
+      var _utils$events2 = _phylocanvas.utils.events,
+          fireEvent = _utils$events2.fireEvent,
+          addEvent = _utils$events2.addEvent,
+          killEvent = _utils$events2.killEvent;
+
+
+      var snapshotClass = 'phylocanvas-history-snapshot';
+      var snapshotSelectedClass = snapshotClass + '--selected';
+
+      var History = function () {
+        function History(tree, _ref7) {
+          var _this2 = this;
+
+          var _ref7$parent = _ref7.parent,
+              parent = _ref7$parent === undefined ? tree.containerElement : _ref7$parent,
+              _ref7$zIndex = _ref7.zIndex,
+              zIndex = _ref7$zIndex === undefined ? 1 : _ref7$zIndex;
+
+          _classCallCheck(this, History);
+
+          this.tree = tree;
+          this.snapshots = [];
+
+          this.isOpen = false;
+          this.parent = parent;
+          this.buttonClickHandler = this.toggle.bind(this);
+          this.container = this.createElements(parent);
+          this.container.style.zIndex = zIndex;
+
+          this.tree.addListener('subtree', function (_ref8) {
+            var node = _ref8.node;
+            return _this2.addSnapshot(node);
+          });
+          this.tree.addListener('loaded', function () {
+            return _this2.addSnapshot(_this2.tree.root.id);
+          });
+
+          this.tree.addListener('typechanged', function () {
+            return _this2.addSnapshot(_this2.tree.root.id);
+          });
+        }
+
+        _createClass(History, [{
+          key: 'toggle',
+          value: function toggle() {
+            this.isOpen = !this.isOpen;
+
+            (this.isOpen ? addClass : removeClass)(this.container, 'phylocanvas-history--open');
+
+            this.parent[(this.isOpen ? 'add' : 'remove') + 'EventListener']('click', this.buttonClickHandler);
+
+            fireEvent(this.tree.containerElement, 'historytoggle', { isOpen: this.isOpen });
+          }
+        }, {
+          key: 'createElements',
+          value: function createElements(parentElement) {
+            var container = document.createElement('div');
+            container.className = 'phylocanvas-history';
+            addEvent(container, 'click', killEvent);
+            addEvent(container, 'contextmenu', killEvent);
+
+            var button = document.createElement('button');
+            button.className = 'phylocanvas-history-button';
+            button.innerHTML = 'History';
+            addEvent(button, 'click', this.buttonClickHandler);
+            container.appendChild(button);
+            this.button = button;
+
+            var snapshotList = document.createElement('ul');
+            snapshotList.className = 'phylocanvas-history-snapshots';
+            container.appendChild(snapshotList);
+            this.snapshotList = snapshotList;
+
+            parentElement.appendChild(container);
+            return container;
+          }
+        }, {
+          key: 'addSnapshot',
+          value: function addSnapshot(id) {
+            if (!id) return;
+
+            var treetype = this.tree.treeType;
+            var historyAlreadyPresent = false;
+
+            this.snapshots.forEach(function (element) {
+              removeClass(element, snapshotSelectedClass);
+              if (element.getAttribute('data-tree-root') === id && element.getAttribute('data-tree-type') === treetype) {
+                historyAlreadyPresent = true;
+                addClass(element, snapshotSelectedClass);
+              }
+            });
+
+            if (historyAlreadyPresent) {
+              return;
+            }
+
+            var url = this.tree.getPngUrl();
+            var listElement = document.createElement('li');
+            listElement.className = snapshotClass + ' ' + snapshotSelectedClass;
+            listElement.setAttribute('data-tree-root', id);
+            listElement.setAttribute('data-tree-type', this.tree.treeType);
+            listElement.className = snapshotClass + ' ' + snapshotSelectedClass;
+
+            var thumbnail = document.createElement('img');
+            thumbnail.src = url;
+
+            this.snapshots.push(listElement);
+
+            listElement.appendChild(thumbnail);
+            this.snapshotList.appendChild(listElement);
+
+            addEvent(listElement, 'click', this.goBackTo.bind(this, listElement));
+          }
+        }, {
+          key: 'clear',
+          value: function clear() {
+            for (var i = this.snapshots.length; i--;) {
+              this.snapshotList.removeChild(this.snapshots[i]);
+            }
+            this.snapshots.length = 0;
+          }
+        }, {
+          key: 'goBackTo',
+          value: function goBackTo(snapshot) {
+            var id = snapshot.getAttribute('data-tree-root');
+            this.tree.setTreeType(snapshot.getAttribute('data-tree-type'), true);
+            this.tree.redrawFromBranch(this.tree.originalTree.branches[id]);
+            this.toggle();
+          }
+        }]);
+
+        return History;
+      }();
+
+    /***/ }),
+    /* 1 */
+    /***/ (function(module, exports) {
+
+      module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
+
+    /***/ })
+    /******/ ])
+    });
+    ;
+  </script>
+  <script type="application/javascript">
+
+    var DEFAULT_GRID_COL_OPTS = {
+      filter: true,
+      sortable: true,
+      resizable: true
+    };
+    var cols = Object.keys(Object.values(genomeMetadata)[0]);
+    cols.unshift('genome');
+    var columnDefs = cols.map(function(x) {
+      return Object.assign(JSON.parse(JSON.stringify(DEFAULT_GRID_COL_OPTS)), {
+        headerName: _.capitalize(x).replace(/_+/g, " "), 
+        field: x,
+      });
+    });
+
+    var rowData = Object.keys(genomeMetadata).map(function(x) {
+      var record = genomeMetadata[x]
+      return cols.reduce(function(acc, col) {
+        if (record.hasOwnProperty(col)) {
+          acc[col] = record[col];
+        }
+        return acc;
+      }, {genome: x});
+    });
+
+    function getRowData(genomeMetadata, genomes) {
+      if (genomes === null) {
+        genomes = Object.keys(genomeMetadata)
+      }
+      return genomes.map(function(x) {
+        var record = genomeMetadata[x]
+        return cols.reduce(function(acc, col) {
+          if (record.hasOwnProperty(col)) {
+            acc[col] = record[col];
+          }
+          return acc;
+        }, {genome: x});
+      });
+    }
+    
+    // let the grid know which columns and what data to use
+    var gridOptions = {
+      columnDefs: columnDefs,
+      rowData: rowData,
+      rowSelection: 'multiple'
+    };
+
+    var $grid = document.getElementById('metadata-grid')
+
+    var grid = new agGrid.Grid($grid, gridOptions);
+
+    function newElement(htmlString) {
+      var frag = document.createRange().createContextualFragment(htmlString);
+      return frag.firstChild;
+    }
+
+    var $treePlot = document.getElementById('tree-plot');
+
+    var Phylocanvas = window.Phylocanvas;
+    Phylocanvas.default.plugin(metadataPlugin.default);
+    var tree = Phylocanvas.default.createTree('tree-plot', {
+      padding: 0,
+      metadata: {
+        padding: 5,
+        headerAngle: 0,
+        blockLength: 20,
+      },
+      history: {
+        parent: $treePlot,
+        zIndex: 1,
+      },
+      baseNodeSize: 0,
+    });
+
+    function updateHeight(){
+      var BOTTOM_PADDING = 20;
+      var top = $treePlot.getBoundingClientRect().top;
+      var height = window.innerHeight - top - BOTTOM_PADDING;
+      if (height < 300) {
+        height = 300;
+      }
+      $treePlot.style.height = height + 'px';
+      tree.resizeToContainer();
+      setBranchScale(document.getElementById("branchScaleInput").value);
+    }
+    window.addEventListener("resize", updateHeight);
+
+    document.getElementById('metadataBlockLengthInput').addEventListener('change', function(e){
+      const value = Number(e.target.value);
+      tree.metadata.blockLength = value;
+      tree.draw();
+    });
+
+    document.getElementById('headerAngleRotationInput').addEventListener('change', function(e){
+      const value = Number(e.target.value);
+      tree.metadata.headerAngle = value;
+      tree.draw();
+    });
+
+    function setBranchScale(value) {
+      tree.setBranchScale(value);
+      tree.currentBranchScale = value;
+      tree.fitInPanel();
+      tree.offsetx = 0;
+      tree.draw();
+    }
+
+    document.getElementById("branchScaleInput").addEventListener('change', function(e){
+      var value = Number(e.target.value);
+      setBranchScale(value);
+    });
+
+    document.getElementById('showMetadataLabelsInput').addEventListener('change', function(){
+      tree.metadata.showLabels = !tree.metadata.showLabels;
+      var $input = document.getElementById('headerAngleRotationInput');
+      if (tree.metadata.showLabels) {
+        $input.value = tree.metadata.headerAngle = 0;
+      } else {
+        $input.value = tree.metadata.headerAngle = 45;
+      }
+      tree.draw();
+    });
+
+    document.getElementById('findLeavesInput').addEventListener('keyup', function(e) {
+      var element = e.target;
+      var value = e.target.value;
+      if (value === '') {
+        element.classList.remove('is-valid');
+        element.classList.remove('is-invalid');
+        return;
+      }
+      var regex;
+      try {
+        regex = RegExp('^' + value)
+      } catch {
+        return;
+      }
+      foundLeaves = tree.findLeaves(regex);
+      if (foundLeaves.length === 0) {
+        element.classList.add('is-invalid');
+        return;
+      }
+      element.classList.remove('is-invalid');
+      element.classList.add('is-valid');
+      tree.leaves.forEach(function(x) { x.selected = false; });
+      foundLeaves.forEach(function(x) { 
+        x.selected = true;
+        x.highlighted = true;
+        setTimeout(function() {
+          x.highlighted = false;
+        }, 1000);
+      });
+      tree.fitInPanel(foundLeaves);
+      tree.draw();
+      sel_leaves = foundLeaves.reduce(function(acc, x) {
+        acc[x.id] = 1; 
+        return acc; 
+      }, {});
+      console.log('sel_leaves', sel_leaves)
+      console.log('grid', grid)
+      grid.context.beans.gridApi.beanInstance.forEachNode(function(x) {
+        if (sel_leaves.hasOwnProperty(x.data.genome)) { 
+          console.log(x);
+          x.selected = true; 
+        } else { 
+          x.selected = false; 
+        }
+      });
+      grid.context.beans.gridApi.beanInstance.redrawRows();
+    });
+
+    function highlightLowSupportBranches(supportThreshold, lowSupportColour) {
+      if (supportThreshold === undefined || supportThreshold === null) {
+        supportThreshold = 95; // 95%
+      }
+      if (lowSupportColour === undefined || lowSupportColour === null) {
+        lowSupportColour = '#f00'; // red
+      }
+      for (let nodeId in tree.branches) {
+        if (tree.branches.hasOwnProperty(nodeId)) { 
+          let node = tree.branches[nodeId]; 
+          if (node.children.length === 0) { 
+            continue;
+          }
+          let bs = parseInt(node.label); 
+          if (bs < supportThreshold) {
+            node.colour = lowSupportColour;
+          } else {
+            node.colour = '#000'; // black
+          }
+        }
+      }
+      tree.draw()
+    }
+
+    var lowSupportInput = document.getElementById('lowSupportInput');
+    var highlightLowSupportBranchesInput = document.getElementById('highlightLowSupportBranchesInput');
+
+    lowSupportInput.addEventListener('change', function() {
+      if (highlightLowSupportBranchesInput.checked) {
+        highlightLowSupportBranches(parseInt(lowSupportInput.value))
+      }
+    })
+
+    highlightLowSupportBranchesInput.addEventListener('change', function(e) {
+      const element = e.target;
+      console.log('highlightLowSupportBranchesInput', element, e, element.value)
+      if (element.checked) {
+        highlightLowSupportBranches(parseInt(lowSupportInput.value))
+      } else {
+        highlightLowSupportBranches(Infinity, '#000')
+      }
+    });
+
+    tree.on('error', function(event){ throw event.error; });
+
+    var vals = Object.values(genomeMetadata);
+    var fieldValueCounts = vals.reduce(function(acc, mdRecord) {
+      Object.keys(mdRecord).reduce(function(acc2, fieldName) {
+        var mdVal = mdRecord[fieldName];
+        if (mdRecord[fieldName] !== null) {
+          if (acc2.hasOwnProperty(fieldName)) {
+            if (acc2[fieldName].hasOwnProperty(mdVal)) {
+              acc2[fieldName][mdVal] += 1;
+            } else {
+              acc2[fieldName][mdVal]=1;
+            }
+          } else {
+            acc2[fieldName] = {};
+            acc2[fieldName][mdVal]=1;
+          }
+        };
+        return acc2;
+      }, acc); 
+      return acc; 
+    }, {});
+
+
+    var fieldValueColour = Object.keys(fieldValueCounts).reduce(function(acc, fieldName) {
+      if (!acc.hasOwnProperty(fieldName)) {
+        acc[fieldName] = {};
+      };
+      var valueCounts = fieldValueCounts[fieldName];
+      var isAllNumbers = Object.keys(valueCounts).reduce(function(acc, x) {
+        return !isNaN(Number(x)) && acc;
+      }, true);
+      var isAllDates = Object.keys(valueCounts).reduce(function(acc, x) {
+        return !isNaN(Date.parse(x)) && acc;
+      }, true);
+      var sorted_keys;
+      var map_new_to_old = {};
+      if (isAllNumbers) {
+        sorted_keys = Object.keys(valueCounts).map(Number).sort(function (a,b) { return a > b; });
+      } else if (isAllDates) {
+        map_new_to_old = Object.keys(valueCounts).reduce(function (acc, d) {
+            acc[Date.parse(d)] = d;
+            return acc;
+        }, {});
+        sorted_keys = Object.keys(map_new_to_old).sort(function (a,b) { return a > b; });
+      } else {
+        sorted_keys = Object.keys(valueCounts).sort(function (a, b) {
+          return valueCounts[a] < valueCounts[b];
+        });
+      }
+      var n = sorted_keys.length;
+      var colours;
+      if (isAllNumbers || isAllDates) {
+        colours = chroma.scale('Blues').domain([sorted_keys[0], sorted_keys[n-1]]);
+      } else {
+        if (n > 12) {
+          colours = chroma.scale('Spectral').colors(n);
+        } else if (n > 9) {
+          colours = chroma.brewer.Set3;
+        } else {
+          colours = chroma.brewer.Pastel1;
+        }
+      }
+      for (var i = 0; i < sorted_keys.length; i++) {
+        if (isAllNumbers) {
+          acc[fieldName][sorted_keys[i]+""] = colours(sorted_keys[i]);
+        } else if (isAllDates) {
+          acc[fieldName][map_new_to_old[sorted_keys[i]]] = colours(sorted_keys[i]);
+        } else {
+          acc[fieldName][sorted_keys[i]] = colours[i];
+        }
+      }
+      return acc; 
+    }, {});
+
+    tree.on('beforeFirstDraw', function() {
+      for (var leaf of tree.leaves) {
+        if (!leaf.data) leaf.data = {};
+        var gmd = genomeMetadata[leaf.id];
+        for (var colName of Object.keys(gmd)) {
+          var val = gmd[colName];
+          var isValNull = val === null;
+          leaf.data[colName] = {
+            label: isValNull ? "" : val + "",
+            colour:  isValNull ? '#FFF' : fieldValueColour[colName][val],
+          };
+        }
+      }
+    });
+
+    tree.on('subtree', function(x){
+      setBranchScale(document.getElementById("branchScaleInput").value);
+      var subtreeNodes = tree.branches[x.node].tree.leaves.map((node) => node.id)
+      var newRowData = getRowData(genomeMetadata, subtreeNodes)
+      grid.context.beans.gridApi.beanInstance.setRowData(newRowData)
+    });
+
+    tree.setTreeType('rectangular');
+    tree.alignLabels = true;
+
+    tree.load(newick_string);
+    window.tree = tree;
+    updateHeight();
+    setBranchScale(0.5);
+    highlightLowSupportBranches()
+  </script>
+</body>
+</html>

@@ -1,0 +1,903 @@
+IQ-TREE multicore version 1.6.12 for Linux 64-bit built Aug 15 2019
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    beauty (AVX2, FMA3, 251 GB RAM)
+Command: iqtree -s /home/CSCScience.ca/pkruczkiewicz/projects/2019-09-23-IAV-McLaughlin-project/human-HA-sequences-by-flu-season/concat/mafft-msa/HA-H1N1-all-seasons.fa -bb 1000 -m MFP -nt 16
+Seed:    620087 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Fri Sep 27 10:35:34 2019
+Kernel:  AVX+FMA - 16 threads (56 CPU cores detected)
+
+Reading alignment file /home/CSCScience.ca/pkruczkiewicz/projects/2019-09-23-IAV-McLaughlin-project/human-HA-sequences-by-flu-season/concat/mafft-msa/HA-H1N1-all-seasons.fa ... Fasta format detected
+Alignment most likely contains DNA/RNA sequences
+Alignment has 350 sequences with 1785 columns, 546 distinct patterns
+365 parsimony-informative, 148 singleton sites, 1272 constant sites
+            Gap/Ambiguity  Composition  p-value
+   1  FJ800811.1   52.21%    passed     44.12%
+   2  FJ800819.1   52.21%    passed     35.97%
+   3  FJ800810.1   52.21%    passed     44.63%
+   4  FJ800818.1   52.21%    passed     40.85%
+   5  FJ800820.1   52.21%    passed     40.85%
+   6  FJ800809.1   52.21%    passed     45.54%
+   7  HQ239567.1    6.39%    passed     77.35%
+   8  CY060534.2    2.30%    passed     69.89%
+   9  CY060502.2    2.41%    passed     71.32%
+  10  CY060526.2    2.30%    passed     70.93%
+  11  CY060510.2    2.30%    passed     69.85%
+  12  CY060734.2    2.30%    passed     66.55%
+  13  CY060518.2    1.57%    passed     77.87%
+  14  CY060542.2    2.30%    passed     69.85%
+  15  HQ239573.1    6.39%    passed     78.76%
+  16  CY045954.2    1.57%    passed     74.45%
+  17  CY045511.2    2.30%    passed     74.80%
+  18  GQ502906.2    3.03%    passed     79.29%
+  19  CY045978.2    2.30%    passed     69.14%
+  20  CY060750.1    2.46%    passed     70.86%
+  21  CY060742.2    2.30%    passed     69.14%
+  22  CY045970.2    2.30%    passed     67.58%
+  23  CY076795.2    2.30%    passed     70.52%
+  24  CY076779.2    2.30%    passed     70.52%
+  25  CY076787.2    2.30%    passed     70.52%
+  26  GQ411897.1    1.06%    passed     80.80%
+  27  CY076771.2    2.30%    passed     70.52%
+  28  CY076763.2    2.30%    passed     70.52%
+  29  CY045962.2    2.30%    passed     74.38%
+  30  CY076755.2    2.30%    passed     68.95%
+  31  GQ385300.1    1.79%    passed     75.10%
+  32  CY045938.1    2.46%    passed     76.18%
+  33  CY045946.2    3.08%    passed     67.49%
+  34  GQ465678.1    2.35%    passed     69.16%
+  35  HQ239416.1    6.39%    passed     76.91%
+  36  HQ239425.1    6.39%    passed     79.03%
+  37  FJ974026.3    2.30%    passed     71.75%
+  38  FJ998209.1    2.35%    passed     69.16%
+  39  FJ974028.1   69.52%    passed     75.18%
+  40  FJ974022.1   73.56%    passed     72.70%
+  41  FJ974023.1   73.22%    passed     70.63%
+  42  FJ974025.1   72.49%    passed     93.87%
+  43  FJ974027.1   68.57%    passed     78.04%
+  44  FJ974024.3    2.30%    passed     71.75%
+  45  GQ132144.1    2.35%    passed     67.95%
+  46  GQ132143.1    2.41%    passed     70.42%
+  47  CY081093.2    2.30%    passed     66.55%
+  48  HQ239460.2    6.39%    passed     81.80%
+  49  CY060726.2    2.30%    passed     69.89%
+  50  HQ239459.2    6.39%    passed     79.17%
+  51  HQ239458.2    6.39%    passed     76.99%
+  52  CY060718.2    2.30%    passed     75.05%
+  53  CY060678.2    2.35%    passed     69.64%
+  54  CY060710.2    2.30%    passed     64.96%
+  55  CY060662.2    2.30%    passed     64.96%
+  56  CY060638.2    2.30%    passed     75.05%
+  57  CY060686.2    2.30%    passed     72.23%
+  58  CY060654.2    2.30%    passed     72.23%
+  59  CY060702.2    2.30%    passed     64.96%
+  60  CY060694.2    2.30%    passed     63.74%
+  61  CY060630.2    2.30%    passed     69.20%
+  62  CY060670.2    2.30%    passed     64.96%
+  63  CY060646.2    2.30%    passed     72.23%
+  64  CY060622.2    2.30%    passed     64.96%
+  65  CY060614.2    2.30%    passed     72.23%
+  66  CY060606.2    2.30%    passed     64.96%
+  67  CY060598.2    2.30%    passed     61.62%
+  68  CY060590.2    2.30%    passed     64.96%
+  69  CY060582.2    2.30%    passed     63.74%
+  70  CY060574.2    2.30%    passed     68.95%
+  71  CY060566.2    2.30%    passed     73.12%
+  72  HQ239614.1    6.39%    passed     69.39%
+  73  HQ239616.1    6.39%    passed     79.17%
+  74  HQ239613.1    6.39%    passed     72.47%
+  75  HQ239570.1    6.39%    passed     78.76%
+  76  HQ239566.1    6.39%    passed     79.97%
+  77  HQ239617.1    6.44%    passed     79.78%
+  78  HQ239612.1    6.39%    passed     79.95%
+  79  HQ239611.1    6.39%    passed     75.32%
+  80  HQ239615.1    6.44%    passed     83.23%
+  81  HQ239610.1    6.39%    passed     77.35%
+  82  HQ239609.1    6.39%    passed     78.21%
+  83  HQ239580.1    6.39%    passed     78.76%
+  84  HQ239579.1    6.39%    passed     72.47%
+  85  HQ239578.1    6.39%    passed     75.32%
+  86  HQ239577.1    6.39%    passed     75.67%
+  87  HQ239576.1    6.39%    passed     78.76%
+  88  CY060558.2    1.34%    passed     77.05%
+  89  HQ239571.1    6.39%    passed     77.35%
+  90  HQ239575.1    6.39%    passed     78.76%
+  91  HQ239608.1    6.39%    passed     75.32%
+  92  HQ239569.1    6.39%    passed     75.32%
+  93  HQ239568.1    6.39%    passed     73.09%
+  94  HQ239581.1    6.39%    passed     79.17%
+  95  HQ239574.1    6.39%    passed     80.78%
+  96  CY060550.2    2.30%    passed     76.42%
+  97  HQ239572.1    6.39%    passed     84.22%
+  98  CY081101.2    2.30%    passed     67.28%
+  99  CY081069.2    2.30%    passed     75.85%
+ 100  CY081085.2    2.30%    passed     75.85%
+ 101  CY081077.2    2.30%    passed     67.48%
+ 102  CY081061.2    2.35%    passed     75.17%
+ 103  JX875001.1    4.76%    passed     74.63%
+ 104  KF551079.1    4.71%    passed     74.24%
+ 105  KF551095.1    4.71%    passed     89.24%
+ 106  KF551093.1    4.71%    passed     72.98%
+ 107  KF551092.1    4.71%    passed     74.81%
+ 108  KF551094.1    4.71%    passed     71.52%
+ 109  KF551091.1    4.71%    passed     74.24%
+ 110  KF551090.1    4.71%    passed     73.11%
+ 111  KF551089.1    4.71%    passed     76.30%
+ 112  KF551088.1    4.71%    passed     64.40%
+ 113  KF551087.1    4.71%    passed     73.11%
+ 114  KF551086.1    4.71%    passed     76.30%
+ 115  KF551084.1    4.71%    passed     70.57%
+ 116  KF551085.1    4.71%    passed     69.47%
+ 117  KF551083.1    4.71%    passed     59.15%
+ 118  KF551096.1    4.71%    passed     69.46%
+ 119  KF551081.1    4.71%    passed     72.98%
+ 120  KF551080.1    4.71%    passed     60.21%
+ 121  KF886379.1    4.71%    passed     78.63%
+ 122  KF886366.1    4.71%    passed     84.93%
+ 123  KF886376.1    4.71%    passed     75.98%
+ 124  KF886371.1    4.71%    passed     83.93%
+ 125  KF886378.1    4.71%    passed     80.27%
+ 126  KF886365.1    4.71%    passed     76.30%
+ 127  KF886370.1    4.71%    passed     85.70%
+ 128  KF886375.1    4.71%    passed     77.21%
+ 129  KF886373.1    4.71%    passed     76.30%
+ 130  KF886369.1    4.71%    passed     81.71%
+ 131  KF886367.1    4.71%    passed     76.82%
+ 132  KF886381.1    4.71%    passed     70.29%
+ 133  KF886374.1    4.71%    passed     83.06%
+ 134  KF886372.1    4.71%    passed     76.82%
+ 135  KF886377.1    4.71%    passed     76.55%
+ 136  KF886380.1    4.71%    passed     42.49%
+ 137  KF551082.1    4.71%    passed     64.19%
+ 138  KF886368.1    4.71%    passed     78.65%
+ 139  KP864399.1    4.48%    passed     95.28%
+ 140  KP864397.1    2.30%    passed     88.14%
+ 141  KP864398.1    2.30%    passed     89.96%
+ 142  KP864396.1    2.30%    passed     80.80%
+ 143  KJ406387.1    2.24%    passed     79.36%
+ 144  KJ406385.1    2.24%    passed     79.36%
+ 145  KJ406384.1    2.24%    passed     84.36%
+ 146  KJ406386.1    2.24%    passed     79.36%
+ 147  KJ406382.1    2.24%    passed     82.57%
+ 148  KJ406380.1    2.24%    passed     86.95%
+ 149  KJ406379.1    2.24%    passed     81.94%
+ 150  KJ406383.1    2.24%    passed     80.77%
+ 151  KJ406381.1    2.24%    passed     80.77%
+ 152  MF195582.1   48.07%    passed     82.91%
+ 153  MF195581.1   46.22%    passed     78.61%
+ 154  MF195580.1   46.22%    passed     69.41%
+ 155  MF195579.1   48.01%    passed     72.23%
+ 156  MF195578.1   46.22%    passed     76.52%
+ 157  MF195577.1   48.01%    passed     79.96%
+ 158  MF195576.1   48.01%    passed     79.98%
+ 159  MF195574.1   46.22%    passed     76.39%
+ 160  MF195575.1   48.01%    passed     79.96%
+ 161  MF195573.1   48.01%    passed     78.58%
+ 162  MF195572.1   46.22%    passed     74.71%
+ 163  MF195570.1   48.01%    passed     89.58%
+ 164  MF195569.1   46.22%    passed     69.99%
+ 165  MF195568.1   46.22%    passed     74.71%
+ 166  MF195565.1   46.22%    passed     76.84%
+ 167  MF195567.1   48.01%    passed     79.96%
+ 168  MF195566.1   46.22%    passed     73.65%
+ 169  MF195564.1   46.22%    passed     60.04%
+ 170  MF195561.1   48.01%    passed     80.95%
+ 171  MF195559.1   48.01%    passed     79.96%
+ 172  MF195558.1   48.01%    passed     79.96%
+ 173  MF195560.1   48.01%    passed     79.96%
+ 174  MF195562.1   48.01%    passed     85.76%
+ 175  MF195556.1   46.22%    passed     74.83%
+ 176  MF195557.1   48.01%    passed     78.58%
+ 177  MF195563.1   48.01%    passed     84.10%
+ 178  MF195553.1   49.24%    passed     78.01%
+ 179  MF195554.1   48.01%    passed     79.96%
+ 180  MF195555.1   48.01%    passed     79.96%
+ 181  MF195552.1   46.22%    passed     74.83%
+ 182  MF195548.1   48.01%    passed     79.96%
+ 183  MF195547.1   48.01%    passed     81.78%
+ 184  MF195551.1   46.22%    passed     76.84%
+ 185  MF195550.1   48.01%    passed     76.32%
+ 186  MF195545.1   56.30%    passed     80.53%
+ 187  MF195544.1   48.01%    passed     74.95%
+ 188  MF195542.1   46.22%    passed     74.71%
+ 189  MF195571.1   48.01%    passed     76.32%
+ 190  MF195549.1   48.01%    passed     83.12%
+ 191  MF195543.1   48.01%    passed     80.95%
+ 192  MF195539.1   48.01%    passed     79.96%
+ 193  MF195541.1   48.01%    passed     79.96%
+ 194  MF195537.1   48.01%    passed     79.96%
+ 195  MF195538.1   46.22%    passed     76.39%
+ 196  MF195540.1   48.01%    passed     66.91%
+ 197  MF195534.1   46.22%    passed     74.71%
+ 198  MF195546.1   48.01%    passed     80.95%
+ 199  MF195531.1   48.01%    passed     79.96%
+ 200  MF195529.1   48.01%    passed     79.96%
+ 201  MF195536.1   52.21%    passed     99.25%
+ 202  MF195585.1   48.01%    passed     78.29%
+ 203  MF195530.1   48.01%    passed     79.96%
+ 204  MF195528.1   48.01%    passed     80.95%
+ 205  MF195519.1   46.22%    passed     72.22%
+ 206  MF195524.1   48.01%    passed     79.96%
+ 207  MF195535.1   48.01%    passed     79.96%
+ 208  MF195523.1   46.22%    passed     74.71%
+ 209  MF195521.1   46.22%    passed     69.99%
+ 210  MF195532.1   46.22%    passed     74.71%
+ 211  MF195533.1   48.01%    passed     79.96%
+ 212  MF195526.1   46.22%    passed     74.71%
+ 213  MF195527.1   46.22%    passed     74.71%
+ 214  MF195522.1   46.27%    passed     77.22%
+ 215  MF195509.1   48.01%    passed     79.96%
+ 216  MF195518.1   46.22%    passed     76.39%
+ 217  MF195525.1   48.01%    passed     76.32%
+ 218  MF195513.1   48.01%    passed     78.58%
+ 219  MF195511.1   46.22%    passed     69.41%
+ 220  MF195512.1   46.22%    passed     69.99%
+ 221  MF195515.1   46.22%    passed     72.07%
+ 222  MF195517.1   48.01%    passed     79.96%
+ 223  MF195507.1   48.01%    passed     79.96%
+ 224  MF195516.1   48.01%    passed     76.82%
+ 225  MF195520.1   48.01%    passed     78.58%
+ 226  MF195508.1   48.01%    passed     78.58%
+ 227  MF195510.1   48.01%    passed     80.95%
+ 228  MF195498.1   48.01%    passed     76.32%
+ 229  MF195506.1   48.01%    passed     80.95%
+ 230  MF195504.1   46.22%    passed     72.22%
+ 231  MF195505.1   48.01%    passed     79.96%
+ 232  MF195499.1   48.07%    passed     77.41%
+ 233  MF195502.1   48.01%    passed     79.96%
+ 234  MF195497.1   48.01%    passed     79.96%
+ 235  MF195501.1   48.01%    passed     67.76%
+ 236  MF195496.1   48.01%    passed     79.96%
+ 237  MF195500.1   46.22%    passed     74.71%
+ 238  MF195514.1   48.01%    passed     79.96%
+ 239  MF195494.1   46.22%    passed     76.23%
+ 240  MF195493.1   48.01%    passed     79.96%
+ 241  MF195503.1   48.01%    passed     76.82%
+ 242  MF195495.1   46.22%    passed     74.71%
+ 243  MF195492.1   46.22%    passed     74.71%
+ 244  MF195491.1   48.01%    passed     79.96%
+ 245  MF195490.1   48.01%    passed     79.96%
+ 246  MF195489.1   46.22%    passed     76.84%
+ 247  MF195488.1   48.01%    passed     79.96%
+ 248  MF195480.1   46.22%    passed     74.71%
+ 249  MF195485.1   48.01%    passed     80.95%
+ 250  MF195476.1   46.22%    passed     72.22%
+ 251  MF195584.1   46.22%    passed     72.58%
+ 252  MF195583.1   49.24%    passed     71.96%
+ 253  MF195473.1   46.22%    passed     74.71%
+ 254  MF195470.1   46.22%    passed     74.71%
+ 255  MF195484.1   46.22%    passed     74.71%
+ 256  MF195487.1   48.01%    passed     73.20%
+ 257  MF195465.1   46.22%    passed     72.58%
+ 258  MF195471.1   48.01%    passed     79.96%
+ 259  MF195472.1   48.01%    passed     79.96%
+ 260  MF195474.1   48.01%    passed     79.96%
+ 261  MF195486.1   48.01%    passed     77.90%
+ 262  MF195475.1   46.22%    passed     72.22%
+ 263  MF195483.1   46.22%    passed     76.84%
+ 264  MF195482.1   48.01%    passed     79.96%
+ 265  MF195478.1   46.22%    passed     76.84%
+ 266  MF195477.1   46.22%    passed     64.85%
+ 267  MF195481.1   48.01%    passed     76.20%
+ 268  MF195468.1   46.22%    passed     72.22%
+ 269  MF195463.1   46.22%    passed     76.39%
+ 270  MF195469.1   46.22%    passed     77.20%
+ 271  MF195467.1   46.22%    passed     72.22%
+ 272  MF195466.1   46.22%    passed     72.22%
+ 273  MF195464.1   46.22%    passed     76.84%
+ 274  MF195462.1   46.22%    passed     76.52%
+ 275  MF195479.1   46.22%    passed     76.39%
+ 276  MF195453.1   46.22%    passed     69.41%
+ 277  MF195458.1   48.01%    passed     79.96%
+ 278  MF195461.1   48.01%    passed     80.95%
+ 279  MF195459.1   48.01%    passed     79.96%
+ 280  MF195451.1   46.22%    passed     74.71%
+ 281  MF195452.1   46.22%    passed     74.71%
+ 282  MF195454.1   46.22%    passed     74.71%
+ 283  MF195457.1   46.22%    passed     73.75%
+ 284  MF195456.1   48.12%    passed     76.22%
+ 285  MF195444.1   48.01%    passed     79.96%
+ 286  MF195448.1   48.01%    passed     73.21%
+ 287  MF195442.1   46.22%    passed     74.71%
+ 288  MF195438.1   46.22%    passed     74.71%
+ 289  MF195446.1   48.01%    passed     73.78%
+ 290  MF195447.1   50.42%    passed     95.92%
+ 291  MF195435.1   46.22%    passed     69.99%
+ 292  MF195450.1   46.22%    passed     74.71%
+ 293  MF195443.1   46.22%    passed     76.52%
+ 294  MF195460.1   46.22%    passed     86.78%
+ 295  MF195439.1   52.10%    passed     99.51%
+ 296  MF195437.1   52.83%    passed     99.27%
+ 297  MF195455.1   48.01%    passed     73.21%
+ 298  MF195440.1   46.22%    passed     74.71%
+ 299  MF195441.1   49.13%    passed     95.80%
+ 300  MF195449.1   46.22%    passed     74.71%
+ 301  MF195430.1   48.01%    passed     83.30%
+ 302  MF195436.1   46.22%    passed     74.71%
+ 303  MF195432.1   46.22%    passed     74.71%
+ 304  MF195433.1   48.01%    passed     80.95%
+ 305  MF195434.1   46.22%    passed     72.64%
+ 306  MF195431.1   46.22%    passed     76.39%
+ 307  MF195429.1   46.22%    passed     74.71%
+ 308  MF195427.1   48.01%    passed     83.30%
+ 309  MF195425.1   48.01%    passed     80.95%
+ 310  MF195423.1   46.22%    passed     74.71%
+ 311  MF195428.1   46.22%    passed     76.39%
+ 312  MF195426.1   46.22%    passed     76.39%
+ 313  MF195424.1   46.22%    passed     74.71%
+ 314  MF195422.1   48.01%    passed     79.96%
+ 315  MF195445.1   46.22%    passed     80.48%
+ 316  MF348063.1   42.18%    passed     79.69%
+ 317  MF348064.1   42.18%    passed     83.90%
+ 318  MF195420.1   46.22%    passed     74.71%
+ 319  MF195419.1   46.22%    passed     72.22%
+ 320  MF348062.1   62.69%    passed     67.28%
+ 321  MF348065.1   59.16%    passed     82.59%
+ 322  MF348066.1   42.18%    passed     82.28%
+ 323  MF348060.1   42.18%    passed     83.90%
+ 324  MF195421.1   48.01%    passed     73.21%
+ 325  MF348061.1   42.18%    passed     83.67%
+ 326  MF348059.1   42.18%    passed     74.48%
+ 327  MF348057.1   42.18%    passed     83.90%
+ 328  MF348058.1   66.83%    passed     77.10%
+ 329  MF348056.1   42.18%    passed     84.58%
+ 330  MF195418.1   46.22%    passed     68.66%
+ 331  MF348053.1   42.18%    passed     80.85%
+ 332  MF348052.1   48.29%    passed     80.92%
+ 333  MF348054.1   42.18%    passed     74.10%
+ 334  MF348055.1   42.18%    passed     86.19%
+ 335  MF348051.1   42.18%    passed     84.15%
+ 336  MF348048.1   42.18%    passed     81.98%
+ 337  MF348049.1   42.18%    passed     80.85%
+ 338  MF348050.1   42.18%    passed     87.87%
+ 339  MF348047.1   42.18%    passed     81.98%
+ 340  MF348046.1   42.18%    passed     83.90%
+ 341  MF348045.1   42.18%    passed     81.98%
+ 342  MF348044.1   48.01%    passed     77.49%
+ 343  MF348043.1   42.18%    passed     81.98%
+ 344  MF348042.1   42.18%    passed     80.12%
+ 345  MF195417.1   46.22%    passed     59.73%
+ 346  MF195416.1   48.01%    passed     78.58%
+ 347  MF195415.1   48.01%    passed     69.37%
+ 348  MF195414.1   48.07%    passed     76.61%
+ 349  MF195413.1   46.22%    passed     72.22%
+ 350  MH216446.1   48.07%    passed     74.29%
+WARNING: 19 sequences contain more than 50% gaps/ambiguity
+****  TOTAL        30.21%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: FJ800820.1 is identical to FJ800818.1 but kept for subsequent analysis
+NOTE: CY060542.2 is identical to CY060510.2 but kept for subsequent analysis
+NOTE: HQ239570.1 is identical to HQ239573.1 but kept for subsequent analysis
+NOTE: CY060742.2 is identical to CY045978.2 but kept for subsequent analysis
+NOTE: CY076779.2 is identical to CY076795.2 but kept for subsequent analysis
+NOTE: FJ998209.1 is identical to GQ465678.1 but kept for subsequent analysis
+NOTE: FJ974024.3 is identical to FJ974026.3 but kept for subsequent analysis
+NOTE: CY060638.2 is identical to CY060718.2 but kept for subsequent analysis
+NOTE: CY060662.2 is identical to CY060710.2 but kept for subsequent analysis
+NOTE: CY060654.2 is identical to CY060686.2 but kept for subsequent analysis
+NOTE: HQ239579.1 is identical to HQ239613.1 but kept for subsequent analysis
+NOTE: HQ239571.1 is identical to HQ239610.1 but kept for subsequent analysis
+NOTE: HQ239608.1 is identical to HQ239578.1 but kept for subsequent analysis
+NOTE: CY081085.2 is identical to CY081069.2 but kept for subsequent analysis
+NOTE: KF551081.1 is identical to KF551093.1 but kept for subsequent analysis
+NOTE: KF886373.1 is identical to KF886365.1 but kept for subsequent analysis
+NOTE: KJ406385.1 is identical to KJ406387.1 but kept for subsequent analysis
+NOTE: KJ406381.1 is identical to KJ406383.1 but kept for subsequent analysis
+NOTE: MF195453.1 is identical to MF195580.1 but kept for subsequent analysis
+NOTE: MF195575.1 is identical to MF195577.1 but kept for subsequent analysis
+NOTE: MF195518.1 is identical to MF195574.1 but kept for subsequent analysis
+NOTE: MF195542.1 is identical to MF195572.1 but kept for subsequent analysis
+NOTE: MF195483.1 is identical to MF195565.1 but kept for subsequent analysis
+NOTE: MF195528.1 is identical to MF195561.1 but kept for subsequent analysis
+NOTE: MF195498.1 is identical to MF195550.1 but kept for subsequent analysis
+NOTE: MF195479.1 is identical to MF195538.1 but kept for subsequent analysis
+NOTE: MF195532.1 is identical to MF195534.1 but kept for subsequent analysis
+NOTE: MF195507.1 is identical to MF195530.1 but kept for subsequent analysis
+NOTE: MF195416.1 is identical to MF195508.1 but kept for subsequent analysis
+NOTE: MF195478.1 is identical to MF195489.1 but kept for subsequent analysis
+NOTE: MF195465.1 is identical to MF195584.1 but kept for subsequent analysis
+NOTE: MF195466.1 is identical to MF195467.1 but kept for subsequent analysis
+NOTE: MF195443.1 is identical to MF195462.1 but kept for subsequent analysis
+NOTE: MF195455.1 is identical to MF195448.1 but kept for subsequent analysis
+NOTE: MF195427.1 is identical to MF195430.1 but kept for subsequent analysis
+NOTE: MF348060.1 is identical to MF348064.1 but kept for subsequent analysis
+NOTE: MF348045.1 is identical to MF348048.1 but kept for subsequent analysis
+NOTE: 76 identical sequences (see below) will be ignored for subsequent analysis
+NOTE: HQ239580.1 (identical to HQ239573.1) is ignored but added at the end
+NOTE: HQ239576.1 (identical to HQ239573.1) is ignored but added at the end
+NOTE: HQ239575.1 (identical to HQ239573.1) is ignored but added at the end
+NOTE: CY076787.2 (identical to CY076795.2) is ignored but added at the end
+NOTE: CY076771.2 (identical to CY076795.2) is ignored but added at the end
+NOTE: CY076763.2 (identical to CY076795.2) is ignored but added at the end
+NOTE: CY060702.2 (identical to CY060710.2) is ignored but added at the end
+NOTE: CY060670.2 (identical to CY060710.2) is ignored but added at the end
+NOTE: CY060622.2 (identical to CY060710.2) is ignored but added at the end
+NOTE: CY060606.2 (identical to CY060710.2) is ignored but added at the end
+NOTE: CY060590.2 (identical to CY060710.2) is ignored but added at the end
+NOTE: CY060646.2 (identical to CY060686.2) is ignored but added at the end
+NOTE: CY060614.2 (identical to CY060686.2) is ignored but added at the end
+NOTE: KJ406386.1 (identical to KJ406387.1) is ignored but added at the end
+NOTE: MF195567.1 (identical to MF195577.1) is ignored but added at the end
+NOTE: MF195559.1 (identical to MF195577.1) is ignored but added at the end
+NOTE: MF195558.1 (identical to MF195577.1) is ignored but added at the end
+NOTE: MF195560.1 (identical to MF195577.1) is ignored but added at the end
+NOTE: MF195548.1 (identical to MF195577.1) is ignored but added at the end
+NOTE: MF195539.1 (identical to MF195577.1) is ignored but added at the end
+NOTE: MF195541.1 (identical to MF195577.1) is ignored but added at the end
+NOTE: MF195531.1 (identical to MF195577.1) is ignored but added at the end
+NOTE: MF195529.1 (identical to MF195577.1) is ignored but added at the end
+NOTE: MF195524.1 (identical to MF195577.1) is ignored but added at the end
+NOTE: MF195535.1 (identical to MF195577.1) is ignored but added at the end
+NOTE: MF195509.1 (identical to MF195577.1) is ignored but added at the end
+NOTE: MF195517.1 (identical to MF195577.1) is ignored but added at the end
+NOTE: MF195505.1 (identical to MF195577.1) is ignored but added at the end
+NOTE: MF195502.1 (identical to MF195577.1) is ignored but added at the end
+NOTE: MF195497.1 (identical to MF195577.1) is ignored but added at the end
+NOTE: MF195496.1 (identical to MF195577.1) is ignored but added at the end
+NOTE: MF195514.1 (identical to MF195577.1) is ignored but added at the end
+NOTE: MF195493.1 (identical to MF195577.1) is ignored but added at the end
+NOTE: MF195491.1 (identical to MF195577.1) is ignored but added at the end
+NOTE: MF195490.1 (identical to MF195577.1) is ignored but added at the end
+NOTE: MF195488.1 (identical to MF195577.1) is ignored but added at the end
+NOTE: MF195472.1 (identical to MF195577.1) is ignored but added at the end
+NOTE: MF195474.1 (identical to MF195577.1) is ignored but added at the end
+NOTE: MF195482.1 (identical to MF195577.1) is ignored but added at the end
+NOTE: MF195458.1 (identical to MF195577.1) is ignored but added at the end
+NOTE: MF195459.1 (identical to MF195577.1) is ignored but added at the end
+NOTE: MF195444.1 (identical to MF195577.1) is ignored but added at the end
+NOTE: MF195422.1 (identical to MF195577.1) is ignored but added at the end
+NOTE: MF195463.1 (identical to MF195574.1) is ignored but added at the end
+NOTE: MF195431.1 (identical to MF195574.1) is ignored but added at the end
+NOTE: MF195428.1 (identical to MF195574.1) is ignored but added at the end
+NOTE: MF195526.1 (identical to MF195572.1) is ignored but added at the end
+NOTE: MF195527.1 (identical to MF195572.1) is ignored but added at the end
+NOTE: MF195500.1 (identical to MF195572.1) is ignored but added at the end
+NOTE: MF195495.1 (identical to MF195572.1) is ignored but added at the end
+NOTE: MF195492.1 (identical to MF195572.1) is ignored but added at the end
+NOTE: MF195480.1 (identical to MF195572.1) is ignored but added at the end
+NOTE: MF195473.1 (identical to MF195572.1) is ignored but added at the end
+NOTE: MF195470.1 (identical to MF195572.1) is ignored but added at the end
+NOTE: MF195484.1 (identical to MF195572.1) is ignored but added at the end
+NOTE: MF195451.1 (identical to MF195572.1) is ignored but added at the end
+NOTE: MF195452.1 (identical to MF195572.1) is ignored but added at the end
+NOTE: MF195454.1 (identical to MF195572.1) is ignored but added at the end
+NOTE: MF195442.1 (identical to MF195572.1) is ignored but added at the end
+NOTE: MF195450.1 (identical to MF195572.1) is ignored but added at the end
+NOTE: MF195449.1 (identical to MF195572.1) is ignored but added at the end
+NOTE: MF195436.1 (identical to MF195572.1) is ignored but added at the end
+NOTE: MF195432.1 (identical to MF195572.1) is ignored but added at the end
+NOTE: MF195423.1 (identical to MF195572.1) is ignored but added at the end
+NOTE: MF195424.1 (identical to MF195572.1) is ignored but added at the end
+NOTE: MF195420.1 (identical to MF195572.1) is ignored but added at the end
+NOTE: MF195464.1 (identical to MF195565.1) is ignored but added at the end
+NOTE: MF195510.1 (identical to MF195561.1) is ignored but added at the end
+NOTE: MF195461.1 (identical to MF195561.1) is ignored but added at the end
+NOTE: MF195433.1 (identical to MF195561.1) is ignored but added at the end
+NOTE: MF195425.1 (identical to MF195561.1) is ignored but added at the end
+NOTE: MF195419.1 (identical to MF195467.1) is ignored but added at the end
+NOTE: MF195413.1 (identical to MF195467.1) is ignored but added at the end
+NOTE: MF195421.1 (identical to MF195448.1) is ignored but added at the end
+NOTE: MF348057.1 (identical to MF348064.1) is ignored but added at the end
+NOTE: MF348043.1 (identical to MF348048.1) is ignored but added at the end
+
+For your convenience alignment with unique sequences printed to /home/CSCScience.ca/pkruczkiewicz/projects/2019-09-23-IAV-McLaughlin-project/human-HA-sequences-by-flu-season/concat/mafft-msa/HA-H1N1-all-seasons.fa.uniqueseq.phy
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.049 seconds
+NOTE: ModelFinder requires 51 MB RAM!
+ModelFinder will test 286 DNA models (sample size: 1785) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+  1  JC            7604.612     545 16299.225    16779.564    19289.735
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+  2  JC+I          7523.047     546 16138.094    16620.585    19134.090
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+  3  JC+G4         7508.283     546 16108.566    16591.057    19104.563
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+  4  JC+I+G4       7509.489     547 16112.979    16597.629    19114.463
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+  5  JC+R2         7504.093     547 16102.186    16586.836    19103.670
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+  6  JC+R3         7503.513     549 16105.026    16594.014    19117.485
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 14  F81+F         7525.189     548 16146.377    16633.193    19153.348
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 15  F81+F+I       7440.856     549 15979.711    16468.699    18992.169
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 16  F81+F+G4      7426.951     549 15951.902    16440.890    18964.360
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 17  F81+F+I+G4    7427.884     550 15955.768    16446.935    18973.714
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 18  F81+F+R2      7423.878     550 15947.755    16438.922    18965.701
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 19  F81+F+R3      7423.389     552 15950.778    16446.323    18979.697
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 27  K2P           7242.475     546 15576.951    16059.442    18572.948
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 28  K2P+I         7148.551     547 15391.101    15875.751    18392.585
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 29  K2P+G4        7134.658     547 15363.315    15847.965    18364.799
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 30  K2P+I+G4      7135.187     548 15366.374    15853.189    18373.345
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 31  K2P+R2        7134.060     548 15364.121    15850.936    18371.092
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 32  K2P+R3        7133.831     550 15367.662    15858.829    18385.607
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 40  HKY+F         7161.194     549 15420.389    15909.377    18432.847
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 41  HKY+F+I       7064.402     550 15228.804    15719.971    18246.750
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 42  HKY+F+G4      7053.345     550 15206.690    15697.857    18224.635
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 43  HKY+F+I+G4    7053.490     551 15208.980    15702.333    18232.413
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 44  HKY+F+R2      7054.709     551 15211.418    15704.771    18234.851
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 45  HKY+F+R3      7054.444     553 15214.889    15712.634    18249.296
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 53  TNe           7241.258     547 15576.515    16061.165    18577.999
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 54  TNe+I         7148.136     548 15392.272    15879.087    18399.243
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 55  TNe+G4        7134.017     548 15364.033    15850.849    18371.005
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 56  TNe+I+G4      7134.572     549 15367.145    15856.133    18379.603
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 57  TNe+R2        7132.976     549 15363.952    15852.940    18376.411
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 58  TNe+R3        7132.661     551 15367.321    15860.674    18390.754
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 66  TN+F          7160.795     550 15421.590    15912.757    18439.535
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 67  TN+F+I        7063.708     551 15229.417    15722.770    18252.850
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 68  TN+F+G4       7052.647     551 15207.295    15700.647    18230.727
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 69  TN+F+I+G4     7052.810     552 15209.620    15705.165    18238.539
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 70  TN+F+R2       7053.680     552 15211.360    15706.906    18240.280
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 71  TN+F+R3       7053.502     554 15215.004    15714.955    18254.898
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 79  K3P           7242.007     547 15578.014    16062.664    18579.498
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 80  K3P+I         7147.081     548 15390.162    15876.977    18397.133
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 81  K3P+G4        7133.442     548 15362.883    15849.699    18369.855
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 82  K3P+I+G4      7133.827     549 15365.655    15854.643    18378.113
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 83  K3P+R2        7132.674     549 15363.348    15852.336    18375.806
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 84  K3P+R3        7132.379     551 15366.758    15860.110    18390.190
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 92  K3Pu+F        7160.326     550 15420.652    15911.819    18438.597
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 93  K3Pu+F+I      7062.285     551 15226.570    15719.922    18250.002
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 94  K3Pu+F+G4     7051.497     551 15204.994    15698.347    18228.427
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 95  K3Pu+F+I+G4   7051.515     552 15207.030    15702.575    18235.949
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 96  K3Pu+F+R2     7052.772     552 15209.545    15705.090    18238.465
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+ 97  K3Pu+F+R3     7052.521     554 15213.043    15712.994    18252.937
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+105  TPM2+F        7157.381     550 15414.762    15905.929    18432.707
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+106  TPM2+F+I      7061.691     551 15225.382    15718.735    18248.815
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+107  TPM2+F+G4     7049.810     551 15201.620    15694.973    18225.053
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+108  TPM2+F+I+G4   7050.069     552 15204.137    15699.683    18233.057
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+109  TPM2+F+R2     7050.172     552 15204.344    15699.890    18233.264
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+110  TPM2+F+R3     7049.915     554 15207.830    15707.782    18247.725
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+118  TPM2u+F       7157.397     550 15414.794    15905.961    18432.740
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+119  TPM2u+F+I     7061.709     551 15225.417    15718.770    18248.850
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+120  TPM2u+F+G4    7049.828     551 15201.655    15695.008    18225.088
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+121  TPM2u+F+I+G4  7050.077     552 15204.155    15699.700    18233.074
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+122  TPM2u+F+R2    7050.161     552 15204.321    15699.867    18233.241
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+123  TPM2u+F+R3    7049.902     554 15207.804    15707.755    18247.698
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+131  TPM3+F        7160.701     550 15421.401    15912.568    18439.347
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+132  TPM3+F+I      7063.749     551 15229.497    15722.850    18252.930
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+133  TPM3+F+G4     7052.426     551 15206.852    15700.205    18230.284
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+134  TPM3+F+I+G4   7052.536     552 15209.072    15704.618    18237.992
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+135  TPM3+F+R2     7053.218     552 15210.436    15705.981    18239.356
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+136  TPM3+F+R3     7052.986     554 15213.972    15713.923    18253.866
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+144  TPM3u+F       7160.723     550 15421.445    15912.612    18439.391
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+145  TPM3u+F+I     7063.771     551 15229.542    15722.895    18252.975
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+146  TPM3u+F+G4    7052.448     551 15206.896    15700.249    18230.329
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+147  TPM3u+F+I+G4  7052.552     552 15209.104    15704.650    18238.024
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+148  TPM3u+F+R2    7053.191     552 15210.381    15705.927    18239.301
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+149  TPM3u+F+R3    7052.963     554 15213.927    15713.878    18253.821
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+157  TIMe          7240.742     548 15577.485    16064.300    18584.456
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+158  TIMe+I        7146.617     549 15391.235    15880.222    18403.693
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+159  TIMe+G4       7132.756     549 15363.511    15852.499    18375.969
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+160  TIMe+I+G4     7133.133     550 15366.266    15857.433    18384.211
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+161  TIMe+R2       7131.871     550 15363.741    15854.908    18381.687
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+162  TIMe+R3       7131.497     552 15366.995    15862.540    18395.914
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+170  TIM+F         7159.875     551 15421.750    15915.102    18445.182
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+171  TIM+F+I       7061.541     552 15227.081    15722.627    18256.001
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+172  TIM+F+G4      7050.752     552 15205.505    15701.050    18234.424
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+173  TIM+F+I+G4    7050.774     553 15207.548    15705.293    18241.955
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+174  TIM+F+R2      7051.626     553 15209.252    15706.997    18243.659
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+175  TIM+F+R3      7051.487     555 15212.974    15715.139    18258.356
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+183  TIM2e         7233.560     548 15563.119    16049.935    18570.090
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+184  TIM2e+I       7141.290     549 15380.581    15869.569    18393.039
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+185  TIM2e+G4      7124.530     549 15347.060    15836.048    18359.518
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+186  TIM2e+I+G4    7125.218     550 15350.435    15841.602    18368.381
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+187  TIM2e+R2      7121.994     550 15343.988    15835.155    18361.934
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+188  TIM2e+R3      7121.476     552 15346.952    15842.498    18375.872
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+196  TIM2+F        7156.886     551 15415.772    15909.125    18439.204
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+197  TIM2+F+I      7060.884     552 15225.768    15721.314    18254.688
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+198  TIM2+F+G4     7048.963     552 15201.925    15697.471    18230.845
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+199  TIM2+F+I+G4   7049.178     553 15204.357    15702.101    18238.764
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+200  TIM2+F+R2     7049.173     553 15204.345    15702.090    18238.752
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+201  TIM2+F+R3     7048.936     555 15207.871    15710.036    18253.253
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+209  TIM3e         7241.250     548 15578.499    16065.315    18585.470
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+210  TIM3e+I       7148.116     549 15394.232    15883.219    18406.690
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+211  TIM3e+G4      7133.937     549 15365.875    15854.862    18378.333
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+212  TIM3e+I+G4    7134.326     550 15368.653    15859.820    18386.598
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+213  TIM3e+R2      7132.787     550 15365.574    15856.740    18383.519
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+214  TIM3e+R3      7132.398     552 15368.797    15864.342    18397.717
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+222  TIM3+F        7160.179     551 15422.358    15915.711    18445.791
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+223  TIM3+F+I      7062.932     552 15229.865    15725.410    18258.785
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+224  TIM3+F+G4     7051.596     552 15207.192    15702.737    18236.112
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+225  TIM3+F+I+G4   7051.671     553 15209.341    15707.086    18243.748
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+226  TIM3+F+R2     7052.259     553 15210.518    15708.263    18244.925
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+227  TIM3+F+R3     7052.038     555 15214.075    15716.240    18259.457
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+235  TVMe          7233.984     549 15565.968    16054.956    18578.426
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+236  TVMe+I        7139.773     550 15379.547    15870.714    18397.492
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+237  TVMe+G4       7123.589     550 15347.178    15838.345    18365.124
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+238  TVMe+I+G4     7124.046     551 15350.092    15843.445    18373.524
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+239  TVMe+R2       7121.449     551 15344.898    15838.251    18368.331
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+240  TVMe+R3       7120.937     553 15347.874    15845.619    18382.281
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+248  TVM+F         7155.789     552 15415.579    15911.124    18444.499
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+249  TVM+F+I       7058.745     553 15223.490    15721.235    18257.897
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+250  TVM+F+G4      7047.004     553 15200.009    15697.754    18234.416
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+251  TVM+F+I+G4    7047.071     554 15202.141    15702.093    18242.036
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+252  TVM+F+R2      7047.546     554 15203.092    15703.043    18242.986
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+253  TVM+F+R3      7047.123     556 15206.247    15710.631    18257.115
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+261  SYM           7232.645     550 15565.290    16056.457    18583.235
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+262  SYM+I         7139.221     551 15380.443    15873.795    18403.875
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+263  SYM+G4        7122.695     551 15347.389    15840.742    18370.822
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+264  SYM+I+G4      7123.195     552 15350.390    15845.936    18379.310
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+265  SYM+R2        7120.399     552 15344.799    15840.344    18373.719
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+266  SYM+R3        7119.859     554 15347.718    15847.669    18387.612
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+274  GTR+F         7155.223     553 15416.445    15914.190    18450.853
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+275  GTR+F+I       7057.839     554 15223.678    15723.630    18263.573
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+276  GTR+F+G4      7046.103     554 15200.206    15700.157    18240.100
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+277  GTR+F+I+G4    7046.184     555 15202.369    15704.533    18247.750
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+278  GTR+F+R2      7046.514     555 15203.027    15705.192    18248.409
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+279  GTR+F+R3      7046.160     557 15206.320    15712.931    18262.675
+Akaike Information Criterion:           TVM+F+G4
+Corrected Akaike Information Criterion: TPM2+F+G4
+Bayesian Information Criterion:         HKY+F+G4
+Best-fit model: HKY+F+G4 chosen according to BIC
+
+All model information printed to /home/CSCScience.ca/pkruczkiewicz/projects/2019-09-23-IAV-McLaughlin-project/human-HA-sequences-by-flu-season/concat/mafft-msa/HA-H1N1-all-seasons.fa.model.gz
+CPU time for ModelFinder: 322.116 seconds (0h:5m:22s)
+Wall-clock time for ModelFinder: 21.952 seconds (0h:0m:21s)
+Generating 1000 samples for ultrafast bootstrap (seed: 620087)...
+
+NOTE: 21 MB RAM (0 GB) is required!
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -7456.844
+2. Current log-likelihood: -7061.954
+3. Current log-likelihood: -7053.813
+4. Current log-likelihood: -7053.384
+Optimal log-likelihood: -7053.346
+Rate parameters:  A-C: 1.00000  A-G: 10.58835  A-T: 1.00000  C-G: 1.00000  C-T: 10.58835  G-T: 1.00000
+Base frequencies:  A: 0.356  C: 0.193  G: 0.216  T: 0.235
+Gamma shape alpha: 0.449
+Parameters optimization took 4 rounds (0.371 sec)
+Computing ML distances based on estimated model parameters... 0.700 sec
+Computing BIONJ tree...
+0.057 seconds
+Log-likelihood of BIONJ tree: -7127.341
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 5.041 second
+Computing log-likelihood of 98 initial trees ... 11.148 seconds
+Current best score: -7018.624
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -7017.846
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 2: -7017.513
+Iteration 10 / LogL: -7017.801 / Time: 0h:0m:48s
+Iteration 20 / LogL: -7019.583 / Time: 0h:1m:19s
+Finish initializing candidate tree set (20)
+Current best tree score: -7017.513 / CPU time: 79.028
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -7022.840 / Time: 0h:1m:50s (0h:4m:33s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 31: -7017.486
+Iteration 40 / LogL: -7019.060 / Time: 0h:2m:27s (0h:5m:44s left)
+BETTER TREE FOUND at iteration 41: -7017.482
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 49: -7016.946
+Iteration 50 / LogL: -7017.537 / Time: 0h:3m:7s (0h:6m:19s left)
+Log-likelihood cutoff on original alignment: -7069.014
+Iteration 60 / LogL: -7016.959 / Time: 0h:3m:54s (0h:5m:53s left)
+Iteration 70 / LogL: -7017.316 / Time: 0h:4m:23s (0h:5m:1s left)
+BETTER TREE FOUND at iteration 79: -7016.945
+Iteration 80 / LogL: -7019.519 / Time: 0h:4m:50s (0h:6m:3s left)
+Iteration 90 / LogL: -7042.908 / Time: 0h:5m:22s (0h:5m:22s left)
+Iteration 100 / LogL: -7032.481 / Time: 0h:5m:58s (0h:4m:46s left)
+Log-likelihood cutoff on original alignment: -7069.014
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.998
+Iteration 110 / LogL: -7023.191 / Time: 0h:6m:42s (0h:5m:31s left)
+Iteration 120 / LogL: -7016.956 / Time: 0h:7m:18s (0h:4m:54s left)
+BETTER TREE FOUND at iteration 121: -7016.945
+Iteration 130 / LogL: -7019.237 / Time: 0h:7m:54s (0h:5m:34s left)
+Iteration 140 / LogL: -7031.730 / Time: 0h:8m:26s (0h:4m:54s left)
+Iteration 150 / LogL: -7034.492 / Time: 0h:8m:58s (0h:4m:16s left)
+Log-likelihood cutoff on original alignment: -7069.014
+Iteration 160 / LogL: -7018.324 / Time: 0h:9m:31s (0h:3m:39s left)
+Iteration 170 / LogL: -7027.169 / Time: 0h:10m:5s (0h:3m:2s left)
+Iteration 180 / LogL: -7017.005 / Time: 0h:10m:43s (0h:2m:27s left)
+Iteration 190 / LogL: -7016.958 / Time: 0h:11m:18s (0h:1m:51s left)
+Iteration 200 / LogL: -7023.611 / Time: 0h:11m:49s (0h:1m:14s left)
+Log-likelihood cutoff on original alignment: -7069.879
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.999
+BETTER TREE FOUND at iteration 202: -7016.941
+BETTER TREE FOUND at iteration 206: -7016.940
+Iteration 210 / LogL: -7029.328 / Time: 0h:12m:27s (0h:5m:43s left)
+Iteration 220 / LogL: -7032.550 / Time: 0h:13m:0s (0h:5m:6s left)
+Iteration 230 / LogL: -7028.452 / Time: 0h:13m:42s (0h:4m:32s left)
+Iteration 240 / LogL: -7016.943 / Time: 0h:14m:21s (0h:3m:57s left)
+Iteration 250 / LogL: -7035.009 / Time: 0h:14m:50s (0h:3m:20s left)
+Log-likelihood cutoff on original alignment: -7069.879
+Iteration 260 / LogL: -7041.197 / Time: 0h:15m:28s (0h:2m:44s left)
+BETTER TREE FOUND at iteration 267: -7016.935
+Iteration 270 / LogL: -7045.746 / Time: 0h:16m:10s (0h:5m:49s left)
+Iteration 280 / LogL: -7045.399 / Time: 0h:16m:37s (0h:5m:11s left)
+Iteration 290 / LogL: -7030.644 / Time: 0h:17m:11s (0h:4m:34s left)
+Iteration 300 / LogL: -7022.454 / Time: 0h:17m:55s (0h:4m:0s left)
+Log-likelihood cutoff on original alignment: -7069.879
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.999
+Iteration 310 / LogL: -7016.948 / Time: 0h:18m:40s (0h:5m:26s left)
+BETTER TREE FOUND at iteration 317: -7016.933
+Iteration 320 / LogL: -7018.251 / Time: 0h:19m:25s (0h:5m:54s left)
+Iteration 330 / LogL: -7034.078 / Time: 0h:20m:6s (0h:5m:19s left)
+Iteration 340 / LogL: -7039.681 / Time: 0h:20m:50s (0h:4m:44s left)
+Iteration 350 / LogL: -7029.656 / Time: 0h:21m:24s (0h:4m:6s left)
+Log-likelihood cutoff on original alignment: -7069.879
+Iteration 360 / LogL: -7024.556 / Time: 0h:22m:14s (0h:3m:31s left)
+Iteration 370 / LogL: -7018.244 / Time: 0h:22m:52s (0h:2m:54s left)
+Iteration 380 / LogL: -7022.805 / Time: 0h:23m:28s (0h:2m:17s left)
+Iteration 390 / LogL: -7019.259 / Time: 0h:24m:16s (0h:1m:41s left)
+Iteration 400 / LogL: -7023.071 / Time: 0h:25m:0s (0h:1m:3s left)
+Log-likelihood cutoff on original alignment: -7069.879
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.999
+Iteration 410 / LogL: -7055.476 / Time: 0h:25m:46s (0h:5m:40s left)
+TREE SEARCH COMPLETED AFTER 418 ITERATIONS / Time: 0h:26m:16s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -7016.933
+Optimal log-likelihood: -7016.933
+Rate parameters:  A-C: 1.00000  A-G: 10.51017  A-T: 1.00000  C-G: 1.00000  C-T: 10.51017  G-T: 1.00000
+Base frequencies:  A: 0.356  C: 0.193  G: 0.216  T: 0.235
+Gamma shape alpha: 0.464
+Parameters optimization took 1 rounds (0.055 sec)
+BEST SCORE FOUND : -7016.933
+Creating bootstrap support values...
+Split supports printed to NEXUS file /home/CSCScience.ca/pkruczkiewicz/projects/2019-09-23-IAV-McLaughlin-project/human-HA-sequences-by-flu-season/concat/mafft-msa/HA-H1N1-all-seasons.fa.splits.nex
+Total tree length: 1.052
+
+Total number of iterations: 418
+CPU time used for tree search: 23031.652 sec (6h:23m:51s)
+Wall-clock time used for tree search: 1575.685 sec (0h:26m:15s)
+Total CPU time used: 23044.400 sec (6h:24m:4s)
+Total wall-clock time used: 1578.191 sec (0h:26m:18s)
+
+Computing bootstrap consensus tree...
+Reading input file /home/CSCScience.ca/pkruczkiewicz/projects/2019-09-23-IAV-McLaughlin-project/human-HA-sequences-by-flu-season/concat/mafft-msa/HA-H1N1-all-seasons.fa.splits.nex...
+274 taxa and 9393 splits.
+Consensus tree written to /home/CSCScience.ca/pkruczkiewicz/projects/2019-09-23-IAV-McLaughlin-project/human-HA-sequences-by-flu-season/concat/mafft-msa/HA-H1N1-all-seasons.fa.contree
+Reading input trees file /home/CSCScience.ca/pkruczkiewicz/projects/2019-09-23-IAV-McLaughlin-project/human-HA-sequences-by-flu-season/concat/mafft-msa/HA-H1N1-all-seasons.fa.contree
+Log-likelihood of consensus tree: -7018.895
+
+Analysis results written to: 
+  IQ-TREE report:                /home/CSCScience.ca/pkruczkiewicz/projects/2019-09-23-IAV-McLaughlin-project/human-HA-sequences-by-flu-season/concat/mafft-msa/HA-H1N1-all-seasons.fa.iqtree
+  Maximum-likelihood tree:       /home/CSCScience.ca/pkruczkiewicz/projects/2019-09-23-IAV-McLaughlin-project/human-HA-sequences-by-flu-season/concat/mafft-msa/HA-H1N1-all-seasons.fa.treefile
+  Likelihood distances:          /home/CSCScience.ca/pkruczkiewicz/projects/2019-09-23-IAV-McLaughlin-project/human-HA-sequences-by-flu-season/concat/mafft-msa/HA-H1N1-all-seasons.fa.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          /home/CSCScience.ca/pkruczkiewicz/projects/2019-09-23-IAV-McLaughlin-project/human-HA-sequences-by-flu-season/concat/mafft-msa/HA-H1N1-all-seasons.fa.splits.nex
+  Consensus tree:                /home/CSCScience.ca/pkruczkiewicz/projects/2019-09-23-IAV-McLaughlin-project/human-HA-sequences-by-flu-season/concat/mafft-msa/HA-H1N1-all-seasons.fa.contree
+  Screen log file:               /home/CSCScience.ca/pkruczkiewicz/projects/2019-09-23-IAV-McLaughlin-project/human-HA-sequences-by-flu-season/concat/mafft-msa/HA-H1N1-all-seasons.fa.log
+
+Date and Time: Fri Sep 27 11:02:17 2019
